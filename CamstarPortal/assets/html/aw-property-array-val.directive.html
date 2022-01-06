@@ -1,0 +1,36 @@
+<div class="aw-jswidgets-arrayWidgetContainer"
+     ng-class="{'changed': prop.dirty, 'aw-layout-popup' : ( prop.isEditing && inTableCell ) }"
+     ng-style="{'position' : ( prop.isEditing && inTableCell ) ? 'absolute' : 'inherit' }">
+    <div class="aw-jswidgets-arrayValueCellListContainer aw-base-normal">
+        <ul class="aw-jswidgets-arrayEditValueCellList" ng-style="{'maxHeight': arrayHeight}">
+          <div class="aw-layout-flexColumnContainer" ng-repeat="displayNode in prop.displayValsModel track by $index">
+            <li class="aw-jswidgets-arrayValueCellListItem" ng-class="{'aw-state-selected': displayNode.selected}">
+                <div class="aw-jswidgets-arrayValueContainer">
+                  <div class="aw-jswidgets-arrayValue" >
+                      <div ng-click="selectAndEdit($event, $index)">{{displayNode.displayValue}}</div>
+                  </div>
+                  <div class="aw-layout-flexColumnContainer">
+                    <div class="aw-jswidgets-arrayIcons">
+                        <button type="button" class="aw-commands-commandIconButton aw-widgets-defaultPropertyValueButton"
+                               ng-click="moveUp($index)" ng-disabled="prop.editArrayInlineMode" title="{{prop.moveUpButtonTitle}}" >
+                               <aw-property-image name="cmdMoveUp"/>
+                        </button>
+                        <button type="button" class="aw-commands-commandIconButton aw-widgets-defaultPropertyValueButton"
+                               ng-click="moveDown($index)" ng-disabled="prop.editArrayInlineMode" title="{{prop.moveDownButtonTitle}}" >
+                               <aw-property-image name="cmdMoveDown"/>
+                        </button>
+                        <button type="button" class="aw-commands-commandIconButton aw-widgets-defaultPropertyValueButton"
+                               ng-click="remove($index)" ng-disabled="prop.editArrayInlineMode" title="{{prop.removeButtonTitle}}" >
+                               <aw-property-image name="cmdDelete"/>
+                         </button>
+                    </div>
+                  </div>
+                </div>
+            </li>
+          </div>
+        </ul>
+    </div>
+    <div class="aw-jswidgets-arrayEditableWidget">
+        <aw-property-array-edit-val prop="dummyProp" />
+    </div>
+</div>

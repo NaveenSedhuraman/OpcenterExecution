@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="PortalStudio_Help.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="General Properties">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Action Properties</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/LDCSS1.2.4.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Horiz-rules_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div role="main" id="mc-main-content">
+            <p class="Head2">Action Properties<a name="kanchor87"></a></p>
+            <p class="_1body">Action properties allow you to view or edit the properties of local actions for pages, web parts, and other objects. Action properties appear in the &lt;Object&gt; - Action pop-up when the More button is clicked for Actions in the Properties pane. Refer to "<a href="../Getting Started/Properties Pane/PropertiesPane.htm" class="MCXref xref">Properties Pane</a>" for information on the Properties pane.</p>
+            <p class="_1body">Action properties that are not required by the currently selected action type are hidden on the &lt;Object&gt; - Action pop-up. </p>
+            <p class="_1body">This table provides the descriptions of action properties.</p>
+            <table style="width: 95%;mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');caption-side: top;" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                        <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                            <p class="CellHead-Left">Action Property</p>
+                        </th>
+                        <th class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                            <p class="CellHead-Left">Property Description</p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">ActionCategory</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Specifies an action category to associate with the action.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">ButtonPosition</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Determines whether the action button appears on the left or right side of a page when the Location field is set to Button.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">ClearValues</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Clear values when the action is submitted.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">CloseButtonOnly</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody"><span class="Emphasis">Deprecated.</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">CommandName</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Used to provide information for logic in event arguments and JavaScript.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">ConditionHandler</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Options: DefaultConditionHandler or SpecificConditionHandler. Defines the handler method in code that is called when the action is submitted. This allows you to execute additional functionality from the app code when the action submits.&#160;</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">Confirmation</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Set of properties that configure the labels that appear on a confirmation message.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2" colspan="2">
+                            <p class="CellSubSectionHeader">Confirmation - General</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBodyIndented">Cancel_LabelName</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Determines the text that appears on the Cancel button of the confirmation message.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBodyIndented">Cancel_LabelText</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Determines the text that appears on the Cancel button of the confirmation message. This field supercedes text entered in the Cancel_LabelName sub-property.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBodyIndented">Message_LabelName</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Determines the text that appears as the message of the confirmation message.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBodyIndented">Message_LabelText</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Determines the text that appears as the message of the confirmation message. This field supercedes text entered in the Message_LabelName sub-property.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBodyIndented">OK_LabelName</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Determines the text that appears on the OK button of the confirmation message.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBodyIndented">OK_LabelText</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Determines the text that appears on the OK button of the confirmation message. This field supercedes text entered in the OK_LabelName sub-property.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBodyIndented">Title_LabelName</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Determines the text that appears as the title of the confirmation message.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBodyIndented">Title_LabelText</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Determines the text that appears as the title of the confirmation message. This field supercedes text entered in the Title_LabelName sub-property.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">CssClass</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Specifies a custom CSS class for the action.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">CustomMethodHandler</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Options: ExecuteMaintenanceTransaction, ExecuteNewTransaction, ShopfloorReset, TrueSubmit, VIewDocument, VIewInExcel, or WebPartCustomAction.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">DataContractLinks</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Data Contract members to pass to the linked page.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">DataContractReturnLinks</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Data Contract Members returned from the floating page.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">DenyDataContract</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Nullifies any Data Contracts associated with the action.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">Description</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Description of the action.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">DisableCondition<a name="DisableCondition"></a></p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Property Condition expression that will cause the action to be disabled if the expression evaluates to True.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2" colspan="2">
+                            <p class="CellSubSectionHeader">DisableCondition - Description</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBodyIndented">Expression</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">The conditional expression that is evaluated.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2" colspan="2">
+                            <p class="CellSubSectionHeader">DisableCondition - Equivalency</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBodyIndented">ColumnName</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Name of the column used in the comparison.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBodyIndented">Comparison</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Comparison operator used to evaluate a condition. Valid entries are "Equal", "NonEqual", and "Contains".</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1" colspan="2">
+                            <p class="CellSubSectionHeader">DisableCondition - Equivalency - LeftValue - General<a name="LeftValue"></a></p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBodyIndented">ConnectionType</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Specifies the connection type of the event handler.</p>
+                            <p class="CellBody"><span class="User_Entry">Note:</span> Additional fields will appear based on the connection type selected.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBodyIndented">Control</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Specifies a control to be used on a given side of the condition evaluation.</p>
+                            <p class="CellBody"><span class="User_Entry">Note:</span> This field appears when Control is selected in the ConnectionType field.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBodyIndented">PageDataContract</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Specifies a page data contract to be used on a given side of the condition evaluation.</p>
+                            <p class="CellBody"><span class="User_Entry">Note:</span> This field appears when PageDataContract is selected in the ConnectionType field.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBodyIndented">SessionDataContract</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Specifies a session data contract to be used on a given side of the condition evaluation.</p>
+                            <p class="CellBody"><span class="User_Entry">Note:</span> This field appears when SessionDataContract is selected in the ConnectionType field.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBodyIndented">SessionVariable</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Specifies a session variable to be used on a given side of the condition evaluation.</p>
+                            <p class="CellBody"><span class="User_Entry">Note:</span> This field appears when SessionVariable is selected in the ConnectionType field.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBodyIndented">FieldExpression</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Specifies a field expression to be used on a given side of the condition evaluation.</p>
+                            <p class="CellBody"><span class="User_Entry">Note:</span> This field appears when FieldExpression is selected in the ConnectionType field.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBodyIndented">StaticValue</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Specifies a static value to be used on a given side of the condition evaluation.</p>
+                            <p class="CellBody"><span class="User_Entry">Note:</span> This field appears when StaticValue is selected in the ConnectionType field.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBodyIndented">GridItem</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Specifies a grid item to be used on a given side of the condition evaluation.</p>
+                            <p class="CellBody"><span class="User_Entry">Note:</span> This field appears when GridItem is selected in the ConnectionType field.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBodyIndented">Property</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Specifies the control property value that is evaluated. </p>
+                            <p class="CellBody"><span class="User_Entry">Note:</span> This field appears when Control is selected in the ConnectionType field.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBodyIndented">RequestDataMode</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Specifies the method used to retrieve the property value from a control. </p>
+                            <p class="CellBody"><span class="User_Entry">Note:</span> This field appears when Control is selected in the ConnectionType field.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBodyIndented">AllowEmptyValue</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Determines whether the value can be empty.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBodyIndented">Initiators</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">The Initiators pop-up appears when you click the More button.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2" colspan="2">
+                            <p class="CellSubSectionHeader">DisableCondition - Equivalency - RightValue</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1" colspan="2">
+                            <p class="CellBody"><span class="User_Entry">Note:</span> The RightValue fields are identical to the LeftValue fields. Refer to the "<a href="#LeftValue" class="MCXref xref">DisableCondition - Equivalency - LeftValue - General</a>" fields for field definitions.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2" colspan="2">
+                            <p class="CellSubSectionHeader">DisableCondition&#160;- General</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBodyIndented">And</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">The And pop-up appears when you click the More button. You can define additional conditions for a conditional event handler that will be added with an "And" operator.</p>
+                            <p class="CellBody"><span class="User_Entry">Note:</span> The And pop-up fields are identical to the fields that appear when defining a conditional event handler. Refer to the "<a href="#DisableCondition" class="MCXref xref">DisableCondition</a>" fields for field definitions.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBodyIndented">Or</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">The Or pop-up appears when you click the More button. You can define additional conditions for a conditional event handler that will be added with an "Or" operator.</p>
+                            <p class="CellBody"><span class="User_Entry">Note:</span> The Or pop-up fields are identical to the fields that appear when defining a conditional event handler. Refer to the "<a href="#DisableCondition" class="MCXref xref">DisableCondition</a>" fields for field definitions.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">DynamicDisplayMode</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Determines the display mode of the action for users with roles that are not permitted to view the action.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">EndResponse</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Used by floating frame actions internally to set the CallStack redirect information. A value of True follows the standard framework functionality for floating frame call stacks.  A value of False exposes the FloatingPageCallStackMethod in JavaScript.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">ESignatureDependencies(Collection)</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Collection of Esignatures required to submit the action.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">ESignatureRequired</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Is an Esignature required?</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">ForceRedirect</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Bypasses any required field validations before redirecting to the target page if set to True.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">FormValidate</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Indicates whether to turn on form validation before form submit (implemented in html5). </p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">FrameLocation</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Allows you to specify the dimensions of the floating page when it is loaded.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2" colspan="2">
+                            <p class="CellSubSectionHeader">FrameLocation - General</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBodyIndented">Height</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Height in pixels.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBodyIndented">Width</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Width in pixels.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">GroupName</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Name of the action group.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">HiddenCondition</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">The condition that is evaluated to determine if the page action is hidden on a page.</p>
+                            <p class="CellBody"><span class="User_Entry">Note:</span> The HiddenCondition sub-properties are identical to the sub-properties for DisableCondition when defining a conditional expression. Refer to the "<a href="#DisableCondition" class="MCXref xref">DisableCondition</a>" fields for property descriptions.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">HorizontalShift</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Sequence of the shift: Left to Right</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2" colspan="2">
+                            <p class="CellSubSectionHeader">HorizontalShift - General</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBodyIndented">HorizontalShiftDirection</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Specifies the direction to adjust the horizontal position of the action during runtime. Accepted values are "Left","Right", and "None".</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBodyIndented">HorizontalShiftValue</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Number of pixels to adjust the horizontal position of the action.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">Index</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Integer used to order the display of the actions.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">InitContractHandler</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Used to assign a method that will be invoked when action processing is initializing data contracts of target page.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">IsDisabled</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Is the action disabled?</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">IsHidden</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Is the action hidden?</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">IsPrimary</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Is the action the primary action?</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">IsReturn</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Closes the page after submittal.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">LabelName</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Dictionary label name for the action.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">LabelText</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Label text for the action. This field supercedes text entered in the LabelName property.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">Location</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Determines where the action will appear on a page. Selecting Button sets the action to appear as a button on the bottom of associated pages. Selecting ActionPanel sets the action to appear within the ActionsControl web part on associated pages.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">MapItem</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Specifies the Page Map to use when the action submits. Page Maps are maintained in the Modeling tab of Portal Studio and are used to define Source Pages, Targets and Parameters.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">Name</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Name of the action.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">PageflowName</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Name of the pageflow to be opened.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">PageName</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Name of the page to be opened.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">Parameters</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Allows for entry of a string value that can be used in the WebPartCustomAction function override in the App_Code file for a page.  Parameters are typically used to determine which button was clicked in the case of multiple Custom Actions on a page.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1" colspan="2">
+                            <p class="CellSubSectionHeader">Permissions - General</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBodyIndented">DisplayMode</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Options: Disable or Hide. Display mode if the permissions are not satisfied. </p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBodyIndented">PagePermission</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Apply the page permissions?</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBodyIndented">ServicePermission</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Apply the service permissions?</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">PortalTab</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Existing tabs can be selected in the PortalTab field, if SpecificTab is selected for PortaTabOptions,.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">PortalTabOptions</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Options: CurrentTab, NewTab, or SpecificTab. Tab option for the new page to open in. </p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">QueryStringParameters(Collection)</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Allows the user to map Data Contract Members from the page to Query Parameters that will be appended to the Link URL when the link is opened.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">ReloadValues</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">The action reloads the page values after submitting when set to True.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">ServiceName</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Service that is executed when the action is clicked.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">ShowButtons</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Displays the First, Next, Prev, and Last buttons.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">SPCChild</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">Launches SPC in the parent frame if it is being called from a child.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                            <p class="CellBody">SPCEnabled</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                            <p class="CellBody">Enables SPC actions.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                            <p class="CellBody">URL</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                            <p class="CellBody">URL&#160;that is executed when the action is clicked.</p>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2">
+                            <p class="CellBody">WIPMessagesRequired</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body2">
+                            <p class="CellBody">Specifies if a WIP message is required for the action.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <MadCap:pageFooter class="FirstPage">
+            <p class="copyright">© Siemens 2020</p>
+        </MadCap:pageFooter>
+    </body>
+</html>

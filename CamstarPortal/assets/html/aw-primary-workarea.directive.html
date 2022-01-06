@@ -1,0 +1,10 @@
+<div class="aw-layout-flexColumn aw-layout-primaryWorkareaContainer">
+    <div class="aw-layout-workareaCommandbar aw-theme-toolbar">
+        <aw-toolbar first-anchor="aw_primaryWorkArea" second-anchor="aw_workArea_right"
+        orientation="HORIZONTAL" context="context"></aw-toolbar>
+    </div>
+    <div class="aw-search-inContentSearchBox" exist-when="breadcrumbConfig && (breadcrumbConfig.type === undefined || breadcrumbConfig.type === 'search') && !breadcrumbConfig.noBreadCrumb && !breadcrumbConfig.inContentBoxNotActive && !conditions.noResultsFoundForBreadCrumb">
+        <aw-in-content-search-box class="aw-search-searchBox" prop="data.searchBox" action="doSearchKeepFilter"></aw-search-box>
+    </div>
+    <aw-include name="{{viewBase + viewSuffix}}" ng-if="viewSuffix" sub-panel-context="context"></aw-include>
+</div>

@@ -1,0 +1,139 @@
+{
+    "schemaVersion" : "1.0.0",
+    "imports": [
+        "js/aw-command-panel.directive",
+        "js/aw-command-bar.directive",
+        "js/aw-panel-header.directive",
+        "js/aw-panel-body.directive",
+        "js/aw-panel-section.directive",
+        "js/aw-panel-footer.directive",
+        "js/visible-when.directive",
+        "js/aw-button.directive",
+        "js/aw-i18n.directive",
+        "js/aw-list-filter.directive",
+        "js/arrange-cell.directive"
+    ],
+    "actions": {
+        "reveal": {
+            "actionType": "dataProvider",
+            "method": "dataProviderColumnConfigs"
+        },
+        "actionFilterList": {
+            "actionType": "JSFunction",
+            "method": "actionFilterList",
+            "inputData": {
+                "data": "{{data}}"
+            },
+            "deps": "js/arrange.service"
+        },
+        "selectColumn": {
+            "actionType": "JSFunction",
+            "method": "selectColumn",
+            "inputData": {
+                "data": "{{data}}",
+                "eventData": "{{data.eventData}}"
+            },
+            "deps": "js/arrange.service"
+        },
+        "columnVisibilityChanged": {
+            "actionType": "JSFunction",
+            "method": "columnVisibilityChanged",
+            "inputData": {
+                "data": "{{data.arrangeData}}"
+            },
+            "deps": "js/arrange.service"
+        },
+        "operationTypeChanged": {
+            "actionType": "JSFunction",
+            "method": "operationTypeChanged",
+            "inputData": {
+                "data": "{{data}}"
+            },
+            "deps": "js/arrange.service"
+        },
+        "updateColumns": {
+            "actionType": "JSFunction",
+            "method": "updateColumns",
+            "inputData": {
+                "data": "{{data}}"
+            },
+
+            "deps": "js/arrange.service"
+        },
+        "arrange": {
+            "actionType": "JSFunction",
+            "method": "arrange",
+            "inputData": {
+                "data": "{{data.arrangeData}}"
+            },
+
+            "deps": "js/arrange.service"
+        },
+        "closeArrangePanel": {
+            "actionType": "Event",
+            "method": "Event",
+            "inputData": {
+                "events": [ {
+                    "name": "complete",
+                    "eventData": {
+                        "source": "toolAndInfoPanel"
+                    }
+                } ]
+            }
+        }
+    },
+    "data": {
+        "filterBox": {
+            "displayName": "MyFilter",
+            "type": "STRING"
+        },
+        "arrangeData": {
+            "columnConfigId": null,
+	        "filter": "",
+	        "columnDefs": null,
+	        "filteredColumnDefs": null,
+	        "selectedColumn": null,
+	        "allColumnsVisible": true,
+	        "dirty":false,
+            "operationType": "configured"
+        }
+    },
+    "dataProviders": {
+        "dataProviderColumnConfigs": {
+            "action": "actionFilterList",
+            "response": "{{data.arrangeData.filteredColumnDefs}}",
+            "totalFound": "{{data.arrangeData.filteredColumnDefs.length}}",
+            "selectionModelMode": "single",
+            "deps": "js/arrange.service"
+        }
+    },
+    "i18n": {
+        "arrangeTitle":[ "UIMessages"],
+        "arrangeButtonTitle":[ "UIMessages"]
+    },
+    "onEvent": [{
+	        "eventId": "dataProviderColumnConfigs.selectionChangeEvent",
+	        "cacheEventData": true,
+	        "action": "selectColumn"
+	    }, {
+	        "eventId": "columnVisibilityChanged",
+	        "cacheEventData": false,
+	        "action": "columnVisibilityChanged"
+	    }, {
+            "eventId": "columnChanged",
+            "cacheEventData": false,
+            "action": "updateColumns"
+        }, {
+            "eventId": "operationTypeChanged",
+            "cacheEventData": false,
+            "action": "operationTypeChanged"
+        }, {
+            "eventId": "appCtx.register",
+            "condition": "(name === 'ViewModeContext' || name === 'objectSetViewModeContext') && value !== 'TableView' && value !== 'TableSummaryView'",
+            "action": "closeArrangePanel"
+        }, {
+            "eventId": "tableDestroyed",
+            "action": "closeArrangePanel"
+        }
+    ]
+}

@@ -1,0 +1,204 @@
+.mom-homepage-card {
+    width: 268px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 2px;
+    margin: 8px;
+    display: inline-block;
+}
+
+/* Home Page Card Vertical Spacing in pure (S)CSS
+
+    ASSUMPTION: Three rows of cards are not likely to fit the viewport completely, but one or two will.
+
+    * If all cards fit one or two row, center them vertically
+    * Otherwise align to top with no margin
+
+*/
+
+$cardHeightWithMargins: 300px;
+$headerHeight: 64px;
+$momHomeCardTopMarginOneRow: calc(50vh - #{$cardHeightWithMargins} / 2 - #{$headerHeight});
+$momHomeCardTopMarginTwoRows: calc(50vh - #{$cardHeightWithMargins} - #{$headerHeight});
+
+.mom-homepage-container {
+    mom-homepage-card:first-child .mom-homepage-card {
+        margin-top: 0;
+    }
+}
+
+// Max: 1 card/row
+@media (min-width: 300px) {
+    mom-homepage-card:nth-last-child(2):first-child .mom-homepage-card {
+        margin-top: $momHomeCardTopMarginTwoRows;
+    }
+
+    mom-homepage-card:nth-last-child(1):first-child .mom-homepage-card {
+        margin-top: $momHomeCardTopMarginOneRow;
+    }
+}
+
+// Max: 2 cards/row
+@media (min-width: 700px) {
+
+    mom-homepage-card:nth-last-child(4):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(3):first-child .mom-homepage-card {
+        margin-top: $momHomeCardTopMarginTwoRows;
+    }
+
+    mom-homepage-card:nth-last-child(2):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(1):first-child .mom-homepage-card {
+        margin-top: $momHomeCardTopMarginOneRow;
+    }
+}
+
+// Max: 3 cards/row
+@media (min-width: 1000px) {
+
+    mom-homepage-card:nth-last-child(6):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(5):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(4):first-child .mom-homepage-card {
+        margin-top: $momHomeCardTopMarginTwoRows;
+    }
+
+    mom-homepage-card:nth-last-child(3):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(2):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(1):first-child .mom-homepage-card {
+        margin-top: $momHomeCardTopMarginOneRow;
+    }
+}
+
+// Max: 4 cards/row
+@media (min-width: 1300px) {
+
+    mom-homepage-card:nth-last-child(8):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(7):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(6):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(5):first-child .mom-homepage-card {
+        margin-top: $momHomeCardTopMarginTwoRows;
+    }
+
+    mom-homepage-card:nth-last-child(4):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(3):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(2):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(1):first-child .mom-homepage-card {
+        margin-top: $momHomeCardTopMarginOneRow;
+    }
+}
+
+// Max: 5 cards/row
+@media (min-width: 1600px) {
+
+    mom-homepage-card:nth-last-child(10):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(9):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(8):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(7):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(6):first-child .mom-homepage-card {
+        margin-top: $momHomeCardTopMarginTwoRows;
+    }
+
+    mom-homepage-card:nth-last-child(5):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(4):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(3):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(2):first-child .mom-homepage-card,
+    mom-homepage-card:nth-last-child(1):first-child .mom-homepage-card {
+        margin-top: $momHomeCardTopMarginOneRow;
+    }
+}
+
+
+.mom-homepage-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+.mom-homepage-card-image {
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.mom-homepage-card-title {
+    text-align: left;
+    line-height: 24px;
+    font-size: 17px;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.mom-homepage-card-content {
+    padding: 8px 0 8px 0;
+    height: 38px;
+    font-size: 12px;
+    overflow-y: hidden;
+    text-align: left;
+    line-height: 16px;
+}
+
+.mom-homepage-card-actions {
+    aw-command-bar.aw-commands-commandBarHorizontal .aw-commands-commandIconButton {
+        height: 32px;
+        width: 32px;
+        padding: 8px;
+    }
+
+    .aw-commands-commandIconButton {
+        margin: 0;
+        vertical-align: top;
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.mom-homepage-card-actionable {
+    cursor: pointer;
+
+    .mom-homepage-card-content {
+        height: 70px;
+    }
+
+    .mom-homepage-card-actions {
+        display: none;
+    }
+}
+
+.mom-header-content {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+
+    aw-command-bar.aw-commands-commandBarHorizontal {
+        .aw-commands-commandIconButton {
+            width: 45px;
+
+            &:hover {
+                background-color: #003750;
+            }
+        }
+
+        .aw-commands-commandIconButton.aw-state-selected {
+            &:hover {
+                .aw-commands-commandIconButtonText {
+                    color: #ffffff;
+                }
+            }
+
+            .aw-commands-commandIconButtonText {
+                color: #464646;
+            }
+        }
+    }
+
+    aw-command-bar aw-command .aw-commands-cellDecorator {
+        top: -4px;
+        right: 0;
+
+        div {
+            line-height: 155%;
+            margin-left: -10px;
+            padding: 1px;
+        }
+    }
+}

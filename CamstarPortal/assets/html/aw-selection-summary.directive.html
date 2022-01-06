@@ -1,0 +1,8 @@
+<div class="aw-xrt-summaryXrt">
+    <div ng-show="tabs.length > 1" class="aw-xrt-tabsContainer">
+        <aw-tab-container tab-container-model="visibleTabs" callback="api">
+            <aw-tab tab-model="tab" ng-repeat="tab in visibleTabs" />
+        </aw-tab-container>
+    </div>
+    <aw-include class="aw-xrt-pageContainer aw-widgets-multiSelectContainer" name="{{activeTab.view}}" sub-panel-context="subPanelContext" />
+</div>

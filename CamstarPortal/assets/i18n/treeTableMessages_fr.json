@@ -1,0 +1,12 @@
+{
+    "TwistieTooltipCollapsed": "Afficher les enfants",
+    "TwistieTooltipExpanded": "Cacher les enfants",
+    "freezeMenu": "Geler",
+    "unfreezeMenu": "Figer",
+    "visibilityControlsTitle": "Afficher\/Masquer",
+    "arrangeMenu": "Disposer",
+    "sortAscending": "Trier croissant",
+    "sortDescending": "Trier décroissant",
+    "removeSort": "Pas de tri",
+    "removeAllFilters": "Supprimer tous les filtres"
+}

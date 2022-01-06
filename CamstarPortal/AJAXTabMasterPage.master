@@ -1,0 +1,88 @@
+<%-- Copyright Siemens 2020   --%>
+
+<%@ Master Language="C#" CodeFile="AJAXTabMasterPage.master.cs" AutoEventWireup="true"
+    Inherits="Camstar.Portal.AJAXTabMasterPage" %>
+
+<%@ Register TagPrefix="nmuc" Src="Controls/NavigationMenuUserControl.ascx" TagName="NavigationMenuUserControl" %>
+<%@ Register TagPrefix="cwpfcc" Namespace="Camstar.WebPortal.WebPortlets.Concierge" %>
+<!doctype html>
+<html>
+    <head id="Head1" runat="server">
+        <title>Opcenter Execution</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <asp:PlaceHolder runat="server">
+            <%= this.styleSheetString %>
+        </asp:PlaceHolder>
+    </head>
+    <body class="<%=BodyCssClass%> <%=currentTheme%>-theme  AJAXTabMaster-page">
+        <form id="AJAXForm" runat="server">
+            <cwpf:WebPartFrameworkManager ID="WebPartManager" runat="server" EnableClientScript="false" />
+            <asp:ScriptManager ID="ScriptManager" runat="server" EnablePartialRendering="true" EnableCdn="false" EnableScriptGlobalization="true">
+                <Scripts>
+                    <asp:ScriptReference Name="jquery"/>
+                    <asp:ScriptReference Name="camstar"/>
+                    <asp:ScriptReference Name="camstar.webcontrols"/> 
+                    <asp:ScriptReference Name="camstar.scripts"/>
+                    <asp:ScriptReference Path="~/Scripts/jquery/tiny_mce/tinymce.min.js" />               
+                    <asp:ScriptReference Name="session"/>
+                    <asp:ScriptReference Name="workspaceoverride"/>
+                    <asp:ScriptReference Path="~/Scripts/User/User.js" />
+                </Scripts>
+            </asp:ScriptManager>
+            <cwfw:label runat="server" Visible="false" ID="YesLabel" LabelName="Web_Yes" LabelType="Designer" />
+            <cwfw:label runat="server" Visible="false" ID="NoLabel" LabelName="Web_No" LabelType="Designer" />
+            <cwfw:label runat="server" Visible="false" ID="OkLabel" LabelName="OKButton" LabelType="Designer" />
+            <cwfw:label runat="server" Visible="false" ID="CloseLabel" LabelName="Web_Close" LabelType="Designer" />
+            <cwfw:label runat="server" Visible="false" ID="MessageTitleLabel" LabelName="ConfirmationMessageTitle" LabelType="Designer" />
+            <cwfw:label runat="server" Visible="false" ID="LoadingLabel" LabelName="Lbl_PopupLoadingTitle" LabelType="Designer" />
+        
+            <div class="form-container <% if (IsResponsive) Response.Write("form-responsive"); %>">
+                
+                <% if (IsClassicDesktop) { %>
+                    <csc:header id="Header" runat="server" />
+                    <nmuc:navigationmenuusercontrol ID="NavigationMenu" runat="server" />
+                <%} else if (IsClassicMobile) { %>
+                    <nav class="navbar navbar-static-top">
+                        <csc:HeaderMobileControl runat="server" ID="NavbarHeader" ClientIDMode="Static"/>
+                    </nav>
+                    <csc:NavigationMenuMobileControl runat="server" id="NavigationMenuMobile"/>
+                <%} %>
+
+                <cwpf:webpartbasezone id="StaticZoneTop" cssclassbrowse="ui-zone-static-top" runat="server">
+                    <zonetemplate>
+                    </zonetemplate>
+                </cwpf:webpartbasezone>
+                <div id="DynamicContentDiv" class="ui-form-contentpanel ui-helper-clearfix">
+                    <asp:ContentPlaceHolder ID="AJAXContentPlaceHolder" Visible="false" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>                
+            <div id="tabContainerControl" class="tabs-navigation ui-page-tab">
+                <div id="tabs-strip" class="">
+                    <ul id="tablist" class="pageTablist"></ul>
+                </div>
+            </div>
+                <cwpf:webpartbasezone id="StaticZoneBottom" cssclassbrowse="ui-zone-static-bottom" runat="server">
+                    <zonetemplate>
+                        <cwpfc:buttonsbarcontrol ID="ButtonsBar" runat="server" />
+                        <cwpfc:workflownavigationbuttons id="NavigationButtonsBar" runat="server" />
+                    </zonetemplate>
+                </cwpf:webpartbasezone>
+            
+                <% if (IsClassicDesktop || IsApollo) { %>
+                    <div id="ConciergeContainer" class='concierge-container <% if (IsApollo) Response.Write("apollo-concierge"); %>'>
+                        <cwpf:ConciergeZone ID="ConciergeZone" class="ConciergeZone" runat="server">
+                            <zonetemplate>
+                                <cwpfcc:ConciergePanel ID="ConciergeControl" runat="server"></cwpfcc:ConciergePanel>
+                            </zonetemplate>
+                        </cwpf:ConciergeZone>
+                    </div>
+                    
+                <%} %>
+                <%if (IsClassicDesktop) { %>
+                <csc:footer ID="MasterFooter" runat="server" timeoutinterval="15" />
+                <%} %>
+            </div>
+            <csc:floatingframe ID="FloatingFrame" runat="server" />
+        </form>
+    </body>
+</html>

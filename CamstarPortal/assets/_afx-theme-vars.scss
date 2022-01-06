@@ -1,0 +1,185 @@
+/* Copyright 2018 Siemens Product Lifecycle Management Software Inc. */
+
+/*
+    BRAND COLOR VARIABLES
+*/
+
+// content background colors
+// and contrasting foreground / text / fill
+$brand_primary_content_background: $Siemens_Snow;
+$brand_primary_content_text: $PL_Black_8;
+
+$brand_secondary_content_background: $PL_Black_25;
+$brand_secondary_content_text: $PL_Black_4;
+
+$brand_quaternary_content_background: $Siemens_Blue_1;
+$brand_quaternary_content_text: $Siemens_Snow;
+
+$brand_primary_background: $Siemens_Blue_7;
+$brand_primary_text: $Siemens_Snow;
+
+$brand_primary_background_disabled: $PL_Black_18;
+$brand_primary_disabled_text: $Siemens_Snow;
+
+$brand_secondary_background: $Siemens_Blue_13;
+$brand_secondary_text: $PL_Black_10;
+
+$brand_tertiary_background: $Siemens_Blue_24;
+$brand_tertiary_text: $PL_Black_8;
+
+$brand_tertiary_content_background: $PL_Black_20;
+$brand_tertiary_content_text: $PL_Black_8;
+
+$brand_primary_accent_background: $Siemens_Yellow_9;
+$brand_primary_accent_text: $PL_Black_4;
+
+$brand_secondary_accent_background: $Siemens_Snow;
+$brand_secondary_accent_text: $PL_Black_8;
+
+$brand_tertiary_accent_background: $Siemens_Blue_10;
+
+$brand_table_header_background: $PL_Black_24;
+$brand_table_header_text: $PL_Black_8;
+$brand_table_content_background: $brand_primary_content_background;
+
+// selection background colors
+$brand_selection_background_hover: $Siemens_Blue_9_5_Old;
+$brand_selection_text_hover: $PL_Black_8;
+
+$brand_selection_background_active: $Siemens_Blue_9_Old;
+$brand_selection_text_active: $PL_Black_8;
+
+$brand_selection_background_selected: $Siemens_Blue_10_Old;
+$brand_selection_text_selected: $PL_Black_8;
+
+$brand_selection_background_selected_hover: $Siemens_Blue_8_5_Old;
+$brand_selection_text_selected_hover: $PL_Black_8;
+
+// text / fill colors to correspond to backgrounds above
+$brand_primary_inverse_text: $Siemens_Snow;
+$brand_secondary_disabled_text: $PL_Black_18;
+$brand_secondary_inverse_text: $Siemens_Snow;
+
+$brand_brand_panel_text: $Siemens_Snow;
+
+$static_light_text_color: $Siemens_Snow;
+$static_dark_text_color: $PL_Black_8;
+
+// border colors
+$brand_primary_border: $PL_Black_16;
+$brand_primary_border_hover: $PL_Black_16;
+$brand_primary_border_focus: $Siemens_Blue_13;
+$brand_primary_border_changed: $Siemens_Blue_13;
+$brand_primary_border_disabled: $PL_Black_18;
+$brand_secondary_border: $PL_Black_23;
+$brand_tertiary_border: $PL_Black_8;
+$brand_primary_accent_border: $Siemens_Blue_10;
+$brand_primary_accent_border_changed: $Siemens_Yellow_17;
+$brand_search_prefilter_border: $Siemens_Blue_13;
+
+// button backgrounds
+$brand_primary_button_background: $brand_primary_background;
+$brand_primary_button_background_hover: $Siemens_Blue_3;
+$brand_primary_button_background_active: $Siemens_Blue_3;
+$brand_primary_button_background_disabled: $brand_secondary_accent_background;
+$brand_secondary_button_background: $brand_secondary_background;
+$brand_secondary_button_background_hover: $Siemens_Blue_9;
+$brand_secondary_button_background_active: $Siemens_Blue_9;
+$brand_secondary_button_background_disabled: $brand_secondary_accent_background;
+$brand_primary_accent_button_background: $brand_primary_accent_background;
+$brand_primary_accent_button_background_hover: $Siemens_Yellow_5;
+$brand_primary_accent_button_background_active: $Siemens_Yellow_5;
+$brand_primary_accent_button_background_disabled: $brand_secondary_accent_background;
+$brand_secondary_accent_button_background: transparent;
+$brand_secondary_accent_button_background_hover: $PL_Black_25;
+$brand_secondary_accent_button_background_active: $PL_Black_25;
+$brand_secondary_accent_button_background_disabled: $brand_secondary_accent_background;
+
+// button borders
+$brand_primary_button_border: $Siemens_Blue_3;
+$brand_primary_button_border_hover: $Siemens_Blue_3;
+$brand_primary_button_border_active: $Siemens_Blue_3;
+$brand_primary_button_border_disabled: $brand_primary_border_disabled;
+$brand_primary_accent_button_border: $Siemens_Yellow_5;
+$brand_primary_accent_button_border_hover: $Siemens_Yellow_5;
+$brand_primary_accent_button_border_active: $Siemens_Yellow_5;
+$brand_primary_accent_button_border_disabled: $brand_primary_border_disabled;
+$brand_secondary_accent_button_border: $PL_Black_22;
+$brand_secondary_accent_button_border_hover: $PL_Black_22;
+$brand_secondary_accent_button_border_active: $PL_Black_22;
+$brand_secondary_accent_button_border_disabled: $brand_primary_border_disabled;
+
+// link colors
+$brand_primary_link: $Siemens_Blue_10;
+$brand_primary_link_visited: $Siemens_Blue_10;
+$brand_primary_link_hover: $Siemens_Yellow_10;
+$brand_primary_link_active: $Siemens_Blue_10;
+$brand_secondary_link: $Siemens_Blue_23;
+$brand_secondary_link_visited: $brand_secondary_link;
+$brand_secondary_link_hover: $Siemens_Yellow_19;
+$brand_secondary_link_active:$brand_secondary_link;
+$brand_primary_link_disabled: $PL_Black_18;
+
+// tab colors
+$brand_tab_title_border_color: transparent;
+$brand_tab_title_hover: $Siemens_Blue_9;
+$brand_tab_title_active: $Siemens_Blue_14;
+$brand_tab_title_selected: $Siemens_Blue_9;
+$brand_tab_title_selected_border_color: $Siemens_Blue_9;
+$brand_tab_title_selected_border_color_hover: $Siemens_Blue_9;
+$brand_parent_tab_title: $Siemens_Yellow_17;
+$brand_parent_tab_title_border_color: $Siemens_Yellow_17;
+
+// box shadow colors
+$brand_primary_box_shadow: $PL_Black;
+$brand_secondary_box_shadow: $PL_Black_18;
+
+// status colors
+$brand_status_success: $Siemens_Status_Green;
+$brand_status_information: $Siemens_Blue_7;
+$brand_status_warning: $Siemens_Status_Yellow;
+$brand_status_error: $Siemens_Status_Red;
+
+$brand_status_information_background: $Siemens_Blue_24;
+$brand_status_warning_background: $Siemens_Yellow_24;
+$brand_status_error_background: $Siemens_Red_24;
+
+$brand_status_information_accent: $Siemens_Blue_18;
+$brand_status_warning_accent: $Siemens_Yellow_18;
+$brand_status_error_accent: $PL_Red_21;
+
+$brand_status_information_accent2: $Siemens_Blue_3;
+$brand_status_warning_accent2: $Siemens_Yellow_18;
+$brand_status_error_accent2: $PL_Red_21;
+
+//common-app-frame
+$aw_common_app_frame_large_t_header_tabs_selected_color: $Siemens_Yellow_17;
+$aw_common_app_frame_large_t_header_tabs_hover_color: $Siemens_Yellow_17;
+$aw_common_app_frame_large_header_tabs_background_color: $PL_Black_20;
+
+// panel and sidenav pinned/unpinned  color
+$panel_unpinned_icon_color: $Siemens_Snow;
+$panel_pinned_icon_color: $Siemens_Yellow_17;
+$panel_avatar_name: $PL_Black_8;
+$panel_command_icon_color: $PL_Black_8;
+$panel_command_icon_hover_color: $PL_Black_2;
+$global_toolbar_command_hover_background_color: $Siemens_Blue_25;
+$global_toolbar_command_active_background_color: $Siemens_Blue_26;
+$global_navigation_label_background_color: $Siemens_Snow;
+$global_navigation_panel_title_background_color: $Siemens_Blue_3;
+$global_navigation_link_polygon_icon_color : $Siemens_Snow;
+
+
+
+// table cell background colors
+$brand_table_cell_property_diff: $Siemens_Yellow_17;
+
+// aw-notification-cell
+$aw_notification_cell_imp_color: $Siemens_Status_Red;
+$aw_notification_cell_med_color: $Siemens_Yellow_11;
+$aw_notification_cell_low_color: $Siemens_Blue_7;
+$aw_notification_cell_prop_color: $PL_Black_5;
+$aw_notification_cell_read_color: $Siemens_Snow;
+/*
+    END BRAND COLOR VARIABLES
+*/

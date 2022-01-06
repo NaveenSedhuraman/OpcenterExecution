@@ -1,0 +1,3 @@
+<li class="aw-jswidget-tab" ng-show="tabModel.displayTab">
+   <a name="{{tabModel.pageId}}" ng-attr-title="{{ tabModel.isLeafTab && tabModel.name || '' }}" selectedtab="{{tabModel.selectedTab}}"  ng-style="{'width': tabModel.width, 'visibility' : tabModel.displayTab }" ng-class="{'aw-base-tabTitle':!tabModel.selectedTab, 'aw-base-tabTitleSelected':tabModel.selectedTab}" ng-click="selectCurrentTab()">{{tabModel.name}}</a>
+</li>

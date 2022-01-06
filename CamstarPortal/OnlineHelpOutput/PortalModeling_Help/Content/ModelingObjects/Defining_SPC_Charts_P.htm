@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="PortalModeling.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Statistical Process Control">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Defining SPC Charts</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/LDCSS1.2.4.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Horiz-rules_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div role="main" id="mc-main-content">
+            <p class="Head2">Defining SPC Charts<a name="kanchor68"></a></p>
+            <p class="_1body">The SPC&#160;Chart modeling object contains information required to display a single SPC chart. It describes the type of chart, the Statit Software macro, the Statit Software Rules file, Out of Control Actions and Procedures (OCAPs), and the variable being plotted.</p>
+            <p class="_1bodyKeepWithNext">Siemens provides four default SPC Charts for your use:</p>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">Moving Range</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">Range Chart</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">Trial I-Chart</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">X Chart</td>
+                </tr>
+            </table>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />When Defining an Inline SPC Chart</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1body" style="color: #000000;">You must install and configure Inline SPC on your server before using this page. Otherwise, you will not be able to populate all required fields or save the page.</p>
+                    <p class="_1body" style="color: #000000;">You must create one SPC chart with the appropriate SPC Chart Type and SPC Query for each chart you want to display. </p>
+                    <p class="_1body" style="color: #000000;">Use the Out of Control Actions section of the SPC chart to establish the actions triggered upon violation.</p>
+                    <p class="_1body" style="color: #000000;">SPC Chart is an optional Modeling definition in SPC&#160;Chart Group.</p>
+                    <p class="_1body" style="color: #000000;">SPC Chart contains the following optional Modeling definitions: Document, E-mail Message, Hold Reason, and Resource Status Code.</p>
+                    <p class="_1body" style="color: #000000;">Refer to the <span class="Emphasis">Opcenter Execution Core Inline Statistical Process Control Reference Guide</span> for information on setting up and configuring SPC.</p>
+                </div>
+            </div>
+            <p class="_1body">&#160;</p>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="When_Creating_an_SPC_Chart"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />When Defining a Legacy SPC Chart</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1body">You must create one SPC chart with the appropriate chart-generating macro for each chart you want to display.</p>
+                    <p class="_1body">Ensure the path for the chart macros and chart properties are valid. For example, if SPC is installed in a directory other than the default installation directory, you will need to change the paths.</p>
+                    <p class="_1body">Use the Out of Control Actions section of the SPC chart to establish the actions triggered upon violation.</p>
+                    <p class="_1body">SPC Chart is an optional Modeling definition in SPC&#160;Chart Group.</p>
+                    <p class="_1body">SPC Chart contains the following optional Modeling definitions: Document, E-mail Message, Hold Reason, and Resource Status Code.</p>
+                    <p class="_1body">Refer to the <span class="Emphasis">Opcenter Execution Core Statistical Process Control Reference Guide</span> for information on setting up and configuring SPC.</p>&#160;</div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="SPC_Chart_Page_Field_Definitions"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />SPC Chart Page Field Definitions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1bodyKeepWithNext">This table defines the fields unique to the SPC Chart page.</p>
+                    <p class="_1bodyKeepWithNext">Refer to "<a href="../Getting Started/Modeling_Page.htm#Common" class="MCXref xref">Common Fields on Modeling Pages</a>" for information on the fields common to all modeling objects.</p>
+                    <table style="caption-side: top;width: 95%;mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                        <col width="113px" class="TableStyle-Horiz-rules_Table-Column-Column1">
+                        </col>
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1">
+                        </col>
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 69px;">
+                        </col>
+                        <thead>
+                            <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                                <td class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">Field</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">Definition</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                    <p class="CellHead-Left">Type</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1" colspan="3">
+                                    <p class="CellSectionHeader">Chart Configuration</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Chart Type</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Script command within the macro used to generate the chart (for example, gxchart or gpchart). Required for Legacy SPC.</p>
+                                    <p class="CellBody" style="color: #000000;"><b>Note:</b> The Inline SPC solution uses a Chart Type user code to predefine parameter values.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Required</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Inline SPC
+                                </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody" style="color: #000000;">Indicates whether the chart is generated using Inline SPC.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody" style="color: #000000;">Required</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">SPC Query
+                                </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody" style="color: #000000;">Indicates the SPC Query used to generate Inline SPC charts.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody" style="color: #000000;">Required</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">SPC Connection
+                                </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody" style="color: #000000;">Indicates the  ODBC&#160;database connection designated to retrieve chart plotting data. </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody" style="color: #000000;">Required</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Variable to chart</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Variable the chart displays.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Required</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Chart Generating Macro</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Location (path and file name) of the Statit macro file.</p>
+                                    <p class="CellBody"><b>Note:</b> This field is used for Legacy SPC charts only.
+                                </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Required</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Chart Properties</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Location (path and file name) of the rules file.</p>
+                                    <p class="CellBody" style="color: #000000;">Note: This field is used for Legacy SPC charts only.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">SPC Chart Display Options</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Options to determine when the chart is displayed.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Required</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Chart Height</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Default height (in pixels) you want set for the chart.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Chart Width</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Default width (in pixels) you want set for the chart.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2" colspan="3">
+                                    <p class="CellSectionHeader">Out of Control Actions</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Trigger OCAPs (Out of Control Actions and Procedures)</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Check box indicating whether to allow the chart to trigger the Out-of-Control Actions and Procedures when a violation occurs. If the check box is not selected, the Out-of-Control Actions and Procedures will not be triggered even if a violation occurs.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Put Container on Hold - reason code</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Hold reason that will be assigned to the container. If a violation occurs, the container will be placed on hold with this as the reason for the hold. </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Set Resource Status</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Status reason that will be assigned to the resource when a violation occurs.  </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Document to View</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Action setting the reference to the document to be viewed when an OCAP is triggered.  Document instances can be created by modeling of the Document object.  SPC does not support documents sets.  Only individual documents can be viewed.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Require Annotation</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Check box indicating whether an annotation will be required from the user when a violations occurs.  The annotation will apply to the data point that caused the violation.  The SPC Chart display pop-up cannot be closed until the data point has been annotated.  If the user attempts to close the pop-up, a message will be displayed to inform the user that an annotation is required.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">List of e-mail address (separate with commas)</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">E-mail addresses to which a notification is sent when a violation occurs. Separate each e-mail address with a comma.</p>
+                                    <p class="CellBody">The e-mail  can include DCD name, variable name and value, chart details (such as CL, UCL, LCL), violation, and details of any Out-of-Control-Actions that were taken if you configure text variables.  The server must have IE  9 or higher installed. IE must have its e-mail settings defaulted to the network e-mail server.</p>
+                                    <p class="CellBody"><span class="User_Entry" style="color: #000000;">Note:</span> Further e-mail option configuration is now possible in the application's App.Config file.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">E-mail Message</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">List of messages defined in the E-mail Message modeling object.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2" style="color: #ff0000;">
+                                    <p class="CellBody">Record against custom SPC data source</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2" style="color: #ff0000;">
+                                    <p class="CellBody">Check box indicating whether annotations or violations are recorded against a custom data source you provided rather than the application data collection. Ensure this box is selected if you are running charts on data outside of the Opcenter EX MDD or the Opcenter EX CR DataStore database.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2" style="color: #ff0000;">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1" style="color: #ff0000;" colspan="3">
+                                    <p class="CellSectionHeader">Parameters</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2">
+                                    <p class="CellBody">User Parameter (1-10)</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2">
+                                    <p class="CellBody">User-defined values entered in a ParamName=Value format. You can enter multiple values in a field, separated by commas.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body2">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p class="Head3-Side" data-mc-conditions="Default.ScreenOnly"><a name="How_to_Define_a_New_SPC_Chart"></a>
+            </p>
+            <p class="Head3-Side">How to Define a New SPC Chart<a name="kanchor69"></a></p>
+            <p class="_1bodyKeepWithNext">Follow these steps to define a new SPC Chart:</p>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>1.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">Open the <span class="User_Entry">SPC Chart</span> page. <span class="Emphasis">The SPC Chart page appears within the Modeling page.</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>2.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">Click <span class="User_Entry">New</span>. <span class="Emphasis">Blank fields appear for you to define a new instance.</span> </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>3.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">Enter the <span class="User_Entry">SPC Chart</span>, <span class="User_Entry">Chart Type</span>, <span class="User_Entry">Variable to chart</span>, <span class="User_Entry">Chart Generating Macro</span>, and <span class="User_Entry">SPC Chart Display Options</span>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>4.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;4.&lt;/b&gt;">Enter  optional information according to your business requirements. Refer to the field definitions table for information on the optional fields.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>5.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;5.&lt;/b&gt;">Click <span class="User_Entry">Save</span>. <span class="Emphasis">The application saves the modeling object and displays a success message.</span></td>
+                </tr>
+            </table>
+            <p class="Head3-Side" style="color: #000000;">How to Define a New Inline SPC Chart</p>
+            <p class="_1bodyKeepWithNext" style="color: #000000;">Follow these steps to define a new SPC Chart:</p>
+            <table class="AutoNumber_p_Step1" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step_KeepWithNext" valign="top"><span class="Number"><b>1.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step_KeepWithNext" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">Log on to Opcenter Execution Medical Device and Diagnostics.</td>
+                </tr>
+            </table>
+            <p class="_3bodyKeepWithNext" style="color: #000000;">Or</p>
+            <p class="_3body" style="color: #000000;">Log on to Opcenter Execution Core.</p>
+            <table class="AutoNumber_p_Step1" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>2.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">Select <b>Modeling</b> from the <b>Modeling</b> menu. <i>The Modeling page appears</i>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>3.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">Click <span class="User_Entry">SPC Chart</span>. <span class="Emphasis">The SPC&#160;Chart page appears within the Modeling page</span>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>4.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;4.&lt;/b&gt;">Click <span class="User_Entry">New</span>. <span class="Emphasis">Blank fields appear for you to define a new instance</span>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>5.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;5.&lt;/b&gt;">Enter the <span class="User_Entry">SPC Chart Name</span>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>6.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;6.&lt;/b&gt;">Select the <b>Inline SPC</b> checkbox to define an Inline SPC&#160;chart. </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>7.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;7.&lt;/b&gt;">Select a <span class="User_Entry">Chart Type</span>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>8.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;8.&lt;/b&gt;">Select a <span class="User_Entry">Variable to chart</span>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>9.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;9.&lt;/b&gt;">Enter optional information according to your business requirements. Refer to the field definitions table for information about the optional fields.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>10.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;10.&lt;/b&gt;">Click <span class="User_Entry">Save</span>. <span class="Emphasis">The application saves the modeling object and displays a success message.</span></td>
+                </tr>
+            </table>
+        </div>
+        <MadCap:pageFooter class="FirstPage">
+            <p class="copyright">© Siemens 2020</p>
+        </MadCap:pageFooter>
+    </body>
+</html>

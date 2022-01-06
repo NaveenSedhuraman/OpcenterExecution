@@ -1,0 +1,802 @@
+/* Copyright 2018 Siemens Product Lifecycle Management Software Inc. */
+
+/********************************* Table *************************************/
+
+aw-splm-table {
+    overflow: inherit;
+    /*width: 100%;*/
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+// Needed for table responsiveness in IE only
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    aw-splm-table {
+        height: 100%;
+    }
+}
+
+aw-splm-table .aw-visual-indicator {
+    padding-left: 8px;
+    padding-right: 0px;
+}
+
+aw-splm-table .aw-splm-table {
+    height: auto; // Prevents cell drop downs from being cut off by table boundary
+    overflow: visible; // min-height needed here for so that IE will apply flex shrink as expected
+    flex: 0 1 auto;
+    min-height: 1px;
+}
+
+/********************************* Table Containers **************************/
+
+.aw-splm-table-container {
+    display: flex;
+    flex: inherit;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.aw-splm-table-pinned-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.aw-splm-table-pinned-container-left {
+    float: left;
+    left: 0;
+}
+
+.aw-splm-table-pinned-container>.aw-splm-table-viewport {
+    z-index: 1;
+    overflow: auto;
+}
+
+.aw-splm-table-scroll-container .aw-splm-table-viewport {
+    overflow: auto;
+    width: 100%;
+    -ms-overflow-style: scrollbar;
+}
+
+.aw-splm-table-scroll-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    flex: inherit;
+    z-index: 2;
+}
+
+.aw-jswidgets-grid .aw-splm-table-canvas {
+    padding-top: 0;
+}
+
+.aw-splm-table-canvas {
+    position: relative;
+    padding-top: 1px;
+}
+
+.aw-splm-table-viewport {
+    flex: inherit;
+    position: relative;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: auto;
+    overflow-anchor: none;
+}
+
+// Makes scrollbars visible on iPad when -webkit-over-flow-scroll is set to auto.
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .aw-splm-table-viewport::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+    .aw-splm-table-viewport::-webkit-scrollbar-thumb {
+        background-color: #aaaaaa;
+    }
+}
+
+.aw-jswidgets-grid .aw-splm-table-pinned-container-left .ui-grid-cell:last-child {
+    border-right-style: solid;
+    border-right-width: 2px;
+}
+
+.aw-splm-table-scroll-contents {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+}
+
+.aw-base-scrollPanel.aw-splm-table-overflow-visible {
+    overflow: visible;
+}
+
+// LCS-199548: Tables shown in panel will have overflow set to hidden and cause LOV to be cutoff without this css rule.
+.aw-layout-declarativePanelRoot aw-splm-table .aw-layout-flexColumn,
+.aw-layout-infoPanelContainer aw-splm-table .aw-layout-flexColumn,
+.aw-layout-navigationAreaContainer aw-splm-table .aw-layout-flexColumn,
+    {
+    overflow: visible;
+}
+
+// LCS-220408 - (AW4.2-Firefox) Vertical scroll bar appears when resizing that is not expected. Other browsers OK.
+// Firefox scrollbar disappears when element width/height is less than 34px - https://bugzilla.mozilla.org/show_bug.cgi?id=292284
+@-moz-document url-prefix() {
+    .aw-splm-table-scroll-container .aw-splm-table-viewport {
+        min-width: 34px;
+    }
+}
+
+/********************************* Header ******************************/
+
+.aw-splm-table-header-row {
+    position: relative;
+    display: flex;
+}
+
+.aw-splm-table-header-row:before,
+.aw-splm-table-header-row:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+
+.aw-splm-table-header-row:after {
+    clear: both;
+}
+
+.aw-splm-table-pinned-container>.aw-splm-table-header-row {
+    z-index: 2;
+}
+
+.aw-splm-table-scroll-container>.aw-splm-table-header-row {
+    z-index: 1;
+}
+
+.aw-splm-table-header-cell {
+    border-style: solid;
+    border-collapse: collapse;
+    font-weight: 700;
+    position: relative;
+    box-sizing: border-box;
+    background-color: inherit;
+    background-clip: padding-box;
+    /* LCS-146892 - Regression: column header menu regression */
+    /* Maintain the display from aw-splm-table-header-row to its descendants */
+    display: inherit;
+    /* inherit from .aw-splm-table-header-row */
+}
+
+.aw-splm-table-header-cell-contents {
+    display: inherit;
+    /* inherit from .aw-splm-table-header-row */
+}
+
+.aw-splm-table-header-cell .aw-splm-table-column-menu-enabled {
+    cursor: pointer;
+}
+
+.aw-splm-table-header-cell-label {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline;
+}
+
+.aw-splm-table-header-cell-sort-icon {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.aw-jswidgets-grid .aw-splm-table-header-cell .aw-splm-table-header-cell-splitter {
+    border-right-style: solid;
+}
+
+div.stationaryHeader {
+    z-index: -100;
+    visibility: hidden;
+}
+
+.aw-splm-table-header-cell-splitter {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    cursor: col-resize;
+    float: right;
+    right: 0
+}
+
+/********************************* Sort Icon *********************************/
+
+[class^="aw-splm-table-icon"]:before,
+[class*=" aw-splm-table-icon"]:before {
+    /*font-family: "ui-grid";*/
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+}
+
+.aw-splm-table-icon {
+    width: rem-calc(24);
+    height: rem-calc(24);
+    object-fit: cover;
+}
+
+/********************************* Menu **************************************/
+
+.aw-splm-table-menu-container {
+    z-index: 5;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    -webkit-box-direction: normal;
+}
+
+.aw-splm-table-menu .aw-widgets-cellListItem>i {
+    display: inline-block;
+    width: 16px;
+}
+
+.aw-splm-table-menu .aw-widgets-cellListItem>div {
+    display: inline-block;
+}
+
+/********************************* Cells *************************************/
+
+.aw-splm-table .ui-grid-row {
+    flex-grow: 1;
+    display: flex;
+}
+
+.aw-splm-table-cellTop,
+.aw-splm-table-edit-cellTop {
+    align-items: center;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.aw-splm-table-cellText {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.ui-grid-cell {
+    overflow: hidden;
+    float: left;
+    position: relative;
+    border-right: 1px solid;
+    border-color: #d4d4d4;
+    box-sizing: border-box;
+}
+
+aw-splm-table .aw-splm-table .aw-splm-table-container .ui-grid-row .ui-grid-cell {
+    background-color: inherit;
+}
+
+.aw-jswidgets-grid .aw-splm-table-cell-contents {
+    outline: none;
+}
+
+.aw-splm-table-cell-contents {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 100%;
+}
+
+/********************************* Non Edit Cells ****************************/
+
+aw-splm-table .aw-jswidgets-arrayValueCellListItem:not(:last-of-type)::after {
+    content: ",\00a0";
+    line-height: normal;
+    padding-top: 5px;
+}
+
+.compact aw-splm-table .aw-jswidgets-arrayValueCellListItem:not(:last-of-type)::after {
+    padding-top: 1px;
+}
+
+li.aw-jswidgets-arrayValueCellListItem.aw-splm-table-cellText:last-of-type {
+    flex-grow: 1;
+}
+
+aw-splm-table .aw-jswidgets-arrayValueCellListItem {
+    flex-grow: 0;
+}
+
+aw-splm-table .aw-widgets-propertyValContainerMargin {
+    margin-bottom: 0;
+}
+
+aw-splm-table .aw-splm-table-cellTop .aw-splm-table-cellText {
+    font-weight: normal;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline;
+}
+
+aw-splm-table .aw-splm-table-tree-command-cell .aw-jswidgets-tableNonEditContainer {
+    height: calc(100% - 4px);
+}
+
+aw-splm-table .aw-splm-table-tree-command-cell .aw-splm-table-cellText {
+    padding-top: 3px;
+    overflow: hidden;
+}
+
+.aw-splm-table .aw-splm-table-cellTop {
+    display: flex;
+}
+
+.aw-splm-table-edit-non-array aw-property-text-area-val textarea {
+    position: absolute;
+    z-index: 3;
+    width: calc(100% - 4px);
+}
+
+.aw-splm-table .aw-splm-table-rtf-cell-item {
+    flex-direction: column;
+}
+
+/********************************* Edit Cells ********************************/
+
+/* override margin for UWs in grid cells while editing */
+
+.aw-jswidgets-tableEditContainer input,
+.aw-jswidgets-tableEditContainer input[type="checkbox"],
+.aw-jswidgets-tableEditContainer textarea {
+    margin: 0;
+    padding: 2px;
+}
+
+aw-splm-table .aw-splm-table-edit-cellTop div.aw-layout-flexRowContainer {
+    display: flex;
+}
+
+.aw-splm-table-edit-cellTop aw-property-radio-button-val {
+    padding: 0 0 8px 0;
+}
+
+// Prevents unnecessary wrapping in Edge
+.aw-splm-table-edit-cellTop aw-property-radio-button-val span {
+    display: inline;
+}
+
+.aw-splm-table-edit-cellTop div,
+.aw-splm-table-edit-cellTop aw-property-string-val,
+.aw-splm-table-edit-cellTop aw-property-val,
+.aw-splm-table-edit-cellTop aw-property-error,
+/*.aw-splm-table-edit-cellTop aw-property-text-area-val,*/
+
+.aw-splm-table-edit-cellTop aw-property-double-val,
+.aw-splm-table-edit-cellTop aw-property-integer-val,
+.aw-splm-table-edit-cellTop aw-property-non-edit-val,
+.aw-splm-table-edit-cellTop aw-property-lov-val,
+.aw-splm-table-edit-cellTop aw-property-date-val,
+.aw-splm-table-edit-cellTop aw-property-time-val,
+.aw-splm-table-edit-cellTop aw-property-date-time-val,
+.aw-splm-table-edit-cellTop aw-property-text-box-val,
+.aw-splm-table-edit-cellTop aw-property-object-val,
+/*.aw-splm-table-edit-cellTop aw-property-array-val,*/
+
+.aw-splm-table-edit-cellTop aw-property-rich-text-area-val,
+.aw-splm-table-edit-cellTop aw-lov-edit {
+    /*height: inherit !important;*/
+    height: inherit;
+}
+
+.aw-splm-table-edit-cellTop aw-property-val .aw-jswidgets-arrayWidgetContainer {
+    display: flex;
+}
+
+.aw-splm-table-edit-cellTop .aw-jswidgets-checkboxLabel {
+    margin-top: -3px;
+}
+
+.aw-splm-table-edit-cellTop aw-property-text-box-val input,
+.aw-splm-table-edit-cellTop aw-property-time-val input,
+.aw-splm-table-edit-cellTop>.aw-jswidgets-tableEditContainer,
+.aw-splm-table-edit-cellTop>.aw-jswidgets-tableEditContainer>aw-property-val {
+    height: 100% !important;
+}
+
+.aw-splm-table-edit-cellTop aw-property-object-val .aw-jswidgets-lovParentContainer,
+.aw-splm-table-edit-cellTop aw-property-array-val aw-property-array-edit-val {
+    width: 100%;
+}
+
+.aw-splm-table-edit-cellTop aw-property-rich-text-area-val .aw-widgets-propertyRichTextEditValue {
+    position: absolute;
+    height: unset !important;
+    margin-top: 0px !important;
+    white-space: normal;
+    z-index: 3;
+    width: calc(100% - 4px);
+}
+
+.aw-splm-table-edit-cellTop .aw-jswidgets-arrayWidgetContainer {
+    margin: 0 2px 0 0;
+    z-index: 3;
+    min-width: calc(100% - 4px);
+    top: 2px;
+}
+
+// Fixes cell width issue present in IE only
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .aw-splm-table-edit-cellTop .aw-jswidgets-arrayWidgetContainer {
+        width: calc(100% - 4px);
+    }
+    .aw-splm-table-edit-cellTop .aw-jswidgets-arrayEditableWidget {
+        width: 100%;
+    }
+}
+
+.aw-splm-table-edit-cellTop aw-property-array-val input[type="text"].aw-widgets-propertyEditValue {
+    padding: 3px;
+}
+
+// Firefox specific edit cell styling
+@-moz-document url-prefix() {
+    .aw-splm-table-edit-cellTop aw-property-array-val input[type="text"].aw-widgets-propertyEditValue {
+        padding: 5px;
+    }
+}
+
+.aw-splm-table-edit-cellTop aw-property-date-time-val .aw-jswidgets-dateTimeInputbox {
+    display: flex;
+}
+
+.aw-splm-table-edit-cellTop aw-property-time-val {
+    width: inherit;
+}
+
+.aw-splm-table-edit-cellTop .aw-jswidgets-dateInputbox .aw-widgets-innerWidget {
+    position: relative;
+}
+
+.aw-splm-table-edit-cellTop aw-property-array-val aw-property-time-val .aw-widget-icon,
+.aw-splm-table-edit-cellTop aw-property-date-val .aw-widget-icon {
+    top: 0;
+}
+
+.aw-splm-table-edit-cellTop aw-property-time-val .aw-widget-icon,
+.aw-splm-table-edit-cellTop aw-property-date-val .aw-widget-icon {
+    right: -6px;
+    width: 16px;
+    height: 16px;
+}
+
+.aw-splm-table-edit-cellTop .aw-jswidgets-arrayEditWidgetContainer .aw-jswidgets-timepicker {
+    height: 100%;
+}
+
+.aw-splm-table-edit-cellTop .aw-jswidgets-tableEditContainer aw-property-val textarea {
+    height: 28px;
+}
+
+/********************************* Command Bar *******************************/
+
+.aw-splm-command-bar-present {
+    flex-direction: inherit;
+}
+
+.aw-splm-command-bar-present aw-table-command-bar {
+    align-self: flex-end;
+}
+
+/********************************* Drag **************************************/
+
+.dragHeader {
+    position: absolute;
+    z-index: 100;
+}
+
+.dragHeader .aw-splm-table-cell-contents {
+    border: 1px solid;
+    border-color: black;
+}
+
+.ui-grid-cell .aw-jswidgets-draghandle {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: crosshair;
+}
+
+aw-splm-table.aw-jswidgets-dragfilling {
+    cursor: crosshair;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ui-grid-cell .aw-jswidgets-draghandle,
+aw-splm-table.aw-jswidgets-dragfilling .ui-grid-cell .aw-jswidgets-draghandle {
+    display: none;
+}
+
+.nonTouch .ui-grid-cell:hover .aw-jswidgets-draghandle,
+aw-splm-table.aw-jswidgets-dragfilling .ui-grid-cell.dragSrc .aw-jswidgets-draghandle {
+    display: inherit;
+}
+
+aw-splm-table.aw-jswidgets-dragfilling .ui-grid-cell.dragCell.dragCellTop {
+    border-top-color: black;
+}
+
+aw-splm-table.aw-jswidgets-dragfilling .ui-grid-cell.dragCell.dragCellBottom {
+    border-bottom-color: black;
+}
+
+/********************************* Menu **************************************/
+
+.aw-splm-table-menu-popup {
+    width: 150px;
+    left: 253px;
+    top: 21px;
+    position: absolute;
+    border: solid 1px;
+    min-width: 100px;
+    height: auto;
+    z-index: 1000;
+    font-size: $fontsize_13px;
+    font-family: "Segoe UI", "Open Sans", Verdana, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+.aw-splm-table-menu-popup .aw-widgets-cellListItem {
+    float: none;
+    width: auto;
+    display: block;
+    cursor: pointer;
+    padding: 4px 15px 4px 10px;
+    max-width: 100%;
+    border-color: inherit;
+    margin: 0;
+    height: 24px;
+    line-height: 24px;
+
+    i, div {
+        line-height: 12px;
+    }
+}
+
+.aw-splm-table-menu-popup .grid-menu-command .aw-widgets-cellListItem {
+    padding: 10px 15px 10px 10px;
+    height: 12px;
+    line-height: 12px;
+}
+
+.aw-splm-table-menu-popup .aw-widgets-cellListItem i {
+    width: 12%;
+}
+
+.aw-splm-table-menu-popup .aw-widgets-cellListItem div {
+    width: 86%;
+    margin-left: 2%;
+}
+
+.aw-splm-table-menu-button {
+    border: none;
+    cursor: pointer;
+    font-weight: normal;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+}
+
+.aw-splm-table-menu-button .aw-commands-commandIconButton {
+    height: 16px;
+    width: 16px;
+}
+
+/********************************* Tree **************************************/
+
+.aw-splm-table .ui-grid-tree-base-row-header-buttons.ui-grid-tree-base-header {
+    height: 34px;
+    width: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    margin-right: 5px;
+    flex-shrink: 0;
+}
+
+.aw-splm-table .ui-grid-tree-base-row-header-buttons.ui-grid-tree-base-header .aw-base-icon {
+    height: rem-calc(16);
+    width: rem-calc(16);
+}
+
+.aw-splm-table .aw-widgets-dataGridCellImage {
+    margin-right: 8px;
+}
+
+.aw-splm-table .aw-widgets-dataGridCellImage>.aw-base-icon {
+    height: auto;
+    width: auto;
+    max-height: 24px;
+    max-width: 24px;
+    object-fit: cover;
+}
+
+.aw-splm-table-tree-command-cell .aw-widgets-propertyValContainerMargin {
+    margin-bottom: 0;
+}
+
+.aw-splm-table-tree-command-cell .aw-jswidgets-cellTop {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.aw-splm-table-tree-command-cell .aw-jswidgets-dataGridCellText {
+    display: inline-block;
+}
+
+.aw-splm-table-cellTop .aw-jswidgets-gridCellCommands {
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    width: auto;
+    height: rem-calc(16);
+    /*display: inline-block;*/
+    display: flex;
+    right: 2px;
+    flex-direction: column;
+}
+
+.aw-splm-table-cellTop:hover .aw-widgets-cellListCellCommandHover {
+    display: inline-block;
+}
+
+/********************************* Tooltip ***********************************/
+
+.aw-splm-table .aw-splm-table-tooltipPopup {
+    position: fixed;
+}
+
+/********************************* Decorators ********************************/
+
+.aw-splm-table-cellColorIndicator {
+    height: 100%;
+    flex-shrink: 0;
+    margin-right: 2px;
+}
+
+aw-splm-table .aw-jswidgets-grid .ui-grid-cell .aw-splm-table-icon-cell {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    display: inherit;
+    height: inherit;
+    padding: 2px;
+    padding-left: 0.5em;
+}
+
+aw-splm-table .aw-jswidgets-grid .aw-jswidgets-tablecell {
+    padding-right: 0px;
+}
+
+/********************************* Property Value Link ***********************/
+
+.aw-splm-table-clearfix:before,
+.aw-splm-table-clearfix:after {
+    content: "";
+    display: table;
+}
+
+.aw-splm-table-clearfix:after {
+    clear: both;
+}
+
+/********************************* Misc **************************************/
+
+/* Dependency on ui-grid CSS */
+
+.ui-grid-row {
+    clear: both;
+}
+
+/* For column rearrangement */
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.aw-splm-table-flexRow {
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    width: 100%;
+    outline: none;
+    justify-content: right;
+    align-items: center;
+}
+
+.hiddenUtility {
+    display: none !important;
+}
+
+.aw-splm-table-menu-popup .aw-splm-table-menu-item {
+    display: block;
+    padding: 8px 8px 8px 8px;
+    white-space: nowrap;
+}
+
+.aw-splm-table-menu-popup hr {
+    margin: 0;
+}
+
+/* This style will override the border-color for the line between pinned & scroll containers. */
+.aw-splm-table-pinned-container-drop-frame.aw-widgets-dropframe.aw-theme-dropframe.ui-grid-row {
+    border-right-width: $splm_table_drag_drop_line_width;
+    border-top-right-radius: $splm_table_drag_drop_line_radius;
+    border-bottom-right-radius: $splm_table_drag_drop_line_radius;
+    border-right-style: $splm_table_drag_drop_border_style;
+}
+
+/* This style will override the border-color for the line between pinned & scroll containers. */
+.aw-splm-table-scroll-container-drop-frame.aw-widgets-dropframe.aw-theme-dropframe.ui-grid-row {
+    border-left-width: $splm_table_drag_drop_line_width;
+    border-top-left-radius: $splm_table_drag_drop_line_radius;
+    border-bottom-left-radius: $splm_table_drag_drop_line_radius;
+    border-left-style: $splm_table_drag_drop_border_style;
+}

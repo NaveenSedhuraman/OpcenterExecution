@@ -1,0 +1,37 @@
+{
+    "schemaVersion": "1.0.0",
+    "imports": [
+        "js/aw-avatar.directive",
+        "js/aw-row.directive",
+        "js/aw-column.directive",
+        "js/aw-header-context.directive",
+        "js/aw-command-bar.directive",
+        "js/aw-link.directive"
+    ],
+    "data": {
+        "userName": {
+            "displayName": "{{ctx.userSession.props.user.uiValues[0]}}",
+            "type": "STRING"
+        }
+    },
+    "actions": {
+        "viewProfile": {
+            "actionType": "JSFunction",
+            "method": "go",
+            "inputData": {
+                "transitionTo": "com_siemens_splm_clientfx_tcui_xrt_showObject",
+                "toParams": {
+                    "uid": "{{ctx.user.uid}}"
+                }
+            },
+            "deps": "js/locationNavigation.service",
+            "events": {
+                "success": [
+                    {
+                        "name": "awPopupWidget.close"
+                    }
+                ]
+            }
+        }
+    }
+}

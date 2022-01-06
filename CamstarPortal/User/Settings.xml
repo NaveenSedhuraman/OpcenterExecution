@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PortalSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="camstar.com/Portal.Configuration.Model">
+  <DefaultSettings CachePersonalization="true" CancelKeyPressList="'8'" UploadDirectory="\\GCPCAMWEBD05\CamstarUploads2\" DefaultTheme="Horizon" MaxAttachmentSizeLimit="30" MaxDataTransferRefreshAttempts="10" DisplayDropdownIconWhenReadOnly="false" ComboRowsRange="30" LogonAutoComplete="true" ListDisplayExpression="Name" RevisionDisplayExpression="Name + &quot; : &quot; + Revision" DisplayUserDCDTooltips="true" ESignatureRequired="true" WIPMessagesRequired="true" ConciergeRefreshInterval="0" ConciergeItemsDisplayedPerSection="10" CopyNDOFloating="~/CopyNDO.aspx?CDOType={0}&amp;InstanceName={1}" CopyRDOFloating="~/CopyRDO.aspx?CDOType={0}&amp;InstanceName={1}&amp;InstanceRev={2}&amp;CurrentAction={3}" CopyNDO="CopyNDO.aspx?CDOType={0}&amp;InstanceName={1}" CopyRDO="CopyRDO.aspx?CDOType={0}&amp;InstanceName={1}&amp;InstanceRev={2}&amp;CurrentAction={3}" MainPage="" HelpPage="onlinehelpoutput/psf_help/portalsfug_csh.htm" RoleBasedAccess="true" PasswordLengthLimit="256" SPCEnabled="false" SuccessPopupMessageEnabled="true" SuccessPopupFadeOutTime="3000" TraceEnabled="false" TracePath="c:\Temp" CountersEnabled="false" EnforceCheckOutWhenEditing="false" FullScreenMode="false">
+    <SelectionValuesSettings RowsPerPage="50" PagesRequested="10" />
+  </DefaultSettings>
+  <StudioSettings AlwaysEnableSave="false" PropertyCategoriesAlwaysExpanded="true" PropertyCategoriesPersistence="false">
+    <PropertyCategories>
+      <Category Name="General" Collapsed="false" />
+    </PropertyCategories>
+    <DefaultShopfloorPages>
+      <Page Name="MfgAuditTrailNew" />
+      <Page Name="AssociateVP" />
+      <Page Name="ChangeQtyMultiReasonVP" />
+      <Page Name="ChangeQtyVP" />
+      <Page Name="ChangeQtyVP_R2" />
+      <Page Name="CloseVP" />
+      <Page Name="CombineContainersVP" />
+      <Page Name="CombineQtyVP" />
+      <Page Name="ComponentDefectVP" />
+      <Page Name="ComponentIssueAdvancedVP" />
+      <Page Name="ComponentIssueVP" />
+      <Page Name="ComponentIssue_VPR2" />
+      <Page Name="ComponentRemoveVP" />
+      <Page Name="ComponentReplaceVP" />
+      <Page Name="ContainerAttrMaintVP" />
+      <Page Name="ContainerDefectVP" />
+      <Page Name="ContainerHoldVP" />
+      <Page Name="ContainerMaintenanceVP" />
+      <Page Name="ContainerReleaseVP" />
+      <Page Name="ContainerSearchVP" />
+      <Page Name="ContainerThruputVP" />
+      <Page Name="CreateNCRVP" />
+      <Page Name="CRTemplateDashboardVP" />
+      <Page Name="CRTemplateReportVP" />
+      <Page Name="CRTemplateReportWithInputVP" />
+      <Page Name="DataCollectionVP" />
+      <Page Name="DisassociateVP" />
+      <Page Name="DT_Execution_VP" />
+      <Page Name="DT_Selection_VP" />
+      <Page Name="DT_SelectionMode_VP" />
+      <Page Name="DT_Summary_VP" />
+      <Page Name="DT_Target_VP" />
+      <Page Name="DT_TargetImpact_VP" />
+      <Page Name="DT_TransferType_VP" />
+      <Page Name="DelegateTask_Popup" />
+      <Page Name="DelegateByDatePopup_VP" />
+      <Page Name="DelegationSearch_VP" />
+      <Page Name="EProcDocumentsVP" />
+      <Page Name="EProcedureVP" />
+      <Page Name="EProcTaskListSummaryVP" />
+      <Page Name="ErrorPage" />
+      <Page Name="ESigCaptureVP" />
+      <Page Name="ESigQualityCaptureVP" />
+      <Page Name="ExecutionContainerPage" />
+      <Page Name="LineAssignmentPage" />
+      <Page Name="LineAssignmentVP_R2" />
+      <Page Name="MaintClassActivation_VP" />
+      <Page Name="ResourceActivation_VP" />
+      <Page Name="AttachDocument_VP" />
+      <Page Name="AttachDocumentManagement_VP" />
+      <Page Name="DetachDocPopup_VP" />
+      <Page Name="CollectSamplingDataVP" />
+      <Page Name="CollectLotSamplingData_VP" />
+      <Page Name="CreateSamplingLot_VP" />
+      <Page Name="CreateSamplingStatusUpdate_VP" />
+      <Page Name="CurrentSamplingStatusUpdate_VP" />
+      <Page Name="InstructionTaskItemDetail_VP" />
+      <Page Name="ShopfloorBase_VP" />
+      <Page Name="ShopfloorBaseEproc_VP" />
+      <Page Name="UpdateSamplingLot_VP" />
+      <Page Name="TrainingRecordAddPopUp_VP" />
+      <Page Name="TrainingRecordComparison_VP" />
+      <Page Name="TrainingRecordManagement_VP" />
+      <Page Name="TrainingRecordUpdatePopUp_VP" />
+      <Page Name="FilterPopup_VP" />
+      <Page Name="DT_CDOFilterPopup_VP" />
+      <Page Name="DT_ExportExecution_VP" />
+      <Page Name="DT_ImportExecution_VP" />
+      <Page Name="DT_PopupFilter_VP" />
+      <Page Name="DT_References_VP" />
+      <Page Name="MaintenanceManagementVP" />
+      <Page Name="MessageCenterPage" />
+      <Page Name="MessageCenterVP" />
+      <Page Name="MfgAuditTrailVP" />
+      <Page Name="ResourceAuditTrailVP" />
+      <Page Name="ModelViewerPopup" />
+      <Page Name="MoveInVP" />
+      <Page Name="MoveInVP_R2" />
+      <Page Name="MoveNonStdVP" />
+      <Page Name="MoveStdVP" />
+      <Page Name="MoveStdVP_R2" />
+      <Page Name="MultiContainerCloseVP" />
+      <Page Name="MultiContainerHoldVP" />
+      <Page Name="MultiContainerMoveNonStdVP" />
+      <Page Name="MultiContainerOpenVP" />
+      <Page Name="MultiContainerReleaseVP" />
+      <Page Name="OpenVP" />
+      <Page Name="OperationalViewScanVP" />
+      <Page Name="OperationalViewVP" />
+      <Page Name="OperationalViewVPR2" />
+      <Page Name="OrderDispatchVP" />
+      <Page Name="PrintContainerLabelVP" />
+      <Page Name="PrintProductionEventLabelVP" />
+      <Page Name="ProcessTimerInquiry_VP" />
+      <Page Name="ReprintContainerLabelVP" />
+      <Page Name="ResourceCollectDataVP" />
+      <Page Name="ResourceSetupVP" />
+      <Page Name="ResourceThruputVP" />
+      <Page Name="ReworkVP" />
+      <Page Name="ShipVP" />
+      <Page Name="SPCAnnotationsVP" />
+      <Page Name="SPCChartsViewerVP" />
+      <Page Name="SPCTesterFormVP" />
+      <Page Name="SplitContainerVP" />
+      <Page Name="SplitQuantityVP" />
+      <Page Name="StartPage" />
+      <Page Name="Start_M" />
+      <Page Name="StopTimer_VP" />
+      <Page Name="TransferVP" />
+      <Page Name="TriageVP" />
+      <Page Name="TwoLevelStartVP" />
+      <Page Name="TxnReversalVP" />
+      <Page Name="UserProfilePage" />
+      <Page Name="UserProfile_VP" />
+      <Page Name="WIPMessagesProcessingVP" />
+      <Page Name="WorkflowCanvasPopup_VP" />
+    </DefaultShopfloorPages>
+    <DefaultModelingPages>
+      <Page Name="ApprovalTemplate_VP" />
+      <Page Name="AQLLevel_VP" />
+      <Page Name="BOMMaint_VP" />
+      <Page Name="BusinessRule_VP" />
+      <Page Name="BusinessRuleHandlerMaint_VP" />
+      <Page Name="BusinessRuleScheduleMaint_VP" />
+      <Page Name="Carrier_VP" />
+      <Page Name="CarrierStatusCode_VP" />
+      <Page Name="CauseCode_VP" />
+      <Page Name="ChangeMgtApplication_VP" />
+      <Page Name="ChangeMgtSpec_VP" />
+      <Page Name="ChecklistTemplateMaint_VP" />
+      <Page Name="CM_WfPathDetails_VP" />
+      <Page Name="CM_WfStepDetails_VP" />
+      <Page Name="CM_WfSubworkflowStepDetails_VP" />
+      <Page Name="CM_WorkflowMaint_VP" />
+      <Page Name="Computation_VP" />
+      <Page Name="ComputationTaskItemDetail_VP" />
+      <Page Name="DataCollectionDefMaint_VP" />
+      <Page Name="DispositionMaint_VP" />
+      <Page Name="Document_VP" />
+      <Page Name="DocumentSet_VP" />
+      <Page Name="EmployeeMaint_VP" />
+      <Page Name="EProcedureMaint_VP" />
+      <Page Name="ERPBOMMaint_VP" />
+      <Page Name="ESigRequirementMaint_VP" />
+      <Page Name="FailureMode_VP" />
+      <Page Name="InspectionLevel_VP" />
+      <Page Name="MaintenanceClass_VP" />
+      <Page Name="MasterDataCatalog_VP" />
+      <Page Name="MasterRecipeVP" />
+      <Page Name="ModelingAuditTrail_VP" />
+      <Page Name="ModelingAuditTrailPopup_VP" />
+      <Page Name="ModelingConfirmPopup_VP" />
+      <Page Name="ModelingCopyPopup_VP" />
+      <Page Name="ModelingCopyRevPopup_VP" />
+      <Page Name="ModelingESig_VP" />
+      <Page Name="ModelingWIPPopup_VP" />
+      <Page Name="NamedObject_VP" />
+      <Page Name="NamedObjectGroupMaint_VP" />
+      <Page Name="NumberingRuleMaint_VP" />
+      <Page Name="ObjectDataPointDetail_VP" />
+      <Page Name="Organization_VP" />
+      <Page Name="PackagePriorityCode_VP" />
+      <Page Name="PortalMessageCategoryMaint_VP" />
+      <Page Name="PriorityCode_VP" />
+      <Page Name="ProcessTimer_VP" />
+      <Page Name="ProductFamily_VP" />
+      <Page Name="RecipeListComputationTaskItemDetail_VP" />
+      <Page Name="RecipeListInstructionTaskItemDetail_VP" />
+      <Page Name="RecipeListMaint_VP" />
+      <Page Name="RecipeListRecipeIssueTaskItemDetail_VP" />
+      <Page Name="ResolvedEntries_VP" />
+      <Page Name="ResourceFamily_VP" />
+      <Page Name="ResourceStatusCode_VP" />
+      <Page Name="ResponseSetMaint_VP" />
+      <Page Name="RevisionedObjectGroupMaint_VP" />
+      <Page Name="RevisionedObjectMaint_VP" />
+      <Page Name="SampleDataPointMaint_VP" />
+      <Page Name="SampleTestMaint_VP" />
+      <Page Name="SamplingPlanMaint_VP" />
+      <Page Name="Scale_VP" />
+      <Page Name="ScaleStatusCode_VP" />
+      <Page Name="ServerCatalogSystem_VP" />
+      <Page Name="SetupMaint_VP" />
+      <Page Name="Shift_VP" />
+      <Page Name="SPCChart_VP" />
+      <Page Name="SPCConnection_VP" />
+      <Page Name="SPCChartTypeMaint_VP" />
+      <Page Name="SPCQueryMaint_VP" />
+      <Page Name="SpecMaintForm_VP" />
+      <Page Name="SummaryTableDef_VP" />
+      <Page Name="SummaryTableDefTestPopup_VP" />
+      <Page Name="SwitchingRuleMaint_VP" />
+      <Page Name="TaskList_VP" />
+      <Page Name="TrainingPlanMaint_VP" />
+      <Page Name="TrainingRecordStatus_VP" />
+      <Page Name="TrainingRequirementMaint_VP" />
+      <Page Name="TransactionTaskItemDetail_VP" />
+      <Page Name="TriageSpecMaint_VP" />
+      <Page Name="UserDataCollectionDef_VP" />
+      <Page Name="UserLabel_VP" />
+      <Page Name="UserQueryTestPopup_VP" />
+      <Page Name="ValueDataPointDetail_VP" />
+      <Page Name="WfPathDetails_VP" />
+      <Page Name="WfReworkPathDetails_VP" />
+      <Page Name="WfStepDetails_VP" />
+      <Page Name="WfSubworkflowStepDetails_VP" />
+      <Page Name="WorkflowMaint_VP" />
+      <Page Name="ApprovalDecisionList_VP" />
+      <Page Name="BillOfProcess_VP" />
+      <Page Name="ModelingBaseVP" />
+      <Page Name="ModelingVP" />
+      <Page Name="UIPreference_VP" />
+      <Page Name="EnterpriseMaint_VP" />
+      <Page Name="ResourceType_VP" />
+      <Page Name="ResourceStatusModel_VP" />
+      <Page Name="Site_VP" />
+      <Page Name="ContainerLevelMaint_VP" />
+      <Page Name="MSMQTransport_VP" />
+      <Page Name="FTPTransport_VP" />
+      <Page Name="Customer_VP" />
+      <Page Name="EmailNotification_VP" />
+      <Page Name="EmailDistribution_VP" />
+      <Page Name="EmailMessage_VP" />
+      <Page Name="ERPRoute_VP" />
+      <Page Name="Dictionary_VP" />
+      <Page Name="SMTPTransport_VP" />
+      <Page Name="ShipmentDestination_VP" />
+      <Page Name="RecurringDateReq_VP" />
+      <Page Name="DispatchRule_VP" />
+      <Page Name="DocumentViewer_VP" />
+      <Page Name="BusinessRuleHandler_VP" />
+      <Page Name="BusinessRuleSchedule_VP" />
+      <Page Name="MfgCalendarMaint_VP" />
+      <Page Name="PrintQueue_VP" />
+      <Page Name="PrinterLabelDefinition_VP" />
+      <Page Name="Operation_VP" />
+      <Page Name="SalesOrder_VP" />
+      <Page Name="TextVariable_VP" />
+      <Page Name="FactoryMaint_VP" />
+      <Page Name="MaintClassActivationVP" />
+      <Page Name="ResourceGroup_VP" />
+      <Page Name="WorkCenterMaint_VP" />
+      <Page Name="Product_VP" />
+      <Page Name="Role_VP" />
+      <Page Name="DateRequirement_VP" />
+      <Page Name="ThruputRequirement_VP" />
+      <Page Name="Resource_VP" />
+      <Page Name="UserConstantMaint_VP" />
+      <Page Name="VendorMaint_VP" />
+      <Page Name="TeamMaint_VP" />
+      <Page Name="WebServiceTransportMaint_VP" />
+      <Page Name="UserQuery_VP" />
+      <Page Name="MfgOrder_VP" />
+      <Page Name="PackageCreationTemplate_VP" />
+      <Page Name="SmartScanRule_VP" />
+      <Page Name="CIO_OutboundMessageDefVP" />
+      <Page Name="CIO_Settings_VP" />
+      <Page Name="CIO_TemplateVP" />
+      <Page Name="CIO_ListProcessorVP" />
+      <Page Name="CIO_UserQueryVP" />
+      <Page Name="CIO_QueryPortalPageMaintVP" />
+    </DefaultModelingPages>
+    <DefaultQualityPages>
+      <Page Name="CancelApprovalSheet_VP" />
+      <Page Name="ChangeCategoryVP" />
+      <Page Name="EventAssignChecklist_VP" />
+      <Page Name="GenericEventClassificationVP" />
+      <Page Name="GenericEventFailuresVP" />
+      <Page Name="GenericEventLotInformationVP" />
+      <Page Name="GenericEventManage_VP" />
+      <Page Name="GenericEventAttachmentVP" />
+      <Page Name="ManageMyRecordsVP" />
+      <Page Name="ProductionEventManage_VP" />
+      <Page Name="ProductionEventRecord_VP" />
+      <Page Name="QualityObjectResolution_VP" />
+      <Page Name="QualitySearch_VP" />
+      <Page Name="ReassignOwnerVP" />
+      <Page Name="ReOpenQOVP" />
+      <Page Name="SignApproval_VP" />
+    </DefaultQualityPages>
+    <DefaultGeneralPages>
+      <Page Name="MainPage" />
+      <Page Name="ModelingDataFilterSessionValuePopup_VP" />
+      <Page Name="ContentHierarchy_VP" />
+    </DefaultGeneralPages>
+    <DefaultChangeManagementPages>
+      <Page Name="ActivateChangePkg_VP" />
+      <Page Name="ActivationImpact_VP" />
+      <Page Name="ActivationInquiry_VP" />
+      <Page Name="ActivationSearchMultiple_VP" />
+      <Page Name="AlterChangePkg_VP" />
+      <Page Name="ApprovePackagePLM_VP" />
+      <Page Name="AssignApproval_VP" />
+      <Page Name="AssignChangePkgCompletePopup_VP" />
+      <Page Name="AssignChangePkgContent_VP" />
+      <Page Name="AssignChangePkgContentWhereUsed_VP" />
+      <Page Name="CancelApproval_VP" />
+      <Page Name="ChangePkgContentComplete_VP" />
+      <Page Name="ChangePkgWorkflowPopup_VP" />
+      <Page Name="ClosePackageMultiPopup_VP" />
+      <Page Name="ClosePackageSinglePopup_VP" />
+      <Page Name="CM_PackageDetails_VP" />
+      <Page Name="CM_PackageWorkflowPopup_VP" />
+      <Page Name="CM_WorkflowCanvasPopup_VP" />
+      <Page Name="CollaboratorEntryDetailsPopUp_VP" />
+      <Page Name="CollaboratorTemplate_VP" />
+      <Page Name="ContentChangeHistoryInquiry_VP" />
+      <Page Name="DeployChangePkg_VP" />
+      <Page Name="DeploymentDetailsPopup_VP" />
+      <Page Name="ManageChangePackageLinkagePopup_VP" />
+      <Page Name="MoveNonStdChangePkg_VP" />
+      <Page Name="OpenPackageMultiPopup_VP" />
+      <Page Name="OpenPackageSinglePopup_VP" />
+      <Page Name="OverrideConfirmation_VP" />
+      <Page Name="PackageContentSummaryPopup_VP" />
+      <Page Name="PackageInquiry_VP" />
+      <Page Name="PackageInquiryPopup_VP" />
+      <Page Name="PackageSearchMultiple_VP" />
+      <Page Name="RouteApproval_VP" />
+      <Page Name="SetChangePackage_VP" />
+      <Page Name="SignatureApproval_VP" />
+      <Page Name="SignSingleApproval_VP" />
+      <Page Name="StartChangePkg_VP" />
+      <Page Name="TargetSystemsPopup_VP" />
+      <Page Name="UpdateChangePkg_VP" />
+      <Page Name="VoidPackageMultiPopup_VP" />
+      <Page Name="VoidPackageSinglePopup_VP" />
+    </DefaultChangeManagementPages>
+  </StudioSettings>
+  <DomainSettings>
+    <Domains>
+      <Domain Name="dexcom.dexcominc.com" />
+      <Domain Name="." />
+    </Domains>
+  </DomainSettings>
+  <ThemeSettings>
+    <Themes>
+      <Theme Name="Classic" />
+      <Theme Name="Horizon" />
+    </Themes>
+  </ThemeSettings>
+  <LanguageSettings>
+    <Languages />
+  </LanguageSettings>
+  <TimeZoneSettings>
+    <TimeZones>
+      <TimeZone Name="EDT" Offset="-04:00" />
+      <TimeZone Name="EST" Offset="-05:00" />
+    </TimeZones>
+  </TimeZoneSettings>
+  <CurrentCultureSettings>
+    <DateTimeFormat>
+      <ShortDatePattern />
+      <LongTimePattern />
+    </DateTimeFormat>
+    <NumberFormat>
+      <NumberDecimalSeparator />
+    </NumberFormat>
+  </CurrentCultureSettings>
+  <GridSettings RowsPerPage="20" VisibleRows="7" PagesRequested="5">
+    <Locales>
+      <Text Path="defaults.recordtext" LabelName="Lbl_GridDisplayingToOfItems" />
+      <Text Path="defaults.recordtexthorizon" LabelName="Lbl_GridShowingToOfItems" />
+      <Text Path="defaults.emptyrecords" LabelName="Grid_EmptyRecordsText" />
+      <Text Path="defaults.loadtext" LabelName="Lbl_PopupLoadingTitle" />
+      <Text Path="defaults.pgtext" LabelName="Lbl_GridPagesOf" />
+      <Text Path="defaults.pgtexthorizon" LabelName="Lbl_GridPages" />
+      <Text Path="defaults.selectedCountFormat" LabelName="Lbl_SelectedCountFormat" />
+      <Text Path="nav.edittitle" LabelName="Lbl_GridNavEditTitle" />
+      <Text Path="nav.addtitle" LabelName="Lbl_GridNavAddTitle" />
+      <Text Path="nav.deltitle" LabelName="Lbl_GridNavDelTitle" />
+      <Text Path="nav.searchtitle" LabelName="Lbl_GridNavSearchTitle" />
+      <Text Path="nav.refreshtitle" LabelName="Lbl_GridNavReloadTitle" />
+      <Text Path="nav.alertcap" LabelName="Lbl_Warning" />
+      <Text Path="nav.alerttext" LabelName="Lbl_GridNavAlertText" />
+      <Text Path="nav.viewtitle" LabelName="Lbl_GridNavViewTitle" />
+      <Text Path="camstar.ExcelExport.caption" LabelName="Lbl_ExportData" />
+      <Text Path="camstar.ExcelExport.excelExportCaption" LabelName="Lbl_ExcelExport" />
+      <Text Path="camstar.ExcelExport.csvExportCaption" LabelName="Lbl_CSVExport" />
+      <Text Path="camstar.ExcelExport.allRecOption" LabelName="Lbl_AllRecOption" />
+      <Text Path="camstar.ExcelExport.currRecCurColsOption" LabelName="Lbl_CurrRecCurColsOption" />
+      <Text Path="camstar.ExcelExport.currRecAllColsOption" LabelName="Lbl_CurrRecAllColsOption" />
+      <Text Path="camstar.EditingDialog.addTitle" LabelName="AddButton" />
+      <Text Path="camstar.EditingDialog.editTitle" LabelName="Actions_Edit" />
+      <Text Path="camstar.EditingDialog.ResetButton" LabelName="ResetButton" />
+      <Text Path="camstar.EditingDialog.OkButton" LabelName="OKButton" />
+      <Text Path="camstar.EditingDialog.CloseButton" LabelName="CloseButton" />
+      <Text Path="camstar.ColumnChooserDialog.caption" LabelName="Grid_ShowColumns" />
+      <Text Path="camstar.ColumnChooserDialog.title" LabelName="Grid_ShowColumns" />
+      <Text Path="camstar.ColumnChooserDialog.showAllButton" LabelName="Lbl_ShowAll" />
+      <Text Path="camstar.ColumnChooserDialog.hideAllButton" LabelName="Lbl_HideAll" />
+      <Text Path="camstar.ColumnChooserDialog.visibleCaption" LabelName="Lbl_VisibleColumns" />
+      <Text Path="camstar.ColumnChooserDialog.hiddenCaption" LabelName="Lbl_HiddenColumns" />
+      <Text Path="camstar.ColumnChooserDialog.oneColumnReqiredMsg" LabelName="Lbl_OneColumnReqiredMsg" />
+      <Text Path="camstar.ColumnChooserDialog.ApplyButton" LabelName="Lbl_Apply" />
+      <Text Path="camstar.ColumnChooserDialog.CloseButton" LabelName="CloseButton" />
+      <Text Path="col.caption" LabelName="Lbl_SelectColumns" />
+      <Text Path="camstar.Validation.fieldRequired" LabelName="Lbl_FieldIsRequired" />
+      <Text Path="camstar.Validation.warning" LabelName="StatusMessage_Warning" />
+    </Locales>
+  </GridSettings>
+  <SearchSettings AdvancedSearchTypeConfigFilePath="~/AdvancedSearchConfig.xml" MaxSavedSearches="10" MaxExcelExportRecords="10000" />
+  <SmartScanningSettings Enabled="false" Preamble="!" Terminators="\t">
+    <ScannerTemplates>
+      <ScannerTemplate Name="Container" Prefix="#Container#" />
+      <ScannerTemplate Name="Carrier" Prefix="#Carrier#" />
+      <ScannerTemplate Name="Batch" Prefix="#Batch#" />
+      <ScannerTemplate Name="LotCode" Prefix="#LotCode#" />
+      <ScannerTemplate Name="MfgOrder" Prefix="#MfgOrder#" />
+      <ScannerTemplate Name="Operator" Prefix="#Operator#" />
+      <ScannerTemplate Name="Product" Prefix="#Product#" />
+      <ScannerTemplate Name="Quantity" Prefix="#Quantity#" />
+    </ScannerTemplates>
+  </SmartScanningSettings>
+  <CachingSettings>
+    <LabelCacheSettings Enabled="true" ExpiredIn="20" ResetFile="~/LabelCache.invalidate" />
+  </CachingSettings>
+  <IntelligenceSettings DefaultSource="DefaultSource">
+    <DataSources>
+      <DataSource LoginName="insiteadmin" LoginPassword="e94e0e67b688b771fe0fe56047fee701" Host="localhost" Database="CAMSTAR1" Name="DefaultSource" />
+    </DataSources>
+  </IntelligenceSettings>
+  <CDOFormsSettings>
+    <CDOForms>
+      <CDOForm Service="AQLLevelMaint" PageName="AQLLevel_VP" />
+      <CDOForm Service="ApprovalDecisionListMaint" PageName="ApprovalDecisionList_VP" />
+      <CDOForm Service="ApprovalSheetTemplateMaint" PageName="ApprovalTemplate_VP" />
+      <CDOForm Service="BOMMaint" PageName="BOMMaint_VP" />
+      <CDOForm Service="BillOfProcessMaint" PageName="BillOfProcess_VP" />
+      <CDOForm Service="BillTypeMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="BOMMaint" PageName="BOMMaint_VP" />
+      <CDOForm Service="BonusReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="BusinessRuleHandlerMaint" PageName="BusinessRuleHandlerMaint_VP" />
+      <CDOForm Service="BusinessRuleMaint" PageName="BusinessRule_VP" />
+      <CDOForm Service="BuyReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="CarrierMaint" PageName="Carrier_VP" />
+      <CDOForm Service="CarrierStatusCodeMaint" PageName="CarrierStatusCode_VP" />
+      <CDOForm Service="CarrierStatusReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="ChangeMgtSpecMaint" PageName="ChangeMgtSpec_VP" />
+      <CDOForm Service="ChangeMgtWorkflowMaint" PageName="CM_WorkflowMaint_VP" />
+      <CDOForm Service="ChangeStatusReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="ChangePackageReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="ChangePackagePriorityMaint" PageName="PackagePriorityCode_VP" />
+      <CDOForm Service="ClassificationMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="CommentTypeMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="ComponentDefectReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="ComputationMaint" PageName="Computation_VP" />
+      <CDOForm Service="ContainerDefectReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="ContainerLevelMaint" PageName="ContainerLevelMaint_VP" />
+      <CDOForm Service="CustomerMaint" PageName="Customer_VP" />
+      <CDOForm Service="DataCollectionDefMaint" PageName="DataCollectionDefMaint_VP" />
+      <CDOForm Service="DateReqMaint" PageName="DateRequirement_VP" />
+      <CDOForm Service="DictionaryMaint" PageName="Dictionary_VP" />
+      <CDOForm Service="DispatchRuleMaint" PageName="DispatchRule_VP" />
+      <CDOForm Service="DispositionMaint" PageName="DispositionMaint_VP" />
+      <CDOForm Service="DocumentMaint" PageName="Document_VP" />
+      <CDOForm Service="DocumentSetMaint" PageName="DocumentSet_VP" />
+      <CDOForm Service="DocumentViewerMaint" PageName="DocumentViewer_VP" />
+      <CDOForm Service="EMailDistributionMaint" PageName="EmailDistribution_VP" />
+      <CDOForm Service="EMailMessageMaint" PageName="EmailMessage_VP" />
+      <CDOForm Service="EMailNotificationMaint" PageName="EmailNotification_VP" />
+      <CDOForm Service="ERPBOMMaint" PageName="ERPBOMMaint_VP" />
+      <CDOForm Service="ERPRouteMaint" PageName="ERPRoute_VP" />
+      <CDOForm Service="ESigCosignReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="ESigMeaningMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="ESigRequirementMaint" PageName="ESigRequirementMaint_VP" />
+      <CDOForm Service="ElectronicProcedureMaint" PageName="EProcedureMaint_VP" />
+      <CDOForm Service="EmployeeMaint" PageName="EmployeeMaint_VP" />
+      <CDOForm Service="EnterpriseMaint" PageName="EnterpriseMaint_VP" />
+      <CDOForm Service="FTPTransportMaint" PageName="FTPTransport_VP" />
+      <CDOForm Service="FactoryMaint" PageName="FactoryMaint_VP" />
+      <CDOForm Service="FailureActionTypeMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="FailureModeMaint" PageName="FailureMode_VP" />
+      <CDOForm Service="FailureSeverityMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="NCRFailureTypeMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="HoldReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="InspectionLevelMaint" PageName="InspectionLevel_VP" />
+      <CDOForm Service="IssueDifferenceReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="IssueReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="LocalReworkReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="LossReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="MSMQTransportMaint" PageName="MSMQTransport_VP" />
+      <CDOForm Service="MaintenanceReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="MaintenanceClassMaint" PageName="MaintenanceClass_VP" />
+      <CDOForm Service="MasterDataCatalogMaint" PageName="MasterDataCatalog_VP" />
+      <CDOForm Service="MasterRecipeMaint" PageName="MasterRecipeVP" />
+      <CDOForm Service="MessageCategoryLabelMaint" PageName="UserLabel_VP" />
+      <CDOForm Service="MfgCalendarMaint" PageName="MfgCalendarMaint_VP" />
+      <CDOForm Service="MfgOrderMaint" PageName="MfgOrder_VP" />
+      <CDOForm Service="NCRCauseCodeMaint" PageName="CauseCode_VP" />
+      <CDOForm Service="NCRFailureCodeMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="NCRResolutionCodeMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="NamedObjectGroupMaint" PageName="NamedObjectGroupMaint_VP" />
+      <CDOForm Service="NumberingRuleMaint" PageName="NumberingRuleMaint_VP" />
+      <CDOForm Service="OccupationMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="OperationMaint" PageName="Operation_VP" />
+      <CDOForm Service="OrderStatusMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="OrderTypeMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="OrganizationMaint" PageName="Organization_VP" />
+      <CDOForm Service="OwnerMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="PortalMessageCategoryMaint" PageName="PortalMessageCategoryMaint_VP" />
+      <CDOForm Service="PrintQueueMaint" PageName="PrintQueue_VP" />
+      <CDOForm Service="PrinterLabelDefinitionMaint" PageName="PrinterLabelDefinition_VP" />
+      <CDOForm Service="PriorityCodeMaint" PageName="PriorityCode_VP" />
+      <CDOForm Service="PriorityLevelMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="ProductFamilyMaint" PageName="ProductFamily_VP" />
+      <CDOForm Service="ProductMaint" PageName="Product_VP" />
+      <CDOForm Service="ProcessTimerMaint" PageName="ProcessTimer_VP" />
+      <CDOForm Service="ProductTypeMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="ProcessTimerTypeMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="QtyAdjustReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="QualityResolutionCodeMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="RecipeListMaint" PageName="RecipeListMaint_VP" />
+      <CDOForm Service="RecurringDateReqMaint" PageName="RecurringDateReq_VP" />
+      <CDOForm Service="ReleaseReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="RemovalReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="RemoveDifferenceReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="ResourceMaint" PageName="Resource_VP" />
+      <CDOForm Service="ResourceFamilyMaint" PageName="ResourceFamily_VP" />
+      <CDOForm Service="ResourceStatusCodeMaint" PageName="ResourceStatusCode_VP" />
+      <CDOForm Service="ResourceStatusModelMaint" PageName="ResourceStatusModel_VP" />
+      <CDOForm Service="ResourceStatusReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="ResourceTypeMaint" PageName="ResourceType_VP" />
+      <CDOForm Service="ResponseSetMaint" PageName="ResponseSetMaint_VP" />
+      <CDOForm Service="RevisionedObjectMaint" PageName="RevisionedObjectMaint_VP" />
+      <CDOForm Service="ReworkReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="RoleMaint" PageName="Role_VP" />
+      <CDOForm Service="RollupReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="SMTPTransportMaint" PageName="SMTPTransport_VP" />
+      <CDOForm Service="SPCChartDefMaint" PageName="SPCChart_VP" />
+      <CDOForm Service="SPCChartTypeMaint" PageName="SPCChartTypeMaint_VP" />
+      <CDOForm Service="SPCConnectionMaint" PageName="SPCConnection_VP" />
+      <CDOForm Service="SPCQueryMaint" PageName="SPCQueryMaint_VP" />
+      <CDOForm Service="SalesOrderMaint" PageName="SalesOrder_VP" />
+      <CDOForm Service="SampleDataPointMaint" PageName="SampleDataPointMaint_VP" />
+      <CDOForm Service="SampleTestMaint" PageName="SampleTestMaint_VP" />
+      <CDOForm Service="SamplingPlanMaint" PageName="SamplingPlanMaint_VP" />
+      <CDOForm Service="ScaleMaint" PageName="Scale_VP" />
+      <CDOForm Service="ScaleStatusCodeMaint" PageName="ScaleStatusCode_VP" />
+      <CDOForm Service="ScaleStatusReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="ScheduledBusinessRuleMaint" PageName="BusinessRuleScheduleMaint_VP" />
+      <CDOForm Service="ScrapReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="SellReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="SetupMaint" PageName="SetupMaint_VP" />
+      <CDOForm Service="ShiftMaint" PageName="Shift_VP" />
+      <CDOForm Service="ShipmentDestinationMaint" PageName="ShipmentDestination_VP" />
+      <CDOForm Service="ShippingReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="SiteMaint" PageName="Site_VP" />
+      <CDOForm Service="SmartScanRuleMaint" PageName="SmartScanRule_VP" />
+      <CDOForm Service="SpecMaint" PageName="SpecMaintForm_VP" />
+      <CDOForm Service="StartReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="SubClassificationMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="SubstitutionReasonMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="SummaryTableDefMaint" PageName="SummaryTableDef_VP" />
+      <CDOForm Service="SwitchingRuleMaint" PageName="SwitchingRuleMaint_VP" />
+      <CDOForm Service="TargetSystemMaint" PageName="ServerCatalogSystem_VP" />
+      <CDOForm Service="TaskListMaint" PageName="TaskList_VP" />
+      <CDOForm Service="TeamMaint" PageName="TeamMaint_VP" />
+      <CDOForm Service="TextVariableMaint" PageName="TextVariable_VP" />
+      <CDOForm Service="ThruputReqMaint" PageName="ThruputRequirement_VP" />
+      <CDOForm Service="TrainingPlanMaint" PageName="TrainingPlanMaint_VP" />
+      <CDOForm Service="TrainingRecordStatusMaint" PageName="TrainingRecordStatus_VP" />
+      <CDOForm Service="TrainingReqGroupMaint" PageName="RevisionedObjectGroupMaint_VP" />
+      <CDOForm Service="TrainingRequirementMaint" PageName="TrainingRequirementMaint_VP" />
+      <CDOForm Service="TriageSpecMaint" PageName="TriageSpecMaint_VP" />
+      <CDOForm Service="UIPreferenceMaint" PageName="UIPreference_VP" />
+      <CDOForm Service="UOMMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="UserConstantMaint" PageName="UserConstantMaint_VP" />
+      <CDOForm Service="UserDataCollectionDefMaint" PageName="UserDataCollectionDef_VP" />
+      <CDOForm Service="UserLabelMaint" PageName="UserLabel_VP" />
+      <CDOForm Service="UserQueryMaint" PageName="UserQuery_VP" />
+      <CDOForm Service="VendorMaint" PageName="VendorMaint_VP" />
+      <CDOForm Service="WIPMessageProcessingMaint" PageName="WIPMessageProcessingVP" />
+      <CDOForm Service="WebServiceTransportMaint" PageName="WebServiceTransportMaint_VP" />
+      <CDOForm Service="WorkCenterMaint" PageName="WorkCenterMaint_VP" />
+      <CDOForm Service="WorkflowMaint" PageName="WorkflowMaint_VP" />
+      <CDOForm Service="ChecklistTemplateMaint" PageName="ChecklistTemplateMaint_VP" />
+      <CDOForm Service="CollaboratorTemplateMaint" PageName="CollaboratorTemplate_VP" />
+      <CDOForm Service="ChangeMgtApplicationMaint" PageName="ChangeMgtApplication_VP" />
+      <CDOForm Service="PackageCreationTemplateMaint" PageName="PackageCreationTemplate_VP" />
+      <CDOForm Service="DelegationReasonCodeMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="PackageTypeMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="FilterTagMaint" PageName="NamedObject_VP" />
+      <CDOForm Service="ReplaceReasonMaint" PageName="ReplaceReason_VP" />
+      <CDOForm Service="TerminalMaint" PageName="TerminalMaint_VP" />
+      <CDOForm Service="CIOOutboundMsgDefMaint" PageName="CIO_OutboundMessageDefVP" />
+      <CDOForm Service="CIOSettingsMaint" PageName="CIO_Settings_VP" />
+      <CDOForm Service="CIOTemplateMaint" PageName="CIO_TemplateVP" />
+      <CDOForm Service="CIOListProcessorMaint" PageName="CIO_ListProcessorVP" />
+      <CDOForm Service="CIOUserQueryMaint" PageName="CIO_UserQueryVP" />
+      <CDOForm Service="cioQueryPortalPageMaint" PageName="CIO_QueryPortalPageMaintVP" />
+      <CDOForm Service="DeviceIdentifierMaint" PageName="DeviceIdentifier_VP" />
+      <CDOForm Service="UDIExpressionMaint" PageName="UDIExpression_VP" />
+      <CDOForm Service="dexLineMaint" PageName="dexLineMaint_VP" />
+      <CDOForm Service="dexCellMaint" PageName="dexCellMaint_VP" />
+    </CDOForms>
+  </CDOFormsSettings>
+  <ExportGroupsSettings />
+  <StatusMessageSettings PlaySound="false">
+    <WarningSoundPath>warning.mp3</WarningSoundPath>
+    <SuccessSoundPath>success.mp3</SuccessSoundPath>
+    <ErrorSoundPath>error.mp3</ErrorSoundPath>
+  </StatusMessageSettings>
+  <TemplateSettings ContainerTemplatePage="ShopfloorBase_VP" ContainerWithEprocedureTemplatePage="ShopfloorBaseEproc_VP" ModelingTemplatePage="ModelingBaseVP" />
+  <AppearanceSettings>
+    <HighlightRequiredFields>false</HighlightRequiredFields>
+  </AppearanceSettings>
+</PortalSettings>

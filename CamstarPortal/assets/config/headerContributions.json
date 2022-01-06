@@ -1,0 +1,9 @@
+{
+  "headerContributions": [
+    {
+      "view": "lineAssignment",
+      "visibleWhen": "true",
+      "priority": 1
+    }
+  ]
+}

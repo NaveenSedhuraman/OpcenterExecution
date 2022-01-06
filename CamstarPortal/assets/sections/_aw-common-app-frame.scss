@@ -1,0 +1,96 @@
+.awRoot {
+    .global-navigation-parent .global-navigation-toolbar img {
+        width: $aw_common_app_frame_global_navigation_app_logo_width;
+    }
+
+    .aw-layout-locationPanel {
+        padding-right: 0;
+    }
+
+    .aw-layout-header {
+        padding-top: $aw_common_app_frame_aw_layout_header_padding_top;
+    }
+
+    .awLargeTHeader .awHeader,
+    .awLargeHeader .awHeader {
+        height: $aw_common_app_frame_large_header_height;
+    }
+
+    .awMediumHeader .awHeader {
+        height: $aw_common_app_frame_medium_header_height;
+    }
+
+    .awHeader {
+        .aw-layout-locationTitle {
+            height: $aw_common_app_frame_header_location_title;
+            align-items: center;
+        }
+
+        &.afx-layout-fullscreen-header {
+            padding: $fullscreen_header_padding;
+            border-style: solid;
+            border-bottom-width: 1px;
+        }
+
+        .aw-layout-headerTitleContainer {
+            padding-top: $aw_common_app_frame_header_title_padding_top;
+        }
+
+        aw-header-tabs {
+            padding-top: $aw_common_app_frame_header_tabs_padding_top;
+        }
+
+        padding-top: $aw_common_app_frame_header_padding_top;
+
+        overflow: hidden;
+
+        .aw-layout-workareaTitle {
+            padding-top: $aw_common_app_frame_header_breakcrumb_padding_top;
+        }
+
+        aw-tab-set {
+            padding-top: $aw_common_app_frame_header_tab_set_padding_top;
+        }
+    }
+
+    // For tabs below header with template type "Large": the one with tabs below header
+    .awTabs {
+        padding-left: $aw_common_app_frame_large_header_tabs_padding_left;
+        padding-top: $aw_common_app_frame_large_header_tabs_padding_top;
+    }
+
+    aw-logo {
+        padding-bottom: $aw_common_app_frame_logo_padding_bottom;
+    }
+
+    .aw-widgets-cellListCellTitleBlock {
+        & .aw-widgets-cellListCellTitle {
+            font-weight: $default_cell_list_item_cell_content_cell_title_header1_font_weight;
+        }
+    }
+
+    aw-global-search {
+        padding-bottom: $aw_common_app_frame_global_search_padding_bottom;
+    }
+
+    // The aw-page's scss is to be copied from wherever aw-page is present in afx and pasted here to be available to our common-app-frame through .awRoot
+}
+
+.awRootNarrowMode {
+    aw-logo {
+        padding-right: $aw_common_app_frame_narrowMode_aw_logo_padding_right;
+        align-self: end;
+    }
+    .awHeader {
+        padding-top: $aw_common_app_frame_narrowMode_header_padding_top;
+
+        .aw-layout-locationTitle {
+            font-size: $aw_common_app_frame_narrowMode_locationTitle_font_size;
+            align-items: end;
+        }
+    }
+
+    .aw-layout-primaryWorkarea {
+        flex-basis: auto;
+    }
+}

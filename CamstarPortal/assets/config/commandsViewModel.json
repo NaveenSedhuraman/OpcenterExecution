@@ -1,0 +1,1282 @@
+{
+  "commandsViewModel": {
+    "commands": {
+      "cmdMomLoginOptions": {
+        "iconId": "cmdSettings",
+        "title": "{{ctx.momLoginComponentData.labels.options}}",
+        "isToggle": false
+      },
+      "momCmdChangeTheme": {
+        "iconId": "cmdSettings",
+        "title": "{{i18n.changeTheme}}",
+        "isGroup": true,
+        "isToggle": false
+      },
+      "momCmdShowLightTheme": {
+        "iconId": "cmdSettings",
+        "title": "{{i18n.light}}",
+        "isToggle": true
+      },
+      "momCmdShowDarkTheme": {
+        "iconId": "cmdSettings",
+        "title": "{{i18n.dark}}",
+        "isToggle": true
+      },
+      "momCmdFullScreen": {
+        "iconId": "cmdFullScreen",
+        "title": "{{i18n.fullScreenCommand}}",
+        "isToggle": false
+      },
+      "momCmdExitFullScreen": {
+        "iconId": "cmdExitFullScreen",
+        "title": "{{i18n.fullScreenCommandExit}}",
+        "isToggle": false
+      },
+      "momCmdToggleViewMode": {
+        "isShuttle": true,
+        "isToggle": false
+      },
+      "momCmdShowListView": {
+        "iconId": "cmdListView",
+        "title": "{{i18n.momCmdShowListViewTitle}}",
+        "isToggle": true
+      },
+      "momCmdShowSummaryView": {
+        "iconId": "cmdListSummaryView",
+        "title": "{{i18n.momCmdShowSummaryViewTitle}}",
+        "isToggle": true
+      },
+      "momCmdShowTableSummaryView": {
+        "iconId": "cmdTableSummaryView",
+        "title": "{{i18n.momCmdShowTableSummaryViewTitle}}",
+        "isToggle": true
+      },
+      "momCmdShowTableView": {
+        "iconId": "cmdTableView",
+        "title": "{{i18n.momCmdShowTableViewTitle}}",
+        "isToggle": true
+      },
+      "momCmdGoToHomePage": {
+        "iconId": "cmdHome",
+        "title": "{{i18n.home}}",
+        "isToggle": false
+      },
+      "momCmdToggleLabels": {
+        "iconId": "cmdMore",
+        "title": "{{i18n.labels}}",
+        "isToggle": true
+      },
+      "momCmdChangeLocale": {
+        "iconId": "cmdlanguage",
+        "isGroup": true,
+        "title": "{{i18n.changeLocale}}",
+        "isToggle": false
+      },
+      "momCmdGoToTop": {
+        "iconId": "cmdUp",
+        "title": "{{i18n.goToTop}}",
+        "isToggle": false
+      },
+      "momCmdUiSettings": {
+        "iconId": "cmdSettings",
+        "isGroup": true,
+        "title": "{{i18n.uiSettings}}",
+        "isToggle": false
+      },
+      "cmdSettings": {
+        "iconId": "cmdSettings",
+        "title": "View Settings",
+        "isToggle": false
+      },
+      "cmdHelp": {
+        "iconId": "cmdHelp",
+        "title": "Help",
+        "isToggle": false
+      },
+      "cmdUserProfile": {
+        "iconId": "cmduser",
+        "isGroup": false,
+        "title": "View User Profile",
+        "isToggle": false
+      },
+      "cmdLogout": {
+        "iconId": "cmdSignOut",
+        "isGroup": false,
+        "title": "Log Out",
+        "isToggle": false
+      },
+      "cmdPortalStudio": {
+        "iconId": "cmdUIApplication",
+        "isGroup": false,
+        "title": "Portal Studio",
+        "isToggle": false
+      },
+      "Awp0ChangeTheme": {
+        "iconId": "cmdSettings",
+        "title": "{{i18n.changeThemeCommand}}",
+        "isGroup": true,
+        "isToggle": false
+      },
+      "Awp0ShowLightTheme": {
+        "iconId": "cmdSettings",
+        "title": "{{i18n.lightTheme}}",
+        "isToggle": true
+      },
+      "Awp0ShowDarkTheme": {
+        "iconId": "cmdSettings",
+        "title": "{{i18n.darkTheme}}",
+        "isToggle": true
+      },
+      "arrangeSelectAll": {
+        "iconId": "cmdCheckmark",
+        "isGroup": false,
+        "title": "{{i18n.arrangeSelectAll}}",
+        "selected": {
+          "iconId": "cmdCheckmark",
+          "title": "{{i18n.arrangeUnselectAll}}"
+        },
+        "isToggle": true
+      },
+      "arrangeReset": {
+        "iconId": "cmdReset",
+        "isGroup": false,
+        "title": "{{i18n.arrangeReset}}",
+        "isToggle": false
+      },
+      "arrangeMoveUp": {
+        "iconId": "cmdMoveUp",
+        "isGroup": false,
+        "title": "{{i18n.arrangeMoveUp}}",
+        "isToggle": false
+      },
+      "arrangeMoveDown": {
+        "iconId": "cmdMoveDown",
+        "isGroup": false,
+        "title": "{{i18n.arrangeMoveDown}}",
+        "isToggle": false
+      },
+      "Awp0ColumnConfig": {
+        "iconId": "",
+        "title": "{{i18n.arrange}}",
+        "isToggle": false
+      },
+      "Awp0ShowColumnFilters": {
+        "iconId": "",
+        "title": "{{i18n.showFiltersTitle}}",
+        "isToggle": false
+      },
+      "Awp0HideColumnFilters": {
+        "iconId": "",
+        "title": "{{i18n.hideFiltersTitle}}",
+        "isToggle": false
+      },
+      "Awp0GoBack": {
+        "iconId": "cmdBackLHN",
+        "title": "{{ctx.previousLocationDisplayName }}",
+        "isToggle": false
+      },
+      "AddObjectPanelSetPin": {
+        "iconId": "cmdPin",
+        "title": "{{i18n.addObjectPanelPinButtonToolTip}}",
+        "isToggle": false
+      },
+      "AddObjectPanelSetUnPin": {
+        "iconId": "cmdUnpin",
+        "title": "{{i18n.addObjectPanelUnpinButtonToolTip}}",
+        "isToggle": false
+      },
+      "uiwidgetAddcmd": {
+        "iconId": "cmdAdd",
+        "title": "{{i18n.addProjectButtonTitle}}",
+        "isToggle": false
+      },
+      "Awp0ColumnConfigPre": {
+        "iconId": "",
+        "title": "{{i18n.arrange}}",
+        "isToggle": false
+      }
+    },
+    "commandHandlers": {
+      "cmdMomLoginOptionsHandler": {
+        "id": "cmdMomLoginOptions",
+        "action": "activatecmdMomLoginOptions",
+        "activeWhen": true,
+        "visibleWhen": {
+          "condition": "conditions.momLoginOptionsEnabled"
+        }
+      },
+      "momAwp0GoBackHandler": {
+        "id": "Awp0GoBack",
+        "action": "momGoBack",
+        "activeWhen": {
+          "condition": "conditions.isMomProject"
+        },
+        "visibleWhen": {
+          "condition": "conditions.goToPreviousPageEnabled"
+        }
+      },
+      "momCmdGoToTop": {
+        "id": "momCmdGoToTop",
+        "action": "momGoToTop",
+        "activeWhen": {
+          "condition": "conditions.isHomePageScrolled"
+        },
+        "visibleWhen": {
+          "condition": "conditions.isHomePageScrolled"
+        }
+      },
+      "momCmdGoToHomePageHandler": {
+        "id": "momCmdGoToHomePage",
+        "action": "goToHomePage",
+        "activeWhen": {
+          "condition": "conditions.isMomProject"
+        },
+        "visibleWhen": {
+          "condition": "conditions.goToHomePageEnabled"
+        }
+      },
+      "momCmdShowLightThemeHandler": {
+        "id": "momCmdShowLightTheme",
+        "action": "momSetLightTheme",
+        "activeWhen": true,
+        "visibleWhen": {
+          "condition": "conditions.supportsMomLightTheme"
+        },
+        "selectWhen": {
+          "condition": "conditions.isLightMomTheme"
+        }
+      },
+      "momCmdShowDarkThemeHandler": {
+        "id": "momCmdShowDarkTheme",
+        "action": "momSetDarkTheme",
+        "activeWhen": true,
+        "visibleWhen": {
+          "condition": "conditions.supportsMomDarkTheme"
+        },
+        "selectWhen": {
+          "condition": "conditions.isDarkMomTheme"
+        }
+      },
+      "momCmdFullScreenHandler": {
+        "id": "momCmdFullScreen",
+        "action": "momCmdFullScreenAction",
+        "activeWhen": {
+          "condition": "conditions.momCmdFullScreenCmdCondition"
+        },
+        "visibleWhen": {
+          "condition": "conditions.momCmdFullScreenCmdCondition"
+        }
+      },
+      "momCmdExitFullScreenHandler": {
+        "id": "momCmdExitFullScreen",
+        "action": "momCmdFullScreenAction",
+        "activeWhen": true,
+        "visibleWhen": {
+          "condition": "conditions.momCmdExitFullScreenCmdCondition"
+        }
+      },
+      "momCmdToggleViewModeHandler": {
+        "id": "momCmdToggleViewMode",
+        "activeWhen": {
+          "condition": "conditions.supportsViewModes"
+        },
+        "visibleWhen": {
+          "condition": "conditions.supportsViewModes"
+        }
+      },
+      "momCmdShowListViewHandler": {
+        "id": "momCmdShowListView",
+        "action": "switchToListView",
+        "activeWhen": {
+          "condition": "conditions.supportsListView"
+        },
+        "visibleWhen": {
+          "condition": "conditions.supportsListView"
+        },
+        "selectWhen": {
+          "condition": "conditions.isListView"
+        }
+      },
+      "momCmdShowSummaryViewHandler": {
+        "id": "momCmdShowSummaryView",
+        "action": "switchToSummaryView",
+        "activeWhen": {
+          "condition": "conditions.supportsSummaryView"
+        },
+        "visibleWhen": {
+          "condition": "conditions.supportsSummaryView"
+        },
+        "selectWhen": {
+          "condition": "conditions.isSummaryView"
+        }
+      },
+      "momCmdShowTableSummaryViewHandler": {
+        "id": "momCmdShowTableSummaryView",
+        "action": "switchToTableSummaryView",
+        "activeWhen": {
+          "condition": "conditions.supportsTableSummaryView"
+        },
+        "visibleWhen": {
+          "condition": "conditions.supportsTableSummaryView"
+        },
+        "selectWhen": {
+          "condition": "conditions.isTableSummaryView"
+        }
+      },
+      "momCmdShowTableViewHandler": {
+        "id": "momCmdShowTableView",
+        "action": "switchToTableView",
+        "activeWhen": {
+          "condition": "conditions.supportsTableView"
+        },
+        "visibleWhen": {
+          "condition": "conditions.supportsTableView"
+        },
+        "selectWhen": {
+          "condition": "conditions.isTableView"
+        }
+      },
+      "momCmdToggleLabelsHandler": {
+        "id": "momCmdToggleLabels",
+        "action": "toggleLabels",
+        "activeWhen": {
+          "condition": "conditions.toggleCommandLabelsEnabled"
+        },
+        "visibleWhen": {
+          "condition": "conditions.toggleCommandLabelsEnabled"
+        },
+        "selectWhen": {
+          "condition": "conditions.commandLabels"
+        }
+      },
+      "cepCmdGoToHomePageHandler": {
+        "id": "momCmdGoToHomePage",
+        "action": "goToUserHomePage",
+        "activeWhen": {
+          "condition": "conditions.isCEPOverrideCommand"
+        },
+        "visibleWhen": {
+          "condition": "conditions.isCEPOverrideCommand"
+        }
+      },
+      "cmdHelpHandler": {
+        "id": "cmdHelp",
+        "action": "openHelpPage",
+        "activeWhen": true,
+        "visibleWhen": {
+          "condition": "conditions.true"
+        }
+      },
+      "cmdSettingsHandler": {
+        "id": "cmdSettings",
+        "action": "openSettingsPanel",
+        "activeWhen": true,
+        "visibleWhen": {
+          "condition": "conditions.true"
+        }
+      },
+      "cmdUserProfileHandler": {
+        "id": "cmdUserProfile",
+        "action": "viewUserProfile",
+        "activeWhen": {
+          "condition": "conditions.userLoggedIn"
+        },
+        "visibleWhen": {
+          "condition": "conditions.userLoggedIn"
+        }
+      },
+      "cmdLogoutHandler": {
+        "id": "cmdLogout",
+        "action": "logout",
+        "activeWhen": {
+          "condition": "conditions.userLoggedIn"
+        },
+        "visibleWhen": {
+          "condition": "conditions.userLoggedIn"
+        }
+      },
+      "cmdPortalStudioHandler": {
+        "id": "cmdPortalStudio",
+        "action": "openPortalStudio",
+        "activeWhen": true,
+        "visibleWhen": {
+          "condition": "conditions.true"
+        }
+      },
+      "Awp0ChangeThemeHandler": {
+        "id": "Awp0ChangeTheme",
+        "activeWhen": true
+      },
+      "Awp0ShowLightThemeHandler": {
+        "id": "Awp0ShowLightTheme",
+        "action": "setLightTheme",
+        "activeWhen": true,
+        "visibleWhen": {
+          "condition": "conditions.supportsLightTheme"
+        },
+        "selectWhen": {
+          "condition": "conditions.isLightTheme"
+        }
+      },
+      "Awp0ShowDarkThemeHandler": {
+        "id": "Awp0ShowDarkTheme",
+        "action": "setDarkTheme",
+        "activeWhen": true,
+        "visibleWhen": {
+          "condition": "conditions.supportsDarkTheme"
+        },
+        "selectWhen": {
+          "condition": "conditions.isDarkTheme"
+        }
+      },
+      "arrangeSelectAllCommandHandler": {
+        "id": "arrangeSelectAll",
+        "action": "arrangeSelectAll",
+        "activeWhen": true,
+        "visibleWhen": {
+          "condition": "conditions.arrangeSelectAllVisible"
+        },
+        "selectWhen": {
+          "condition": "conditions.arrangeSelectAllSelected"
+        }
+      },
+      "arrangeResetCommandHandler": {
+        "id": "arrangeReset",
+        "action": "arrangeReset",
+        "activeWhen": true,
+        "visibleWhen": {
+          "condition": "conditions.arrangeResetVisible"
+        }
+      },
+      "arrangeMoveUpCommandHandler": {
+        "id": "arrangeMoveUp",
+        "action": "arrangeMoveUp",
+        "activeWhen": true,
+        "visibleWhen": true,
+        "enableWhen": {
+          "condition": "conditions.arrangeMoveUpVisible"
+        }
+      },
+      "arrangeMoveDownCommandHandler": {
+        "id": "arrangeMoveDown",
+        "action": "arrangeMoveDown",
+        "activeWhen": true,
+        "visibleWhen": true,
+        "enableWhen": {
+          "condition": "conditions.arrangeMoveDownVisible"
+        }
+      },
+      "Awp0ColumnConfigHandler": {
+        "id": "Awp0ColumnConfig",
+        "action": "launchArrangePanel",
+        "activeWhen": true,
+        "visibleWhen": true
+      },
+      "Awp0ShowColumnFiltersHandler": {
+        "id": "Awp0ShowColumnFilters",
+        "action": "showColumnFiltersAction",
+        "activeWhen": true,
+        "visibleWhen": {
+          "condition": "conditions.isColumnFilteringOff"
+        }
+      },
+      "Awp0HideColumnFiltersrHandler": {
+        "id": "Awp0HideColumnFilters",
+        "action": "hideColumnFiltersAction",
+        "activeWhen": true,
+        "visibleWhen": {
+          "condition": "conditions.isColumnFilteringOn"
+        }
+      },
+      "Awp0GoBackHandler": {
+        "id": "Awp0GoBack",
+        "action": "goBack",
+        "activeWhen": true,
+        "visibleWhen": true
+      },
+      "addObjectPanelSetPinCommandHandler": {
+        "id": "AddObjectPanelSetPin",
+        "action": "addObjectPanelSetPin",
+        "activeWhen": {
+          "condition": "conditions.isAddObjectPanelPanelPinned"
+        },
+        "visibleWhen": {
+          "condition": "conditions.isAddObjectPanelPanelPinned"
+        }
+      },
+      "addObjectPanelSetUnPinCommandHandler": {
+        "id": "AddObjectPanelSetUnPin",
+        "action": "addObjectPanelSetUnPin",
+        "activeWhen": {
+          "condition": "conditions.isAddObjectPanelPanelUnPinned"
+        },
+        "visibleWhen": {
+          "condition": "conditions.isAddObjectPanelPanelUnPinned"
+        }
+      },
+      "uiwidgetAddcmdHandler": {
+        "id": "uiwidgetAddcmd",
+        "action": "uiwidgetAddActivateCmdPanel",
+        "activeWhen": true,
+        "visibleWhen": true
+      },
+      "Awp0ColumnConfigPreHandler": {
+        "id": "Awp0ColumnConfigPre",
+        "action": "openArrangePanel",
+        "activeWhen": true,
+        "visibleWhen": true
+      }
+    },
+    "commandPlacements": {
+      "cmdMomLoginOptions": {
+        "id": "cmdMomLoginOptions",
+        "uiAnchor": "mom_loginOptions",
+        "priority": 100
+      },
+      "momCmdGoToTopPlacement": {
+        "id": "momCmdGoToTop",
+        "uiAnchor": "mom_homeRightSideBar",
+        "priority": 100
+      },
+      "momCmdChangeThemePlacement": {
+        "id": "momCmdChangeTheme",
+        "uiAnchor": "aw_userLink",
+        "priority": 300,
+        "showGroupSelected": false
+      },
+      "momCmdShowLightThemePlacement": {
+        "id": "momCmdShowLightTheme",
+        "parentGroupId": "momCmdChangeTheme",
+        "priority": 100
+      },
+      "momCmdShowDarkThemePlacement": {
+        "id": "momCmdShowDarkTheme",
+        "parentGroupId": "momCmdChangeTheme",
+        "priority": 200
+      },
+      "momCmdFullScreenPlacement": {
+        "id": "momCmdFullScreen",
+        "parentGroupId": "momCmdUiSettings",
+        "priority": 100
+      },
+      "momCmdExitFullScreenPlacement": {
+        "id": "momCmdExitFullScreen",
+        "parentGroupId": "momCmdUiSettings",
+        "priority": 100
+      },
+      "momCmdChangeLocalePlacement": {
+        "id": "momCmdChangeLocale",
+        "uiAnchor": "aw_userLink",
+        "priority": 200,
+        "showGroupSelected": false
+      },
+      "momCmdUiSettingsPlacement": {
+        "id": "momCmdUiSettings",
+        "uiAnchor": "aw_userLink",
+        "priority": 100,
+        "showGroupSelected": false
+      },
+      "momCmdToggleViewModeDisplay": {
+        "id": "momCmdToggleViewMode",
+        "uiAnchor": "aw_primaryWorkArea",
+        "priority": -1,
+        "showGroupSelected": false
+      },
+      "momCmdShowListViewDisplay": {
+        "id": "momCmdShowListView",
+        "uiAnchor": "aw_primaryWorkArea",
+        "priority": 2,
+        "parentGroupId": "momCmdToggleViewMode"
+      },
+      "momCmdShowSummaryViewDisplay": {
+        "id": "momCmdShowSummaryView",
+        "uiAnchor": "aw_primaryWorkArea",
+        "priority": 1,
+        "parentGroupId": "momCmdToggleViewMode"
+      },
+      "momCmdShowTableSummaryViewDisplay": {
+        "id": "momCmdShowTableSummaryView",
+        "uiAnchor": "aw_primaryWorkArea",
+        "priority": 4,
+        "parentGroupId": "momCmdToggleViewMode"
+      },
+      "momCmdShowTableViewDisplay": {
+        "id": "momCmdShowTableView",
+        "uiAnchor": "aw_primaryWorkArea",
+        "priority": 3,
+        "parentGroupId": "momCmdToggleViewMode"
+      },
+      "momCmdGoToHomePageDisplay": {
+        "id": "momCmdGoToHomePage",
+        "uiAnchor": "aw_globalNavigationbar",
+        "priority": 2
+      },
+      "momCmdToggleLabelsDisplay": {
+        "id": "momCmdToggleLabels",
+        "parentGroupId": "momCmdUiSettings",
+        "priority": 200
+      },
+      "cmdUserProfile": {
+        "id": "cmdUserProfile",
+        "uiAnchor": "aw_userLink",
+        "priority": 5
+      },
+      "cmdLogout": {
+        "id": "cmdLogout",
+        "uiAnchor": "aw_userLink",
+        "priority": 10
+      },
+      "cmdPortalStudio": {
+        "id": "cmdPortalStudio",
+        "uiAnchor": "aw_userSessionbar",
+        "priority": 100
+      },
+      "cmdHelp": {
+        "id": "cmdHelp",
+        "uiAnchor": "aw_userSessionbar",
+        "priority": 150
+      },
+      "cmdSettings": {
+        "id": "cmdSettings",
+        "uiAnchor": "aw_userSessionbar",
+        "priority": 200
+      },
+      "Awp0ChangeThemePlacement": {
+        "id": "Awp0ChangeTheme",
+        "uiAnchor": "aw_globalToolbar",
+        "priority": -1,
+        "showGroupSelected": false
+      },
+      "arrangeSelectAllCommandPlacement": {
+        "id": "arrangeSelectAll",
+        "uiAnchor": "arrangeCommandbar",
+        "priority": 100
+      },
+      "arrangeResetCommandPlacement": {
+        "id": "arrangeReset",
+        "uiAnchor": "arrangeCommandbar",
+        "priority": 200
+      },
+      "arrangeMoveUpCommandPlacement": {
+        "id": "arrangeMoveUp",
+        "uiAnchor": "arrangeCommandbar",
+        "priority": 400
+      },
+      "arrangeMoveDownCommandPlacement": {
+        "id": "arrangeMoveDown",
+        "uiAnchor": "arrangeCommandbar",
+        "priority": 500
+      },
+      "Awp0ColumnConfigPlacement": {
+        "id": "Awp0ColumnConfig",
+        "uiAnchor": "aw_uiGrid",
+        "priority": 0
+      },
+      "Awp0ShowColumnFiltersPlacement": {
+        "id": "Awp0ShowColumnFilters",
+        "uiAnchor": "aw_uiGrid",
+        "priority": 1
+      },
+      "Awp0HideColumnFiltersPlacement": {
+        "id": "Awp0HideColumnFilters",
+        "uiAnchor": "aw_uiGrid",
+        "priority": 2
+      },
+      "Awp0GoBackGlobalNavigationbar": {
+        "id": "Awp0GoBack",
+        "uiAnchor": "aw_globalNavigationbar",
+        "priority": 1
+      },
+      "Awp0GoBackFooterToolbar": {
+        "id": "Awp0GoBack",
+        "uiAnchor": "aw_footer",
+        "relativeTo": "Awp0GoHome",
+        "priority": -1
+      },
+      "Awp0ChangeThemeSessionbar": {
+        "id": "Awp0ChangeTheme",
+        "uiAnchor": "aw_userSessionbar",
+        "priority": 2,
+        "showGroupSelected": false
+      },
+      "addObjectPanelSetPinPlacement": {
+        "id": "AddObjectPanelSetPin",
+        "uiAnchor": "addObjectPanel_oneStepPinCommands",
+        "priority": 100
+      },
+      "addObjectPanelSetUnPinPlacement": {
+        "id": "AddObjectPanelSetUnPin",
+        "uiAnchor": "addObjectPanel_oneStepPinCommands",
+        "priority": 100
+      },
+      "uiwidgetAddcmdPlacement": {
+        "id": "uiwidgetAddcmd",
+        "uiAnchor": "uiwidget_projectSectionCommands",
+        "priority": 150
+      },
+      "Awp0ColumnConfigPrePlacement": {
+        "id": "Awp0ColumnConfigPre",
+        "uiAnchor": "aw_compare",
+        "priority": 0
+      }
+    },
+    "actions": {
+      "activatecmdMomLoginOptions": {
+        "actionType": "Event",
+        "method": "Event",
+        "inputData": {
+          "events": [
+            {
+              "name": "mom.login.onLoginOptionsRequested",
+              "eventData": {
+                "data": "{{ctx.momLoginComponentData}}"
+              },
+              "excludeLocalDataCtx": true
+            }
+          ]
+        }
+      },
+      "momGoToTop": {
+        "actionType": "JSFunction",
+        "method": "scrollTo",
+        "inputData": {
+          "id": "mom-homepage-top"
+        },
+        "deps": "js/mom.utils.service"
+      },
+      "momGoBack": {
+        "actionType": "JSFunction",
+        "method": "navigateToPreviousPage",
+        "inputData": {},
+        "deps": "js/mom.utils.service"
+      },
+      "momSetLightTheme": {
+        "actionType": "JSFunction",
+        "method": "setTheme",
+        "inputData": {
+          "0": "ui-lightTheme"
+        },
+        "deps": "js/theme.service"
+      },
+      "momSetDarkTheme": {
+        "actionType": "JSFunction",
+        "method": "setTheme",
+        "inputData": {
+          "0": "ui-darkTheme"
+        },
+        "deps": "js/theme.service"
+      },
+      "momCmdFullScreenAction": {
+        "actionType": "JSFunction",
+        "method": "toggleApplicationFullScreenMode",
+        "deps": "js/fullViewModeService",
+        "inputData": {
+          "fullViewModeActiveFromContext": "{{ctx.fullscreen}}"
+        }
+      },
+      "switchToListView": {
+        "actionType": "JSFunction",
+        "method": "changeViewMode",
+        "deps": "js/viewMode.service",
+        "inputData": {
+          "0": "ListView"
+        }
+      },
+      "switchToTableView": {
+        "actionType": "JSFunction",
+        "method": "changeViewMode",
+        "deps": "js/viewMode.service",
+        "inputData": {
+          "0": "TableView"
+        }
+      },
+      "switchToSummaryView": {
+        "actionType": "JSFunction",
+        "method": "changeViewMode",
+        "deps": "js/viewMode.service",
+        "inputData": {
+          "0": "SummaryView"
+        }
+      },
+      "switchToTableSummaryView": {
+        "actionType": "JSFunction",
+        "method": "changeViewMode",
+        "deps": "js/viewMode.service",
+        "inputData": {
+          "0": "TableSummaryView"
+        }
+      },
+      "goToHomePage": {
+        "actionType": "JSFunction",
+        "method": "navigateToHomePage",
+        "deps": "js/mom.utils.service"
+      },
+      "toggleLabels": {
+        "actionType": "JSFunction",
+        "method": "toggleCommandLabels",
+        "deps": "js/mom.utils.service"
+      },
+      "openSettingsPanel": {
+        "actionType": "Event",
+        "method": "Event",
+        "inputData": {
+          "events": [
+            {
+              "name": "awsidenav.openClose",
+              "eventData": {
+                "id": "globalNavigationSideNav",
+                "includeView": "settingsList",
+                "invokerId": "cmdSettings",
+                "keepOthersOpen": true
+              }
+            }
+          ]
+        }
+      },
+      "openHelpPage": {
+        "actionType": "JSFunction",
+        "method": "navigateToUrl",
+        "inputData": {
+          "nav": {
+            "value": "LOAD_HELPFRAME"
+          }
+        },
+        "deps": "js/mom.swac.compatibility.service"
+      },
+      "goToLocations": {
+        "actionType": "JSFunction",
+        "method": "navigateTo",
+        "deps": "js/mom.utils.service",
+        "inputData": {
+          "state": "locations"
+        }
+      },
+      "viewUserProfile": {
+        "actionType": "JSFunction",
+        "method": "openUserProfile",
+        "deps": "js/cepPortalService"
+      },
+      "logout": {
+        "actionType": "JSFunction",
+        "method": "signOut",
+        "deps": "js/cepAuthenticator"
+      },
+      "openPortalStudio": {
+        "actionType": "JSFunction",
+        "method": "openPortalStudio",
+        "deps": "js/cepPortalService"
+      },
+      "showMenu": {
+        "actionType": "Event",
+        "method": "Event",
+        "inputData": {
+          "events": [
+            {
+              "name": "awsidenav.openClose",
+              "eventData": {
+                "id": "globalNavigationSideNav",
+                "includeView": "pageList",
+                "invokerId": "cmdViewPageMenu",
+                "keepOthersOpen": true
+              }
+            }
+          ]
+        }
+      },
+      "goToUserHomePage": {
+        "actionType": "JSFunction",
+        "method": "goToUserHomePage",
+        "deps": "js/cepPortalService"
+      },
+      "setLightTheme": {
+        "actionType": "JSFunction",
+        "method": "setTheme",
+        "inputData": {
+          "0": "ui-lightTheme"
+        },
+        "deps": "js/theme.service"
+      },
+      "setDarkTheme": {
+        "actionType": "JSFunction",
+        "method": "setTheme",
+        "inputData": {
+          "0": "ui-darkTheme"
+        },
+        "deps": "js/theme.service"
+      },
+      "arrangeSelectAll": {
+        "actionType": "JSFunction",
+        "method": "selectAll",
+        "inputData": {
+          "0": "{{context}}"
+        },
+        "deps": "js/arrange.service"
+      },
+      "arrangeReset": {
+        "actionType": "JSFunction",
+        "method": "reset",
+        "inputData": {
+          "0": "{{context}}"
+        },
+        "deps": "js/arrange.service"
+      },
+      "arrangeMoveUp": {
+        "actionType": "JSFunction",
+        "method": "moveUp",
+        "deps": "js/arrange.service",
+        "inputData": {
+          "0": "{{context}}"
+        }
+      },
+      "arrangeMoveDown": {
+        "actionType": "JSFunction",
+        "method": "moveDown",
+        "deps": "js/arrange.service",
+        "inputData": {
+          "0": "{{context}}"
+        }
+      },
+      "launchArrangePanel": {
+        "actionType": "JSFunction",
+        "deps": "js/uiGridService",
+        "method": "openArrangePanel",
+        "inputData": {
+          "0": "{{gridOptions.columnDefs}}",
+          "1": "{{gridOptions}}",
+          "2": "{{gridId}}",
+          "3": "{{columnConfigId}}",
+          "4": "{{showFirstColumnInArrange}}"
+        }
+      },
+      "showColumnFiltersAction": {
+        "actionType": "JSFunction",
+        "deps": "js/uiGridService",
+        "method": "showColumnFilters",
+        "inputData": {
+          "0": "{{gridOptions}}"
+        }
+      },
+      "hideColumnFiltersAction": {
+        "actionType": "JSFunction",
+        "deps": "js/uiGridService",
+        "method": "hideColumnFilters",
+        "inputData": {
+          "0": "{{gridOptions}}"
+        }
+      },
+      "goBack": {
+        "actionType": "JSFunction",
+        "method": "goBack",
+        "deps": "js/locationNavigation.service"
+      },
+      "addObjectPanelSetPin": {
+        "actionType": "Event",
+        "method": "Event",
+        "inputData": {
+          "events": [
+            {
+              "name": "addObjectPanelCommand.addObjectPanelSetPin"
+            }
+          ]
+        }
+      },
+      "addObjectPanelSetUnPin": {
+        "actionType": "Event",
+        "method": "Event",
+        "inputData": {
+          "events": [
+            {
+              "name": "addObjectPanelCommand.addObjectPanelSetUnPin"
+            }
+          ]
+        }
+      },
+      "uiwidgetAddActivateCmdPanel": {
+        "actionType": "Event",
+        "method": "Event",
+        "inputData": {
+          "events": [
+            {
+              "name": "awPanel.navigate",
+              "eventData": {
+                "destPanelId": "assignProjectSub",
+                "title": "{{i18n.addProjectButtonTitle}}",
+                "recreatePanel": true,
+                "supportGoBack": true
+              }
+            }
+          ]
+        }
+      },
+      "openArrangePanel": {
+        "actionType": "JSFunction",
+        "deps": "js/uiGridService",
+        "method": "openArrangePanel",
+        "inputData": {
+          "0": "{{columns}}",
+          "1": "{{gridOptions}}",
+          "2": "{{localContext.columnProvider.columnConfigId}}",
+          "3": null,
+          "4": "{{showFirstColumnInArrange}}"
+        }
+      }
+    },
+    "conditions": {
+      "momLoginOptionsEnabled": {
+        "expression": "ctx.momLoginComponentData.options"
+      },
+      "isHomePageScrolled": {
+        "expression": "ctx.momHomePageScrolledDown"
+      },
+      "isMomProject": {
+        "expression": "ctx.momBaseUrl && ctx.locationContext['ActiveWorkspace:Location']"
+      },
+      "goToPreviousPageEnabled": {
+        "expression": "!ctx.momDisableGoToPreviousPage && !ctx.momHomePage"
+      },
+      "goToHomePageEnabled": {
+        "expression": "!ctx.momDisableGoToHomePage && !ctx.momHomePage"
+      },
+      "supportsMomLightTheme": {
+        "expression": "!ctx.momChangeThemeDisabled"
+      },
+      "supportsMomDarkTheme": {
+        "expression": "!ctx.momChangeThemeDisabled"
+      },
+      "isLightMomTheme": {
+        "expression": "ctx.theme === 'ui-lightTheme'"
+      },
+      "isDarkMomTheme": {
+        "expression": "ctx.theme === 'ui-darkTheme'"
+      },
+      "momCmdFullScreenCmdCondition": {
+        "expression": "ctx.fullscreenDisabled !== true && ctx.isInHostedMode !== true && ctx.fullscreen !== true"
+      },
+      "momCmdExitFullScreenCmdCondition": {
+        "expression": "ctx.fullscreenDisabled !== true && ctx.fullscreen === true"
+      },
+      "supportsViewModes": {
+        "expression": "ctx.ViewModeContext.ViewModeContext !== 'None' && conditions.notFullScreen"
+      },
+      "supportsListView": {
+        "expression": "ctx.ViewModeContext.supportedViewModes.ListView && conditions.notFullScreen && ctx.momSupportedViewModesList.length > 1"
+      },
+      "supportsTableView": {
+        "expression": "ctx.ViewModeContext.supportedViewModes.TableView && conditions.notFullScreen && ctx.momSupportedViewModesList.length > 1"
+      },
+      "supportsSummaryView": {
+        "expression": "ctx.ViewModeContext.supportedViewModes.SummaryView && conditions.notFullScreen && ctx.momSupportedViewModesList.length > 1"
+      },
+      "supportsTableSummaryView": {
+        "expression": "ctx.ViewModeContext.supportedViewModes.TableSummaryView && conditions.notFullScreen && ctx.momSupportedViewModesList.length > 1"
+      },
+      "isListView": {
+        "expression": "ctx.ViewModeContext.ViewModeContext === 'ListView'"
+      },
+      "isTableView": {
+        "expression": "ctx.ViewModeContext.ViewModeContext === 'TableView'"
+      },
+      "isSummaryView": {
+        "expression": "ctx.ViewModeContext.ViewModeContext === 'SummaryView'"
+      },
+      "isTableSummaryView": {
+        "expression": "ctx.ViewModeContext.ViewModeContext === 'TableSummaryView'"
+      },
+      "fullScreen": {
+        "expression": "ctx.fullscreen === true && !ctx.fullscreenDisabled"
+      },
+      "toggleCommandLabelsEnabled": {
+        "expression": "!ctx.disableToggleCommandLabels"
+      },
+      "commandLabels": {
+        "expression": "ctx.toggleLabel"
+      },
+      "notFullScreen": {
+        "expression": "ctx.fullscreen !== true && !ctx.fullscreenDisabled"
+      },
+      "openPageMenuPanel": {
+        "expression": "ctx.momPrimaryNavigationPanel === 'pageMenu'"
+      },
+      "userLoggedIn": {
+        "expression": "true"
+      },
+      "goToUserHomePageEnabled": {
+        "expression": "!ctx.momDisableGoToHomePage && ctx.cepCommandsOverride"
+      },
+      "isCEPOverrideCommand": {
+        "expression": "ctx.momBaseUrl && ctx.locationContext['ActiveWorkspace:Location'] && ctx.cepCommandsOverride"
+      },
+      "supportsLightTheme": {
+        "expression": "!ctx.changeThemeDisabled"
+      },
+      "supportsDarkTheme": {
+        "expression": "!ctx.changeThemeDisabled"
+      },
+      "isLightTheme": {
+        "expression": "ctx.theme === 'ui-lightTheme'"
+      },
+      "isDarkTheme": {
+        "expression": "ctx.theme === 'ui-darkTheme'"
+      },
+      "true": {
+        "expression": "true"
+      },
+      "false": {
+        "expression": "false"
+      },
+      "arrangeSelectAllVisible": {
+        "expression": "commandContext.columnDefs.length > 0"
+      },
+      "arrangeSelectAllSelected": {
+        "expression": "commandContext.allColumnsVisible"
+      },
+      "arrangeResetVisible": {
+        "expression": "commandContext.columnDefs.length > 0"
+      },
+      "arrangeItemSelected": {
+        "expression": "commandContext.filter === '' && commandContext.selectedColumn !== null"
+      },
+      "arrangeMoveUpVisible": {
+        "expression": "conditions.arrangeItemSelected && commandContext.selectedColumn !== commandContext.columnDefs[0]"
+      },
+      "arrangeMoveDownVisible": {
+        "expression": "conditions.arrangeItemSelected && commandContext.selectedColumn !== commandContext.columnDefs[commandContext.columnDefs.length-1]"
+      },
+      "isColumnFilteringOn": {
+        "expression": "ctx.columnFilter.isFilteringOn === true"
+      },
+      "isColumnFilteringOff": {
+        "expression": "ctx.columnFilter.isFilteringOn === false"
+      },
+      "isAddObjectPanelPanelPinned": {
+        "expression": "commandContext.pinnedToForm.dbValue"
+      },
+      "isAddObjectPanelPanelUnPinned": {
+        "expression": "commandContext.unpinnedToForm.dbValue"
+      }
+    },
+    "i18n": {
+      "changeTheme": [
+        "momMessages"
+      ],
+      "labels": [
+        "momMessages"
+      ],
+      "fullScreenCommand": [
+        "momMessages",
+        "UIMessages"
+      ],
+      "fullScreenCommandExit": [
+        "momMessages",
+        "UIMessages"
+      ],
+      "momCmdShowListViewTitle": [
+        "momMessages"
+      ],
+      "momCmdShowSummaryViewTitle": [
+        "momMessages"
+      ],
+      "momCmdShowTableViewTitle": [
+        "momMessages"
+      ],
+      "home": [
+        "momMessages"
+      ],
+      "light": [
+        "momMessages"
+      ],
+      "dark": [
+        "momMessages"
+      ],
+      "changeLocale": [
+        "momMessages"
+      ],
+      "uiSettings": [
+        "momMessages"
+      ],
+      "goToTop": [
+        "momMessages"
+      ],
+      "momCmdShowTableSummaryViewTitle": [
+        "momMessages"
+      ],
+      "changeThemeCommand": [
+        "UIMessages"
+      ],
+      "lightTheme": [
+        "UIMessages"
+      ],
+      "darkTheme": [
+        "UIMessages"
+      ],
+      "arrangeSelectAll": [
+        "UIMessages"
+      ],
+      "arrangeUnselectAll": [
+        "UIMessages"
+      ],
+      "arrangeReset": [
+        "UIMessages"
+      ],
+      "arrangeMoveUp": [
+        "UIMessages"
+      ],
+      "arrangeMoveDown": [
+        "UIMessages"
+      ],
+      "arrange": [
+        "UIMessages",
+        "awCompareMessages"
+      ],
+      "showFiltersTitle": [
+        "UIMessages"
+      ],
+      "hideFiltersTitle": [
+        "UIMessages"
+      ],
+      "aw_uiGrid": [
+        "UIMessages"
+      ],
+      "backTitle": [
+        "UIElementsMessages"
+      ],
+      "aw_rightWall": [
+        "UIElementsMessages"
+      ],
+      "aw_footer": [
+        "UIElementsMessages"
+      ],
+      "aw_primaryWorkArea": [
+        "UIElementsMessages"
+      ],
+      "aw_globalNavigationbar": [
+        "UIElementsMessages"
+      ],
+      "addObjectPanelPinButtonToolTip": [
+        "awAddDirectiveMessages"
+      ],
+      "addObjectPanelUnpinButtonToolTip": [
+        "awAddDirectiveMessages"
+      ],
+      "addProjectButtonTitle": [
+        "awAddDirectiveMessages"
+      ],
+      "addObjectPanel_oneStepPinCommands": [
+        "awAddDirectiveMessages"
+      ],
+      "uiwidget_projectSectionCommands": [
+        "awAddDirectiveMessages"
+      ],
+      "aw_compare": [
+        "awAddDirectiveMessages"
+      ]
+    },
+    "onEvent": [
+      {
+        "eventId": "topLevelCtxUpdated",
+        "action": "showMenu"
+      }
+    ],
+    "messages": {}
+  }
+}

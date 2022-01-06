@@ -1,0 +1,129 @@
+// Copyright 2018 Siemens Product Lifecycle Management Software Inc.
+// aw-popup
+aw-popup {
+    .aw-popup-contentContainer {
+        border-radius: $popup_container_border_radius;
+
+        .aw-layout-panelTitle {
+            padding: $popup_title_padding;
+            border-radius: $popup_title_border_radius;
+
+            .aw-base-iconButton {
+                margin: $popup_title_icon_button_margin;
+                height: $popup_title_icon_button_height;
+                width: $popup_title_icon_button_width;
+            }
+        }
+
+        .aw-layout-popup {
+            border: $popup_child_border;
+            border-radius: $popup_child_border_radius;
+        }
+    }
+
+    .aw-popup-container {
+        max-width: $popup_container_max_width;
+        max-height: $popup_container_max_height;
+        min-width: $popup_container_min_width;
+        min-height: $popup_container_min_height;
+    }
+
+    // panel layout css
+    .aw-layout-popup {
+        border: $popup_border;
+        border-radius: $popup_border_radius;
+    }
+
+    .aw-popup-centerAligned {
+        -webkit-box-pack: justify;
+        -webkit-justify-content: center;
+        -ms-flex-pack: justify;
+        -moz-box-pack: justify;
+        justify-content: center;
+        align-items: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center
+    }
+
+    .aw-popup-topAligned {
+        z-index: $popup_position_top_aligned_z-index;
+        position: absolute;
+        left: $popup_position_top_aligned_left;
+        top: $popup_position_top_aligned_top;
+    }
+
+    .aw-popup-noModal {
+        position: inherit;
+        transform: translate(-50%);
+    }
+
+    .aw-popup-contentContainer {
+        z-index: $popup_content_container_z-index;
+        opacity: $popup_content_container_opacity;
+    }
+
+    .aw-popup-screenMask {
+        opacity: $popup_screen_mask_opacity;
+        z-index: $popup_screen_mask_z-index;
+    }
+
+    .aw-popup-fullPage {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .aw-popup-animate {
+        opacity: 1;
+        transition: opacity 1s;
+    }
+
+    .aw-popup-scrollable {
+        overflow: auto;
+    }
+
+    .aw-popup-commands {
+        justify-content: flex-end;
+    }
+
+    .aw-popup-pinMargin {
+        margin: $popup_pin_margin;
+    }
+
+    .aw-layout-panelFooter {
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-justify-content: flex-end;
+        justify-content: flex-end;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    button {
+        &.aw-base-size-auto:not(:last-child) {
+            margin: $popup_button_not_last_child_margin;
+        }
+
+        &.aw-base-size-auto:last-child {
+            margin: $popup_button_last_child_margin;
+        }
+
+        &.disabled {
+            cursor: default;
+            box-sizing: border-box;
+        }
+    }
+}
+
+//aw-link-with-popup-menu icon css
+.aw-layout-headerSubTitle {
+    .aw-base-icon {
+        height: $popup_menu_icon_height;
+        width: $popup_menu_icon_width;
+    }
+}

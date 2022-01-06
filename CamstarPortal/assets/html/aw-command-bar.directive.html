@@ -1,0 +1,16 @@
+<div class="aw-commands-wrapper" ng-class="{'aw-commands-showIconLabel': showCommandLabels}" ng-style="{'flex-grow': showDownArrow ? (visibleCommands.length - overflowCommands.length) : visibleCommands.length }">
+    <!-- All of the currently visible commands that fit within the command bar -->
+    <aw-command ng-repeat="command in commandsList | filter:{visible:true} | orderBy: '':reverse | limitTo:commandLimit as visibleCommands" id="{{$index}}"></aw-command>
+</div>
+<div class="aw-commands-wrapper aw-commands-overflow" ng-class="{'aw-commands-showIconLabel': showCommandLabels}" ng-show="overflowCommands.length > 0 && showDownArrow" ng-style="{'flex-grow': overflowCommands.length * 2}">
+    <!-- All of the currently visible overflow commands -->
+    <aw-command ng-repeat="command in commandsList | filter:{visible:true} | orderBy: '':reverse | limitTo:commandsList.length:commandLimit as overflowCommands" id="{{$index}}"></aw-command>
+</div>
+<div class="aw-command-overflowIcon" ng-show="overflowCommands.length > 0">
+    <button type="button"
+        class="aw-commands-commandIconButton aw-commands-commandWrapperVertical"
+        ng-click="toggleOverflow($event)" title="{{showDownArrow ? collapseText : expandText}}">
+        <aw-icon id="miscChevronDown" ng-class="['aw-commands-svg', {'aw-icon-rotate': showDownArrow}]"></aw-icon>
+        <div class="aw-commands-showIconLabel aw-commands-commandIconButtonText">{{showDownArrow ? collapseText : expandText}}</div>
+    </button>
+</div>

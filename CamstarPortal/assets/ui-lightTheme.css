@@ -1,0 +1,5173 @@
+/* Copyright 2018 Siemens Product Lifecycle Management Software Inc. */
+/*
+    Import the Apollo Default Theme Palette
+*/
+/* Copyright 2018 Siemens Product Lifecycle Management Software Inc. */
+/*
+  APOLLO PRIMARY COLORS
+*/
+/*
+  END APOLLO PRIMARY COLORS
+*/
+/*
+    Import the Legacy Theme Palette
+*/
+/* start legacy color vars */
+/*
+    Import the Afx Theme "brand" variables
+*/
+/* Copyright 2018 Siemens Product Lifecycle Management Software Inc. */
+/*
+    BRAND COLOR VARIABLES
+*/
+/*
+    END BRAND COLOR VARIABLES
+*/
+/*
+    Import the LegacyAfx Theme variables
+*/
+/*
+    Import the Afx Theme variable assignments
+*/
+/*
+    PLACEHOLDER
+    Alternate theme-specific color VARs
+*/
+/*
+    PLACEHOLDER
+    Assign Alternate theme-specific VARS to the generic VARs (from _afx-theme-vars.scss) you'd like to override
+*/
+/* Copyright 2018 Siemens Product Lifecycle Management Software Inc. */
+/*
+    Assign the color variables to the element-specific variables
+*/
+/*
+    1. BACKGROUNDS and FOREGROUNDS
+    2. ELEVATION
+    3. CELL LIST ITEMS
+    4. BUTTONS
+    5. ICON BUTTONS
+    6. POP UPS
+    7. PANEL TITLES
+    8. TABS
+    9. TEXT
+    10. LINKS
+    11. BREADCRUMBS
+    12. TRANSITIONS
+    13. CHECKBOXES
+    14. SLIDERS
+    15. SPLITTERS
+    16. FILE UPLOADS
+    17. DEFAULT CELLS
+    18. DEFAULT GROUP CELLS
+    19. AVATARS
+    20. LABELS
+    21. RADIO BUTTONS
+    22. DATE PICKERS
+    23. DATETIME PICKERS
+    24. BALLOON POPUPS
+    25. SEARCH PREFILTERS
+    26. PROGRESS INDICATORS
+    27. COMMAND BARS
+    28. TABLES
+    29. SEPARATORS
+    30. HORIZONTAL TOOLBARS
+    31. SIDENAVS
+    32. PROPERTY ARRAYS
+    33. FOOTERS
+    34. SEARCH BOX
+    35. PLACEHOLDER
+    36. LINK_WITH_POPUP
+    37. COMMAND_PANEL_SECTION
+    38. DRAG AND DROP
+    39. SOURCE EDITOR
+    40. NOTIFICATION_CELL
+*/
+/*
+    1. BACKGROUNDS and FOREGROUNDS (text/foreground to contrast background)
+    default background gradient comes via the background-image mix-in
+    these backgrounds override it
+    ssu - rm the unecc intermediary remapping of brand vars...
+*/
+/*
+    2. ELEVATION
+*/
+/*
+    3. CELL LIST ITEMS
+*/
+/*
+    4. BUTTONS
+*/
+/*
+    5. ICON BUTTONS
+*/
+/*
+    6. POP UPS
+*/
+/*
+    7. PANEL TITLES
+*/
+/*
+    8. TABS
+*/
+/*
+    9. TEXT
+*/
+/*
+    10. LINKS
+*/
+/*
+    11. BREADCRUMBS
+*/
+/*
+    12. TRANSITIONS
+*/
+/*
+    13. CHECKBOXES
+*/
+/*
+    14. SLIDERS
+*/
+/*
+    15. SPLITTERS
+*/
+/*
+    16. FILE UPLOADS
+*/
+/*
+    17. DEFAULT CELLS
+*/
+/*
+    18. DEFAULT GROUP CELLS
+*/
+/*
+    19. AVATARS
+*/
+/*
+    20. LABELS
+*/
+/*
+    21. RADIO BUTTONS
+*/
+/*
+    22. DATE PICKERS
+*/
+/*
+    23. DATETIME PICKERS
+*/
+/*
+    24. BALLOON POPUPS
+*/
+/*
+    25. SEARCH PREFILTERS
+*/
+/*
+    26. PROGRESS INDICATORS
+*/
+/*
+    27. COMMAND BARS
+*/
+/*
+    28. TABLES
+*/
+/*
+    29. SEPARATORS
+*/
+/*
+    30. HORIZONTAL TOOLBARS
+*/
+/*
+    31. SIDENAVS
+*/
+/*
+    32. PROPERTY ARRAYS
+*/
+/*
+    33. FOOTERS
+*/
+/*
+  end generic color var assignment
+*/
+/*
+    34. SEARCH BOX
+*/
+/*
+    35.PLACEHOLDER
+*/
+/*
+    36.LINK_WITH_POPUP
+*/
+/*
+    37.COMMAND_PANEL_SECTION
+*/
+/*
+    38.DRAG AND DROP
+*/
+/*
+    39.SOURCE EDITOR
+*/
+/*
+    40.NOTIFICATION_CELL
+*/
+/*
+    Import the Legacy Theme variable assignments
+*/
+/*  end legacy color vars */
+/*
+    Import the Legacy Theme Palette
+*/
+/* Copyright 2018 Siemens Product Lifecycle Management Software Inc. */
+select,
+.aw-jswidgets-tablePropertyContentChanged .aw-jswidgets-editableGridCell,
+.aw-uiwidgets-searchBoxContainer,
+.aw-search-SuggestBoxPopup .aw-layout-popup,
+aw-table .aw-jswidgets-grid .movingColumn {
+  border-color: #dcdcdc;
+}
+
+.aw-jswidgets-editableGridCell,
+input.aw-search-searchBox,
+aw-splm-table .aw-jswidgets-editableGridCell {
+  border-color: #dcdcdc;
+}
+
+select:hover,
+.aw-uiwidgets-searchBoxContainer:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+input.aw-search-searchBox:hover,
+.aw-jswidgets-tablePropGrid .ui-grid-canvas div.ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell,
+.aw-jswidgets-tablePropGrid .ui-grid-canvas div.ui-grid-row.ui-grid-row-selected.aw-jswidgets-tablePropertyEditTextAreaCell > [ui-grid-row] > .ui-grid-cell {
+  border-color: #a3d0dc;
+}
+
+.aw-jswidgets-grid {
+  border-color: #dcdcdc;
+}
+
+.aw-jswidgets-grid .ui-grid-row {
+  border-color: #dcdcdc;
+}
+
+.aw-widgets-droparea,
+.aw-widgets-droparea td {
+  background-color: #cde6eb !important;
+}
+
+.aw-theme-multidragimage {
+  background-color: #cde6eb;
+  border-color: #39a0c0;
+}
+
+.aw-theme-dropframe {
+  border-color: #afd7e1;
+}
+
+.aw-theme-iconOutline,
+.aw-commands-svg svg {
+  fill: #464646;
+}
+
+.aw-theme-iconFilledBackground {
+  fill: #ffffff;
+}
+
+.aw-theme-iconFilledOutline {
+  fill: #464646;
+}
+
+select:focus,
+.aw-jswidgets-editableGridCell:focus,
+.aw-layout-panelHeader .aw-uiwidgets-searchBoxContainerFocus,
+div.ui-grid-cell input[type="text"]:focus,
+div.aw-jswidgets-cellTop input:focus {
+  border-color: #afd7e1;
+}
+
+.aw-uiwidgets-searchBoxContainer.aw-uiwidgets-searchBoxContainerFocus {
+  border-color: #3296b9;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.aw-jswidgets-checkboxLabel:focus:before,
+.aw-widgets-propertyRichTextEditValue:focus,
+input.aw-search-searchBox:focus {
+  border-color: #afd7e1;
+}
+
+.aw-jswidgets-drop .aw-widgets-cellListWidget {
+  background-color: #ffffff;
+}
+
+input[type="file"] {
+  background-color: #ffffff;
+  color: #464646;
+}
+
+input.aw-search-searchBox,
+input.aw-search-searchBox:focus {
+  background-color: #ffffff;
+}
+
+.aw-jswidgets-cbaSearch input[type="text"].ng-dirty,
+.aw-uiwidgets-searchBoxContainer input[type="text"].ng-dirty {
+  background-color: #ffffff;
+}
+
+.aw-theme-valueChanged {
+  background-color: #e3faff;
+  color: #464646;
+}
+
+.aw-base-small-glyph,
+.aw-base-glyph,
+.aw-base-xl-glyph {
+  color: #3c3c3c;
+}
+
+thead {
+  border-color: #aaaaaa;
+}
+
+.aw-base-backButton,
+.aw-base-backButton:hover {
+  background-color: transparent;
+}
+
+.aw-search-searchContainer .aw-base-iconButton {
+  background-color: #505050;
+}
+
+.aw-base-iconButton {
+  background-color: transparent;
+}
+
+.aw-base-iconButtonNode {
+  fill: #dcdcdc;
+}
+
+/* end base */
+/* layout */
+.aw-layout-headerLeft button:hover {
+  background-color: #cde6eb;
+}
+
+.aw-layout-headerLeft button:active {
+  background-color: #afd7e1;
+}
+
+/* ui */
+.aw-ui-popupPanel {
+  border-color: #ffffff;
+}
+
+.aw-ui-mainPanelError {
+  background-color: #dc0000;
+  color: #ffffff;
+}
+
+.aw-ui-mainPanelWarning {
+  background-color: #dc6914;
+  color: #fafafa;
+}
+
+.aw-ui-mainPanelInfo {
+  background-color: #f0f0f0;
+  color: #aaaaaa;
+}
+
+/* end ui */
+.aw-layout-popup,
+aw-table .ui-grid-menu .ui-grid-menu-inner ul li button,
+aw-table .ui-grid-menu .ui-grid-menu-inner ul li:not(:last-child) > button,
+aw-compare .ui-grid-menu .ui-grid-menu-inner ul li button,
+.aw-jswidgets-grid .ui-grid-menu .ui-grid-menu-inner ul li:not(:last-child) > button.ui-grid-menu-item,
+.aw-jswidgets-grid .ui-grid-menu .ui-grid-menu-inner ul li > button.ui-grid-menu-item,
+.aw-jswidgets-grid .ui-grid-menu .ui-grid-menu-inner ul li button.ui-grid-menu-item.ui-grid-menu-item-active {
+  border-color: #dcdcdc;
+  background-color: #ffffff;
+  color: #464646;
+  fill: #464646;
+}
+
+/* class for aw-balloon-popup-panel start */
+aw-balloon-popup-panel .aw-layout-popup {
+  border-color: #505050;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+aw-balloon-popup-panel .aw-layout-popup:before {
+  border-bottom-color: #505050;
+}
+
+aw-balloon-popup-panel .aw-layout-popup:after {
+  border-bottom-color: #ffffff;
+}
+
+.aw-popup-close {
+  color: #505050;
+}
+
+.aw-popup-close:hover,
+.aw-popup-close:focus {
+  color: #000000;
+}
+
+/* class for aw-balloon-popup-panel Ends */
+.aw-jswidgets-grid .ui-grid-menu-button .ui-grid-icon-container:hover {
+  background-color: #cde6eb;
+}
+
+aw-table .ui-grid-menu-button,
+aw-compare .ui-grid-menu-button {
+  background-color: transparent;
+}
+
+.gwt-SuggestBoxPopup .item {
+  color: #aaaaaa;
+}
+
+.aw-jswidgets-grid .ui-grid-row .ui-grid-cell {
+  background-color: #ffffff;
+  border-color: #dcdcdc;
+}
+
+.ui-grid-header-cell-wrapper,
+.aw-jswidgets-grid .ui-grid-menu-button .ui-grid-icon-container {
+  background-color: #e6e6e6;
+}
+
+.aw-jswidgets-grid .ui-grid-cell {
+  border-right-color: transparent;
+}
+
+.aw-jswidgets-grid .ui-grid-pinned-container.ui-grid-pinned-container-left .ui-grid-cell:last-child,
+.aw-jswidgets-grid .aw-splm-table-pinned-container-left .ui-grid-cell:last-child {
+  border-right: solid 1px;
+  border-right-color: #dcdcdc;
+}
+
+.aw-jswidgets-grid .aw-splm-table-header-cell .aw-splm-table-header-cell-splitter {
+  border-color: #aaaaaa;
+}
+
+/* LCS-145900 - Issue: UXRefresh: Column header overriding the arrange button */
+/* put background color for table menu */
+.aw-splm-table-menu-button,
+aw-splm-table .grid-menu-command {
+  background-color: #e6e6e6;
+}
+
+.aw-widgets-cellListItemNode {
+  /* svg-specific */
+  fill: #ffffff;
+  fill-opacity: 1;
+}
+
+.aw-graph-container .aw-widgets-cellListItemNode {
+  /* svg-specific, as the node could not be transparent, otherwise all child nodes will have the parent node fill color
+       when the parent hovered/selected */
+  fill: #ffffff;
+}
+
+.aw-widgets-cellListItemDetailNode,
+.aw-widgets-cellListItem .aw-widgets-cellListItemDetailNode {
+  fill: transparent;
+}
+
+.aw-widgets-cellList text {
+  fill: #fafafa;
+}
+
+.aw-widgets-cellListItemPrevSelected,
+.aw-widgets-cellListItemPrevSelected:hover {
+  background-color: #f0f0f0;
+}
+
+.gwt-SuggestBoxPopup .item:hover,
+.aw-widgets-cellListItem:hover,
+.aw-state-selected:hover,
+.aw-layout-popup .aw-widgets-cellListItem:hover,
+.aw-ui-treeNodeValue:hover,
+.dataGridWidget .dataGridHoveredRow,
+.aw-jswidgets-nestingListItemDisplay.aw-state-attention,
+.aw-jswidgets-nestingListItemDisplay:focus,
+.aw-jswidgets-arrayEditValueCellList .aw-jswidgets-arrayValueCellListItem:hover,
+.aw-jswidgets-grid .ui-grid-menu .ui-grid-menu-inner ul li:not(:last-child) > button.ui-grid-menu-item:hover,
+.aw-jswidgets-grid .ui-grid-menu .ui-grid-menu-inner ul li > button.ui-grid-menu-item:hover {
+  background-color: #cde6eb;
+  fill: #464646;
+  color: #464646;
+}
+
+.aw-jswidgets-grid .ui-grid-menu-mid {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.aw-widgets-cellListItem.aw-widgets-hideCellListSelEffect:hover,
+.aw-widgets-cellListItem.aw-widgets-hideCellListSelEffect:active {
+  background-color: transparent;
+}
+
+select option:hover {
+  background-color: #a3d0dc;
+  fill: #a3d0dc;
+}
+
+.aw-state-selected,
+.gwt-SuggestBoxPopup .item-selected,
+.aw-widgets-cellListItem.aw-state-selected,
+.dataGridWidget .dataGridSelectedRow,
+.dataGridWidget .dataGridKeyboardSelectedRow,
+.aw-jswidgets-nestingListItemDisplay.aw-state-selected.aw-state-attention,
+.aw-jswidgets-compareContainer .aw-jswidgets-selectedObject,
+.aw-jswidgets-compareContainer div.ui-grid-cell-focus.aw-jswidgets-selectedObject {
+  background-color: #cde6eb;
+  fill: #cde6eb;
+}
+
+.aw-widgets-cellListItemSelected {
+  background-color: #cde6eb;
+  fill: #005f87;
+}
+
+.aw-visual-indicator {
+  fill: #464646;
+}
+
+.aw-widgets-cellListItemNodeSelected,
+.aw-jswidgets-tablePropGrid .ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell,
+.aw-jswidgets-tablePropGrid .ui-grid-canvas div.ui-grid-row.ui-grid-row-selected.aw-jswidgets-tablePropertyEditTextAreaCell > [ui-grid-row] > .ui-grid-cell {
+  background-color: #cde6eb;
+  fill: #cde6eb;
+}
+
+.aw-widgets-cellListItemNodeHovered {
+  fill: #cde6eb;
+  /* svg-specific */
+  fill-opacity: 1;
+}
+
+.aw-widgets-cellListItemSelected:hover,
+.aw-layout-popup .aw-widgets-cellListItemSelected:hover,
+.gwt-SuggestBoxPopup .item-selected:hover,
+.dataGridWidget .dataGridSelectedRow:hover,
+.dataGridWidget .dataGridKeyboardSelectedRow:hover,
+.aw-jswidgets-tablePropGrid .ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell:hover,
+.aw-jswidgets-tablePropGrid .ui-grid-canvas div.ui-grid-row.ui-grid-row-selected.aw-jswidgets-tablePropertyEditTextAreaCell > [ui-grid-row] > .ui-grid-cell:hover,
+.aw-widgets-cellListItem.aw-state-selected:hover,
+.aw-search-savedSearchTable .aw-widgets-cellListItemSelected:hover {
+  background-color: #a3d0dc;
+}
+
+.aw-widgets-cellListCellItemType {
+  color: #39a0c0;
+  fill: #39a0c0;
+}
+
+.aw-jswidgets-nestingListItemDisplay:hover {
+  background-color: #daecf0;
+}
+
+.aw-widgets-errorHint {
+  color: #dc0000;
+  background-color: #f0f0f0;
+}
+
+.aw-widgets-cellListItem .aw-widgets-cellListCellItemType,
+.aw-mfgPert-tooltipTitle {
+  color: #005f87;
+}
+
+.aw-widgets-cellListCellPropertyLabel {
+  color: #aaaaaa;
+  fill: #aaaaaa;
+}
+
+select option:active,
+.aw-theme-listItem:active,
+.gwt-SuggestBoxPopup .item:active,
+.aw-widgets-cellListItem:active,
+.aw-layout-popup .aw-widgets-cellListItem:active,
+.dataGridWidget .dataGridHoveredRow:active,
+.aw-jswidgets-nestingListItemDisplay:active,
+.aw-widgets-cellListItemSelected:active,
+.aw-widgets-cellListItemNodeSelected:active,
+.gwt-SuggestBoxPopup .item-selected:active,
+.aw-widgets-cellListItem.aw-state-selected:active,
+.dataGridWidget .dataGridSelectedRow:active,
+.dataGridWidget .dataGridKeyboardSelectedRow:active {
+  background-color: #afd7e1;
+  fill: #afd7e1;
+}
+
+.aw-jswidgets-tablePropGrid .ui-grid-header-cell .ui-grid-cell-contents,
+.aw-jswidgets-grid .ui-grid-header-cell {
+  color: #464646;
+}
+
+.aw-jswidgets-tablePropGrid .ui-grid-header-cell .ui-grid-cell-contents:hover,
+.aw-jswidgets-compareContainer .ui-grid-header-cell .aw-jswidgets-selectedObject {
+  color: #6e6e6e;
+}
+
+.aw-jswidgets-grid .ui-grid-header-cell:hover {
+  color: #6e6e6e;
+}
+
+aw-table .ui-grid-header,
+aw-matrix .ui-grid-header {
+  border-top-color: transparent;
+  border-bottom-color: #f0f0f0;
+}
+
+.aw-jswidgets-grid .ui-grid-pinned-container.ui-grid-pinned-container-left .ui-grid-header-cell:last-child,
+aw-matrix .aw-jswidgets-grid .ui-grid-header-cell {
+  border-right-color: #aaaaaa;
+}
+
+.ui-grid-header {
+  border-bottom: 1px solid #aaaaaa;
+  box-sizing: border-box;
+}
+
+.aw-widgets-cellListPopup {
+  background-color: #ffffff;
+}
+
+.dataGridWidget .dataGridHeader:hover {
+  /* gwt-generated class */
+  border-color: #505050;
+}
+
+.dataGridWidget .dataGridSortableHeader:hover {
+  /* gwt-generated class */
+  color: #6e6e6e;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupMiddleCenter {
+  color: #aaaaaa;
+  background: #f0f0f0;
+  border-color: #505050;
+}
+
+input[type="text"]:disabled.propertyPendingChangeValue,
+.propertyPendingChangeValue,
+.propertyPendingChangeValue:disabled {
+  background-color: #e3faff;
+  color: #464646;
+}
+
+tr td {
+  color: #fafafa;
+}
+
+tr th {
+  color: #464646;
+}
+
+.aw-widgets-checkSelect > label:nth-of-type(2) > input:checked + span {
+  background: #505050;
+}
+
+.required-indicator,
+.aw-widgets-requiredIndicator {
+  color: #dc0000;
+}
+
+.required::-webkit-input-placeholder {
+  color: #dc0000;
+}
+
+.required:-moz-placeholder {
+  color: #dc0000;
+}
+
+.required::-moz-placeholder {
+  color: #dc0000;
+}
+
+.required:-ms-input-placeholder {
+  color: #dc0000;
+}
+
+.warning,
+.aw-widgets-propertyWarningLabel {
+  color: #dc6914;
+}
+
+.error,
+.aw-widgets-propertyErrorLabel {
+  background-color: #dc0000;
+  border: 1px solid #fafafa;
+  color: #ffffff;
+}
+
+input[type="text"].aw-widgets-propertyError {
+  border-color: #dc0000;
+}
+
+hr {
+  border-color: #aaaaaa;
+}
+
+.aw-base-toolbar {
+  color: #005f87;
+}
+
+.aw-layout-locationTitle {
+  color: #ffffff;
+}
+
+.aw-layout-summaryOnly .aw-layout-summaryLocation a.aw-base-tabTitle,
+.aw-layout-summaryOnly .aw-layout-summaryLocation a.aw-base-tabTitle:hover,
+.aw-layout-summaryOnly .aw-layout-summaryLocation a.aw-base-tabTitle:visited {
+  color: #005f87;
+}
+
+.aw-notifications-panel {
+  background-color: #f0f0f0;
+}
+
+/* molecules */
+.aw-session-tcLoginView {
+  background-color: #fafafa;
+}
+
+.aw-session-signIn {
+  color: #ffffff;
+  background-color: rgba(2, 2, 2, 0.5);
+}
+
+.aw-session-brandPanel h1,
+.aw-session-brandPanel h2,
+.aw-session-brandPanel .aw-session-copyright,
+.aw-session-brandPanel h3 {
+  color: #ffffff;
+}
+
+.aw-session-signIn .aw-session-errorMessage {
+  background-color: #dc0000;
+}
+
+.sign-in .error-message {
+  background-color: #dc0000;
+}
+
+.aw-widgets-propertyEditValueCellList {
+  color: #fafafa;
+}
+
+.aw-widgets-propertyValueLinkCellList {
+  color: #fafafa;
+}
+
+.aw-widgets-propertyPendingChangeValue,
+.aw-widgets-propertyPendingChangeValue .aw-widgets-propertyPendingChangeValueChild {
+  background-color: #e3faff;
+  color: #464646;
+}
+
+.aw-widgets-propertyPendingChangeValue:focus {
+  background-color: #e3faff;
+  color: #464646;
+}
+
+.aw-widgets-defaultPropertyValueButton,
+.aw-widgets-headerPanel {
+  background-color: transparent;
+}
+
+.aw-widgets-editPropertyValueButton {
+  background-color: #dcdcdc;
+}
+
+.aw-widgets-noResultsLabel {
+  color: #1e1e1e;
+}
+
+.contextSeparator,
+.aw-layout-contextSeparator {
+  color: #1e1e1e;
+}
+
+.aw-layout-leftPopupPanel,
+.aw-layout-rightPopupPanel {
+  background-color: rgba(240, 240, 240, 0.9);
+  color: #464646;
+}
+
+.aw-layout-leftPopupPanel:hover,
+.aw-layout-rightPopupPanel:hover {
+  background-color: #f0f0f0;
+}
+
+.aw-layout-panelTitle {
+  background-color: #005f87;
+  color: #ffffff;
+}
+
+.aw-layout-panelTitle .aw-commands-commandIconButton,
+.aw-layout-panelTitle .aw-theme-iconButton {
+  color: #ffffff;
+}
+
+.aw-layout-panelTitle .aw-theme-iconOutline {
+  fill: #ffffff;
+}
+
+.aw-layout-popup {
+  display: block;
+}
+
+.aw-layout-panelSectionTitle {
+  color: #39a0c0;
+}
+
+.aw-layout-subLocation .aw-layout-panelSectionTitle {
+  background-color: #f0f0f0;
+  color: #1e1e1e;
+}
+
+.aw-layout-panelMain .aw-layout-panelBody .aw-layout-panelSectionTitle {
+  background-color: #f0f0f0;
+  color: #1e1e1e;
+}
+
+.aw-layout-panelSectionTitleUnderline {
+  border-bottom: 1px solid;
+  border-bottom-color: #aaaaaa;
+}
+
+.aw-theme-childListContent:hover {
+  color: #39a0c0;
+}
+
+.aw-layout-navigatePanelHeader a.aw-layout-panelSectionTitle {
+  color: #005f87;
+}
+
+.aw-layout-navigatePanelHeader a.aw-layout-panelSectionTitle:hover {
+  color: #8cc3d2;
+}
+
+.aw-layout-breadCrumbs {
+  border-bottom-color: #ffffff;
+}
+
+.aw-layout-underline {
+  border-bottom-color: #f0f0f0;
+}
+
+.aw-search-savedSearchPrimaryWorkArea .aw-search-savedSearchLabel,
+.aw-search-recentSearchPrimaryWorkArea .aw-search-savedSearchLabel {
+  color: #39a0c0;
+}
+
+.aw-search-filterNameLabelSelected,
+.aw-search-filterNameLabel,
+.aw-search-filterNameLabelDrilldown1,
+.aw-search-filterNameLabelDrilldown2,
+.aw-search-filterNameLabelDrilldown3,
+.aw-search-filterNameLabelDrilldown4,
+.aw-ui-filterNameLabelSelected,
+.aw-ui-filterNameLabel,
+.aw-ui-filterNameLabelDrilldown1,
+.aw-ui-filterNameLabelDrilldown2,
+.aw-ui-filterNameLabelDrilldown3,
+.aw-ui-filterNameLabelDrilldown4,
+.aw-ui-filterNameLabelSelectedDrilldown1,
+.aw-ui-filterNameLabelSelectedDrilldown2,
+.aw-ui-filterNameLabelSelectedDrilldown3,
+.aw-ui-filterNameLabelSelectedDrilldown4,
+.aw-cfg-optionValueLabelSelected,
+.aw-theme-parentHeader {
+  color: #005f87;
+}
+
+.aw-theme-childListContent {
+  color: #005f87;
+}
+
+.aw-search-filterNameLabelSelected:hover,
+.aw-search-filterNameLabel:hover,
+.aw-search-filterNameLabelDrilldown1:hover,
+.aw-search-filterNameLabelDrilldown2:hover,
+.aw-search-filterNameLabelDrilldown3:hover,
+.aw-search-filterNameLabelDrilldown4:hover,
+.aw-ui-filterNameLabelSelected:hover,
+.aw-ui-filterNameLabel:hover,
+.aw-ui-filterNameLabelDrilldown1:hover,
+.aw-ui-filterNameLabelDrilldown2:hover,
+.aw-ui-filterNameLabelDrilldown3:hover,
+.aw-ui-filterNameLabelDrilldown4:hover,
+.aw-cfg-groupLabel,
+.aw-cfg-groupLabel:hover,
+.aw-cfg-familyLabel,
+.aw-cfg-familyLabel:hover,
+.aw-cfg-optionValueLabelSelected:hover {
+  color: #39a0c0;
+}
+
+.aw-search-filterNameLabelSelected:active,
+.aw-search-filterNameLabel:active,
+.aw-search-filterNameLabelDrilldown1:active,
+.aw-search-filterNameLabelDrilldown2:active,
+.aw-search-filterNameLabelDrilldown3:active,
+.aw-search-filterNameLabelDrilldown4:active,
+.aw-ui-filterNameLabelSelected:active,
+.aw-ui-filterNameLabel:active,
+.aw-ui-filterNameLabelDrilldown1:active,
+.aw-ui-filterNameLabelDrilldown2:active,
+.aw-ui-filterNameLabelDrilldown3:active,
+.aw-ui-filterNameLabelDrilldown4:active,
+.aw-cfg-optionValueLabelSelected:active {
+  color: #afd7e1;
+}
+
+.aw-search-filterCategoryLabel,
+.aw-ui-filterCategoryLabel {
+  color: #39a0c0;
+}
+
+.aw-ui-filterSeparator,
+.aw-search-refineLabel,
+.aw-cfg-completeIndicatorLabel {
+  color: #aaaaaa;
+  border-color: #dcdcdc;
+}
+
+.aw-jswidgets-grid .ui-grid-row:nth-child(odd) .ui-grid-cell.aw-structurecompare-propertydiff,
+.aw-jswidgets-grid .ui-grid-row:nth-child(even) .ui-grid-cell.aw-structurecompare-propertydiff,
+.aw-jswidgets-grid.aw-jswidgets-selectionEnabled .ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell.aw-structurecompare-propertydiff {
+  background-color: #ffb900;
+}
+
+aw-splm-table .aw-splm-table-cellTop.aw-structurecompare-propertydiff {
+  background-color: #ffb900;
+}
+
+.inactive {
+  color: #323232;
+}
+
+.ui-darkTheme .noty_bar .aw-theme-iconOutline {
+  fill: #323232;
+}
+
+.ui-darkTheme .noty_bar .noty_text {
+  color: #323232;
+}
+
+.noty_container_type_information {
+  border-color: #66c8de;
+  background-color: #e3faff;
+  color: #464646;
+  border-left-color: #005f87;
+}
+
+.noty_container_type_information .noty_buttons .btn:last-child {
+  background-color: #005f87;
+  border-color: #004669;
+  color: #ffffff;
+}
+
+.noty_container_type_warning {
+  border-color: #ffc328;
+  background-color: #fff7cd;
+  color: #464646;
+  border-left-color: #dc6914;
+}
+
+.noty_container_type_warning .noty_buttons .btn:last-child {
+  background-color: #dc6914;
+  border-color: #ffc328;
+  color: #ffffff;
+}
+
+.noty_container_type_error {
+  border-color: #efbbb9;
+  background-color: #fbeeed;
+  color: #464646;
+  border-left-color: #dc0000;
+}
+
+.noty_container_type_error .noty_buttons .btn:last-child {
+  background-color: #dc0000;
+  border-color: #b00000;
+  color: #ffffff;
+}
+
+.noty_message h1 {
+  color: inherit;
+}
+
+.noty_bar {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+.noty_modal {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.noty_buttons .btn {
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+  border-color: #f0f0f0;
+}
+
+.noty_buttons .btn:hover {
+  border-color: #004669;
+}
+
+.noty_buttons {
+  color: #fafafa;
+}
+
+.aw-ui-tooltip,
+.aw-viewerAdmin-tooltip,
+.aw-relationshipViewer-tooltip,
+.SDF_diagramTooltip {
+  color: #464646;
+  background-color: #ffffff;
+  border-color: #aaaaaa;
+}
+
+.aw-ui-canvasControl,
+.aw-ui-canvasControl svg {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* new theme classes */
+a.inactive,
+a.inactive:hover {
+  color: #1e1e1e;
+}
+
+.aw-widgets-propertyRichTextEditValue {
+  border-color: #dcdcdc;
+}
+
+.aw-jswidgets-checkboxButton:hover + .aw-jswidgets-checkboxLabel:before,
+.aw-jswidgets-checkboxButton:hover + .aw-jswidgets-toggleLabel,
+.aw-jswidgets-toggleLabel:hover,
+.aw-jswidgets-checkboxLabel:hover:before,
+.aw-jswidgets-editableGridCell:hover,
+div.aw-jswidgets-editableGridCell.aw-jswidgets-isEditing input,
+div.aw-jswidgets-editableGridCell.aw-jswidgets-isEditing textarea,
+.aw-widgets-propertyRichTextEditValue:hover {
+  border-color: #cde6eb;
+}
+
+.aw-widgets-draghandle,
+.aw-jswidgets-draghandle {
+  background-color: #aaaaaa;
+}
+
+.aw-jswidgets-checkboxLabel:hover:before,
+.aw-widgets-propertyRichTextEditValue:hover,
+.aw-widgets-propertyRichTextEditValue:focus,
+.aw-widgets-propertyRichTextEditValue:disabled,
+.aw-jswidgets-checkboxButton:checked.changed + .aw-jswidgets-checkboxLabel:before,
+.aw-jswidgets-checkboxButton:checked.ng-dirty + .aw-jswidgets-checkboxLabel:before,
+.aw-jswidgets-editableGridCell .aw-jswidgets-dirtyGridCell {
+  box-shadow: 0 0 0 2px #e3faff;
+}
+
+.changed,
+.aw-jswidgets-checkboxButton.changed + .aw-jswidgets-checkboxLabel:before,
+.aw-jswidgets-checkboxButton.ng-dirty + .aw-jswidgets-checkboxLabel:before,
+.aw-jswidgets-checkboxButton:checked.changed + .aw-jswidgets-checkboxLabel:before,
+.aw-jswidgets-checkboxButton:checked.ng-dirty + .aw-jswidgets-checkboxLabel:before,
+.aw-jswidgets-editableGridCell .aw-jswidgets-dirtyGridCell {
+  /* !important - https://gitlab.industrysoftware.automation.siemens.com/Apollo/afx/merge_requests/1241 */
+  background-color: #e3faff !important;
+  color: #464646 !important;
+}
+
+.aw-jswidgets-radioSVGSelect {
+  fill: currentColor;
+}
+
+.aw-jswidgets-tablePropertyContentChanged {
+  border-color: #e3faff;
+}
+
+.aw-theme-adminLocationsTile {
+  background-color: #464646;
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.aw-theme-pinnedObjectsTile {
+  background-color: #787878;
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.aw-theme-locationsTile {
+  background-color: #004669;
+  fill: #ffffff;
+  color: #ffffff;
+}
+
+.aw-theme-commandsActionsTile {
+  background-color: #50bed7;
+  fill: #ffffff;
+  color: #ffffff;
+}
+
+.aw-theme-savedSearchesTile {
+  background-color: #969696;
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.aw-tile-tileCanvasPanel svg .aw-theme-iconHomeOutline {
+  fill: inherit;
+}
+
+.aw-tile-tileCanvasPanel .aw-tile-tileEditButton .aw-theme-iconHomeOutline {
+  fill: #464646;
+}
+
+.aw-tile-tileMain.aw-tile-tileEdit:hover aw-tile {
+  outline-color: #0a0a0a;
+}
+
+.aw-theme-tileText {
+  color: #ffffff;
+}
+
+.aw-theme-gatewayLightTileText {
+  color: #0f1923;
+}
+
+.aw-tile-placeHolderTile {
+  border-color: #000000;
+}
+
+.aw-tile-placeHolderGroupSep {
+  background-color: #6e6e6e;
+}
+
+.aw-theme-footer {
+  background-color: #dcdcdc;
+}
+
+.aw-theme-horizontalListMainPanel {
+  background-color: #f0f0f0;
+}
+
+.aw-theme-horizontalListSelectedComponent {
+  color: #fafafa;
+  background-color: #505050;
+}
+
+.aw-theme-horizontalListComponentFocusPanel {
+  color: #1e1e1e;
+  background-color: #ffffff;
+}
+
+.aw-theme-horizontalListComponentFocusPanel:hover {
+  color: #fafafa;
+  background-color: #dcdcdc;
+}
+
+.aw-theme-contentPanel {
+  background-color: #ffffff;
+}
+
+.aw-theme-toolbar,
+.aw-layout-footer,
+.aw-layout-summaryOnly .aw-layout-headerPanel,
+.aw-layout-header.afx-layout-fullscreen-header,
+.aw-layout-workareaCommandbar {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+.aw-layout-header.afx-layout-fullscreen-header {
+  border-color: #bebebe;
+}
+
+.aw-viewerjs-fullViewActiveBody aw-showobject-page .aw-layout-headerSubTitle a {
+  color: #464646;
+}
+
+.aw-theme-headerProperty {
+  border-color: #aaaaaa;
+}
+
+button,
+.aw-base-button,
+.aw-theme-button,
+.aw-theme-taskPanelButton {
+  background-color: #f0f0f0;
+  color: #0a0a0a;
+  border-color: #505050;
+}
+
+.aw-commands-commandIconButton,
+.aw-theme-iconButton {
+  background-color: transparent;
+}
+
+.aw-session-signIn .aw-base-button {
+  background-color: #f0f0f0;
+  color: #0a0a0a;
+  border-color: #505050;
+}
+
+.aw-commands-commandIconButton.aw-state-selected {
+  background-color: #cde6eb;
+  color: #464646;
+}
+
+.aw-commands-commandIconButton:hover.aw-state-selected {
+  background-color: #a3d0dc;
+  color: #464646;
+}
+
+.aw-xrt-objectSetCommandPanel .aw-commands-commandIconButton.aw-state-selected {
+  background-color: #cde6eb;
+  color: #464646;
+}
+
+.aw-xrt-objectSetCommandPanel .aw-commands-commandIconButton:hover .aw-state-selected {
+  background-color: #a3d0dc;
+  color: #464646;
+}
+
+button:not(.disabled):hover,
+.aw-base-button:hover,
+.aw-theme-button:hover,
+.aw-theme-taskPanelButton:hover,
+.aw-commands-commandIconButton:hover,
+.aw-splm-table .ui-grid-menu-button:not(.disabled):hover {
+  background-color: #cde6eb;
+  color: #0a0a0a;
+}
+
+aw-table .ui-grid-row-selected .aw-commands-commandIconButton:hover,
+aw-splm-table .ui-grid-row-selected .aw-commands-commandIconButton:hover,
+aw-compare .ui-grid-row-selected .aw-commands-commandIconButton:hover,
+.aw-widgets-cellListItemSelected .aw-commands-commandIconButton:hover {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.aw-xrt-objectSetCommandPanel .aw-commands-commandIconButton.aw-state-selected:hover {
+  background-color: #a3d0dc;
+  color: #0a0a0a;
+}
+
+.aw-layout-sublocationContent .aw-commands-commandIconButton:hover,
+.aw-layout-panel .aw-commands-commandIconButton:hover,
+.aw-layout-panelTitle .aw-commands-commandIconButton:hover {
+  background-color: #cde6eb;
+  color: #0a0a0a;
+}
+
+.aw-command-panelContainer .aw-layout-panelTitle .aw-commands-commandIconButton:hover {
+  background-color: #2882ad;
+  color: #0a0a0a;
+}
+
+.aw-layout-sublocationContent .aw-widgets-cellListItemSelected .aw-commands-commandIconButton:hover,
+.aw-layout-panel .aw-widgets-cellListItemSelected .aw-commands-commandIconButton:hover {
+  background-color: transparent;
+  color: #0a0a0a;
+}
+
+.aw-layout-sublocationContent .aw-commands-commandIconButton:hover.aw-state-selected,
+.aw-layout-panel .aw-commands-commandIconButton:hover.aw-state-selected {
+  background-color: #a3d0dc;
+  color: #0a0a0a;
+}
+
+.aw-session-signIn .aw-base-button:hover {
+  background-color: #cde6eb;
+  color: #0a0a0a;
+}
+
+button:active,
+.aw-base-button:active,
+.aw-theme-button:active,
+.aw-theme-taskPanelButton:active,
+.aw-commands-commandIconButton:active,
+.aw-commands-commandIconButton:active.aw-state-selected {
+  background-color: #afd7e1;
+}
+
+@media (max-width: 28.75em) {
+  aw-footer {
+    background-color: #006487;
+    box-shadow: 8px 0 16px 0 rgba(0, 0, 0, 0.3);
+  }
+  aw-footer .aw-commands-commandOverflow {
+    color: #ffffff;
+  }
+  aw-footer .aw-theme-iconOutline {
+    fill: #ffffff;
+  }
+  aw-footer .aw-commands-moreNarrowCommands .aw-commands-narrowCommandText,
+  aw-footer .aw-commands-commandIconButtonText {
+    color: #ffffff;
+  }
+  aw-footer .aw-commands-commandIconButton {
+    background-color: transparent;
+  }
+  aw-footer .aw-commands-commandIconButton.aw-state-selected, aw-footer .aw-commands-commandIconButton:hover {
+    background-color: #003750;
+  }
+  aw-footer .aw-commands-commandIconButton:active,
+  aw-footer .aw-commands-commandIconButton:active.aw-state-selected,
+  aw-footer .aw-commands-commandIconButton:hover.aw-state-selected {
+    background-color: #003750;
+  }
+}
+
+.aw-layout-sublocationContent .aw-commands-commandIconButton:active,
+.aw-layout-sublocationContent .aw-commands-commandIconButton:active.aw-state-selected,
+.aw-layout-panel .aw-commands-commandIconButton:active,
+.aw-layout-panel .aw-commands-commandIconButton:active.aw-state-selected {
+  background-color: transparent;
+}
+
+.aw-session-signIn .aw-base-button:active {
+  background-color: #afd7e1;
+}
+
+.aw-theme-navigationButton {
+  color: #ffffff;
+  background-color: #39a0c0;
+}
+
+.aw-theme-navigationButton:hover {
+  color: #ffffff;
+  background-color: #39a0c0;
+}
+
+.aw-theme-galleryScrollButton {
+  background-color: #f0f0f0;
+}
+
+.aw-theme-popups {
+  background-color: #ffffff;
+  border-color: #505050;
+}
+
+.aw-theme-crumbPopups {
+  border-color: #505050;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.aw-theme-listItemSelected,
+.aw-theme-listItemSelected:hover {
+  background-color: #505050;
+}
+
+.aw-theme-listItem:hover {
+  background-color: #505050;
+  fill: #a3d0dc;
+}
+
+.aw-theme-warningText {
+  color: #eb780a;
+}
+
+.aw-theme-errorText {
+  color: #dc0000;
+  fill: #dc0000;
+}
+
+.aw-theme-separator {
+  border-color: #dcdcdc;
+}
+
+.aw-theme-xrtLabel {
+  color: #aaaaaa;
+}
+
+.aw-theme-xrtPanel {
+  color: #39a0c0;
+}
+
+.aw-theme-thumbTitle {
+  color: #fafafa;
+}
+
+.aw-theme-dataGridHeader {
+  color: #aaaaaa;
+  background-color: transparent;
+}
+
+/* end new theme classes */
+/*
+** Only display the following when the width is less than 37.5em
+*/
+/* IE9 Support for placeholder text. */
+.usingPlaceHolder {
+  color: #3c3c3c;
+}
+
+/* start chart colors */
+.aw-charts-chartColor1 {
+  background-color: #006487;
+}
+
+.aw-charts-chartColor2 {
+  background-color: #55a0b9;
+}
+
+.aw-charts-chartColor3 {
+  background-color: #55b991;
+}
+
+.aw-charts-chartColor4 {
+  background-color: #ffb900;
+}
+
+.aw-charts-chartColor5 {
+  background-color: #af235f;
+}
+
+.aw-charts-chartColor6 {
+  background-color: #b95a50;
+}
+
+.aw-charts-chartColor7 {
+  background-color: #aab414;
+}
+
+.aw-charts-chartColor8 {
+  background-color: #505a64;
+}
+
+.aw-charts-chartColor9 {
+  background-color: #eb780a;
+}
+
+.aw-charts-chartTitleColor {
+  background-color: #464646;
+}
+
+/* end chart colors */
+/* start border colors */
+.aw-border-chartColor1 {
+  border-color: #006487;
+}
+
+.aw-border-chartColor2 {
+  border-color: #55a0b9;
+}
+
+.aw-border-chartColor3 {
+  border-color: #55b991;
+}
+
+.aw-border-chartColor4 {
+  border-color: #ffb900;
+}
+
+.aw-border-chartColor5 {
+  border-color: #af235f;
+}
+
+.aw-border-chartColor6 {
+  border-color: #b95a50;
+}
+
+.aw-border-chartColor7 {
+  border-color: #aab414;
+}
+
+.aw-border-chartColor8 {
+  border-color: #505a64;
+}
+
+.aw-border-chartColor9 {
+  border-color: #eb780a;
+}
+
+/* end border colors*/
+/* override highCharts inline colors - copied from aw-widgets-propertyValue */
+.highcharts-container .highcharts-stack-labels text {
+  color: inherit !important;
+  fill: inherit !important;
+}
+
+/* override highCharts inline colors - copied from aw-widgets-propertyLabel */
+.highcharts-container .highcharts-axis-labels text {
+  color: #5a5a5a !important;
+  fill: #5a5a5a !important;
+}
+
+/* end chart colors*/
+.aw-border-alert {
+  /* red */
+  border-color: #dc0000;
+}
+
+.aw-border-warning {
+  /* yellow */
+  border-color: #dc6914;
+}
+
+.aw-border-success {
+  /* green */
+  border-color: #0a9b00;
+}
+
+/* start jswidget datepicker colors */
+.aw-jswidgets-datepicker.ui-datepicker {
+  background-color: #ffffff;
+  border-color: #dcdcdc;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.aw-jswidgets-datepicker.ui-datepicker table td a,
+.aw-jswidgets-datepicker.ui-datepicker .ui-widget-content {
+  color: #1e1e1e;
+}
+
+.aw-jswidgets-datepicker.ui-datepicker table thead,
+.aw-jswidgets-datepicker.ui-datepicker .ui-datepicker-month,
+.aw-jswidgets-datepicker.ui-datepicker .ui-datepicker-year {
+  color: #1e1e1e;
+}
+
+.aw-jswidgets-datepicker.ui-datepicker table th {
+  color: #ffffff;
+}
+
+.aw-jswidgets-datepicker.ui-datepicker table th::first-letter {
+  color: #464646;
+}
+
+.aw-jswidgets-datepicker.ui-datepicker .ui-datepicker-calendar .ui-state-active {
+  color: #ffffff;
+  background-color: #005f87;
+}
+
+.aw-jswidgets-datepicker.ui-datepicker .ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  color: #dc6914;
+  border: 1px solid #dc6914;
+}
+
+.aw-jswidgets-datepicker.ui-datepicker .ui-state-default.ui-state-hover:not(.ui-state-active):not(.ui-state-highlight) {
+  background-color: #daecf0;
+}
+
+/* end jswidget datepicker colors */
+.aw-theme-missingBorder {
+  border-color: #dc0000;
+}
+
+.aw-theme-deviationBorder {
+  border-color: #ffb900;
+}
+
+.aw-theme-substituteBorder {
+  border-color: #005f87;
+}
+
+.aw-theme-alternateBorder {
+  border-color: #ffffff;
+}
+
+.aw-theme-preferredBorder {
+  border-color: #647d2d;
+}
+
+.aw-theme-extraBorder {
+  border-color: #eb780a;
+}
+
+.aw-widgets-cellHasChildren,
+.aw-widgets-cellIsChild {
+  border-color: #3c3c3c;
+}
+
+.aw-widgets-cellReplyCount {
+  background-color: #3c3c3c;
+}
+
+.aw-widgets-cellHelpfulBadge {
+  color: #3c3c3c;
+}
+
+.aw-jswidgets-checkboxButton + .aw-jswidgets-toggleLabel {
+  background: #787878;
+}
+
+.aw-jswidgets-checkboxButton.ng-disabled + .aw-jswidgets-toggleLabel {
+  background: #dcdcdc;
+}
+
+.aw-jswidgets-checkboxButton + .aw-jswidgets-toggleLabel:after {
+  background: #ffffff;
+}
+
+.aw-jswidgets-checkboxButton:checked + .aw-jswidgets-toggleLabel {
+  background: #3296b9;
+}
+
+/** start jqueryUI slider styling */
+.aw-jswidgets-slider .ui-slider {
+  background-color: rgba(70, 70, 70, 0.2);
+}
+
+.aw-jswidgets-slider .ui-slider .ui-slider-handle {
+  background-color: #005f87;
+}
+
+.aw-jswidgets-slider .ui-slider .ui-slider-range {
+  background: #005f87;
+}
+
+.aw-widgets-sliderWithResetPanel button.aw-widgets-minusButton,
+.aw-widgets-sliderWithResetPanel button.aw-widgets-plusButton {
+  background-color: #ffffff;
+  border-color: rgba(70, 70, 70, 0.2);
+  color: #0a0a0a;
+}
+
+/** end jqueryUI slider styling */
+/** Rich Text Inline Editor Styling **/
+.aw-widgets-propertyRichTextEditValue {
+  background-color: #ffffff;
+}
+
+/* Color is required to set to Normal HTML Tag Color*/
+.aw-widgets-richText h2 {
+  color: #fafafa;
+}
+
+/* Color is required to set to Normal HTML Tag Color*/
+.aw-widgets-richText h1 {
+  color: #39a0c0;
+}
+
+/* Color specific rich text overrides */
+.aw-widgets-richText hr {
+  border-top-color: #505050;
+}
+
+.aw-widgets-richText blockquote {
+  border-color: #505050;
+}
+
+.aw-widgets-richText .marker {
+  background-color: #ffff00;
+}
+
+.aw-widgets-richText a > img {
+  outline-color: #0782c1;
+}
+
+.aw-widgets-richText figure {
+  border-color: #505050;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.aw-widgets-richText img.right {
+  border-color: #505050;
+}
+
+.aw-widgets-richText img.left {
+  border-color: #505050;
+}
+
+.aw-jswidgets-compareContainer .aw-jswidgets-unselectedObject {
+  background-color: transparent;
+}
+
+/** Matrix Styling **/
+/*Styling for the Matrix colum Header*/
+div.aw-matrix-container div.ui-grid-header {
+  border-top-color: transparent;
+  border-bottom-color: #f0f0f0;
+}
+
+div.aw-matrix-container div.ui-grid-pinned-container.ui-grid-pinned-container-left .ui-grid-cell:last-child {
+  border-right-color: #aaaaaa;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+div.aw-matrix-container .ui-grid-pinned-container.ui-grid-pinned-container-left div.ui-grid-header-cell:last-child {
+  border-right-color: #aaaaaa;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  background-color: transparent;
+}
+
+div.aw-matrix-container div.ui-grid-pinned-container.ui-grid-pinned-container-left .ui-grid-cell:last-child {
+  color: #aaaaaa;
+}
+
+div.aw-matrix-container .aw-jswidgets-grid .ui-grid-cell {
+  color: #aaaaaa;
+}
+
+.aw-matrix-container .aw-jswidgets-grid .aw-matrix-row-header {
+  color: #aaaaaa;
+}
+
+.aw-matrix-container .aw-jswidgets-grid .aw-matrix-row-header:hover {
+  color: #6e6e6e;
+}
+
+.ui-grid-cell-contents.ui-grid-matrix-header-cell-selected,
+.ui-grid-header-cell.ui-grid-matrix-header-cell-selected,
+.aw-matrix-container .ui-grid-header-cell-wrapper .ui-grid-header-cell:nth-child(odd).ui-grid-matrix-header-cell-selected,
+.aw-matrix-container .ui-grid-header-cell-wrapper .ui-grid-header-cell:nth-child(even).ui-grid-matrix-header-cell-selected,
+.aw-matrix-container div.ui-grid-header-cell:hover {
+  background-color: #cde6eb;
+  color: #6e6e6e;
+}
+
+div.aw-matrix-container .aw-jswidgets-grid .ui-grid-cell {
+  border-right-color: #aaaaaa;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: #aaaaaa;
+}
+
+.aw-matrix-container div.ui-grid-row:last-child .ui-grid-cell {
+  border-bottom-color: #aaaaaa;
+}
+
+.ui-grid-cell.ui-grid-matrix-header-cell-selected {
+  background-color: #cde6eb !important;
+  /*cell head selection override*/
+  color: #6e6e6e !important;
+  /*cell head color override*/
+}
+
+.ui-grid-cell.ui-grid-row-header-cell-over {
+  background-color: #cde6eb !important;
+  /*cell head selection override*/
+  color: #6e6e6e !important;
+  /*cell head color override*/
+}
+
+.ui-grid-cell.ui-grid-matrix-header-cell-unselected {
+  background-color: transparent;
+}
+
+.ui-grid-header-cell.ui-grid-column-header-selected {
+  background-color: #afd7e1;
+}
+
+.aw-matrix-header:hover {
+  background-color: #cde6eb;
+}
+
+.aw-jswidgets-grid div.ui-grid-cell-focus {
+  background-color: #8cc3d2;
+}
+
+.aw-jswidgets-grid.aw-matrix-container div.ui-grid-cell-focus {
+  background-color: #8cc3d2;
+}
+
+.aw-matrix-container .ui-grid-header-cell-wrapper .ui-grid-header-cell:nth-child(even),
+.aw-matrix-container div.ui-grid-header-cell:hover {
+  color: #6e6e6e;
+}
+
+.aw-matrix-container .aw-jswidgets-grid .ui-grid-row:nth-child(even) .ui-grid-cell {
+  background-color: #ffffff;
+}
+
+.aw-matrix-container .aw-jswidgets-grid .ui-grid-row:nth-child(odd) .ui-grid-cell {
+  background-color: #fafafa;
+}
+
+.aw-jswidgets-grid .ui-grid-row:nth-child(odd) .ui-grid-cell.aw-matrix-novalue {
+  background-color: #505050;
+}
+
+.aw-jswidgets-grid .ui-grid-row:nth-child(even) .ui-grid-cell.aw-matrix-novalue {
+  background-color: #505050;
+}
+
+.aw-jswidgets-grid .ui-grid-row:nth-child(even) .ui-grid-cell.aw-matrix-evencell {
+  background-color: #f0f0f0;
+}
+
+.aw-jswidgets-grid .ui-grid-row:nth-child(odd) .ui-grid-cell.aw-matrix-evencell {
+  background-color: #f0f0f0;
+}
+
+.aw-jswidgets-grid .ui-grid-row:nth-child(odd) .ui-grid-cell.aw-matrix-mixcell {
+  background-color: #fafafa;
+}
+
+.aw-jswidgets-grid .ui-grid-row:nth-child(even) .ui-grid-cell.aw-matrix-mixcell {
+  background-color: #fafafa;
+}
+
+.aw-jswidgets-grid .ui-grid-row:nth-child(odd) .ui-grid-cell.aw-matrix-oddcell {
+  background-color: #ffffff;
+}
+
+.aw-jswidgets-grid .ui-grid-row:nth-child(even) .ui-grid-cell.aw-matrix-oddcell {
+  background-color: #ffffff;
+}
+
+.aw-jswidgets-grid .ui-grid-row:nth-child(odd) .ui-grid-cell.aw-matrix-selectedcell {
+  background-color: #8cc3d2;
+}
+
+.aw-jswidgets-grid .ui-grid-row:nth-child(even) .ui-grid-cell.aw-matrix-selectedcell {
+  background-color: #8cc3d2;
+}
+
+/** End Matrix styling */
+/** End Rich Text Inline Editor Styling **/
+/** Begin Visual Navigation Card Styling **/
+.aw-search-visualNavigationContent .aw-widgets-cellListItem {
+  border-color: #f0f0f0;
+}
+
+.aw-search-visualNavigationContent .aw-widgets-cellListCellTitle {
+  color: #197fa2;
+}
+
+/** End Visual Navigation Card Styling**/
+/** Begin Full View Visual Navigation Card Styling **/
+.aw-classificationpanelsjs-searchVisualNavigationContent .aw-widgets-cellListItem {
+  border-color: #f0f0f0;
+}
+
+.aw-classificationpanelsjs-searchVisualNavigationContent .aw-widgets-cellListCellTitle {
+  color: #197fa2;
+}
+
+.aw-classificationpanelsjs-searchVisualNavigationContent .aw-cls-label {
+  color: #197fa2;
+}
+
+/** End Full View Visual Navigation Card Styling **/
+/** B-23233 - Color shifting support for Siemens Logo **/
+.aw-theme-iconLogoColor {
+  fill: #ffffff;
+}
+
+.aw-jswidgets-change {
+  color: #00b050;
+  font-style: italic;
+}
+
+.aw-jswidgets-oldText {
+  color: #dc0000;
+}
+
+.aw-change-backButton,
+.aw-createchange-addButton,
+.aw-createchange-removeButton {
+  background-color: #f0f0f0;
+}
+
+.aw-workinstr-headerPropertiesWrapper,
+.aw-workinstr-tabLayoutTabContentContainer {
+  border-color: #f0f0f0;
+}
+
+.aw-workinstr-overviewGraphNodePropertyText {
+  color: #464646;
+}
+
+.aw-workinstr-overviewCommandBar button {
+  background-color: #ffffff;
+  border-color: #39a0c0;
+}
+
+.aw-workinstr-overviewCommandBar button.aw-workinstr-activeButton {
+  background-color: #39a0c0;
+}
+
+.aw-workinstr-overviewCommandBar button.aw-workinstr-activeButton:hover {
+  background-color: #39a0c0;
+}
+
+.aw-workinstr-overviewCommandBar svg path {
+  fill: #39a0c0;
+}
+
+.aw-workinstr-overviewCommandBar .aw-workinstr-activeButton svg path {
+  fill: #ffffff;
+}
+
+.aw-workinstr-overviewCommandBar aw-i18n {
+  color: #39a0c0;
+}
+
+.aw-workinstr-overviewCommandBar .aw-workinstr-activeButton aw-i18n {
+  color: #ffffff;
+}
+
+.aw-workinstr-loadingLabel {
+  color: #39a0c0;
+}
+
+.aw-mfgPert-dragAndHoverTooltip {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+.aw-mfgPert-tooltip {
+  border-color: #f0f0f0;
+  background: #ffffff;
+  color: rgba(50, 50, 50, 0.5);
+}
+
+.aw-mfgPert-tooltipText,
+.aw-mfgPert-tooltipVariant,
+.aw-mfgPert-tooltipMismatchContent,
+.aw-mfgPert-tooltipMismatchInfo {
+  color: #282828;
+}
+
+.aw-mfgPert-tooltipLine {
+  border-bottom-color: #f0f0f0;
+}
+
+.aw-mfgPert-tooltipWarnning {
+  color: #5c8884;
+}
+
+.aw-mfgPert-dragAndHoverTooltip:after,
+.aw-mfgPert-dragAndHoverTooltip:before {
+  border: solid transparent;
+}
+
+.aw-mfgPert-dragAndHoverTooltip:after {
+  border-top-color: #0a0a0a;
+}
+
+.aw-mfgPert-loadingStatusLabel {
+  color: #aaaaaa;
+}
+
+.aw-mfgPert-droppedOnNodeStarted .aw-mfgPert-nodeDropBackgroundSvg {
+  fill: rgba(255, 255, 255, 0.9);
+}
+
+.aw-mfgPert-droppedOnNodeEnded .aw-mfgPert-nodeDropBackgroundSvg {
+  fill: rgba(255, 255, 255, 0);
+}
+
+.aw-mfgPert-nodeSuggestedDisplay {
+  fill: #d7dfc4;
+  box-shadow: 0 0 7px black;
+}
+
+.aw-mfgPert-nodeSuggestedDisplay:hover {
+  fill: #647d2d;
+  box-shadow: 0 0 7px black;
+}
+
+.aw-mfgPert-nodeSuggestedTextDisplay {
+  color: #fafafa;
+  fill: #fafafa;
+}
+
+.aw-mfgPert-nodeSuggestedDisplay:hover .aw-mfgPert-nodeSuggestedTextDisplay,
+.aw-mfgPert-dragAndHoverTooltipTitle {
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.aw-mfgPert-assignmentSeparator {
+  background-color: #dcdcdc;
+  fill: #dcdcdc;
+}
+
+.aw-mfgPert-noAssignmentText {
+  color: #505050;
+  fill: #505050;
+}
+
+/** NX override **/
+/** End of NX override **/
+/**Graph Component specific**/
+.aw-graph-labelBackground {
+  fill: #ffffff;
+}
+
+.aw-graph-textEditor {
+  background-color: #ffffff;
+}
+
+.aw-graph-container .aw-widgets-cellListCellItemType {
+  color: #005f87;
+  fill: #005f87;
+}
+
+.aw-graph-container .aw-widgets-cellListItem,
+.aw-graph-container .aw-widgets-cellListCellTitle,
+.aw-graph-container .aw-widgets-propertyLabel {
+  color: #464646;
+  fill: #464646;
+}
+
+.aw-graph-legendItemMarker:hover {
+  border-color: #cde6eb;
+}
+
+.aw-graph-legendItemMarker {
+  border-color: transparent;
+}
+
+aw-popup:not(.aw-popup-defaultStyle) .aw-popup-screenMaskBackground {
+  background-color: #fafafa;
+}
+
+aw-popup:not(.aw-popup-defaultStyle) .aw-popup-contentContainer {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+aw-popup:not(.aw-popup-defaultStyle) .aw-popup-contentContainerBackground {
+  background-color: #ffffff;
+}
+
+aw-popup button.disabled {
+  color: #505050;
+  background-color: #f0f0f0;
+  border-color: #f0f0f0;
+}
+
+aw-popup .aw-popup-secondaryButton {
+  background-color: #ffffff;
+  color: #005f87;
+  border-color: #39a0c0;
+}
+
+.aw-splitdirection-top span,
+.aw-splitdirection-left span {
+  border-color: #f0f0f0;
+}
+
+.aw-commands-overflow {
+  border: 1px solid #0a0a0a;
+}
+
+.aw-search-recentSearchBoxCommand aw-link .aw-base-normal a {
+  color: #197fa2;
+}
+
+.aw-search-recentSearchBoxCommand aw-link .aw-base-normal a:visited {
+  color: #197fa2;
+}
+
+.aw-search-recentSearchBoxCommand aw-link .aw-base-normal a:active {
+  color: #197fa2;
+}
+
+/* colors for b-30498 */
+.aw-border-darkRed {
+  border-color: #c00000;
+}
+
+.aw-background-darkRed {
+  background-color: #c00000;
+}
+
+.aw-border-red {
+  border-color: #ff0000;
+}
+
+.aw-background-red {
+  background-color: #ff0000;
+}
+
+.aw-border-orange {
+  border-color: #ffc000;
+}
+
+.aw-background-orange {
+  background-color: #ffc000;
+}
+
+.aw-border-yellow {
+  border-color: #e4e400;
+}
+
+.aw-background-yellow {
+  background-color: #e4e400;
+}
+
+.aw-border-lightGreen {
+  border-color: #92d050;
+}
+
+.aw-background-lightGreen {
+  background-color: #92d050;
+}
+
+.aw-border-green {
+  border-color: #00b050;
+}
+
+.aw-background-green {
+  background-color: #00b050;
+}
+
+.aw-border-lightBlue {
+  border-color: #00b0f0;
+}
+
+.aw-background-lightBlue {
+  background-color: #00b0f0;
+}
+
+.aw-border-blue {
+  border-color: #0070c0;
+}
+
+.aw-background-blue {
+  background-color: #0070c0;
+}
+
+.aw-border-darkBlue {
+  border-color: #002060;
+}
+
+.aw-background-darkBlue {
+  background-color: #002060;
+}
+
+.aw-border-purple {
+  border-color: #7030a0;
+}
+
+.aw-background-purple {
+  background-color: #7030a0;
+}
+
+.aw-border-siemensStoneLight {
+  border-color: #60707e;
+}
+
+.aw-background-siemensStoneLight {
+  background-color: #60707e;
+}
+
+.aw-border-siemensAccentBlueDark {
+  border-color: #006487;
+}
+
+.aw-background-siemensAccentBlueDark {
+  background-color: #006487;
+}
+
+.aw-border-siemensAccentBlueLight {
+  border-color: #55a0b9;
+}
+
+.aw-background-siemensAccentBlueLight {
+  background-color: #55a0b9;
+}
+
+.aw-border-siemensAccentTealLight {
+  border-color: #41aaaa;
+}
+
+.aw-background-siemensAccentTealLight {
+  background-color: #41aaaa;
+}
+
+.aw-border-siemensStone2 {
+  border-color: #788791;
+}
+
+.aw-background-siemensStone2 {
+  background-color: #788791;
+}
+
+.aw-border-siemensStone3 {
+  border-color: #879baa;
+}
+
+.aw-background-siemensStone3 {
+  background-color: #879baa;
+}
+
+.aw-border-siemensSand1 {
+  border-color: #73645a;
+}
+
+.aw-background-siemensSand1 {
+  background-color: #73645a;
+}
+
+.aw-border-siemensSand2 {
+  border-color: #9b9682;
+}
+
+.aw-background-siemensSand2 {
+  background-color: #9b9682;
+}
+
+.aw-border-siemensSand3 {
+  border-color: #b9b9a5;
+}
+
+.aw-background-siemensSand3 {
+  background-color: #b9b9a5;
+}
+
+.aw-border-siemensSand4 {
+  border-color: #b3b3a5;
+}
+
+.aw-background-siemensSand4 {
+  background-color: #b3b3a5;
+}
+
+.aw-border-siemensSand5 {
+  border-color: #c2c2b7;
+}
+
+.aw-background-siemensSand5 {
+  background-color: #c2c2b7;
+}
+
+.aw-border-siemensAccentTeal1 {
+  border-color: #00646e;
+}
+
+.aw-background-siemensAccentTeal1 {
+  background-color: #00646e;
+}
+
+.aw-border-siemensAccentTeal2 {
+  border-color: #0f8287;
+}
+
+.aw-background-siemensAccentTeal2 {
+  background-color: #0f8287;
+}
+
+.aw-border-siemensAccentTeal3 {
+  border-color: #32a0a0;
+}
+
+.aw-background-siemensAccentTeal3 {
+  background-color: #32a0a0;
+}
+
+.aw-border-siemensAccentTeal4 {
+  border-color: #4bb9b9;
+}
+
+.aw-background-siemensAccentTeal4 {
+  background-color: #4bb9b9;
+}
+
+.aw-border-siemensAccentYellow1 {
+  border-color: #7d2d1e;
+}
+
+.aw-background-siemensAccentYellow1 {
+  background-color: #7d2d1e;
+}
+
+.aw-border-siemensAccentYellow2 {
+  border-color: #c85a1e;
+}
+
+.aw-background-siemensAccentYellow2 {
+  background-color: #c85a1e;
+}
+
+.aw-border-siemensAccentYellow3 {
+  border-color: #eb780a;
+}
+
+.aw-background-siemensAccentYellow3 {
+  background-color: #eb780a;
+}
+
+.aw-border-siemensAccentYellow4 {
+  border-color: #ffb900;
+}
+
+.aw-background-siemensAccentYellow4 {
+  background-color: #ffb900;
+}
+
+.aw-border-siemensAccentYellow5 {
+  border-color: #ffe178;
+}
+
+.aw-background-siemensAccentYellow5 {
+  background-color: #ffe178;
+}
+
+.aw-border-siemensAccentRed1 {
+  border-color: #411432;
+}
+
+.aw-background-siemensAccentRed1 {
+  background-color: #411432;
+}
+
+.aw-border-siemensAccentRed2 {
+  border-color: #641946;
+}
+
+.aw-background-siemensAccentRed2 {
+  background-color: #641946;
+}
+
+.aw-border-siemensAccentRed3 {
+  border-color: #871e50;
+}
+
+.aw-background-siemensAccentRed3 {
+  background-color: #871e50;
+}
+
+.aw-border-siemensAccentRed4 {
+  border-color: #af235f;
+}
+
+.aw-background-siemensAccentRed4 {
+  background-color: #af235f;
+}
+
+.aw-border-siemensAccentRed5 {
+  border-color: #d7698c;
+}
+
+.aw-background-siemensAccentRed5 {
+  background-color: #d7698c;
+}
+
+.aw-border-siemensAccentBlue1 {
+  border-color: #004669;
+}
+
+.aw-background-siemensAccentBlue1 {
+  background-color: #004669;
+}
+
+.aw-border-siemensAccentBlue2 {
+  border-color: #005f87;
+}
+
+.aw-background-siemensAccentBlue2 {
+  background-color: #005f87;
+}
+
+.aw-border-siemensAccentBlue3 {
+  border-color: #2387aa;
+}
+
+.aw-background-siemensAccentBlue3 {
+  background-color: #2387aa;
+}
+
+.aw-border-siemensAccentBlue4 {
+  border-color: #41aac8;
+}
+
+.aw-background-siemensAccentBlue4 {
+  background-color: #41aac8;
+}
+
+.aw-border-siemensAccentGreen1 {
+  border-color: #465f19;
+}
+
+.aw-background-siemensAccentGreen1 {
+  background-color: #465f19;
+}
+
+.aw-border-siemensAccentGreen2 {
+  border-color: #647d2d;
+}
+
+.aw-background-siemensAccentGreen2 {
+  background-color: #647d2d;
+}
+
+.aw-border-siemensAccentGreen3 {
+  border-color: #879628;
+}
+
+.aw-background-siemensAccentGreen3 {
+  background-color: #879628;
+}
+
+.aw-border-siemensAccentGreen4 {
+  border-color: #aab414;
+}
+
+.aw-background-siemensAccentGreen4 {
+  background-color: #aab414;
+}
+
+.aw-border-siemensAccentGreen5 {
+  border-color: #d2d741;
+}
+
+.aw-background-siemensAccentGreen5 {
+  background-color: #d2d741;
+}
+
+.aw-border-siemensColor1 {
+  border-color: #6c7993;
+}
+
+.aw-background-siemensColor1 {
+  background-color: #6c7993;
+}
+
+.aw-border-siemensColor2 {
+  border-color: #c4bd97;
+}
+
+.aw-background-siemensColor2 {
+  background-color: #c4bd97;
+}
+
+.aw-border-siemensColor3 {
+  border-color: #ffb679;
+}
+
+.aw-background-siemensColor3 {
+  background-color: #ffb679;
+}
+
+.aw-border-siemensColor4 {
+  border-color: #bfa1e5;
+}
+
+.aw-background-siemensColor4 {
+  background-color: #bfa1e5;
+}
+
+.aw-border-siemensColor5 {
+  border-color: #8a4208;
+}
+
+.aw-background-siemensColor5 {
+  background-color: #8a4208;
+}
+
+.aw-border-siemensColor6 {
+  border-color: #b8d696;
+}
+
+.aw-background-siemensColor6 {
+  background-color: #b8d696;
+}
+
+.aw-border-siemensColor7 {
+  border-color: #ddde9d;
+}
+
+.aw-background-siemensColor7 {
+  background-color: #ddde9d;
+}
+
+.aw-border-siemensColor8 {
+  border-color: #c1bdac;
+}
+
+.aw-background-siemensColor8 {
+  background-color: #c1bdac;
+}
+
+.aw-border-siemensColor9 {
+  border-color: #40648e;
+}
+
+.aw-background-siemensColor9 {
+  background-color: #40648e;
+}
+
+.aw-border-siemensColor10 {
+  border-color: #a79950;
+}
+
+.aw-background-siemensColor10 {
+  background-color: #a79950;
+}
+
+.aw-border-siemensColor11 {
+  border-color: #959cd7;
+}
+
+.aw-background-siemensColor11 {
+  background-color: #959cd7;
+}
+
+.aw-border-siemensColor12 {
+  border-color: #169a5e;
+}
+
+.aw-background-siemensColor12 {
+  background-color: #169a5e;
+}
+
+.aw-border-customColor1 {
+  border-color: #c6c6c6;
+}
+
+.aw-background-customColor1 {
+  background-color: #c6c6c6;
+}
+
+.aw-border-customColor2 {
+  border-color: #bcbcbc;
+}
+
+.aw-background-customColor2 {
+  background-color: #bcbcbc;
+}
+
+.aw-border-customColor3 {
+  border-color: #b3b3b3;
+}
+
+.aw-background-customColor3 {
+  background-color: #b3b3b3;
+}
+
+.aw-border-customColor4 {
+  border-color: #a9a9a9;
+}
+
+.aw-background-customColor4 {
+  background-color: #a9a9a9;
+}
+
+.aw-border-customColor5 {
+  border-color: #9d9d9d;
+}
+
+.aw-background-customColor5 {
+  background-color: #9d9d9d;
+}
+
+.aw-border-customColor6 {
+  border-color: #939393;
+}
+
+.aw-background-customColor6 {
+  background-color: #939393;
+}
+
+.aw-border-customColor7 {
+  border-color: #878787;
+}
+
+.aw-background-customColor7 {
+  background-color: #878787;
+}
+
+.aw-border-customColor8 {
+  border-color: #797979;
+}
+
+.aw-background-customColor8 {
+  background-color: #797979;
+}
+
+.aw-border-customColor9 {
+  border-color: #6c6c6c;
+}
+
+.aw-background-customColor9 {
+  background-color: #6c6c6c;
+}
+
+.aw-ewi-cellListCellTitle:hover text {
+  color: #39a0c0;
+  fill: #39a0c0;
+}
+
+.aw-viewerjs-gutter {
+  background-color: #f0f0f0;
+}
+
+.aw-viewerjs-border {
+  border-color: #f0f0f0;
+}
+
+.aw-ldf-OauthPopupDialogPage button.aw-Ldf-CloseButton:hover {
+  background-color: transparent;
+}
+
+.aw-ldf-OauthPopupDialogPage .aw-base-icon {
+  color: #ffffff;
+}
+
+.aw-ui-filterCategoryLabel {
+  color: #39a0c0;
+}
+
+.aw-ui-filterNameLabel,
+.aw-ui-filterNameLabelSelected {
+  color: #005f87;
+}
+
+.aw-ui-filterNameLabel:hover {
+  color: #39a0c0;
+}
+
+.aw-ui-filterNameLabelCount {
+  font-size: 12px;
+  color: #1e1e1e;
+}
+
+.aw-ui-filterNameLabelMore {
+  color: #005f87;
+}
+
+.aw-ui-filterNameLabelMore:hover {
+  color: #005f87;
+}
+
+.aw-ui-filterCategorySearchBoxWrapper input[type="text"].ng-dirty {
+  background-color: #ffffff;
+}
+
+.aw-requirements-document {
+  background-color: #ffffff;
+}
+
+.aw-requirements-documentPaper {
+  border-color: #505050;
+}
+
+.aw-ui-showHighlight aw-sublocation-body .aw-widgets-showCellHighlighter {
+  color: #464646;
+  background-color: #ffe178;
+}
+
+.aw-widgets-crumbCategoryLabel {
+  color: #ffffff;
+}
+
+.aw-layout-breadCrumbs li.aw-widgets-cellListItem:hover .aw-widgets-crumbCategoryLabel {
+  color: #1e1e1e;
+}
+
+.aw-layout-breadCrumbs .aw-layout-popup .aw-widgets-crumbCategoryLabel {
+  color: #464646;
+}
+
+.aw-layout-workareaTitle {
+  border-color: #f0f0f0;
+}
+
+.aw-layout-splitter {
+  background-color: transparent;
+}
+
+.aw-layout-splitter:hover .aw-layout-splitterLine {
+  border-color: #005f87;
+}
+
+.aw-layout-splitter:hover .aw-layout-splitterLineHorizontal {
+  border-color: #005f87;
+}
+
+.aw-layout-splitter:active .aw-layout-splitterLine {
+  border-color: #dcdcdc;
+}
+
+.aw-layout-splitter:active .aw-layout-splitterLineHorizontal {
+  border-color: #dcdcdc;
+}
+
+.aw-layout-splitterLine {
+  border-color: #dcdcdc;
+}
+
+.aw-layout-splitterLineHorizontal {
+  border-color: #dcdcdc;
+}
+
+/* SPLITTER or AW-SPLITTER end */
+.aw-matrix-MainPanel .aw-jswidgets-tablecell {
+  color: #aaaaaa;
+  border-right-color: #505050;
+}
+
+.aw-matrix-MainPanel.aw-jswidgets-grid .ui-grid-row .ui-grid-cell:not(:first-child) {
+  border-right-color: #aaaaaa;
+  border-top-color: transparent;
+  border-left-color: #aaaaaa;
+  border-bottom-color: #aaaaaa;
+}
+
+.aw-matrix-MainPanel.aw-jswidgets-grid .ui-grid-row .ui-grid-cell:last-child {
+  border-right-color: #aaaaaa;
+  border-top-color: transparent;
+  border-left-color: #aaaaaa;
+  border-bottom-color: #aaaaaa;
+}
+
+.aw-matrix-MainPanel.aw-jswidgets-grid .ui-grid-header-cell:not(:first-child).ui-grid-column-header-selected {
+  background-color: #afd7e1;
+}
+
+.aw-matrix-MainPanel .aw-jswidgets-tablecell.ui-grid-column-header-selected {
+  background-color: #afd7e1;
+}
+
+.aw-matrix-MainPanel.aw-jswidgets-grid .ui-grid-row:hover .ui-grid-cell:first-child {
+  background-color: #cde6eb;
+}
+
+.aw-systemmodeler-circleNodeLabelBackground {
+  stroke: #879baa;
+}
+
+.aw-change-changeTable-even-row {
+  background-color: #f0f0f0;
+  color: #fafafa;
+}
+
+.aw-change-changeTable-odd-row {
+  background-color: #ffffff;
+  color: #fafafa;
+}
+
+.aw-change-changeSummaryTable .ui-grid-cell.aw-change-changeSummaryTableOddCell {
+  background-color: #f0f0f0;
+}
+
+.aw-inbox-performSuccessButton {
+  background-color: #005f87;
+  color: #ffffff;
+  border-color: #005f87;
+}
+
+button:not(.disabled).aw-inbox-performSuccessButton:hover {
+  background-color: #39a0c0;
+  color: #ffffff;
+  border-color: #005f87;
+}
+
+.aw-session-signIn a {
+  color: #39a0c0;
+}
+
+.aw-session-signIn a:hover {
+  color: #005f87;
+}
+
+.aw-session-locale {
+  color: #000000;
+}
+
+.aw-inbox-performSuccessButton:active {
+  background-color: #cde6eb;
+  color: #ffffff;
+  border-color: #005f87;
+}
+
+.aw-inbox-performFailureButton {
+  background-color: #f0f0f0;
+  color: #1e1e1e;
+  border-color: #005f87;
+}
+
+button:not(.disabled).aw-inbox-performFailureButton:hover {
+  background-color: #39a0c0;
+  color: #1e1e1e;
+  border-color: #005f87;
+}
+
+.aw-inbox-performFailureButton:active {
+  background-color: #cde6eb;
+  color: #ffffff;
+  border-color: #005f87;
+}
+
+.aw-architectureModeler-floatDialogSmall {
+  background-color: #ffffff;
+  box-shadow: 4px 4px 6px #282828;
+  color: #464646;
+}
+
+.aw-architectureModeler-floatDialog {
+  background-color: #ffffff;
+  color: #464646;
+}
+
+.aw-architectureModeler-floatDialogMed {
+  background-color: #ffffff;
+  color: #464646;
+}
+
+.aw-architectureModeler-floatDialogLarge {
+  background-color: #ffffff;
+  color: #464646;
+}
+
+.aw-architectureModeler-floatDialogSmall .Caption {
+  background-color: #f0f0f0;
+}
+
+.aw-architectureModeler-floatDialog .Caption {
+  background-color: #f0f0f0;
+}
+
+.aw-architectureModeler-floatDialogMed .Caption {
+  background-color: #f0f0f0;
+}
+
+.aw-architectureModeler-floatDialogLarge .Caption {
+  background-color: #f0f0f0;
+}
+
+.aw-architecturemodelerfg-screenMask {
+  background-color: #fafafa;
+}
+
+.aw-architectureModeler-floatBreadCrumb-disable {
+  color: #464646;
+}
+
+.aw-architectureModeler-floatBreadCrumb {
+  color: #005f87;
+}
+
+.aw-architectureModeler-floatBreadCrumb:hover {
+  color: #39a0c0;
+}
+
+.aw-architectureModeler-floatDiagramTitle-disable {
+  color: #464646;
+}
+
+.aw-architectureModeler-floatDiagramTitle {
+  color: #005f87;
+}
+
+.aw-architectureModeler-floatDiagramTitle:hover {
+  color: #39a0c0;
+}
+
+.aw-architectureModeler-panel-thumbnail {
+  background-color: transparent;
+}
+
+.aw-architectureModeler-panel-thumbnail:hover {
+  background-color: #8cc3d2;
+}
+
+.aw-change-progressChevronContainer li {
+  background-color: #ffffff;
+  color: #464646;
+  border-right-color: #d2d2d2;
+}
+
+.aw-change-progressChevronContainer li::after {
+  border-left-color: #ffffff;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.aw-change-progressChevronContainer li::before {
+  border-left-color: #d2d2d2;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.aw-change-progressChevronContainer li.aw-change-progressCurrentChevron {
+  background-color: #2387aa;
+  color: #ffffff;
+}
+
+.aw-change-progressChevronContainer li.aw-change-progressCurrentChevron::after {
+  border-left-color: #2387aa;
+}
+
+.aw-change-progressChevronContainer li.aw-change-progressCurrentChevron ~ li {
+  color: #aaaaaa;
+}
+
+.aw-change-progressChevronContainer li:last-child {
+  border-right-color: #d2d2d2;
+}
+
+.aw-change-progressChevronContainer li {
+  border-color: #d2d2d2;
+}
+
+.aw-search-popupTitle {
+  color: #1e1e1e;
+}
+
+.gantt_container {
+  border-color: #bebebe;
+}
+
+.gantt_task_cell.week_end {
+  background-color: #f0f0f0;
+}
+
+.gantt_task_row.gantt_selected .gantt_task_cell,
+.gantt_task_row.gantt_selected .gantt_task_cell.week_end {
+  border-right-color: #cde6eb;
+  background-color: #cde6eb;
+}
+
+.gantt_task_line.gantt_task_inline_color .gantt_task_progress {
+  background-color: #005f87;
+}
+
+.gantt_task_line.critical_task.gantt_critical_task.gantt_task_inline_color .gantt_task_progress,
+.gantt_critical_task .gantt_task_progress {
+  background-color: #c00000;
+}
+
+.gantt_task_line.summary_task.gantt_task_inline_color .gantt_task_progress {
+  background-color: #1e1e1e;
+}
+
+.gantt_grid_head_cell {
+  color: #464646;
+}
+
+.gantt_grid_scale {
+  background-color: #ffffff;
+  border-color: #505050;
+}
+
+.gantt_tree_content {
+  color: #464646;
+}
+
+.gantt_task_line .gantt_task_content {
+  color: #ffffff;
+}
+
+.gantt_task_line.summary_task.gantt_task_inline_color {
+  border-color: #000000;
+}
+
+.gantt_scale_line .gantt_scale_cell {
+  color: #5a5a5a;
+}
+
+.gantt_scale_line:first-child .gantt_scale_cell,
+.gantt_scale_line:nth-child(3) .gantt_scale_cell {
+  background-color: #ffffff;
+}
+
+.gantt_scale_line:nth-child(2) .gantt_scale_cell {
+  background-color: #f0f0f0;
+}
+
+.gantt_line_wrapper div {
+  background-color: #dc6914;
+}
+
+.smgantt .gantt_task_line.gantt_milestone .gantt_task_content {
+  background: #005f87;
+}
+
+.gantt_critical_task .gantt_task_content {
+  background-color: #ff0000;
+  border-color: #911914;
+}
+
+.gantt_task_line.gantt_milestone.gantt_critical_task .gantt_task_content {
+  background-color: #ff0000;
+}
+
+.gantt_marker .gantt_marker_content {
+  color: #000000;
+}
+
+.gantt_grid_data .gantt_row.gantt_selected,
+.gantt_grid_data .gantt_row.odd.gantt_selected,
+.gantt_task_row.gantt_selected {
+  background-color: #cde6eb;
+}
+
+.gantt_grid_data .gantt_row.odd:hover,
+.gantt_grid_data .gantt_row:hover {
+  background-color: #cde6eb;
+}
+
+.gantt_link_arrow_right,
+.gantt_link_arrow_left {
+  border-color: #dc6914;
+}
+
+.smgantt .gantt_row.task_added_in_whatif_mode .gantt_cell:first-child .gantt_tree_content {
+  color: #647d2d;
+}
+
+.smgantt .gantt_row.modified_in_whatif_mode .gantt_cell:first-child .gantt_tree_content {
+  color: #af235f;
+}
+
+.gantt_tooltip {
+  background-color: #ffffff;
+  color: #464646;
+  outline-color: #323232;
+}
+
+.prgTimeline .gantt_scale_line .gantt_scale_cell {
+  color: #464646;
+}
+
+.prgTimeline .gantt_tooltip table tr td {
+  color: #464646;
+  outline-color: #323232;
+}
+
+.prgTimeline .gantt_task_line.gantt_milestone.gantt_selected .gantt_task_content {
+  border-color: #faa00a;
+}
+
+.prgTimeline .gantt_task_line.gantt_milestone .gantt_task_content {
+  border-color: #004b2d;
+}
+
+.smgantt .gantt_task_link:hover .gantt_line_wrapper div {
+  box-shadow: 0 0 10px 0 #dc6914;
+}
+
+.smgantt .gantt_task_line.gantt_milestone {
+  border-color: #000000;
+}
+
+.smgantt .gantt_baseline,
+.smgantt .gantt_base_milestone {
+  background: #ffd764;
+  border-color: #5a5a5a;
+}
+
+.prgTimeline .gantt_task_line.gantt_milestone.gantt_selected .gantt_task_content {
+  box-shadow: 0 0 5px #969696;
+}
+
+.gantt_marker {
+  background-color: #ffb900;
+}
+
+.aw-cellImageTooltip,
+.aw-cellImageTooltip:hover,
+.aw-occmgmt-cellImageTooltip,
+.aw-occmgmt-cellImageTooltip:hover {
+  border-color: #2a8eb1;
+}
+
+.aw-cellImageTooltip:active,
+.aw-occmgmt-cellImageTooltip:active {
+  border-color: #50bed7;
+}
+
+.aw-gateway-locationPanel .aw-layout-subLocation,
+.aw-gateway-locationPanel .aw-layout-infoCommandbar {
+  background-color: transparent;
+}
+
+.awRoot .awHeader .aw-layout-subLocationTitles .aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitleSelected,
+.awRoot .awHeader .aw-layout-subLocationTitles .aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitleSelected:hover {
+  color: #ffb900;
+  border-color: #ffb900;
+}
+
+.awRoot .awHeader .aw-layout-subLocationTitles .aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitle:hover {
+  color: #ffb900;
+  border-color: transparent;
+}
+
+.awRoot .awTabs {
+  background-color: #bebebe;
+}
+
+.awRoot .aw-layout-header .aw-base-tabTitle,
+.awRoot .aw-layout-header .aw-base-tabTitleSelected,
+aw-header .aw-base-tabTitle,
+aw-header .aw-base-tabTitleSelected,
+aw-showobject-header .aw-base-tabTitle,
+aw-showobject-header .aw-base-tabTitleSelected {
+  color: #ffffff;
+}
+
+.awRoot .aw-layout-header aw-search-breadcrumb,
+aw-header aw-search-breadcrumb,
+aw-showobject-header aw-search-breadcrumb {
+  color: #ffffff;
+}
+
+.awRoot .aw-layout-header .aw-commands-svg svg,
+.awRoot .aw-layout-header .aw-theme-iconHomeOutline,
+.awRoot .aw-layout-header .aw-theme-iconOutline,
+aw-header .aw-commands-svg svg,
+aw-header .aw-theme-iconHomeOutline,
+aw-header .aw-theme-iconOutline,
+aw-showobject-header .aw-commands-svg svg,
+aw-showobject-header .aw-theme-iconHomeOutline,
+aw-showobject-header .aw-theme-iconOutline {
+  fill: #ffffff;
+}
+
+.awRoot .aw-layout-header .aw-search-globalSearchContainer .aw-theme-iconOutline,
+aw-header .aw-search-globalSearchContainer .aw-theme-iconOutline,
+aw-showobject-header .aw-search-globalSearchContainer .aw-theme-iconOutline {
+  fill: #464646;
+}
+
+.awRoot .aw-layout-header .aw-search-globalSearchContainer.aw-search-slideRight .aw-theme-iconOutline,
+aw-header .aw-search-globalSearchContainer.aw-search-slideRight .aw-theme-iconOutline,
+aw-showobject-header .aw-search-globalSearchContainer.aw-search-slideRight .aw-theme-iconOutline {
+  fill: #ffffff;
+}
+
+.awRoot .aw-layout-header .aw-layout-progressBarCylon,
+aw-header .aw-layout-progressBarCylon,
+aw-showobject-header .aw-layout-progressBarCylon {
+  background-image: -webkit-linear-gradient(to right, #eb780a 0px, #eb780a 0px);
+  background-image: -moz-linear-gradient(to right, #eb780a 0px, #eb780a 0px);
+  background-image: -ms-linear-gradient(to right, #eb780a 0px, #eb780a 0px);
+  background-image: linear-gradient(to right, #eb780a 0px, #eb780a 0px);
+}
+
+aw-global-toolbar .aw-commands-svg svg,
+aw-global-toolbar .aw-theme-iconHomeOutline,
+aw-global-toolbar .aw-theme-iconOutline {
+  fill: #ffffff;
+}
+
+aw-global-toolbar .aw-commands-commandIconButton:hover,
+aw-global-toolbar .aw-commands-profileIconContainer:hover {
+  background-color: #39a0c0 !important;
+}
+
+aw-global-toolbar .aw-layout-globalToolBarCmd {
+  color: #ffb900;
+}
+
+aw-global-toolbar .aw-commands-commandIconButtonText {
+  color: #ffffff;
+}
+
+aw-global-toolbar .aw-user-text {
+  color: #ffb900;
+}
+
+aw-global-toolbar .aw-widgets-contextSubItem a {
+  color: #ffffff;
+}
+
+aw-global-toolbar .aw-widgets-contextSubItem a:hover {
+  color: #ffcd50;
+}
+
+.aw-layout-infoPanelContainer:not(.aw-layout-push) .aw-layout-panel {
+  box-shadow: #bebebe -5px 0 7px;
+}
+
+.aw-layout-infoPanelContainer.aw-layout-push .aw-layout-panel {
+  border-left-color: #dcdcdc;
+}
+
+.aw-layout-infoCommandbar {
+  background-color: #f0f0f0;
+}
+
+.awRoot aw-primary-workarea .aw-layout-workareaCommandbar,
+aw-page aw-primary-workarea .aw-layout-workareaCommandbar,
+aw-showobject-page aw-primary-workarea .aw-layout-workareaCommandbar {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.awRoot aw-primary-workarea .aw-layout-workareaCommandbar .aw-toolbar-layout.aw-toolbar-horizontal,
+aw-page aw-primary-workarea .aw-layout-workareaCommandbar .aw-toolbar-layout.aw-toolbar-horizontal,
+aw-showobject-page aw-primary-workarea .aw-layout-workareaCommandbar .aw-toolbar-layout.aw-toolbar-horizontal {
+  margin: 0;
+  box-shadow: none;
+}
+
+.awRoot .aw-layout-primaryWorkarea,
+aw-page .aw-layout-primaryWorkarea,
+aw-showobject-page .aw-layout-primaryWorkarea {
+  background-color: #f0f0f0;
+  color: #464646;
+  fill: #464646;
+}
+
+.awRoot .aw-widgets-cellListItem .aw-widgets-cellListCellItemType,
+aw-page .aw-widgets-cellListItem .aw-widgets-cellListCellItemType,
+aw-showobject-page .aw-widgets-cellListItem .aw-widgets-cellListCellItemType {
+  color: #005f87;
+}
+
+.awRoot .aw-layout-headerPropContainer .aw-widgets-propertyLabel,
+.awRoot .aw-layout-headerPropContainer .aw-widgets-propertyLabel .aw-base-small,
+.awRoot .aw-layout-headerPropContainer .aw-widgets-propertyLabelTop,
+.awRoot .aw-layout-headerPropContainer .aw-widgets-propertyValue,
+.awRoot .aw-layout-headerPropContainer .aw-widgets-propertyNonEditValue,
+.awRoot .aw-layout-headerPropContainer .aw-widgets-propertyValueLink,
+aw-page .aw-layout-headerPropContainer .aw-widgets-propertyLabel,
+aw-page .aw-layout-headerPropContainer .aw-widgets-propertyLabel .aw-base-small,
+aw-page .aw-layout-headerPropContainer .aw-widgets-propertyLabelTop,
+aw-page .aw-layout-headerPropContainer .aw-widgets-propertyValue,
+aw-page .aw-layout-headerPropContainer .aw-widgets-propertyNonEditValue,
+aw-page .aw-layout-headerPropContainer .aw-widgets-propertyValueLink,
+aw-showobject-page .aw-layout-headerPropContainer .aw-widgets-propertyLabel,
+aw-showobject-page .aw-layout-headerPropContainer .aw-widgets-propertyLabel .aw-base-small,
+aw-showobject-page .aw-layout-headerPropContainer .aw-widgets-propertyLabelTop,
+aw-showobject-page .aw-layout-headerPropContainer .aw-widgets-propertyValue,
+aw-showobject-page .aw-layout-headerPropContainer .aw-widgets-propertyNonEditValue,
+aw-showobject-page .aw-layout-headerPropContainer .aw-widgets-propertyValueLink {
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.awRoot .aw-layout-headerPropContainer .aw-widgets-propertyValueLink:hover,
+aw-page .aw-layout-headerPropContainer .aw-widgets-propertyValueLink:hover,
+aw-showobject-page .aw-layout-headerPropContainer .aw-widgets-propertyValueLink:hover {
+  color: #ffcd50;
+}
+
+.awRoot .aw-layout-subLocationTitles .aw-base-tabTitleSelected:hover,
+.awRoot a.aw-layout-subLocationTitles .aw-base-tabTitleSelected:hover,
+.awRoot .aw-layout-subLocationTitles .aw-base-tabTitleSelected,
+.awRoot a.aw-layout-subLocationTitles .aw-base-tabTitleSelected,
+.awRoot .aw-layout-subLocationTitles .aw-base-tabTitle:hover,
+.awRoot a.aw-layout-subLocationTitles .aw-base-tabTitle:hover,
+aw-page .aw-layout-subLocationTitles .aw-base-tabTitleSelected:hover,
+aw-page a.aw-layout-subLocationTitles .aw-base-tabTitleSelected:hover,
+aw-page .aw-layout-subLocationTitles .aw-base-tabTitleSelected,
+aw-page a.aw-layout-subLocationTitles .aw-base-tabTitleSelected,
+aw-page .aw-layout-subLocationTitles .aw-base-tabTitle:hover,
+aw-page a.aw-layout-subLocationTitles .aw-base-tabTitle:hover,
+aw-showobject-page .aw-layout-subLocationTitles .aw-base-tabTitleSelected:hover,
+aw-showobject-page a.aw-layout-subLocationTitles .aw-base-tabTitleSelected:hover,
+aw-showobject-page .aw-layout-subLocationTitles .aw-base-tabTitleSelected,
+aw-showobject-page a.aw-layout-subLocationTitles .aw-base-tabTitleSelected,
+aw-showobject-page .aw-layout-subLocationTitles .aw-base-tabTitle:hover,
+aw-showobject-page a.aw-layout-subLocationTitles .aw-base-tabTitle:hover {
+  color: #ffb900;
+  border-color: #ffb900;
+}
+
+.awRoot .aw-layout-subLocationTitles .aw-base-tabTitle,
+.awRoot a.aw-layout-subLocationTitles .aw-base-tabTitle,
+aw-page .aw-layout-subLocationTitles .aw-base-tabTitle,
+aw-page a.aw-layout-subLocationTitles .aw-base-tabTitle,
+aw-showobject-page .aw-layout-subLocationTitles .aw-base-tabTitle,
+aw-showobject-page a.aw-layout-subLocationTitles .aw-base-tabTitle {
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.awRoot .aw-base-tabTitle,
+.awRoot a.aw-base-tabTitle,
+aw-page .aw-base-tabTitle,
+aw-page a.aw-base-tabTitle,
+aw-showobject-page .aw-base-tabTitle,
+aw-showobject-page a.aw-base-tabTitle {
+  color: #464646;
+  border-color: transparent;
+}
+
+.awRoot .aw-layout-breadCrumbs,
+aw-page .aw-layout-breadCrumbs,
+aw-showobject-page .aw-layout-breadCrumbs {
+  color: #ffffff;
+}
+
+.awRoot .aw-layout-panelSectionTitle,
+aw-page .aw-layout-panelSectionTitle,
+aw-showobject-page .aw-layout-panelSectionTitle {
+  color: #464646;
+}
+
+.awRoot .aw-layout-header a,
+aw-page .aw-layout-header a,
+aw-showobject-page .aw-layout-header a {
+  color: #c8f5ff;
+}
+
+.awRoot .aw-layout-header aw-link-with-popup .aw-widgets-linkWithPopupMenu aw-property-image svg polygon,
+aw-page .aw-layout-header aw-link-with-popup .aw-widgets-linkWithPopupMenu aw-property-image svg polygon,
+aw-showobject-page .aw-layout-header aw-link-with-popup .aw-widgets-linkWithPopupMenu aw-property-image svg polygon {
+  fill: #c8f5ff;
+}
+
+.awRoot .aw-layout-header aw-link-with-popup .aw-widgets-linkWithPopupMenu:hover aw-link a,
+aw-page .aw-layout-header aw-link-with-popup .aw-widgets-linkWithPopupMenu:hover aw-link a,
+aw-showobject-page .aw-layout-header aw-link-with-popup .aw-widgets-linkWithPopupMenu:hover aw-link a {
+  color: #ffcd50;
+}
+
+.awRoot .aw-layout-header aw-link-with-popup .aw-widgets-linkWithPopupMenu:hover aw-property-image svg polygon,
+aw-page .aw-layout-header aw-link-with-popup .aw-widgets-linkWithPopupMenu:hover aw-property-image svg polygon,
+aw-showobject-page .aw-layout-header aw-link-with-popup .aw-widgets-linkWithPopupMenu:hover aw-property-image svg polygon {
+  fill: #ffcd50;
+}
+
+.awRoot .aw-layout-header a:hover,
+.awRoot .aw-layout-header.afx-layout-fullscreen-header a:hover,
+aw-page .aw-layout-header a:hover,
+aw-page .aw-layout-header.afx-layout-fullscreen-header a:hover,
+aw-showobject-page .aw-layout-header a:hover,
+aw-showobject-page .aw-layout-header.afx-layout-fullscreen-header a:hover {
+  color: #ffcd50;
+}
+
+.awRoot .aw-layout-header.afx-layout-fullscreen-header a,
+aw-page .aw-layout-header.afx-layout-fullscreen-header a,
+aw-showobject-page .aw-layout-header.afx-layout-fullscreen-header a {
+  color: #464646;
+}
+
+.awRoot .aw-ui-filterNameLabel,
+.awRoot .aw-ui-filterNameLabelSelected,
+aw-page .aw-ui-filterNameLabel,
+aw-page .aw-ui-filterNameLabelSelected,
+aw-showobject-page .aw-ui-filterNameLabel,
+aw-showobject-page .aw-ui-filterNameLabelSelected {
+  color: #464646;
+}
+
+.awRoot .aw-ui-filterCategorylabel,
+aw-page .aw-ui-filterCategorylabel,
+aw-showobject-page .aw-ui-filterCategorylabel {
+  color: #323232 !important;
+  background-color: #f0f0f0;
+}
+
+.awRoot .aw-ui-filterCategoryLabel,
+aw-page .aw-ui-filterCategoryLabel,
+aw-showobject-page .aw-ui-filterCategoryLabel {
+  color: #464646;
+}
+
+.awRoot .aw-theme-childListContent,
+.awRoot .aw-ui-filterCategoryNameAndCountContainer,
+aw-page .aw-theme-childListContent,
+aw-page .aw-ui-filterCategoryNameAndCountContainer,
+aw-showobject-page .aw-theme-childListContent,
+aw-showobject-page .aw-ui-filterCategoryNameAndCountContainer {
+  color: #464646;
+}
+
+.awRoot .aw-ui-filterNameLabelMore,
+aw-page .aw-ui-filterNameLabelMore,
+aw-showobject-page .aw-ui-filterNameLabelMore {
+  color: #005f87;
+}
+
+.awRoot .aw-layout-globalToolBarOpen,
+aw-page .aw-layout-globalToolBarOpen,
+aw-showobject-page .aw-layout-globalToolBarOpen {
+  background-color: #004669;
+}
+
+aw-showobject-page .aw-layout-subLocationTitles {
+  background-color: #bebebe;
+  color: #464646;
+  fill: #464646;
+}
+
+aw-showobject-page .aw-layout-subLocationTitles .aw-base-tabTitle,
+aw-showobject-page a.aw-layout-subLocationTitles .aw-base-tabTitle {
+  color: #464646;
+}
+
+aw-showobject-page .aw-layout-subLocationTitles .aw-base-tabTitleSelected:hover,
+aw-showobject-page a.aw-layout-subLocationTitles .aw-base-tabTitleSelected:hover,
+aw-showobject-page .aw-layout-subLocationTitles .aw-base-tabTitleSelected,
+aw-showobject-page a.aw-layout-subLocationTitles .aw-base-tabTitleSelected,
+aw-showobject-page .aw-layout-subLocationTitles .aw-base-tabTitle:hover,
+aw-showobject-page a.aw-layout-subLocationTitles .aw-base-tabTitle:hover {
+  color: #eb780a;
+  border-color: #eb780a;
+}
+
+.aw-widgets-cellListItem .aw-markup-added *,
+.aw-widgets-cellListItem:hover .aw-markup-added * {
+  color: #00b050;
+}
+
+.aw-widgets-cellListItem .aw-markup-deleted a,
+.aw-widgets-cellListItem .aw-markup-deleted *,
+.aw-grid-markup-deleted a,
+.aw-grid-markup-deleted * {
+  text-decoration-color: #ff0000;
+}
+
+.aw-grid-markup-added * {
+  color: #00b050;
+}
+
+.aw-layout-globalToolBarOverlayOpen {
+  background-color: #004669;
+  box-shadow: 5px 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* PLTable Specific start -  */
+.aw-splm-table-header-row {
+  background-color: #e6e6e6;
+}
+
+.aw-splm-table-scrolled .aw-splm-table-header-row {
+  box-shadow: 0 2px 4px 0 #aaaaaa;
+}
+
+.aw-jswidgets-grid .aw-splm-table-pinned-container-left .aw-splm-table-header-cell:last-child .aw-splm-table-header-cell-splitter {
+  border-right-color: #aaaaaa;
+}
+
+.aw-jswidgets-grid .aw-splm-table-pinned-container .ui-grid-row,
+.aw-jswidgets-grid .aw-splm-table-scroll-container .ui-grid-row {
+  /*
+            https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/7119159/
+            https://stackoverflow.com/questions/32313551/border-bottom-bug-in-microsoft-edge
+            */
+  background-color: #ffffff;
+  border-color: #dcdcdc;
+  margin-bottom: -1px;
+  border-bottom-width: 2px;
+}
+
+.aw-jswidgets-grid .aw-splm-table-pinned-container .ui-grid-row:last-child,
+.aw-jswidgets-grid .aw-splm-table-scroll-container .ui-grid-row:last-child {
+  /*
+                https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/7119159/
+                https://stackoverflow.com/questions/32313551/border-bottom-bug-in-microsoft-edge
+                */
+  margin-bottom: 0px;
+  border-bottom-width: 1px;
+}
+
+/**
+ * LCS-167176 - Tables do not follow hover/select color standards
+ * Defines 3 different coloring: hover, selected, selected-hover for table.
+ * For now just reuse cell color definition
+ */
+.aw-jswidgets-grid .ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell,
+.aw-jswidgets-grid.aw-jswidgets-selectionEnabled .ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell,
+.aw-jswidgets-grid .ui-grid-row.ui-grid-row-selected,
+.aw-jswidgets-grid .ui-grid-row.ui-grid-row-selected > .ui-grid-cell,
+.aw-jswidgets-grid .ui-grid-row.ui-grid-row-selected > .ui-grid-cell .aw-widgets-propertyNonEditValue {
+  background: #cde6eb;
+  color: #464646;
+}
+
+.aw-table .aw-jswidgets-grid .ui-grid-row:hover > [ui-grid-row] > .ui-grid-cell,
+.aw-table .aw-jswidgets-grid.aw-jswidgets-selectionEnabled .ui-grid-row:hover > [ui-grid-row] > .ui-grid-cell,
+.aw-table .aw-jswidgets-grid .ui-grid-row:hover,
+.aw-table .aw-jswidgets-grid .ui-grid-row:hover > .ui-grid-cell,
+.aw-table .aw-jswidgets-grid .ui-grid-row:hover > .ui-grid-cell .aw-widgets-propertyNonEditValue {
+  background: #daecf0;
+  color: #464646;
+}
+
+.aw-table .aw-jswidgets-grid .ui-grid-row.ui-grid-row-selected:hover > [ui-grid-row] > .ui-grid-cell,
+.aw-table .aw-jswidgets-grid.aw-jswidgets-selectionEnabled .ui-grid-row.ui-grid-row-selected:hover > [ui-grid-row] > .ui-grid-cell,
+.aw-table .aw-jswidgets-grid .ui-grid-row.ui-grid-row-selected:hover,
+.aw-table .aw-jswidgets-grid .ui-grid-row.ui-grid-row-selected:hover > .ui-grid-cell,
+.aw-table .aw-jswidgets-grid .ui-grid-row.ui-grid-row-selected:hover > .ui-grid-cell .aw-widgets-propertyNonEditValue {
+  background: #a3d0dc;
+  color: #464646;
+}
+
+.aw-splm-table .ui-grid-row.ui-grid-row-selected.aw-splm-table-hoverRow {
+  background: #a3d0dc;
+  color: #464646;
+}
+
+.aw-splm-table .ui-grid-row.aw-splm-table-hoverRow {
+  background: #daecf0;
+  color: #464646;
+}
+
+.aw-splm-table-header-cell,
+.aw-splm-table-header-cell-sort-icon {
+  background-color: #e6e6e6;
+  color: #464646;
+}
+
+.aw-splm-table-header-cell:hover {
+  color: #6e6e6e;
+}
+
+.aw-jswidgets-grid .ui-grid-cell.dragCell,
+.aw-jswidgets-grid .dragCell,
+.aw-jswidgets-grid .ui-grid-row:last-child .ui-grid-cell.dragCellBottom {
+  border-color: #000000;
+}
+
+.aw-jswidgets-grid .aw-table-scrolled .ui-grid-header {
+  box-shadow: 0 2px 4px 0 #aaaaaa;
+}
+
+.aw-splm-table-menu-container {
+  border-color: #bebebe;
+}
+
+.aw-splm-table-menu-container .grid-menu-command .aw-layout-popup,
+.aw-splm-table-menu-container aw-popup-command-bar {
+  position: static;
+}
+
+.aw-splm-table-menu-container .aw-widgets-cellListItem {
+  border: none;
+}
+
+.aw-splm-table-menu-popup .aw-widgets-cellListItem {
+  /*background-color: $aw_popup_background;*/
+  color: #464646;
+}
+
+.aw-splm-table-menu-popup .aw-widgets-cellListItem.aw-widgets-disabled-menu-item {
+  color: #aaaaaa;
+  pointer-events: none;
+}
+
+.aw-splm-table-menu-popup {
+  border-color: #dcdcdc;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  color: #464646;
+}
+
+.aw-splm-table-menu-pointer:before {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #dcdcdc;
+  position: absolute;
+  top: -10px;
+  left: 87%;
+}
+
+.aw-splm-table-menu-pointer:after {
+  content: "";
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid #ffffff;
+  position: absolute;
+  top: -8px;
+  left: calc(87% + 1px);
+}
+
+.aw-splm-table-column-menu-pointer-up:before {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #dcdcdc;
+  position: absolute;
+  top: -10px;
+  left: 15%;
+}
+
+.aw-splm-table-column-menu-pointer-up:after {
+  content: "";
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid #ffffff;
+  position: absolute;
+  top: -8px;
+  left: calc(15% + 1px);
+}
+
+.aw-splm-table-column-menu-pointer-down:before {
+  content: "";
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #dcdcdc;
+  position: absolute;
+  top: 100%;
+  left: 15%;
+}
+
+.aw-splm-table-column-menu-pointer-down:after {
+  content: "";
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 9px solid #ffffff;
+  position: absolute;
+  top: 100%;
+  left: calc(15% + 1px);
+}
+
+.aw-splm-table-menu-popup .aw-widgets-cellListItem:hover {
+  background-color: #cde6eb;
+  fill: #cde6eb;
+}
+
+.aw-splm-table-menu > .aw-widgets-cellListItem {
+  border-bottom: none;
+}
+
+.aw-splm-table-menu-button:hover {
+  background-color: #cde6eb;
+}
+
+.aw-splm-table-menu-item-selected {
+  /* This is currently the same as a table row selection
+    which is $aw_secondary_selection */
+  background-color: #afd7e1;
+}
+
+a.aw-splm-table-propertyValueLinks-disabled,
+a.aw-splm-table-propertyValueLinks-disabled:hover {
+  color: #464646;
+}
+
+/* PLTable Specific end */
+/* DEFAULT-CELL or AW-DEFAULT-CELL start */
+.aw-widgets-cellListItem {
+  border-color: #ffffff;
+}
+
+.aw-widgets-cellListCellTitleBlock .aw-widgets-cellListCellTitle {
+  color: #1e1e1e;
+  fill: #1e1e1e;
+}
+
+aw-default-cell .aw-widgets-cellListCellContent .aw-widgets-cellListCellItemType {
+  color: #197fa2;
+  fill: #197fa2;
+}
+
+aw-default-cell .aw-widgets-cellListCellContent .aw-widgets-cellListCellProperties {
+  color: #464646;
+  fill: #464646;
+}
+
+/* DEFAULT-CELL or AW-DEFAULT-CELL end */
+/* DEFAULT-GROUP-CELL or AW-DEFAULT-GROUP-CELL start */
+.aw-widgets-headerCell .aw-widgets-cellListCellTitleBlock {
+  color: #1e1e1e;
+  fill: #1e1e1e;
+}
+
+/* DEFAULT-GROUP-CELL or AW-DEFAULT-GROUP-CELL end */
+/* CLICKABLE CELL TITLE start */
+.aw-widgets-cellListCellTitleBlock .aw-widgets-cellListCellTitle.aw-uiwidgets-cellClickableTitle,
+.aw-widgets-cellListCellTitleBlock a.aw-uiwidgets-cellClickableTitle {
+  color: #005f87;
+}
+
+.aw-widgets-cellListCellTitleBlock .aw-widgets-cellListCellTitle.aw-uiwidgets-cellClickableTitle:hover,
+a.aw-uiwidgets-cellClickableTitle:hover {
+  color: #eb780a;
+}
+
+/* CLICKABLE CELL TITLE start */
+/* DATE or AW-DATE start */
+.aw-jswidgets-dateInputbox .aw-widgets-innerWidget input {
+  color: #1e1e1e;
+}
+
+.aw-jswidgets-dateInputbox .aw-widgets-innerWidget input:disabled {
+  color: #aaaaaa;
+}
+
+.aw-jswidgets-dateInputbox .aw-widgets-innerWidget input:disabled + aw-property-image svg path,
+.aw-jswidgets-dateInputbox .aw-widgets-innerWidget input:disabled + aw-property-image svg .aw-theme-iconOutline {
+  fill: #aaaaaa;
+}
+
+/* DATE or AW-DATE end */
+/* DATETIME or AW-DATETIME start */
+.aw-jswidgets-dateTimeInputbox .aw-jswidgets-timepicker ul li .aw-widgets-cellListCellText {
+  color: #1e1e1e;
+}
+
+.aw-jswidgets-dateTimeInputbox .aw-jswidgets-timepicker .aw-widgets-innerWidget input {
+  color: #1e1e1e;
+}
+
+.aw-jswidgets-dateTimeInputbox .aw-jswidgets-timepicker .aw-widgets-innerWidget input:disabled {
+  color: #aaaaaa;
+}
+
+.aw-jswidgets-dateTimeInputbox .aw-jswidgets-timepicker .aw-widgets-innerWidget input:disabled + aw-property-image svg path,
+.aw-jswidgets-dateTimeInputbox .aw-jswidgets-timepicker .aw-widgets-innerWidget input:disabled + aw-property-image svg polygon {
+  fill: #aaaaaa;
+}
+
+/* DATETIME or AW-DATETIME end */
+.aw-theme-missingGrid {
+  background-color: #dc0000;
+}
+
+.aw-theme-deviationGrid {
+  background-color: #ffb900;
+}
+
+.aw-theme-substituteGrid {
+  background-color: #006487;
+}
+
+.aw-theme-alternateGrid {
+  background-color: #009999;
+}
+
+.aw-theme-preferredGrid {
+  background-color: #647d2d;
+}
+
+.aw-theme-extraGrid {
+  background-color: #eb780a;
+}
+
+/* Global navigation toolbar (view and viewmodel) */
+.global-navigation-toolbar aw-command-bar .aw-commands-commandIconButton {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.global-navigation-toolbar aw-command-bar .aw-commands-commandIconButton.aw-state-selected, .global-navigation-toolbar aw-command-bar .aw-commands-commandIconButton:hover {
+  background-color: #2882ad;
+}
+
+.global-navigation-toolbar aw-command-bar .aw-commands-commandIconButton:active {
+  background-color: #3c91af;
+}
+
+.global-navigation-toolbar aw-command-bar .aw-theme-iconHomeOutline,
+.global-navigation-toolbar aw-command-bar .aw-theme-iconOutline {
+  fill: #ffffff;
+}
+
+.global-navigation-toolbar aw-avatar:hover {
+  border: 2px solid #41aac8;
+}
+
+/* Collaboration: Make ratings bar display consistent across browsers */
+aw-social-rating-percent progress {
+  color: #39a0c0;
+  border-color: #1e1e1e;
+}
+
+/* Firefox */
+aw-social-rating-percent progress::-moz-progress-bar {
+  background-color: #39a0c0;
+}
+
+/* Chrome and Safari */
+aw-social-rating-percent progress::-webkit-progress-bar {
+  background-color: #f0f0f0;
+}
+
+aw-social-rating-percent progress::-webkit-progress-value {
+  background-color: #39a0c0;
+}
+
+/* Doc Management: Floating PDF Viewer */
+.aw-docmgmt-floatWindow {
+  background-color: #ffffff;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.aw-docmgmt-floatWindow .Caption {
+  background-color: #f0f0f0;
+}
+
+.aw-docmgmt-popupScreenMask {
+  background-color: #fafafa;
+}
+
+/* Multi File Drop area text color */
+.aw-create-multiFileUploadFileDrop {
+  color: #5a5a5a;
+}
+
+.aw-command-panelContainer .aw-layout-commandPanelContent {
+  border-color: #dcdcdc;
+}
+
+/* To be used by clients (like, Active Workspace) using aw-global-navigation-panel and want to write some css for their view
+*/
+aw-global-navigation-panel #avatarPanelUserName a:hover {
+  color: #e3700f;
+}
+
+.global-navigation .aw-sidenav-layoutContainer #avatarPanelUserName a:hover {
+  color: #e3700f;
+}
+
+.aw-architectureModeler-nodeThumbnailTargetSvg {
+  stroke: #f0f0f0;
+}
+
+.aw-architectureModeler-nodeThumbnailTargetSvg:hover {
+  stroke: #3296b9;
+}
+
+.aw-schedulemanager-ganttBreadCrumb .aw-widgets-crumbCategoryLabel {
+  color: #000000;
+}
+
+.aw-schedulemanager-ganttBreadCrumb .aw-layout-breadCrumbs {
+  color: #000000;
+}
+
+aw-table-cell .aw-jswidgets-cellTop.aw-jswidgets-isEditing aw-property-date-val .aw-jswidgets-dateInputbox .aw-widget-icon,
+aw-table-cell .aw-jswidgets-cellTop.aw-jswidgets-isEditing aw-property-time-val .aw-jswidgets-timepicker .aw-widget-icon,
+.aw-splm-table-edit-cellTop .aw-jswidgets-tableEditContainer aw-property-date-val .aw-jswidgets-dateInputbox .aw-widget-icon,
+.aw-splm-table-edit-cellTop .aw-jswidgets-tableEditContainer aw-property-time-val .aw-jswidgets-timepicker .aw-widget-icon {
+  background-color: #ffffff;
+}
+
+aw-table-cell.aw-occmgmtjs-stale div.aw-widgets-propertyNonEditValue,
+aw-treetable-command-cell.aw-occmgmtjs-stale * div.aw-jswidgets-dataGridCellText,
+aw-table-command-cell.aw-occmgmtjs-stale * div.aw-widgets-propertyNonEditValue,
+.aw-widgets-cellListItem .aw-occmgmtjs-stale *,
+.aw-widgets-cellListItem:hover .aw-occmgmtjs-stale * {
+  color: #464646;
+}
+
+.aw-step-progressChevronContainer li {
+  background-color: #ffffff;
+  color: #464646;
+  border-right-color: #d2d2d2;
+}
+
+.aw-step-progressChevronContainer li:after {
+  border-left-color: #ffffff;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.aw-step-progressChevronContainer li:before {
+  border-left-color: #d2d2d2;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.aw-step-progressChevronContainer li.aw-step-progressCurrentChevron {
+  background-color: #2387aa;
+  color: #ffffff;
+}
+
+.aw-step-progressChevronContainer li.aw-step-progressCurrentChevron::after {
+  border-left-color: #2387aa;
+}
+
+.aw-step-progressChevronContainer li.aw-step-progressCurrentChevron ~ li {
+  color: #aaaaaa;
+}
+
+.aw-step-progressChevronContainer li:last-child {
+  border-right-color: #d2d2d2;
+}
+
+.aw-step-progressChevronContainer li {
+  border-color: #d2d2d2;
+}
+
+.aw-commands-cellDecorator .aw-2dviewerjs-pagenumber {
+  background-color: transparent;
+}
+
+/* Used by Command Builder to avoid dirty flags in always edit paradigm
+*/
+.aw-jswidgets-commandBuilderChangeOverride .aw-jswidgets-editableGridCell,
+.aw-jswidgets-commandBuilderChangeOverride input {
+  background-color: inherit !important;
+}
+
+/*
+    color isolation for new elements
+*/
+body,
+.afx-default-background {
+  background-image: -ms-radial-gradient(75% top, ellipse farthest-side, #55a0b9 -100%, #0077a1 40%, #006b91 75%, #006487 100%);
+  background-image: -moz-radial-gradient(75% top, ellipse farthest-side, #55a0b9 -100%, #0077a1 40%, #006b91 75%, #006487 100%);
+  background-image: -o-radial-gradient(75% top, ellipse farthest-side, #55a0b9 -100%, #0077a1 40%, #006b91 75%, #006487 100%);
+  background-image: -webkit-gradient(radial, 75% top, 0, center top, 258, color-stop(-100, #55a0b9), color-stop(40, #0077a1), color-stop(75, #006b91), color-stop(100, #006487));
+  background-image: -webkit-radial-gradient(75% top, ellipse farthest-side, #55a0b9 -100%, #0077a1 40%, #006b91 75%, #006487 100%);
+  background-image: radial-gradient(ellipse farthest-side at 75% top, #55a0b9 -100%, #0077a1 40%, #006b91 75%, #006487 100%);
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.afx-accent-background {
+  background-color: #003750;
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.afx-accent-background .aw-theme-iconOutline {
+  fill: #ffffff;
+}
+
+.aw-layout-subLocation,
+.afx-content-background {
+  background-color: #ffffff;
+}
+
+.aw-toolbar-background {
+  background-color: #f0f0f0;
+}
+
+.afx-alt-content-background {
+  background-color: #f0f0f0;
+}
+
+.afx-medium-background,
+.afx-medium-background .aw-layout-panel {
+  background-color: #bebebe;
+}
+
+.aw-widgets-propertyLabelTop,
+.aw-widgets-propertyNonEditValue {
+  color: #ffffff;
+}
+
+.aw-layout-panelSectionTitle {
+  color: #39a0c0;
+}
+
+a {
+  color: #c8f5ff;
+}
+
+a:visited {
+  color: #c8f5ff;
+}
+
+a:hover {
+  color: #ffcd50;
+}
+
+a:active {
+  color: #c8f5ff;
+}
+
+a.disabled {
+  color: #aaaaaa;
+}
+
+.afx-property-required:after {
+  color: #ffffff;
+}
+
+.aw-layout-subLocation,
+.afx-content-background,
+.afx-alt-content-background,
+.aw-toolbar-background,
+.noty_container_type_error,
+.noty_container_type_information,
+.noty_container_type_warning,
+.afx-medium-background {
+  color: #464646;
+  fill: #464646;
+}
+
+.aw-layout-subLocation text,
+.afx-content-background text,
+.afx-alt-content-background text,
+.aw-toolbar-background text,
+.noty_container_type_error text,
+.noty_container_type_information text,
+.noty_container_type_warning text,
+.afx-medium-background text {
+  fill: #464646;
+}
+
+.aw-layout-subLocation text.aw-theme-errorText,
+.afx-content-background text.aw-theme-errorText,
+.afx-alt-content-background text.aw-theme-errorText,
+.aw-toolbar-background text.aw-theme-errorText,
+.noty_container_type_error text.aw-theme-errorText,
+.noty_container_type_information text.aw-theme-errorText,
+.noty_container_type_warning text.aw-theme-errorText,
+.afx-medium-background text.aw-theme-errorText {
+  fill: #dc0000;
+}
+
+.aw-layout-subLocation tr td,
+.afx-content-background tr td,
+.afx-alt-content-background tr td,
+.aw-toolbar-background tr td,
+.noty_container_type_error tr td,
+.noty_container_type_information tr td,
+.noty_container_type_warning tr td,
+.afx-medium-background tr td {
+  color: #464646;
+}
+
+.aw-layout-subLocation .aw-widgets-propertyNonEditValue,
+.afx-content-background .aw-widgets-propertyNonEditValue,
+.afx-alt-content-background .aw-widgets-propertyNonEditValue,
+.aw-toolbar-background .aw-widgets-propertyNonEditValue,
+.noty_container_type_error .aw-widgets-propertyNonEditValue,
+.noty_container_type_information .aw-widgets-propertyNonEditValue,
+.noty_container_type_warning .aw-widgets-propertyNonEditValue,
+.afx-medium-background .aw-widgets-propertyNonEditValue {
+  color: #5a5a5a;
+}
+
+.aw-layout-subLocation .aw-layout-panelSectionTitle,
+.afx-content-background .aw-layout-panelSectionTitle,
+.afx-alt-content-background .aw-layout-panelSectionTitle,
+.aw-toolbar-background .aw-layout-panelSectionTitle,
+.noty_container_type_error .aw-layout-panelSectionTitle,
+.noty_container_type_information .aw-layout-panelSectionTitle,
+.noty_container_type_warning .aw-layout-panelSectionTitle,
+.afx-medium-background .aw-layout-panelSectionTitle {
+  color: #464646;
+}
+
+.aw-layout-subLocation a,
+.afx-content-background a,
+.afx-alt-content-background a,
+.aw-toolbar-background a,
+.noty_container_type_error a,
+.noty_container_type_information a,
+.noty_container_type_warning a,
+.afx-medium-background a {
+  color: #197fa2;
+}
+
+.aw-layout-subLocation a:visited,
+.afx-content-background a:visited,
+.afx-alt-content-background a:visited,
+.aw-toolbar-background a:visited,
+.noty_container_type_error a:visited,
+.noty_container_type_information a:visited,
+.noty_container_type_warning a:visited,
+.afx-medium-background a:visited {
+  color: #197fa2;
+}
+
+.aw-layout-subLocation a:hover,
+.afx-content-background a:hover,
+.afx-alt-content-background a:hover,
+.aw-toolbar-background a:hover,
+.noty_container_type_error a:hover,
+.noty_container_type_information a:hover,
+.noty_container_type_warning a:hover,
+.afx-medium-background a:hover {
+  color: #e3700f;
+}
+
+.aw-layout-subLocation a:active,
+.afx-content-background a:active,
+.afx-alt-content-background a:active,
+.aw-toolbar-background a:active,
+.noty_container_type_error a:active,
+.noty_container_type_information a:active,
+.noty_container_type_warning a:active,
+.afx-medium-background a:active {
+  color: #197fa2;
+}
+
+.aw-layout-subLocation a.disabled,
+.afx-content-background a.disabled,
+.afx-alt-content-background a.disabled,
+.aw-toolbar-background a.disabled,
+.noty_container_type_error a.disabled,
+.noty_container_type_information a.disabled,
+.noty_container_type_warning a.disabled,
+.afx-medium-background a.disabled {
+  color: #aaaaaa;
+}
+
+.aw-layout-subLocation .aw-widgets-propertyLabelTop,
+.afx-content-background .aw-widgets-propertyLabelTop,
+.afx-alt-content-background .aw-widgets-propertyLabelTop,
+.aw-toolbar-background .aw-widgets-propertyLabelTop,
+.noty_container_type_error .aw-widgets-propertyLabelTop,
+.noty_container_type_information .aw-widgets-propertyLabelTop,
+.noty_container_type_warning .aw-widgets-propertyLabelTop,
+.afx-medium-background .aw-widgets-propertyLabelTop {
+  color: #464646;
+}
+
+.aw-layout-subLocation .afx-property-required:after,
+.afx-content-background .afx-property-required:after,
+.afx-alt-content-background .afx-property-required:after,
+.aw-toolbar-background .afx-property-required:after,
+.noty_container_type_error .afx-property-required:after,
+.noty_container_type_information .afx-property-required:after,
+.noty_container_type_warning .afx-property-required:after,
+.afx-medium-background .afx-property-required:after {
+  color: #005f87;
+}
+
+.aw-layout-subLocation .afx-accent-background .aw-widgets-propertyLabelTop,
+.aw-layout-subLocation .afx-accent-background .aw-widgets-propertyNonEditValue,
+.aw-layout-subLocation .afx-default-background .aw-widgets-propertyLabelTop,
+.aw-layout-subLocation .afx-default-background .aw-widgets-propertyNonEditValue,
+.afx-content-background .afx-accent-background .aw-widgets-propertyLabelTop,
+.afx-content-background .afx-accent-background .aw-widgets-propertyNonEditValue,
+.afx-content-background .afx-default-background .aw-widgets-propertyLabelTop,
+.afx-content-background .afx-default-background .aw-widgets-propertyNonEditValue,
+.afx-alt-content-background .afx-accent-background .aw-widgets-propertyLabelTop,
+.afx-alt-content-background .afx-accent-background .aw-widgets-propertyNonEditValue,
+.afx-alt-content-background .afx-default-background .aw-widgets-propertyLabelTop,
+.afx-alt-content-background .afx-default-background .aw-widgets-propertyNonEditValue,
+.aw-toolbar-background .afx-accent-background .aw-widgets-propertyLabelTop,
+.aw-toolbar-background .afx-accent-background .aw-widgets-propertyNonEditValue,
+.aw-toolbar-background .afx-default-background .aw-widgets-propertyLabelTop,
+.aw-toolbar-background .afx-default-background .aw-widgets-propertyNonEditValue,
+.noty_container_type_error .afx-accent-background .aw-widgets-propertyLabelTop,
+.noty_container_type_error .afx-accent-background .aw-widgets-propertyNonEditValue,
+.noty_container_type_error .afx-default-background .aw-widgets-propertyLabelTop,
+.noty_container_type_error .afx-default-background .aw-widgets-propertyNonEditValue,
+.noty_container_type_information .afx-accent-background .aw-widgets-propertyLabelTop,
+.noty_container_type_information .afx-accent-background .aw-widgets-propertyNonEditValue,
+.noty_container_type_information .afx-default-background .aw-widgets-propertyLabelTop,
+.noty_container_type_information .afx-default-background .aw-widgets-propertyNonEditValue,
+.noty_container_type_warning .afx-accent-background .aw-widgets-propertyLabelTop,
+.noty_container_type_warning .afx-accent-background .aw-widgets-propertyNonEditValue,
+.noty_container_type_warning .afx-default-background .aw-widgets-propertyLabelTop,
+.noty_container_type_warning .afx-default-background .aw-widgets-propertyNonEditValue,
+.afx-medium-background .afx-accent-background .aw-widgets-propertyLabelTop,
+.afx-medium-background .afx-accent-background .aw-widgets-propertyNonEditValue,
+.afx-medium-background .afx-default-background .aw-widgets-propertyLabelTop,
+.afx-medium-background .afx-default-background .aw-widgets-propertyNonEditValue {
+  color: #ffffff;
+}
+
+.aw-layout-subLocation .afx-accent-background .aw-layout-panelSectionTitle,
+.aw-layout-subLocation .afx-default-background .aw-layout-panelSectionTitle,
+.afx-content-background .afx-accent-background .aw-layout-panelSectionTitle,
+.afx-content-background .afx-default-background .aw-layout-panelSectionTitle,
+.afx-alt-content-background .afx-accent-background .aw-layout-panelSectionTitle,
+.afx-alt-content-background .afx-default-background .aw-layout-panelSectionTitle,
+.aw-toolbar-background .afx-accent-background .aw-layout-panelSectionTitle,
+.aw-toolbar-background .afx-default-background .aw-layout-panelSectionTitle,
+.noty_container_type_error .afx-accent-background .aw-layout-panelSectionTitle,
+.noty_container_type_error .afx-default-background .aw-layout-panelSectionTitle,
+.noty_container_type_information .afx-accent-background .aw-layout-panelSectionTitle,
+.noty_container_type_information .afx-default-background .aw-layout-panelSectionTitle,
+.noty_container_type_warning .afx-accent-background .aw-layout-panelSectionTitle,
+.noty_container_type_warning .afx-default-background .aw-layout-panelSectionTitle,
+.afx-medium-background .afx-accent-background .aw-layout-panelSectionTitle,
+.afx-medium-background .afx-default-background .aw-layout-panelSectionTitle {
+  color: #39a0c0;
+}
+
+.aw-layout-subLocation .afx-accent-background a,
+.aw-layout-subLocation .afx-default-background a,
+.afx-content-background .afx-accent-background a,
+.afx-content-background .afx-default-background a,
+.afx-alt-content-background .afx-accent-background a,
+.afx-alt-content-background .afx-default-background a,
+.aw-toolbar-background .afx-accent-background a,
+.aw-toolbar-background .afx-default-background a,
+.noty_container_type_error .afx-accent-background a,
+.noty_container_type_error .afx-default-background a,
+.noty_container_type_information .afx-accent-background a,
+.noty_container_type_information .afx-default-background a,
+.noty_container_type_warning .afx-accent-background a,
+.noty_container_type_warning .afx-default-background a,
+.afx-medium-background .afx-accent-background a,
+.afx-medium-background .afx-default-background a {
+  color: #c8f5ff;
+}
+
+.aw-layout-subLocation .afx-accent-background a:visited,
+.aw-layout-subLocation .afx-default-background a:visited,
+.afx-content-background .afx-accent-background a:visited,
+.afx-content-background .afx-default-background a:visited,
+.afx-alt-content-background .afx-accent-background a:visited,
+.afx-alt-content-background .afx-default-background a:visited,
+.aw-toolbar-background .afx-accent-background a:visited,
+.aw-toolbar-background .afx-default-background a:visited,
+.noty_container_type_error .afx-accent-background a:visited,
+.noty_container_type_error .afx-default-background a:visited,
+.noty_container_type_information .afx-accent-background a:visited,
+.noty_container_type_information .afx-default-background a:visited,
+.noty_container_type_warning .afx-accent-background a:visited,
+.noty_container_type_warning .afx-default-background a:visited,
+.afx-medium-background .afx-accent-background a:visited,
+.afx-medium-background .afx-default-background a:visited {
+  color: #c8f5ff;
+}
+
+.aw-layout-subLocation .afx-accent-background a:hover,
+.aw-layout-subLocation .afx-default-background a:hover,
+.afx-content-background .afx-accent-background a:hover,
+.afx-content-background .afx-default-background a:hover,
+.afx-alt-content-background .afx-accent-background a:hover,
+.afx-alt-content-background .afx-default-background a:hover,
+.aw-toolbar-background .afx-accent-background a:hover,
+.aw-toolbar-background .afx-default-background a:hover,
+.noty_container_type_error .afx-accent-background a:hover,
+.noty_container_type_error .afx-default-background a:hover,
+.noty_container_type_information .afx-accent-background a:hover,
+.noty_container_type_information .afx-default-background a:hover,
+.noty_container_type_warning .afx-accent-background a:hover,
+.noty_container_type_warning .afx-default-background a:hover,
+.afx-medium-background .afx-accent-background a:hover,
+.afx-medium-background .afx-default-background a:hover {
+  color: #ffcd50;
+}
+
+.aw-layout-subLocation .afx-accent-background a:active,
+.aw-layout-subLocation .afx-default-background a:active,
+.afx-content-background .afx-accent-background a:active,
+.afx-content-background .afx-default-background a:active,
+.afx-alt-content-background .afx-accent-background a:active,
+.afx-alt-content-background .afx-default-background a:active,
+.aw-toolbar-background .afx-accent-background a:active,
+.aw-toolbar-background .afx-default-background a:active,
+.noty_container_type_error .afx-accent-background a:active,
+.noty_container_type_error .afx-default-background a:active,
+.noty_container_type_information .afx-accent-background a:active,
+.noty_container_type_information .afx-default-background a:active,
+.noty_container_type_warning .afx-accent-background a:active,
+.noty_container_type_warning .afx-default-background a:active,
+.afx-medium-background .afx-accent-background a:active,
+.afx-medium-background .afx-default-background a:active {
+  color: #c8f5ff;
+}
+
+.aw-layout-subLocation .afx-accent-background a.disabled,
+.aw-layout-subLocation .afx-default-background a.disabled,
+.afx-content-background .afx-accent-background a.disabled,
+.afx-content-background .afx-default-background a.disabled,
+.afx-alt-content-background .afx-accent-background a.disabled,
+.afx-alt-content-background .afx-default-background a.disabled,
+.aw-toolbar-background .afx-accent-background a.disabled,
+.aw-toolbar-background .afx-default-background a.disabled,
+.noty_container_type_error .afx-accent-background a.disabled,
+.noty_container_type_error .afx-default-background a.disabled,
+.noty_container_type_information .afx-accent-background a.disabled,
+.noty_container_type_information .afx-default-background a.disabled,
+.noty_container_type_warning .afx-accent-background a.disabled,
+.noty_container_type_warning .afx-default-background a.disabled,
+.afx-medium-background .afx-accent-background a.disabled,
+.afx-medium-background .afx-default-background a.disabled {
+  color: #aaaaaa;
+}
+
+.aw-layout-subLocation .afx-accent-background .afx-property-required:after,
+.aw-layout-subLocation .afx-default-background .afx-property-required:after,
+.afx-content-background .afx-accent-background .afx-property-required:after,
+.afx-content-background .afx-default-background .afx-property-required:after,
+.afx-alt-content-background .afx-accent-background .afx-property-required:after,
+.afx-alt-content-background .afx-default-background .afx-property-required:after,
+.aw-toolbar-background .afx-accent-background .afx-property-required:after,
+.aw-toolbar-background .afx-default-background .afx-property-required:after,
+.noty_container_type_error .afx-accent-background .afx-property-required:after,
+.noty_container_type_error .afx-default-background .afx-property-required:after,
+.noty_container_type_information .afx-accent-background .afx-property-required:after,
+.noty_container_type_information .afx-default-background .afx-property-required:after,
+.noty_container_type_warning .afx-accent-background .afx-property-required:after,
+.noty_container_type_warning .afx-default-background .afx-property-required:after,
+.afx-medium-background .afx-accent-background .afx-property-required:after,
+.afx-medium-background .afx-default-background .afx-property-required:after {
+  color: #ffffff;
+}
+
+/* aw-list */
+.aw-widgets-cellListWidget .aw-widgets-cellListItem:hover {
+  background: #daecf0;
+  color: #464646;
+}
+
+.aw-widgets-cellListWidget .aw-widgets-cellListItem:active {
+  background: #afd7e1;
+  color: #464646;
+}
+
+.aw-widgets-cellListWidget .aw-widgets-cellListItem.aw-widgets-cellListItemSelected {
+  background: #cde6eb;
+  color: #464646;
+}
+
+.aw-widgets-cellListWidget .aw-widgets-cellListItem.aw-widgets-cellListItemSelected:hover {
+  background: #a3d0dc;
+  color: #464646;
+}
+
+.aw-widgets-cellListItem.aw-widgets-hideCellListSelEffect:hover,
+.aw-widgets-cellListItem.aw-widgets-hideCellListSelEffect:active {
+  background-color: transparent;
+}
+
+.aw-widgets-cellListWidget .aw-widgets-cellListItem.aw-widgets-hideCellListSelEffect:hover,
+.aw-widgets-cellListWidget .aw-widgets-cellListItem.aw-widgets-hideCellListSelEffect:active {
+  background: transparent;
+}
+
+.aw-layout-popup {
+  border-color: #dcdcdc;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.aw-popup-contentContainer > .aw-layout-popup {
+  box-shadow: none;
+}
+
+.afx-default-background.aw-global-navigation-panel label,
+.afx-default-background.aw-global-navigation-panel span, .afx-default-background.aw-sidenav-layoutContainer label,
+.afx-default-background.aw-sidenav-layoutContainer span,
+.afx-accent-background.aw-global-navigation-panel label,
+.afx-accent-background.aw-global-navigation-panel span,
+.afx-accent-background.aw-sidenav-layoutContainer label,
+.afx-accent-background.aw-sidenav-layoutContainer span {
+  color: #ffffff;
+}
+
+.afx-default-background.aw-global-navigation-panel span.aw-avatar-name, .afx-default-background.aw-sidenav-layoutContainer span.aw-avatar-name,
+.afx-accent-background.aw-global-navigation-panel span.aw-avatar-name,
+.afx-accent-background.aw-sidenav-layoutContainer span.aw-avatar-name {
+  color: #464646;
+}
+
+.afx-default-background.aw-global-navigation-panel .aw-layout-panelSectionTitle, .afx-default-background.aw-sidenav-layoutContainer .aw-layout-panelSectionTitle,
+.afx-accent-background.aw-global-navigation-panel .aw-layout-panelSectionTitle,
+.afx-accent-background.aw-sidenav-layoutContainer .aw-layout-panelSectionTitle {
+  background-color: #004669;
+}
+
+.afx-default-background.aw-global-navigation-panel .aw-layout-panelSectionTitle aw-property-image svg polygon, .afx-default-background.aw-sidenav-layoutContainer .aw-layout-panelSectionTitle aw-property-image svg polygon,
+.afx-accent-background.aw-global-navigation-panel .aw-layout-panelSectionTitle aw-property-image svg polygon,
+.afx-accent-background.aw-sidenav-layoutContainer .aw-layout-panelSectionTitle aw-property-image svg polygon {
+  fill: #ffffff;
+}
+
+.afx-default-background.aw-global-navigation-panel .aw-layout-panel, .afx-default-background.aw-sidenav-layoutContainer .aw-layout-panel,
+.afx-accent-background.aw-global-navigation-panel .aw-layout-panel,
+.afx-accent-background.aw-sidenav-layoutContainer .aw-layout-panel {
+  background-color: #003750;
+}
+
+.afx-default-background.aw-global-navigation-panel .aw-jswidgets-arrayWidgetContainer .aw-commands-commandIconButton .aw-theme-iconOutline, .afx-default-background.aw-sidenav-layoutContainer .aw-jswidgets-arrayWidgetContainer .aw-commands-commandIconButton .aw-theme-iconOutline,
+.afx-accent-background.aw-global-navigation-panel .aw-jswidgets-arrayWidgetContainer .aw-commands-commandIconButton .aw-theme-iconOutline,
+.afx-accent-background.aw-sidenav-layoutContainer .aw-jswidgets-arrayWidgetContainer .aw-commands-commandIconButton .aw-theme-iconOutline {
+  fill: #464646;
+}
+
+.afx-default-background button,
+.afx-accent-background button {
+  color: #c8f5ff;
+}
+
+.afx-default-background button:hover,
+.afx-accent-background button:hover {
+  color: #003750;
+}
+
+.afx-default-background aw-link-with-popup .aw-widgets-linkWithPopupMenu aw-property-image svg polygon,
+.afx-accent-background aw-link-with-popup .aw-widgets-linkWithPopupMenu aw-property-image svg polygon {
+  fill: #c8f5ff;
+}
+
+.afx-default-background aw-link-with-popup .aw-widgets-linkWithPopupMenu:hover aw-link a,
+.afx-accent-background aw-link-with-popup .aw-widgets-linkWithPopupMenu:hover aw-link a {
+  color: #ffcd50;
+}
+
+.afx-default-background aw-link-with-popup .aw-widgets-linkWithPopupMenu:hover aw-property-image svg polygon,
+.afx-accent-background aw-link-with-popup .aw-widgets-linkWithPopupMenu:hover aw-property-image svg polygon {
+  fill: #ffcd50;
+}
+
+.aw-global-navigation-panel.unpinned {
+  box-shadow: 8px 0 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+.aw-global-navigation-panel.unpinned aw-property-image svg path {
+  fill: #ffffff;
+}
+
+.aw-global-navigation-panel.pinned {
+  box-shadow: none;
+}
+
+.aw-global-navigation-panel.pinned aw-property-image svg path {
+  fill: #ffb900;
+}
+
+.afx-accent-background .aw-layout-panel .aw-commands-commandIconButton:hover .aw-theme-iconOutline {
+  fill: #0a0a0a;
+}
+
+/* aw sidenav with pin (directive) */
+.aw-sidenav-layoutContainer .unpinned aw-property-image svg path {
+  fill: #ffffff;
+}
+
+.aw-sidenav-layoutContainer .pinned {
+  box-shadow: none;
+}
+
+.aw-sidenav-layoutContainer .pinned aw-property-image svg path {
+  fill: #ffb900;
+}
+
+/* aw-navigate-breadcrumb  */
+.aw-layout-fxbreadCrumbs,
+.aw-layout-breadCrumbs {
+  background: transparent;
+}
+
+.aw-layout-fxbreadCrumbs .aw-layout-popup .aw-commands-svg svg,
+.aw-layout-fxbreadCrumbs .aw-layout-popup .aw-theme-iconOutline,
+.aw-layout-breadCrumbs .aw-layout-popup .aw-commands-svg svg,
+.aw-layout-breadCrumbs .aw-layout-popup .aw-theme-iconOutline {
+  fill: #464646;
+}
+
+.aw-layout-fxbreadCrumbs .aw-layout-popup .aw-widgets-crumbLink,
+.aw-layout-breadCrumbs .aw-layout-popup .aw-widgets-crumbLink {
+  color: #197fa2;
+}
+
+.aw-layout-fxbreadCrumbs .aw-layout-popup .aw-widgets-crumbLink:hover,
+.aw-layout-breadCrumbs .aw-layout-popup .aw-widgets-crumbLink:hover {
+  color: #e3700f;
+}
+
+.aw-layout-fxbreadCrumbs .aw-layout-popup .aw-widgets-crumbLink:active,
+.aw-layout-breadCrumbs .aw-layout-popup .aw-widgets-crumbLink:active {
+  color: #197fa2;
+}
+
+.aw-jswidget-controlArrow svg path {
+  fill: #1e1e1e;
+}
+
+.aw-layout-panelMain .aw-jswidget-controlArrow svg path {
+  fill: #1e1e1e;
+}
+
+aw-header .aw-widgets-crumbLink,
+aw-showobject-header .aw-widgets-crumbLink {
+  color: #197fa2;
+}
+
+aw-header .aw-widgets-crumbLink:hover,
+aw-showobject-header .aw-widgets-crumbLink:hover {
+  color: #e3700f;
+}
+
+aw-header .aw-widgets-crumbLink:active,
+aw-showobject-header .aw-widgets-crumbLink:active {
+  color: #197fa2;
+}
+
+aw-header .aw-jswidget-controlArrow svg path,
+aw-header .aw-layout-panelMain svg path,
+aw-showobject-header .aw-jswidget-controlArrow svg path,
+aw-showobject-header .aw-layout-panelMain svg path {
+  fill: #ffffff;
+}
+
+aw-header .afx-layout-fullscreen-header .aw-jswidget-controlArrow svg path,
+aw-showobject-header .afx-layout-fullscreen-header .aw-jswidget-controlArrow svg path {
+  fill: #1e1e1e;
+}
+
+.aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitle {
+  color: #1e1e1e;
+  border-color: transparent;
+}
+
+.aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitle:hover {
+  color: #0f789b;
+}
+
+.aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitle:active {
+  color: #39a0c0;
+}
+
+.aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitleSelected {
+  color: #0f789b;
+  border-color: #0f789b;
+  -webkit-transition: border-color 0.2s ease-out;
+  transition: border-color 0.2s ease-out;
+}
+
+.aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitleSelected:hover {
+  color: #0f789b;
+  border-color: #0f789b;
+}
+
+.aw-layout-header .aw-jswidget-tab a.aw-base-tabTitle {
+  color: #ffffff;
+}
+
+.gwt-ListBox,
+.gwt-TextBox,
+.gwt-TextArea,
+textarea,
+input[type="text"],
+input[type="password"] {
+  border-color: #969696;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  color: #1e1e1e;
+}
+
+.gwt-ListBox:hover,
+.gwt-TextBox:hover,
+.gwt-TextArea:hover,
+textarea:hover,
+input[type="text"]:hover,
+input[type="password"]:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.gwt-ListBox:focus,
+.gwt-TextBox:focus,
+.gwt-TextArea:focus,
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  color: #1e1e1e;
+  border-color: #3296b9;
+  caret-color: #3296b9;
+}
+
+.gwt-ListBox.changed, .gwt-ListBox.ng-dirty,
+.gwt-TextBox.changed,
+.gwt-TextBox.ng-dirty,
+.gwt-TextArea.changed,
+.gwt-TextArea.ng-dirty,
+textarea.changed,
+textarea.ng-dirty,
+input[type="text"].changed,
+input[type="text"].ng-dirty,
+input[type="password"].changed,
+input[type="password"].ng-dirty {
+  background-color: #e3faff;
+  color: #464646;
+}
+
+.gwt-ListBox:disabled,
+.gwt-TextBox:disabled,
+.gwt-TextArea:disabled,
+textarea:disabled,
+input[type="text"]:disabled,
+input[type="password"]:disabled {
+  background-color: #f0f0f0;
+  border-color: #aaaaaa;
+  box-shadow: none;
+}
+
+.aw-layout-navigationAreaContainer input[type="text"].changed, .aw-layout-navigationAreaContainer input[type="text"].ng-dirty,
+.aw-layout-navigationAreaContainer input[type="password"].changed,
+.aw-layout-navigationAreaContainer input[type="password"].ng-dirty,
+.aw-jswidgets-cbaSearch input[type="text"].changed,
+.aw-jswidgets-cbaSearch input[type="text"].ng-dirty,
+.aw-jswidgets-cbaSearch input[type="password"].changed,
+.aw-jswidgets-cbaSearch input[type="password"].ng-dirty,
+.aw-uiwidgets-searchBoxContainer input[type="text"].changed,
+.aw-uiwidgets-searchBoxContainer input[type="text"].ng-dirty,
+.aw-uiwidgets-searchBoxContainer input[type="password"].changed,
+.aw-uiwidgets-searchBoxContainer input[type="password"].ng-dirty,
+.aw-session-signIn input[type="text"].changed,
+.aw-session-signIn input[type="text"].ng-dirty,
+.aw-session-signIn input[type="password"].changed,
+.aw-session-signIn input[type="password"].ng-dirty,
+.aw-uiwidgets-typeSelectorContainer input[type="text"].changed,
+.aw-uiwidgets-typeSelectorContainer input[type="text"].ng-dirty,
+.aw-uiwidgets-typeSelectorContainer input[type="password"].changed,
+.aw-uiwidgets-typeSelectorContainer input[type="password"].ng-dirty {
+  background-color: #ffffff;
+  color: #1e1e1e;
+}
+
+input[type="password"].changed, input[type="password"].ng-dirty {
+  background-color: #ffffff;
+  color: #1e1e1e;
+}
+
+aw-header .aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitle,
+aw-header-tabs .aw-layout-subLocationTitles .aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitle {
+  color: #ffffff;
+  border-color: transparent;
+}
+
+aw-header .aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitleSelected,
+aw-header .aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitleSelected:hover,
+aw-header .aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitle:hover,
+aw-header-tabs .aw-layout-subLocationTitles .aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitleSelected,
+aw-header-tabs .aw-layout-subLocationTitles .aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitleSelected:hover,
+aw-header-tabs .aw-layout-subLocationTitles .aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitle:hover {
+  color: #ffb900;
+  border-color: #ffb900;
+}
+
+aw-header .aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitle:hover,
+aw-header-tabs .aw-layout-subLocationTitles .aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitle:hover {
+  border-color: transparent;
+}
+
+.afx-checkbox .afx-checkbox-md-style .check {
+  color: #464646;
+  -webkit-transition: border-color 0.2s ease-out;
+  transition: border-color 0.2s ease-out;
+}
+
+.afx-checkbox .afx-checkbox-md-style:before {
+  background-color: #197fa2;
+  pointer-events: none;
+}
+
+.afx-checkbox:hover input[type=checkbox]:not(:checked) + .afx-checkbox-md-style .check {
+  border: solid 4px #197fa2;
+}
+
+.afx-checkbox:hover input[type=checkbox][disabled]:not(:checked) + .afx-checkbox-md-style .check {
+  color: #aaaaaa;
+  border: solid 1px #aaaaaa;
+}
+
+.afx-checkbox input[type=checkbox]:checked + .afx-checkbox-md-style .check {
+  color: #197fa2;
+}
+
+.afx-checkbox input[type=checkbox][disabled] + .afx-checkbox-md-style .check {
+  color: #aaaaaa;
+}
+
+.disabled .aw-jswidgets-checkboxLabel {
+  color: #aaaaaa;
+}
+
+aw-checkbox .disabled .aw-widgets-propertyLabelTop, aw-checkbox.disabled .aw-widgets-propertyLabelTop {
+  color: #aaaaaa;
+}
+
+.changed .afx-checkbox .afx-checkbox-md-style .check {
+  box-shadow: 0 0 0px 4px #ffb900;
+}
+
+.aw-widgets-cellListWidget .afx-selected-vals .aw-jswidgets-nestingListItem:last-child {
+  border-bottom-color: #dcdcdc;
+}
+
+.aw-jswidgets-drop .aw-widgets-cellListCellItemType {
+  color: #464646;
+}
+
+button.aw-base-blk-button:not(.disabled) {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  text-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+  background-color: #005f87;
+  border-color: #004669;
+}
+
+button.aw-base-blk-button:not(.disabled):hover, button.aw-base-blk-button:not(.disabled):focus {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  background-color: #004669;
+}
+
+button.aw-base-blk-button:not(.disabled):active {
+  background-color: #004669;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+button.aw-base-blk-button:not(.disabled).aw-sole-button {
+  background-color: #dc6914;
+  border-color: #b44b28;
+}
+
+button.aw-base-blk-button:not(.disabled).aw-sole-button:hover, button.aw-base-blk-button:not(.disabled).aw-sole-button:focus {
+  background-color: #b44b28;
+}
+
+button.aw-base-blk-button:not(.disabled).aw-sole-button:active {
+  background-color: #b44b28;
+}
+
+button.aw-base-blk-button:not(.disabled).aw-negative-button {
+  background-color: transparent;
+  border-color: #d2d2d2;
+  color: #464646;
+}
+
+button.aw-base-blk-button:not(.disabled).aw-negative-button:hover, button.aw-base-blk-button:not(.disabled).aw-negative-button:focus {
+  background-color: #f0f0f0;
+  color: #464646;
+}
+
+button.aw-base-blk-button:not(.disabled).aw-negative-button:active {
+  background-color: #f0f0f0;
+  color: #464646;
+}
+
+button.aw-base-blk-button.disabled {
+  background-color: #ffffff;
+  border-color: #aaaaaa;
+  color: #aaaaaa;
+}
+
+.aw-layout-panelMain .aw-base-blk-button.aw-not-default-button {
+  background-color: transparent;
+  border-color: #005f87;
+  color: #464646;
+}
+
+.aw-layout-panelMain .aw-base-blk-button.aw-not-default-button:hover, .aw-layout-panelMain .aw-base-blk-button.aw-not-default-button:focus {
+  background-color: #004669;
+  color: #ffffff;
+}
+
+.aw-layout-panelMain .aw-base-blk-button {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  text-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+  background-color: #005f87;
+  border-color: #004669;
+}
+
+.aw-layout-panelMain .aw-base-blk-button:hover, .aw-layout-panelMain .aw-base-blk-button:focus {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  background-color: #004669;
+}
+
+.aw-layout-panelMain .aw-base-blk-button:active {
+  background-color: #004669;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+}
+
+.aw-layout-panelMain .aw-base-blk-button.aw-sole-button {
+  background-color: #dc6914;
+  border-color: #b44b28;
+}
+
+.aw-layout-panelMain .aw-base-blk-button.aw-sole-button:hover, .aw-layout-panelMain .aw-base-blk-button.aw-sole-button:focus {
+  background-color: #b44b28;
+}
+
+.aw-layout-panelMain .aw-base-blk-button.aw-sole-button:active {
+  background-color: #b44b28;
+}
+
+.aw-layout-panelMain .aw-base-blk-button.aw-negative-button {
+  background-color: transparent;
+  border-color: #d2d2d2;
+  color: #464646;
+}
+
+.aw-layout-panelMain .aw-base-blk-button.aw-negative-button:hover, .aw-layout-panelMain .aw-base-blk-button.aw-negative-button:focus {
+  background-color: #f0f0f0;
+  color: #464646;
+}
+
+.aw-layout-panelMain .aw-base-blk-button.aw-negative-button:active {
+  background-color: #f0f0f0;
+  color: #464646;
+}
+
+.aw-layout-panelMain .aw-base-blk-button.disabled {
+  background-color: #ffffff;
+  border-color: #aaaaaa;
+  color: #aaaaaa;
+  box-shadow: none;
+}
+
+.aw-global-toolbar .aw-base-iconButton .aw-theme-iconOutline {
+  fill: #ffffff;
+}
+
+.aw-global-toolbar .aw-base-iconButton:hover {
+  background-color: #55a0b9;
+}
+
+.aw-file-upload-container:hover .aw-file-upload-fileLabel {
+  background-color: #0f789b;
+}
+
+.aw-file-upload-container:hover .aw-file-upload-fileName {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  border-color: #0f789b;
+}
+
+.aw-widgets-droptable.aw-widgets-dropframe,
+.ui-grid-row.aw-widgets-droparea,
+.aw-widgets-droparea,
+.aw-widgets-dropframe,
+.aw-widgets-dropframe.aw-theme-dropframe {
+  border-color: #3296b9;
+  background-color: #e3faff;
+}
+
+.ui-grid-row.aw-theme-dropframe.aw-widgets-dropframe {
+  border-color: #3296b9;
+  background-color: #e3faff;
+}
+
+.ui-grid-cell.aw-theme-dropframe.aw-widgets-dropframe {
+  background-color: #e3faff;
+}
+
+/* This style will override the border-color for the line between pinned & scroll containers. */
+.aw-splm-table-pinned-container-drop-frame.aw-widgets-dropframe.aw-theme-dropframe.ui-grid-row {
+  border-right-color: #dcdcdc;
+}
+
+/* This style will override the border-color for the line between pinned & scroll containers. */
+.aw-splm-table-scroll-container-drop-frame.aw-widgets-dropframe.aw-theme-dropframe.ui-grid-row {
+  border-left-color: #dcdcdc;
+}
+
+.aw-noeachrow-highlight-dropframe {
+  background-color: #e3faff !important;
+}
+
+.aw-file-upload-fileName {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  border-color: #969696;
+  color: #aaaaaa;
+}
+
+.aw-file-upload-fileLabel {
+  border-color: #0f789b;
+  background-color: #3296b9;
+  color: #ffffff;
+}
+
+.file-upload-selected-file {
+  color: #464646;
+}
+
+.aw-avatar-icon {
+  background-color: #f0f0f0;
+}
+
+.aw-avatar-name {
+  color: #464646;
+}
+
+.aw-avatar-normal-icon .aw-theme-iconOutline {
+  fill: #464646;
+}
+
+.aw-avatar-layout {
+  background-color: #ffffff;
+  border-color: #dcdcdc;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16);
+  color: #464646;
+}
+
+@keyframes radio-ripple {
+  0% {
+    box-shadow: 0px 0px 0px 1px rgba(25, 127, 162, 0);
+  }
+  50% {
+    box-shadow: 0px 0px 0px 13px rgba(25, 127, 162, 0.2);
+  }
+  100% {
+    box-shadow: 0px 0px 0px 13px rgba(25, 127, 162, 0);
+  }
+}
+
+.aw-jswidgets-radioButtonItem input[type="radio"]:checked + .aw-jswidgets-radioLabel:before {
+  animation: radio-ripple 0.7s forwards ease-out;
+  border-color: #197fa2;
+}
+
+.aw-jswidgets-radioButtonItem input[type="radio"]:not(:checked):hover + .aw-jswidgets-radioLabel:before {
+  border: solid 4px #197fa2;
+}
+
+.aw-jswidgets-radioButtonItem .aw-jswidgets-radioLabel:before, .aw-jswidgets-radioButtonItem .aw-jswidgets-radioLabel:after {
+  transition-property: transform, border-color;
+}
+
+.aw-jswidgets-radioButtonItem .aw-jswidgets-radioLabel:before {
+  border-color: #464646;
+}
+
+.aw-jswidgets-radioButtonItem .aw-jswidgets-radioLabel:after {
+  background: #197fa2;
+}
+
+.disabled .aw-jswidgets-radioText {
+  color: #aaaaaa;
+}
+
+aw-radiobutton .disabled .aw-widgets-propertyLabelTop, aw-radiobutton.disabled .aw-widgets-propertyLabelTop {
+  color: #aaaaaa;
+}
+
+.disabled .aw-jswidgets-radioButtonItem .aw-jswidgets-radioLabel:before,
+.disabled .aw-jswidgets-radioButtonItem input[type="radio"]:checked + .aw-jswidgets-radioLabel:before,
+.aw-jswidgets-radioButtonItem.disabled .aw-jswidgets-radioLabel:before {
+  border-color: #aaaaaa;
+}
+
+.disabled .aw-jswidgets-radioButtonItem .aw-jswidgets-radioLabel:after {
+  background: #aaaaaa;
+}
+
+aw-balloon-popup-panel .aw-layout-popup {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  border-color: #dcdcdc;
+}
+
+aw-balloon-popup-panel .aw-layout-popup:before {
+  border-bottom-color: #dcdcdc;
+}
+
+aw-search-prefilter input.aw-jswidgets-choice[readonly="readOnly"] {
+  color: #ffffff;
+  background-color: #3296b9;
+  border-color: #3296b9;
+}
+
+aw-search-prefilter input.aw-jswidgets-choice[readonly="readOnly"]:active {
+  background-color: #0f789b;
+}
+
+aw-search-prefilter input.aw-jswidgets-choice[readonly="readOnly"]:focus {
+  background-color: #0f789b;
+}
+
+aw-search-prefilter input.aw-jswidgets-choice[readonly="readOnly"].aw-search-dirty {
+  background-color: #dc6914;
+  border-color: #dc6914;
+}
+
+aw-search-prefilter aw-property-image.aw-search-prefilter-icon .aw-theme-iconOutline {
+  fill: #ffffff;
+}
+
+.aw-layout-progressBarCylon {
+  background-image: -webkit-linear-gradient(to right, #2387aa 0px, #2387aa 0px);
+  background-image: -moz-linear-gradient(to right, #2387aa 0px, #2387aa 0px);
+  background-image: -ms-linear-gradient(to right, #2387aa 0px, #2387aa 0px);
+  background-image: linear-gradient(to right, #2387aa 0px, #2387aa 0px);
+}
+
+.aw-layout-progressBarIE9 {
+  background-color: #2387aa;
+}
+
+.aw-layout-progressBar {
+  background-color: #e6e6e6;
+}
+
+aw-command-bar .aw-commands-commandIconButton:hover {
+  background-color: #daecf0;
+}
+
+aw-command-bar .aw-commands-commandIconButton:active {
+  background-color: #afd7e1;
+}
+
+aw-command-bar .aw-commands-cellDecorator div {
+  background-color: #93dced;
+  color: #003750;
+}
+
+.aw-toolbar-layout.aw-toolbar-horizontal {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* aw-sidenav css start */
+.aw-sidenav-push.aw-sidenav-leftBackground {
+  box-shadow: -3px 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.aw-sidenav-push.aw-sidenav-rightBackground {
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.aw-sidenav-float.aw-sidenav-leftBackground {
+  box-shadow: -8px 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+.aw-sidenav-float.aw-sidenav-rightBackground {
+  box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+.global-navigation .aw-sidenav-float.aw-sidenav-rightBackground {
+  box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.3), 2px -4px 4px 0 rgba(0, 0, 0, 0.3) inset;
+}
+
+.global-navigation .aw-sidenav-push.aw-sidenav-rightBackground {
+  box-shadow: 2px -4px 4px 0 rgba(0, 0, 0, 0.3), 2px -4px 4px 0 rgba(0, 0, 0, 0.3) inset;
+}
+
+.global-navigation .aw-sidenav-float.aw-sidenav-rightBackground .aw-layout-declarativePanelRoot,
+.global-navigation .aw-sidenav-push.aw-sidenav-rightBackground .aw-layout-declarativePanelRoot {
+  box-shadow: 2px -4px 4px 0 rgba(0, 0, 0, 0.3) inset;
+}
+
+/* aw-sidenav css end */
+aw-property-array-val .aw-jswidgets-arrayWidgetContainer, aw-search-property-array-val .aw-jswidgets-arrayWidgetContainer {
+  border-color: #969696;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+aw-property-array-val .aw-jswidgets-arrayWidgetContainer:hover, aw-search-property-array-val .aw-jswidgets-arrayWidgetContainer:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+aw-property-array-val .aw-jswidgets-arrayWidgetContainerFocused, aw-search-property-array-val .aw-jswidgets-arrayWidgetContainerFocused {
+  border-color: #3296b9;
+}
+
+.aw-layout-overflowPopupCellist .aw-widgets-cellListItem a {
+  color: #464646;
+}
+
+.aw-layout-overflowPopupCellist .aw-widgets-cellListItem a:hover {
+  color: #464646;
+}
+
+aw-search-box .aw-uiwidgets-searchBoxContainer,
+aw-in-content-search-box .aw-uiwidgets-searchBoxContainer {
+  border-color: #aaaaaa;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+}
+
+aw-search-box .aw-uiwidgets-searchBoxContainer .aw-uiwidgets-searchBoxIcon,
+aw-in-content-search-box .aw-uiwidgets-searchBoxContainer .aw-uiwidgets-searchBoxIcon {
+  background-color: #ffffff;
+}
+
+aw-search-box .aw-search-inContentSearchBox .aw-uiwidgets-searchBoxContainer,
+aw-in-content-search-box .aw-search-inContentSearchBox .aw-uiwidgets-searchBoxContainer {
+  border-color: #aaaaaa;
+}
+
+aw-search-box .aw-search-inContentSearchBox .aw-uiwidgets-searchBoxContainer:hover,
+aw-in-content-search-box .aw-search-inContentSearchBox .aw-uiwidgets-searchBoxContainer:hover {
+  border-color: #a3d0dc;
+}
+
+aw-search-box .aw-uiwidgets-searchBoxIcon:hover,
+aw-in-content-search-box .aw-uiwidgets-searchBoxIcon:hover {
+  background-color: #cde6eb;
+}
+
+aw-search-box .aw-uiwidgets-searchBoxIcon:active,
+aw-in-content-search-box .aw-uiwidgets-searchBoxIcon:active {
+  background-color: #afd7e1;
+}
+
+aw-search-box aw-icon .aw-theme-iconOutline,
+aw-in-content-search-box aw-icon .aw-theme-iconOutline {
+  fill: #464646;
+}
+
+.aw-search-searchIconViewContainer .aw-uiwidgets-searchBoxIcon {
+  background-color: transparent;
+}
+
+.aw-search-globalSearchPreFilterWrapper .aw-widgets-propertyContainer {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+
+:-ms-input-placeholder {
+  color: #aaaaaa !important;
+}
+
+:-moz-placeholder {
+  color: #aaaaaa;
+}
+
+::-moz-placeholder {
+  color: #aaaaaa;
+}
+
+/* end styling for placeholder */
+.aw-search-globalSearchElementsContainer aw-search-prefilter .aw-jswidgets-popUpVisible .aw-jswidgets-nestingListItemDisplay:hover {
+  color: #464646;
+}
+
+aw-link-with-popup .aw-widgets-linkWithPopupMenu aw-property-image svg polygon {
+  fill: #197fa2;
+}
+
+aw-link-with-popup .aw-widgets-linkWithPopupMenu:hover aw-link a {
+  color: #e3700f;
+}
+
+aw-link-with-popup .aw-widgets-linkWithPopupMenu:hover aw-property-image svg polygon {
+  fill: #e3700f;
+}
+
+.aw-commands-showIconLabel .aw-layout-declarativePanelRoot.aw-layout-panel .aw-layout-panelSection aw-command-bar:not(.aw-layout-userSessionCommands).aw-commands-commandBarHorizontal {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* NOTIFICATION-CELL or AW-NOTIFICATION-CELL start */
+/* notification cell decorator color*/
+.aw-notification-cell-importance-high {
+  border-left-color: #dc0000;
+}
+
+.aw-notification-cell-importance-medium {
+  border-left-color: #eb780a;
+}
+
+.aw-notification-cell-importance-low {
+  border-left-color: #005f87;
+}
+
+/* notification cell title color*/
+.aw-notification-cell-title-high {
+  color: #dc0000;
+}
+
+.aw-notification-cell-title-medium {
+  color: #eb780a;
+}
+
+.aw-notification-cell-title-low {
+  color: #005f87;
+}
+
+.aw-notification-cell-read {
+  border-left-color: #ffffff;
+}
+
+.aw-notification-cell-prop {
+  color: #282828;
+}
+
+.aw-notification-cell:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+.aw-notification-cell {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* NOTIFICATION-CELL or AW-NOTIFICATION-CELL end */
+/*
+    consumer contributions
+*/

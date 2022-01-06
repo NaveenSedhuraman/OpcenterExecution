@@ -1,0 +1,6 @@
+<div class="aw-uiwidgets-searchBoxContainer" ng-class="{'aw-uiwidgets-searchBoxContainerFocus':focused}">
+    <input type="{{prop.inputType}}" aw-autofocus auto-focus="prop.autofocus" 
+    ng-model="prop.dbValue" placeholder="{{getPlaceHolder()}}" class="aw-uiwidgets-searchBox" ng-disabled="!prop.isEnabled" 
+    aw-enter-key="{{action}}"  ng-focus="setFocus( true )" ng-blur="setFocus( false )"/>
+    <aw-icon class="aw-uiwidgets-searchBoxIcon" ng-click="doit(action)" id="cmdSearch"></aw-icon>
+</div>

@@ -1,0 +1,19 @@
+<aw-command-panel caption="i18n.arrangeTitle">
+    <aw-panel-header>
+        <div class="aw-arrange-commands">
+            <aw-command-bar anchor="arrangeCommandbar" context="data.arrangeData" alignment="HORIZONTAL"></aw-command-bar>
+        </div>
+    </aw-panel-header>
+    <aw-panel-body>
+        <aw-panel-section>
+            <aw-list-filter prop="data.filterBox" dataprovider="data.dataProviders.dataProviderColumnConfigs">
+                <arrange-cell vmo="item"></arrange-cell>
+            </aw-list-filter>
+        </aw-panel-section>
+    </aw-panel-body>
+    <aw-panel-footer>
+        <aw-button action="arrange" visible-when="data.arrangeData.dirty">
+            <aw-i18n>i18n.arrangeButtonTitle</aw-i18n>
+        </aw-button>
+    </aw-panel-footer>
+</aw-command-panel>

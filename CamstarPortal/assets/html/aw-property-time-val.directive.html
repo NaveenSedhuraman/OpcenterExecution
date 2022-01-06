@@ -1,0 +1,22 @@
+<div class="aw-jswidgets-lovParentContainer aw-jswidgets-timepicker"  ng-class="{'aw-jswidgets-popUpVisible': expanded}">
+    <aw-property-error>
+        <input class="aw-jswidgets-choice gwt-ListBox" type="text" aw-widget-initialize
+            auto-focus="prop.autofocus" autocomplete="off" autocorrect="off" autocapitilize="off"
+            spellcheck="false" placeholder="{{prop.dateApi.timeFormatPlaceholder}}" maxlength="12"
+            ng-model="prop.dateApi.timeValue" ng-click="toggleDropdown()" ng-change="changeFunction()" ng-blur="blurTimeFunction($event)"
+            ng-class="{'aw-widgets-propertyError': errorApi.errorMsg, 'aw-jswidgets-expanded': expanded}"
+            ng-keydown="evalKey($event)" aw-validator="TIME" ng-disabled="!prop.isEnabled" ng-attr-tabindex="{{prop.tabIndex}}"
+            ng-model-options="{ allowInvalid: true }" />
+        <aw-property-image name="cmdTime" class="aw-widget-icon" />
+    </aw-property-error>
+    <div class="aw-jswidgets-drop aw-layout-popup aw-base-scrollPanel" ng-show="expanded"
+        ng-style="{'marginTop': dropDownVerticalAdj, 'top': lovDDTop, 'left': lovDDLeft, 'width': lovDDWidth}" aw-when-scrolled="requestNextLovEntries()">
+        <ul class="aw-widgets-cellListWidget">
+            <li class="aw-jswidgets-nestingListItem" ng-repeat="lovEntry in filtered = ( lovEntries | filter: listFilterText)">
+                <aw-property-lov-child lov-entry="lovEntry" />
+            </li>
+            <li class="aw-jswidgets-lov-novals" ng-hide="hasValues()">{{prop.lovNoValsText}}</li>
+            <li class="aw-jswidgets-loading" ng-hide="queueIdle">&nbsp;</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="aw-link-with-popup aw-widgets-linkWithPopupMenu" >
+    <div class="aw-layout-headerSubTitle">
+        <aw-link prop="prop" ng-click="showLinkPopUp($event)" id="{{id}}" visible-when="!useIcon"></aw-link>
+        <aw-property-image name="miscDownArrow_uxRefresh" ng-click="showLinkPopUp($event)" visible-when="!useIcon"></aw-property-image>
+        <aw-icon id="{{prop.dbValue}}" ng-click="showLinkPopUp($event)" ng-if="useIcon"></aw-icon>
+    </div>
+    <div>
+        <aw-popup-panel>
+            <div class="aw-layout-flexColumnContainer" ng-transclude></div>
+        </aw-popup-panel>
+    </div>
+</div>

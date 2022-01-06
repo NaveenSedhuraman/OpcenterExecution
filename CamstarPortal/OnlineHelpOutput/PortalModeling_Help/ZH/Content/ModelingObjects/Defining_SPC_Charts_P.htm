@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="PortalModeling.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="统计流程控制">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>定义 SPC 图表</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/LDCSS1.2.4.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Horiz-rules_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div role="main" id="mc-main-content">
+            <p class="Head2">定义 SPC 图表<a name="kanchor68"></a></p>
+            <p class="_1body">“SPC 图表”建模对象包含显示单个 SPC 图表所需的信息。它描述了图表类型、Statit Software 宏、Statit Software 规则文件、失控操作和流程 (OCAP)，以及绘制的变量。</p>
+            <p class="_1bodyKeepWithNext">Siemens 提供了四个默认 SPC 图表供用户使用：</p>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">移动极差</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">极差图</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">试用 I-图</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">X 图</td>
+                </tr>
+            </table>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="When_Creating_an_SPC_Chart"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />在定义 SPC 图表时</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1body">必须为要显示的每个图表创建一个具有相应图表生成宏的 SPC 图表。</p>
+                    <p class="_1body">确保图表宏和图表属性的路径有效。例如，如果 SPC 安装在非默认安装目录的目录中，则需要更改路径。</p>
+                    <p class="_1body">使用 SPC 图表的“失控操作”部分来确定在违规时触发的操作。</p>
+                    <p class="_1body">SPC 图表是“SPC 图表组”中的可选建模定义。</p>
+                    <p class="_1body">SPC 图表包含以下可选建模定义：文档、电子邮件消息、搁置原因和资源状态代码。</p>
+                    <p class="_1body">有关设置和配置 SPC 的信息，请参考《<span class="Emphasis">Opcenter Execution Core Statistical Process Control 参考指南</span>》。</p>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="SPC_Chart_Page_Field_Definitions"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />SPC 图表页字段定义</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1bodyKeepWithNext">此表定义“SPC 图表”页的独有字段。</p>
+                    <p class="_1bodyKeepWithNext">请参考“<a href="../Getting Started/Modeling_Page.htm#Common" class="MCXref xref">建模页上的公共字段</a>”获取有关所有建模对象的公共字段的信息。</p>
+                    <table style="caption-side: top;width: 95%;mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                        <col width="113px" class="TableStyle-Horiz-rules_Table-Column-Column1">
+                        </col>
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1">
+                        </col>
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 69px;">
+                        </col>
+                        <thead>
+                            <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                                <td class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">字段</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">定义</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                    <p class="CellHead-Left">类型</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1" colspan="3">
+                                    <p class="CellSectionHeader">图表配置</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">图表类型</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">用于生成图表的宏中的脚本命令（例如，gxchart 或 gpchart）。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">必需</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">图表变量</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">图表显示的变量。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">必需</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">生成宏的图表</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Statit 宏文件的位置（路径和文件名）。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">必需</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">图表属性</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">规则文件的位置（路径和文件名）。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">SPC 图表显示选项</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">显示图表时要确定的选项。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">必需</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">图表高度</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">要为图表设置的默认高度（以像素为单位）。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">图表宽度</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">要为图表设置的默认宽度（以像素为单位）。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1" colspan="3">
+                                    <p class="CellSectionHeader">失控操作</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">触发器 OCAP（控制操作和程序溢出</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">此复选框表示是否允许图表在发生违规时触发“失控应对操作和流程”。如果未选中该复选框，则即使发生违规也不会触发“失控应对操作和流程”。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">设置批次为停工 - 原因代码 </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">将指派给容器的搁置原因。如有发生违规，该批次将以此为停工原因被设置为停工。 </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">设置资源状态</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">违规发生后将指派给资源的状态原因。  </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">要查看的文档 </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">设置在触发 OCAP 时引用要查看的文档的设置。通过对文档对象建模，可以创建文档实例。SPC 不支持文档集。只能查看单个文档。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">需要注解</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">此复选框表示在发生违规时用户需要提供注释。注释将应用到导致违规的数据点。在对数据点进行注释之前，SPC 图表显示弹出窗口无法关闭。如果用户尝试关闭弹出窗口，系统将显示一条消息，通知用户需要提供注释。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">电子邮件地址列表（逗号分隔）</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">在发生违规时向其发送通知的电子邮件地址。用逗号分隔各个电子邮件地址。</p>
+                                    <p class="CellBody">电子邮件可以包括 DCD 名称、变量名称和值、图表细节（例如，CL、UCL、LCL）、违规以及在配置了文本变量时执行的所有失控操作的细节。服务器必须安装了 IE 9 或更高版本。IE 的电子邮件默认设置必须为网络电子邮件服务器。</p>
+                                    <p class="CellBody"><span class="User_Entry" style="color: #000000;">注：</span>现在，可以在应用程序的 App.Config 文件中进行其他电子邮件选项配置。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">电子邮件消息</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">“电子邮件消息”建模对象中定义的消息列表。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1" style="color: #ff0000;">
+                                    <p class="CellBody">根据自定义 SPC 数据源进行记录</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1" style="color: #ff0000;">
+                                    <p class="CellBody">此复选框表示是否根据所提供的自定义数据源（而不是应用程序数据收集）记录批注或违规。如果要根据 Opcenter EX MDD 或 Opcenter EX CR DataStore 数据库之外的数据来运行图表，确保选中此框。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1" style="color: #ff0000;">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2" style="color: #ff0000;" colspan="3">
+                                    <p class="CellSectionHeader">参数</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                    <p class="CellBody">用户参数 (1-10)</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                    <p class="CellBody">以“ParamName=值”格式输入的用户定义值。可以在字段中输入用逗号分隔的多个值。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body1">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p class="Head3-Side" data-mc-conditions="Default.ScreenOnly"><a name="How_to_Define_a_New_SPC_Chart"></a>
+            </p>
+            <p class="Head3-Side">如何定义新的 SPC 图表<a name="kanchor69"></a></p>
+            <p class="_1bodyKeepWithNext">按照以下步骤定义新的 SPC 图表：</p>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>1.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">打开 <span class="User_Entry">SPC 图表</span>页。<span class="Emphasis">随即“建模”页中将显示“SPC 图表”页。</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>2.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">单击<span class="User_Entry">新建</span>。 <span class="Emphasis">显示用于定义新实例的空白字段。</span> </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>3.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">在<span class="User_Entry">SPC 图表</span>、<span class="User_Entry">图表类型</span>、<span class="User_Entry">图表变量</span>、<span class="User_Entry">生成图表的宏</span>和 <span class="User_Entry">SPC 图表显示选项</span>中输入内容。</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>4.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;4.&lt;/b&gt;">根据您的业务需求输入可选信息。有关可选字段的信息，请参考字段定义表。</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>5.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;5.&lt;/b&gt;">单击<span class="User_Entry">保存</span>。 <span class="Emphasis">应用程序保存建模对象并显示成功消息。</span></td>
+                </tr>
+            </table>
+        </div>
+        <MadCap:pageFooter class="FirstPage">
+            <p class="copyright">© Siemens 2020</p>
+        </MadCap:pageFooter>
+    </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="PortalStudio_Help.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Web Parts">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Adding a Control to a Web Part</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/LDCSS1.2.4.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div role="main" id="mc-main-content">
+            <p class="Head2">Adding a Control to a Web Part<a name="kanchor220"></a></p>
+            <p class="_1body">Controls incorporate the standard Web controls with  Manufacturing properties added to the control. The disadvantage of adding a control instead of a field is that you must set up the control manually, whereas the field expression and control type are set automatically when adding a field.</p>
+            <p class="_1body">Controls that display fields or data will generally need field expressions. Controls that are for layout purposes such as tabs, expanding sections, fly-outs, etc. will generally not need field expressions.</p>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="When_Adding_a_Control_to_a_Web_Part"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />When Adding a Control to a Web Part</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1body">Controls can only be added to a web part. Controls cannot be added directly to a page.</p>
+                    <p class="_1body">Some controls, such as a tab control or flyout, do not interact with a service and therefore do not require a field expression. </p>
+                    <p class="_1body">When you add a control, you must add a field expression for that control. You must select a control that is compatible with the field expression you want to use.</p>
+                </div>
+            </div>
+            <p class="Head3-Side"><a name="How_to_Add_a_Control_to_a_Web_Part"></a>How to Add a Control to a Web Part<a name="kanchor221"></a></p>
+            <p class="_1bodyKeepWithNext">Follow these steps to add a control to a web part:</p>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>1.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">Access Portal Studio.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>2.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">Click <span class="User_Entry">Show/Hide Catalog</span> if the UI&#160;Components catalog is hidden.<span class="Emphasis"> The UI Components catalog appears.</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>3.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">Double-click a web part or a page containing a web part. <span class="Emphasis">The web part or page appears in the working area.</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>4.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;4.&lt;/b&gt;">Click <b>Show/Hide Toolbox</b> if the Toolbox is hidden. <span class="Emphasis">The Toolbox appears.</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>5.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;5.&lt;/b&gt;">Click and drag a control onto a cell on a web part. <span class="Emphasis">The control appears in the web part.</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>6.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;6.&lt;/b&gt;">Enter a name for the control in the <span class="User_Entry">Name</span> field in the Properties pane.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>7.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;7.&lt;/b&gt;">Repeat steps 5-6 to add additional controls.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>8.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;8.&lt;/b&gt;">Click <span class="User_Entry">Save</span>. <span class="Emphasis">The application saves your changes  and displays a success message.</span> </td>
+                </tr>
+            </table>
+        </div>
+        <MadCap:pageFooter class="FirstPage">
+            <p class="copyright">© Siemens 2020</p>
+        </MadCap:pageFooter>
+    </body>
+</html>

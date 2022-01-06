@@ -1,0 +1,16 @@
+<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<rect class="aw-theme-iconOutline" fill="#464646" width="24" height="1"/>
+<rect y="4" class="aw-theme-iconOutline" fill="#464646" width="24" height="1"/>
+<rect class="aw-theme-iconOutline" fill="#464646" width="1" height="24"/>
+<rect x="23" class="aw-theme-iconOutline" fill="#464646" width="1" height="24"/>
+<rect y="23" class="aw-theme-iconOutline" fill="#464646" width="24" height="1"/>
+<rect x="2" y="2" class="aw-theme-iconOutline" fill="#464646" width="4.001" height="1"/>
+<rect x="8" y="2" class="aw-theme-iconOutline" fill="#464646" width="4" height="1"/>
+<rect x="14" y="2" class="aw-theme-iconOutline" fill="#464646" width="4" height="1"/>
+<rect x="21" y="2" class="aw-theme-iconOutline" fill="#464646" width="1" height="1"/>
+<polygon class="aw-theme-iconOutline" fill="#464646" points="5.069,14.008 4.286,13.388 8.523,8.043 11.61,10.08 16.838,5.252 17.516,5.987 11.713,11.347 
+	8.737,9.383 "/>
+<path class="aw-theme-iconOutline" fill="#464646" d="M8,21.99H3v-7h5V21.99z M4,20.99h3v-5H4V20.99z"/>
+<path class="aw-theme-iconOutline" fill="#464646" d="M14,21.99H9v-9h5V21.99z M10,20.99h3v-7h-3V20.99z"/>
+<path class="aw-theme-iconOutline" fill="#464646" d="M20.016,21.99h-5v-11h5V21.99z M16.016,20.99h3v-9h-3V20.99z"/>
+</svg>

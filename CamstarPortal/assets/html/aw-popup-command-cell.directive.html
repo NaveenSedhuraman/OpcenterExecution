@@ -1,0 +1,2 @@
+<li id="{{::prop.commandId}}" title="{{prop.extendedTooltip ? undefined : prop.title}}" class="aw-widgets-cellListItem aw-widgets-cellTop" ng-click="prop.enabled !== false ? ctrl.executeGroupChildCommand( $event,prop ) : angular.noop()"
+extended-tooltip="{{prop.extendedTooltip}}" ng-class="{'aw-state-selected': prop.isSelected, 'disabled': prop.enabled === false}">{{prop.title}}</li>

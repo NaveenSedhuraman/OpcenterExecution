@@ -1,0 +1,2433 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="zh-cn" xml:lang="zh-cn" data-mc-search-type="NGram" data-mc-help-system-file-name="MPCM_Help.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="执行包任务">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>指派和审核包内容</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/LDCSS1.2.4.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Horiz-rules_TableIndent3body.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Horiz-rules_Table.css" rel="stylesheet" />
+        <link href="../../../PortalModeling/Content/Resources/TableStyles/Horiz-rules_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="Head2">指派和审核包内容</p>
+        <p class="_1body">可以将建模对象实例和引用分配给在草稿步骤或配置为允许分配和审阅的步骤的任何现有包。通过 "分配和审阅内容" 页, 您可以自定义和审阅现有包的内容。</p>
+        <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Before_Assigning"></a>
+        </p>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" name="kanchor82"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" />在分配包内容之前</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1body" style="color: #000000;">在 "分配和审阅内容" 页上可供选择的某些建模对象实例不应分配给要部署到目标系统的包。某些建模对象在目标系统上激活包时可能会导致冲突。  </p>
+                <p class="Head4">建模不应分配给包的对象</p>
+                <p class="_1body" style="color: #000000;">西门子建议您不要将这些建模对象实例分配给包, 以便部署到目标系统。</p>
+                <p class="_1body" style="color: #000000;">此外, 选择 "添加引用" 可能会自动将这些建模对象添加到对象类型名称网格中。Siemens 建议从该表格中手动移除这些实例，以免出现冲突。</p>
+                <table class="AutoNumber_p_Note1body" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 20px;" />
+                    <col style="width: 50px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                        </td>
+                        <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">通过将建模对象添加到“工厂”建模对象上的“要排除的建模对象”表格，可以确保在导出期间不会显示这些实例以供选择。有关信息，请参考《&#160;&#160;<span class="Emphasis">Opcenter Execution Medical Device and Diagnostics Modeling 用户指南</span>》或《&#160;&#160;<span class="Emphasis">Opcenter Execution Core Modeling 用户指南</span>》。</td>
+                    </tr>
+                </table>
+                <table style="mc-table-style: url('../../../PortalModeling/Content/Resources/TableStyles/Horiz-rules_Table.css');margin-left: auto;margin-right: 0;width: 95%;" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 177px;" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                            <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">建模对象</p>
+                            </th>
+                            <th class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                <p class="CellHead-Left">不导出的原因</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">操作 (Action)</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">操作建模对象实例包含对页面的引用。页面对于不同系统可能包含不同的 ID。</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">数据收集定义 (Data Collection Def)</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">数据收集定义需要 Designer 和元数据更新。</p>
+                                <p class="CellBody"><span class="User_Entry">注：</span>这不适用于用户数据收集定义。 </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">制造日历 (Mfg Calendar)</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">替代现有日历可能会对历史产生意想不到的后果。有关从 Excel 加载日历的备选方法，请参考《&#160;&#160;<span class="Emphasis">Opcenter Execution Medical Device and Diagnostics Modeling 用户指南</span>》或《&#160;&#160;<span class="Emphasis">Opcenter Execution Core Modeling 用户指南</span>》。</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">门户菜单定义</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">除非已克隆数据库，否则实例 ID 不可能从一个系统匹配到另一个系统。可能存在孤立菜单项。</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">角色</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">除非已克隆数据库，否则实例 ID 不可能从一个系统匹配到另一个系统。 </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">UI 页面流</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">应该使用 Portal Studio 导出和导入 UI 页面流。有关信息，请参考《&#160;&#160;<span class="Emphasis">Opcenter Execution Medical Device and Diagnostics Portal Studio 用户指南</span>》或《&#160;&#160;<span class="Emphasis">Opcenter Execution Core Portal Studio 用户指南</span>》。</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">UI 虚拟页</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">应该使用 Portal Studio 导出和导入 UI 虚拟页。有关信息，请参考《&#160;&#160;<span class="Emphasis">Opcenter Execution Medical Device and Diagnostics Portal Studio 用户指南</span>》或《&#160;&#160;<span class="Emphasis">Opcenter Execution Core Portal Studio 用户指南</span>》。</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2">
+                                <p class="CellBody">Web 部件</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body2">
+                                <p class="CellBody">应该使用 Portal Studio 导出和导入 Web 部件。有关信息，请参考《&#160;&#160;<span class="Emphasis">Opcenter Execution Medical Device and Diagnostics Portal Studio 用户指南</span>》或《&#160;&#160;<span class="Emphasis">Opcenter Execution Core Portal Studio 用户指南</span>》。</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="Head4">可能导致冲突的建模对象</p>
+                <p class="_1body" style="color: #000000;">西门子建议您仔细考虑将这些建模对象实例分配给打包, 以便部署到目标系统。 </p>
+                <table style="mc-table-style: url('../../../PortalModeling/Content/Resources/TableStyles/Horiz-rules_Table.css');margin-left: auto;margin-right: 0;width: 95%;" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 177px;" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                            <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">建模对象</p>
+                            </th>
+                            <th class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                <p class="CellHead-Left">不导出的原因</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">员工</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">员工建模对象实例可能包含循环引用。实例还可能引用目标系统中不存在的角色 ID。</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">建模电子签名要求</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">建模电子签名要求实例可能包含循环引用。从源到目标，用户、角色和电子签名可能不一致。</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">编号规则</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">当源系统上的数字与目标系统上的数字不同时，编号规则实例可能会发生冲突。</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">组织</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">组织建模对象实例可能包含循环引用。 </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">历史视图</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">制造审核追踪显示可能会在目标系统上意外更改。可能会覆盖目标系统上的自定义更改。</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">计划业务规则</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">导入从其他系统导出的计划业务规则将更新目标系统上的开始日期。此外，如果在目标系统上更新或创建的计划业务规则实例影响部署或通知，则可能需要重新启动 Camstar 部署服务器和 Camstar 通知服务器。 </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                <p class="CellBody">已修订对象 (RO)</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body1">
+                                <p class="CellBody">在以下情况下，应用程序将已修订对象导入中包含的第一个修订版本设为记录修订版本：</p>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">对于导入的 RO，目标系统上不存在记录修订版本，以及</td>
+                                    </tr>
+                                </table>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">导出不包含 RO 的记录修订版本。</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="Head4">可以分配给包的不推荐的建模对象</p>
+                <p class="_1body" style="color: #000000;">使用在后续版本中已弃用的建模对象实例的现有客户仍然可以导出和导入以下建模对象实例：</p>
+                <table class="AutoNumber_p__1bullet" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">FTP 传输</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__1bullet" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">MSMQ 传输</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__1bullet" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">测重器</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__1bullet" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">测重器组 </td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__1bullet" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">测重器代码</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__1bullet" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">测重器状态原因</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__1bullet" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">Web 服务传输</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="When_Assigning_and_Reviewing_Package_Content"></a>
+        </p>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a name="When"></a><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" />指派和审核包内容</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1bodyKeepWithNext">只有包所有者和协作者才能将内容分配给包。"分配和审阅内容" 页显示一个或两个选项卡, 具体取决于是否已为包启用了内容协作:</p>
+                <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">分配和审阅内容</td>
+                    </tr>
+                </table>
+                <p class="_3body">通过 "分配和审阅内容" 选项卡, 可以分配建模对象实例和对包的引用。您还可以显示包的摘要信息。还可以显示包的摘要信息, 并在分层视图中显示所有分配的对象及其引用。</p>
+                <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">协作任务</td>
+                    </tr>
+                </table>
+                <p class="_3body" style="color: #000000;">仅当为包启用了内容协作时, "协作者任务" 选项卡才会出现。该选项卡由协作网格和指令部分组成。合作者网格列出了每个合作者的级别、名称、协作工作的状态、为协作工作分配的日期、到期时间和完成情况、合作伙伴注释和协作者说明。此信息使包所有者可以查看协作工作的状态, 并确定是否需要后续行动。"指令" 部分列出了与协作网格中所选任务相关的所有协作者和说明的包所有者说明。说明仅显示。只有当您是分配给包的协作者时, 说明才会显示。有关启用内容协作的信息, 请参阅 "<a href="Updating_a_Package.htm" style="color: #000000;" class="MCXref xref">更新包</a>"。</p>
+                <table class="AutoNumber_p_Note3body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 62px;" />
+                    <col style="width: 50px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p_Note3body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                        </td>
+                        <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">如果无法执行协作任务, 则应用程序不显示说明。如果包所有者或具有所有者角色的用户分配内容, 而替代选项被设置为 "无", 则会发生此情况。</td>
+                    </tr>
+                </table>
+                <p class="_1body">只有为其定义了实例的建模对象才可在 "分配和审阅内容" 选项卡上进行选择。应用程序不会显示任何尚未定义实例的建模对象。</p>
+                <p class="_1body">通过在筛选字段中输入前几个字符或整个建模对象名称, 可以在 "对象" 列表中搜索特定的建模对象。应用程序显示在 "实例" 列表中为选定建模对象定义的所有实例。还可以筛选实例列表。有关信息, 请参阅 "<a href="#Filterin" class="MCXref xref">过滤实例列表</a>"。</p>
+                <table class="AutoNumber_p_Note1body" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 20px;" />
+                    <col style="width: 50px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                        </td>
+                        <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">设计器应用程序中的设置确定建模对象实例是否可添加到包中。未显示的抽象建模对象不可用。有关信息，请参考《&#160;&#160;<span class="Emphasis">Opcenter Execution Medical Device and Diagnostics Designer 用户指南</span>》或《&#160;&#160;<span class="Emphasis">Opcenter Execution Core Designer 用户指南</span>》</td>
+                    </tr>
+                </table>
+                <p class="_1body">可以选中标题行的“全选”复选框以自动选择所有显示的实例，也可以选中各个实例对应的复选框。</p>
+                <p class="_1body">单击 "添加到网格" 按钮将选定的实例添加到对象类型名称网格中, 并更新包内容摘要信息。网格中的条目以字母顺序显示, 通过建模对象名称, 然后通过建模对象实例名称。添加的实例保留在实例列表中, 但显示为已选中和禁用。 </p>
+                <table class="AutoNumber_p_Note1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 20px;" />
+                    <col style="width: 50px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                        </td>
+                        <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">在添加引用之前, 应先添加所有建模对象和在其中使用的实例。</td>
+                    </tr>
+                </table>
+                <p class="_1body"><a name="Hierarchy_38684_start"></a>在分配包内容时, 添加引用是可选的。如果选择不包含引用，则仍按正确的顺序导出和导入对象。必须按正确的顺序指派建模对象实例，或者仅当“更改管理保存”选项设为“打开”时才添加引用。请参阅 "在<a href="Assigning_Modeling_Object_Instances_to_a_Package_in_Modeling.htm" class="MCXref xref">在建模中将建模对象实例指派给包</a>", 以了解有关更改 "调整" 保存选项的信息。</p>
+                <p class="Head4">示例：</p>
+                <p class="_1body">选择指派容器级别建模对象的批、支架和托盘实例进行导出。单击 "添加到网格" 按钮将在 "对象类型名称" 网格中显示容器级别, 并更新 Pkg 内容摘要表以指示一个建模对象和3个实例。此外, 批处理、机架和托盘仍保留在 "实例" 列表中, 但已选中并禁用它们。</p>
+            </div>
+        </div>
+        <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Filtering_the_List_of_Instances"></a>
+        </p>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a name="Filterin"></a><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" />过滤实例列表</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1bodyKeepWithNext">该应用程序提供了两种筛选实例列表中显示的实例的方法:</p>
+                <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">输入要查找的实例的名称。当您在 "实例筛选" 字段中输入每个字符时, 应用程序将更新实例列表。在单击 "刷新" 图标后, 应用程序只显示包含这些字符的实例。</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">单击筛选器图标以使用实例名称以外的条件。当您单击筛选器图标时, 应用程序将显示实例筛选器弹出窗口。使用此弹出式指定诸如时间戳、最后一个要更新实例的雇员等条件, 等等。单击 "应用" 关闭实例筛选器弹出并查看满足这些条件的所有实例。 </td>
+                    </tr>
+                </table>
+                <p class="_1body">应用程序显示一个图标, 指示列表已在筛选器图标旁边进行筛选。</p>
+                <p class="_1body">单击刷新图标将删除所有筛选条件, 应用程序将显示为所选对象定义的所有实例。在 "选择对象" 字段中选择其他建模对象也会移除所有筛选条件。单击滤镜图标旁边的图标还会重置筛选器。</p>
+            </div>
+        </div>
+        <p class="_1bodyKeepWithNext" data-mc-conditions="Default.ScreenOnly"><a name="Viewing_Instances_One_Level_Up"></a>
+        </p>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" />查看使用实例的位置</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1bodyKeepWithNext">单击 "使用位置" 按钮可在下列情况下显示使用的弹出窗口:</p>
+                <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">您已经在 "对象类型名称" 网格中选择了一个或多个实例, 并且</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">已为与已登录的员工关联的工厂指定了更改管理设置。</td>
+                    </tr>
+                </table>
+                <p class="_1body">使用的弹出窗口显示的建模对象实例直接引用在 "对象类型名称" 网格中选择的实例。例如, 应用程序显示引用所选操作实例的所有规范。应用程序不显示引用所选操作实例的规范的工作流。</p>
+                <table class="AutoNumber_p_Note1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 20px;" />
+                    <col style="width: 50px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                        </td>
+                        <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">更改管理设置确定可以在 "对象类型名称" 网格中选择的实例数。有关配置“更改管理设置”的信息，请参考《&#160;&#160;<span class="Emphasis">Opcenter Execution Medical Device and Diagnostics Modeling 用户指南</span>》或《&#160;&#160;<span class="Emphasis">Opcenter Execution Core Modeling 用户指南</span>》。</td>
+                    </tr>
+                </table>
+                <p class="_1body">可以将用于建模对象实例的位置添加到更改管理包中。在使用的弹出窗口中选择实例, 然后单击 "添加"。</p>
+                <table class="AutoNumber_p_Note1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 20px;" />
+                    <col style="width: 50px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                        </td>
+                        <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">当以下任一条件为真时, 应用程序将显示一条错误消息:</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p_Important3body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 100px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p_Important3body" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p_Important3body" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">没有与登录用户关联的更改管理设置。</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__3bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 100px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p_Important3body" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p_Important3body" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">在 "对象类型名称" 网格中没有选择任何实例。</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__3bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 100px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p_Important3body" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p_Important3body" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">所选实例数超过了在更改管理设置中配置的使用限制。</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="When_Assigning_a_Large_Number_of_Instances"></a>
+        </p>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" /></a><a name="When_Assigning_a_Large_Number_of_Instances_and_References"></a><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_">指派大量实例和引用</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1body">如果分配给包的内容超过1000个实例 (包括引用), 应用程序将显示一条警告消息。消息警告系统性能可能受到影响, 但应用程序不会阻止您保存和稍后部署包。 </p>
+                <p class="_1body">Siemens 建议查看 CamsarAppServer 应用程序池的 Private Memory Usage 应用程序池设置。在使用 1000 个或更多实例时，可能需要增加该值。有关配置应用程序池内存上限的信息，请参考《&#160;&#160;<i>Opcenter Execution Medical Device and Diagnostics 系统管理指南</i>》或《&#160;&#160;<i>Opcenter Execution Core 系统管理指南</i>》。</p>
+                <table class="AutoNumber_p_Note1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 20px;" />
+                    <col style="width: 50px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                        </td>
+                        <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">即使您继续超过包的1000实例阈值, 应用程序也只显示一次警告消息。 </td>
+                    </tr>
+                </table>
+                <p class="_1bodyKeepWithNext">导出大量实例和参考时，应用程序可能超时或产生意外的结果。可以在以下位置中通过更新值来增加超时设置：<a name="JW_V7SU7_Bug15218"></a></p>
+                <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">Management Studio - 在“站点”树中选择“配置节点”，然后选择“数据库连接”选项卡。字段处于空闲状态后，将“关闭连接”中的值增加到 500 秒。 </td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">Management Studio - 在“站点”树中选择“配置节点”，然后选择“安全”选项卡。将“空闲会话超时”字段中的值增加到 30 分钟。</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p_Note3body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 62px;" />
+                    <col style="width: 50px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p_Note3body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                        </td>
+                        <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">有关 Management Studio 的信息，请参考《&#160;&#160;<span class="Emphasis">Opcenter Execution Medical Device and Diagnostics 系统管理指南</span>》或《&#160;&#160;<i>Opcenter Execution Core 系统管理指南</i>》。</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"> XMLClientConfig.xml - 默认情况下，XMLClientConfig.xml 文件位于 C:\Program Files (x86)\Camstar\InSite Utility 中。将 SendTimeout 和 ReceiveTimeout 的值增加到 500000。 </td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">Web.config - 默认情况下，Web.config 文件位于 C:\Program Files (x86)\Camstar\CamstarPortal 中。在 system.web 节点的 httpRuntime 设置中增加 executionTimeout 值。默认值为 110 秒。</td>
+                    </tr>
+                </table>
+                <p class="_1body">应用程序使您可以添加对角色的引用, 但这可能会导致应用程序在执行包上的任务时超时。必须从包中移除对角色的引用才能完成这些任务。</p>
+            </div>
+        </div>
+        <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="When_Completing_Content_Collaboration"></a>
+        </p>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" name="kanchor83"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" />完成内容协作时</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1body">您可以在 "协作任务" 选项卡上的协作网格中查看合作工作的状态。应用程序在加载页时为当前登录的协作者选择默认任务。"协作" 部分的说明中的说明包含当前选定任务的说明。如果在网格中选择了其他任务, 应用程序将更新本节中显示的说明。在网格中一次只能选择一个任务。</p>
+                <p class="_1body">您在 "分配和审阅内容" 选项卡上为选定的包分配内容。如果您是协作者, 则在完成协作任务后, 在 "分配和审阅内容" 选项卡上单击 "完成"。</p>
+                <table class="AutoNumber_p_Note1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 20px;" />
+                    <col style="width: 50px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                        </td>
+                        <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">协作者还可以在建模过程中将内容分配给包或从中移除内容。有关信息, 请参阅 "为<a href="Assigning_Modeling_Object_Instances_to_a_Package_in_Modeling.htm" class="MCXref xref">在建模中将建模对象实例指派给包</a>"。</td>
+                    </tr>
+                </table>
+                <p class="_1body">内容协作者–在单击 "完成" 时出现 "完成作业" 弹出窗口。此弹出窗口由协作网格和注释部分组成。网格列出了每个合作者的级别、名称、协作任务的状态以及协作任务分配和到期日期。</p>
+                <p class="_1body">协作网格只列出当前登录的协作者有资格完成的任务。符合条件的任务包括:</p>
+                <table class="AutoNumber_p__1bullet" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"> 分配给当前级别或任何以前级别的当前登录协作者的任务。</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__1bullet" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">仅当当前登录的协作者具有使用替换选项定义的角色时, 才在当前级别或任何以前级别分配给其他协作者的任务。</td>
+                    </tr>
+                </table>
+                <p class="_1body">应用程序为当前登录的协作者选择网格中的默认任务。您可以选择任何任务。</p>
+                <p class="_1body">当您单击 "完成" 时, 您在此弹出窗口中输入的任何注释都会显示在 "协作者任务" 选项卡上 "协作者" 网格的 "合作者注释" 字段应用程序还会更新 "协作任务" 选项卡上的 "状态" 和 "完成日期" 字段。应用程序向包所有者发送电子邮件通知, 以指示协作者已完成将内容分配给包, 如果包所有者在 "更新包" 页 "协作" 选项卡上指定了 "完成" 消息给所有者。它还向下一个合作者发送电子邮件通知 (如果指定), 如果在 "更新包" 页 "协作" 选项卡上选择了 "更新工作分配通知协作者" 复选框, 则可以开始其协作工作。</p>
+                <p class="_1body">如果单击 "完成多次", 应用程序将您的最新评论保存到 "协作者任务" 选项卡上的 "合作者注释" 字段中。</p>
+                <p class="_1body">如果包所有者在更新包页上添加协作者时未指定工期和期间, 则应用程序将截止日期设置为 "协作者任务" 选项卡上的 "已分配日期" 和 "状态" 晚。</p>
+                <p class="_1body">应用程序使协作者能够在单击 "完成" 按钮后继续将内容分配给包, 只要该包位于配置分配和审阅内容的步骤中。</p>
+                <p class="_1body">当您分配内容并完成每个任务时, 应用程序会列出任何新的合格任务, 而无需在完成每个任务后关闭 "分配和审阅内容" 页。</p>
+            </div>
+        </div>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" />查看分配的实例的层次结构</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1body">单击“层次结构”按钮可显示“层次结构”弹出窗口。层次结构弹出窗口显示添加到对象类型名称网格中的建模对象实例的缩进树视图。</p>
+                <p class="_1body">通过单击 "添加到网格" 按钮或使用的弹出窗口以粗体、黑色字体显示添加到网格中的实例。通过单击 "添加引用" 按钮添加到网格中的实例在粗体项下显示为普通的黑色字体。</p>
+                <p class="_1body">必须至少向对象类型名称网格中添加一个建模对象实例, 才能查看层次结构。如果没有, 应用程序将显示错误。</p>
+            </div>
+        </div>
+        <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Viewing_the_Package_Content_Summary"></a>
+        </p>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" />查看包内容摘要</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1bodyKeepWithNext">单击 "对象类型名称" 网格下面的 "Pkg 内容摘要" 图标将显示 "包内容摘要" 弹出窗口。"包内容摘要" 弹出显示以下信息: </p>
+                <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">可供导入的建模对象数</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">可供导入的建模对象实例总数</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">分配给包的建模对象数</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">分配给包的建模对象实例总数</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">所选建模对象引用的建模对象数</td>
+                    </tr>
+                </table>
+                <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">分配给包的引用建模对象实例总数</td>
+                    </tr>
+                </table>
+                <p class="_1body">在添加和移除程序包的实例和引用时, 应用程序会更新包内容摘要信息。</p>
+            </div>
+        </div>
+        <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Assign_and_Review_Content_Page_Field_Definitions"></a>
+        </p>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" />使用分配和审阅内容选项卡字段定义分配和审阅内容页</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1bodyKeepWithNext">此表定义 "分配和审阅内容" 页上 "分配和审阅内容" 选项卡上的字段。</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');width: 95%;" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 130px;" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 375px;" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 100px;" />
+                    <thead>
+                        <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                            <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">字段</p>
+                            </th>
+                            <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">定义</p>
+                            </th>
+                            <th class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                <p class="CellHead-Left">类型</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">包信息</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">所选包及其核心属性。核心属性提供状态、描述、所有者、上次更新和工步等信息。此外，此区域还包括一些图标，单击这些图标可提供其他功能或浮出控件菜单。有关信息，请参考“<a href="../GettingStarted/PackageInformation.htm" class="MCXref xref">包信息</a>”。 </p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">必需</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">对象</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">建模对象可用于分配给变更管理包。此列表包括已命名数据对象 (NDO) 和已修订对象 (RO)。选择建模对象后，“可用实例”部分将显示所有已定义的实例。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">必需</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">实例</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">为在“可用对象”中选择的建模对象定义的实例。可以选中“全选”复选框以自动选择所有实例，也可以选中各个实例对应的复选框。应用程序要求至少选择一个要导出的实例。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">必需</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">对象类型名称表格</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">显示更改管理包中包含的建模对象实例的网格。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBodyIndented">[复选框]</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">可用于选择建模对象实例的复选框。可以选中标题行的复选框以自动选择所有显示的实例，也可以选中各个实例对应的复选框。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">可选</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBodyIndented">Dep</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">引用的建模对象实例的可视指示器。如果建模对象实例已添加到包中，应用程序会在此列中显示一个复选标记，因为该实例由先前在“实例选择”页上选择的一个或多个建模对象实例引用。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBodyIndented">名称</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">建模对象或建模对象实例的名称。单击该链接将显示相应的建模对象页。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBodyIndented">描述</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">建模对象实例的简短描述。该描述在定义建模对象实例时提供。如果在建模中未提供描述，则此字段为空。 </p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBodyIndented">上次编辑者</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">在建模中更改该信息的上一用户。 </p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBodyIndented">上次编辑时间</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">上次在建模中更改该信息的日期和时间。 </p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBodyIndented">待定保存</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">未保存项的可视指示器。如果实例或引用尚未保存到包中, 应用程序将在该列中显示星号。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2">
+                                <p class="CellBody">隐藏裁判</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2">
+                                <p class="CellBody">选定后, 应用程序将隐藏网格中的所有引用。如果将引用添加到网格中, 应用程序将显示此复选框。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body2">
+                                <p class="CellBody">可选</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Assign_and_Review_Content_Page_Button_Definitions"></a>
+        </p>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" />使用分配和审阅内容选项卡按钮定义分配和审阅内容页</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1bodyKeepWithNext">此表定义 "分配和审阅内容" 页上 "分配和审阅内容" 选项卡上的按钮。</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');width: 95%;" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 125px;" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                            <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">按钮</p>
+                            </th>
+                            <th class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                <p class="CellHead-Left">按钮功能 ...</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">添加到网格</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">将所有选定实例添加到更改管理包中。</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">添加引用</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">将分配的建模对象实例的引用添加到对象类型名称网格中。如果未将引用添加到网格中, 应用程序将显示此按钮。 </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">移除引用</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">从对象类型名称网格中移除所有引用。如果已将引用添加到网格中, 应用程序将显示此按钮。</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2" data-mc-conditions="">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">层次 结构</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">查看与分配给包的建模对象实例关联的引用的分层树。</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">使用的位置</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">查看直接引用在 "对象类型名称" 网格中选择的实例的建模对象实例。</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">重置</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">将包还原到其上次保存的状态。删除上次保存后对包内容所做的任何更改。</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">完成？</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">显示内容协作者–完成的任务弹出。</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2">
+                                <p class="CellBody">分配</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body2">
+                                <p class="CellBody">保存对包所做的更改。
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p class="_1body" style="color: #000000;" data-mc-conditions="Default.ScreenOnly"><a name="Instance_Filters_Popup_Field_Definitions"></a>
+        </p>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" />实例筛选器弹出字段定义</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1bodyKeepWithNext">此表定义“添加”弹出窗口上的字段。</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');width: 95%;" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 130px;" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 374px;" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 100px;" />
+                    <thead>
+                        <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                            <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">字段</p>
+                            </th>
+                            <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">定义</p>
+                            </th>
+                            <th class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                <p class="CellHead-Left">类型</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">不按时间筛选</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">选项, 指示应用程序应忽略由 "时间戳" 和 "时间戳" 字段指定的时间范围。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">可选</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">仅包括在此时间段内编辑的实例数据</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">选项, 指示应用程序应只返回在 "从时间戳" 和 "时间戳" 字段中指定的时间段中编辑的实例。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">可选</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">开始时间戳记</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">编辑实例的最早日期。可以使用“yyyy/mm/dd 上午/下午 hh:mm”格式输入其他日期和时间，或者通过单击日历图标，使用日期选择器控件来选择日期和时间。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">可选</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">结束时间戳记</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">编辑实例的最新日期。可以使用“yyyy/mm/dd 上午/下午 hh:mm”格式输入其他日期和时间，或者通过单击日历图标，使用日期选择器控件来选择日期和时间。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">可选</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">要编辑的上一个员工</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">要编辑实例的最后一个员工。应用程序将可供选择的员工限制为具有包所有者或包内容角色的人员。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">可选</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">仅包含活动实例</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">选定后, 应用程序只包括具有活动状态的实例。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">可选</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">仅包括</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">选定后, 应用程序只包括指定为记录修订的实例。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">可选</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">要包括的实例前缀</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">实例名称开头处的字符。应用程序只显示实例列表中具有这些字符的名称的实例。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">可选</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">要排除的实例前缀</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">实例名称开头处的字符。应用程序不显示具有从 "实例" 列表中的这些字符开始的名称的任何实例。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">可选</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">要包括的实例后缀</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">实例名称末尾的字符。应用程序仅显示实例列表中带有这些字符的名称的实例。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">可选</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                <p class="CellBody">要排除的实例后缀</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                <p class="CellBody">实例名称末尾的字符。应用程序不显示实例列表中以这些字符结尾的名称的任何实例。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body1">
+                                <p class="CellBody">可选</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Package_Content_Summary_Popup_Field_Definitions"></a>
+        </p>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" />包内容摘要弹出字段定义</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1bodyKeepWithNext">此表定义“任务列表汇总”弹出窗口中的字段。</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');width: 95%;" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 100px;" />
+                    <thead>
+                        <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                            <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">字段</p>
+                            </th>
+                            <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">定义</p>
+                            </th>
+                            <th class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                <p class="CellHead-Left">类型</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">计数类型</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">行中显示的值的说明: </p>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">源系统总计: 建模对象和建模对象实例的总数, 可用于分配给包。</td>
+                                    </tr>
+                                </table>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">显式分配给包: 分配给包的建模对象和建模对象实例的总数。</td>
+                                    </tr>
+                                </table>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">添加的引用: 分配给包的建模对象和建模对象实例引用的总数。</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">对象</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">建模对象总数:</p>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">可用于包的指派</td>
+                                    </tr>
+                                </table>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">直接分配给包</td>
+                                    </tr>
+                                </table>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">作为引用分配给包</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                <p class="CellBody">实例</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                <p class="CellBody">建模对象实例的总数:</p>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">可用于包的指派</td>
+                                    </tr>
+                                </table>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">直接分配给包</td>
+                                    </tr>
+                                </table>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">作为引用分配给包</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p class="_1bodyKeepWithNext" data-mc-conditions="Default.ScreenOnly"><a name="Where_Used_Popup_Field_Definitions"></a>
+        </p>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" />何处使用弹出窗口字段定义</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1bodyKeepWithNext">此表定义“何处使用”弹出窗口的独有字段。</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');width: 95%;" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 125px;" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 100px;" />
+                    <thead>
+                        <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                            <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">字段</p>
+                            </th>
+                            <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">定义</p>
+                            </th>
+                            <th class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                <p class="CellHead-Left">类型</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">所选包</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">选定的包名称。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">何处使用实例</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">网格显示用于引用在 "对象类型名称" 网格中选择的实例的建模对象实例。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBodyIndented">复选框</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">可用于选择建模对象实例的复选框。可以选中标题行的复选框以自动选择所有显示的实例，也可以选中各个实例对应的复选框。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">可选</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBodyIndented">名称</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody"> 引用在 "对象类型名称" 网格中选择的实例的建模对象实例的名称。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBodyIndented">描述</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">建模对象实例的简短描述。该描述在定义建模对象实例时提供。如果在建模中未提供描述，则此字段为空。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBodyIndented">上次编辑者</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">在建模中更改该信息的上一用户。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                <p class="CellBodyIndented">上次编辑时间</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                <p class="CellBody">上次在建模中更改该信息的日期和时间。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body1">
+                                <p class="CellBody">显示</p>
+                                <p class="CellBody">仅</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Content_Collaborator_Completed_Assignment_Pop-up_Field_Definitions"></a>
+        </p>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" />内容协作–已完成的工作分配弹出字段定义</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1bodyKeepWithNext">此表定义了内容协作者的字段-完成的工作分配弹出。</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');width: 95%;" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 125px;" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 100px;" />
+                    <thead>
+                        <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                            <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">字段</p>
+                            </th>
+                            <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">定义</p>
+                            </th>
+                            <th class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                <p class="CellHead-Left">类型</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">协同者表格</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody"> 网格列出当前登录用户有资格完成的所有任务。级别、协作工时、分配日期和截止日期的状态显示。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody" style="color: #000000;">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBodyIndented">层次</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody" style="color: #000000;">与协同者关联的协同者级别。级别仅由数字值表示。表格按此列的升序排序。</p>
+                                <p class="CellBody" style="color: #000000;"> 级别定义任务必须完成的顺序。如果协作任务是按顺序设置的, 则应用程序在每个任务完成后发送电子邮件通知。如果协作任务是并行设置的, 则应用程序在最后一个协作者完成任务时发送电子邮件通知。</p>
+                                <p class="CellBody" style="color: #000000;">串行表示级别数字较低的协同者必须在级别数字较高的协同者开始之前完成指派内容。并行表示具有相同级别数字的协同者可以同时指派内容。 </p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBodyIndented">名称</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">已被指派协同工作责任的员工。  </p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBodyIndented">状态</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">协作工作的状态。单元格突出显示颜色会根据状态动态变化。状态设置为:</p>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><span class="User_Entry" style="color: #000000;">待处理</span> - 员工尚未完成任务。员工可能已经或可能没有启动任务。橙色突出显示单元格。</td>
+                                    </tr>
+                                </table>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><span class="User_Entry" style="color: #000000;">完成</span>-员工已经完成了协作任务, 无论工作是否完成得很晚。当协作者单击内容协作者的 "完整" 按钮时, 工作就完成了-通过 "分配和审阅内容" 页访问完成的任务弹出, 分配和审阅内容选项卡。红色突出显示单元格。</td>
+                                    </tr>
+                                </table>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><span class="User_Entry" style="color: #000000;">逾期</span> - 员工尚未完成任务，指派的完成任务的时间已过期。当当前日期晚于截止日期时, 任务延迟。员工可能已经或可能没有启动任务。红色突出显示单元格。</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBodyIndented">分配日期</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">包所有者将协作分配给 "更新程序包" 页 "协作" 选项卡上的合作伙伴的日期。 日期采用 yyyy/mm/dd 格式。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBodyIndented">到期日</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">协作工作到期的日期。到期日期是根据包所有者分配协作工作给合作者的日期以及 "更新包" 页 "协作" 选项卡上指定的持续时间/期间计算的。 日期采用 yyyy/mm/dd 格式。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                <p class="CellBody">备注</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                <p class="CellBody">描述协作工作完成的文本 (最多255个字符)。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body1">
+                                <p class="CellBody">可选</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Content_Collaborator_Completed_Assignment_Pop-up_Button_Definitions"></a>
+        </p>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" />内容协作–完成的工作分配弹出按钮定义</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1bodyKeepWithNext">此表定义了内容协作者的按钮-完成的工作分配弹出。</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');width: 95%;" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 150px;" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                    <thead>
+                        <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                            <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">按钮</p>
+                            </th>
+                            <th class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                <p class="CellHead-Left">按钮功能 ...</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">取消 </p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">关闭弹出窗口而不保存信息。</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2">
+                                <p class="CellBody">完成</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body2">
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">关闭内容协作者-完成的任务弹出。</td>
+                                    </tr>
+                                </table>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">更新 "协作者任务" 选项卡上 "合作者注释" 字段中的注释。</td>
+                                    </tr>
+                                </table>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">更新 "协作任务" 选项卡上的 "状态" 和 "完成日期" 字段。</td>
+                                    </tr>
+                                </table>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">在弹出的协作网格中更新与任何新的合格任务的列表。</td>
+                                    </tr>
+                                </table>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">向包所有者发送电子邮件通知, 以指示在包所有者将完成消息指定给 "更新包" 页 "协作" 选项卡上的所有者时, 已完成向包分配内容。</td>
+                                    </tr>
+                                </table>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"> 将电子邮件通知发送到下一个合作者 (如果指定), 如果在 "更新包" 页 "协作" 选项卡上选择了 "更新工作分配的通知协作者" 复选框, 则可以开始其协作工作。</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Assign_and_Review_Content_Page_with_Collaborator_Status_Tab_Field_Definitions"></a>
+        </p>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" />使用 "协作任务" 选项卡字段定义分配和审阅内容页</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1bodyKeepWithNext">此表定义 "分配和审阅内容" 页上 "协作任务" 选项卡上的字段。</p>
+                <table style="caption-side: top;width: 95%;mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                    <col width="150px" class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 373px;" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 100px;" />
+                    <thead>
+                        <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                            <td class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">字段 </p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">定义</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                <p class="CellHead-Left">类型</p>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">协同者表格</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">网格列出为所选更改管理包指定为协作者的所有员工。级别、协作工作的状态、相关日期、协作者注释和协作者说明也会出现。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2" data-mc-conditions="">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBodyIndented">层次</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">与协同者关联的协同者级别。级别仅由数字值表示。表格按此列的升序排序。</p>
+                                <p class="CellBody"> 级别定义任务必须完成的顺序。如果协作任务是按顺序设置的, 则应用程序在每个任务完成后发送电子邮件通知。如果协作任务是并行设置的, 则应用程序在最后一个协作者完成任务时发送电子邮件通知。</p>
+                                <p class="CellBody">串行表示级别数字较低的协同者必须在级别数字较高的协同者开始之前完成指派内容。并行表示具有相同级别数字的协同者可以同时指派内容。 </p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBodyIndented">名称</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">已被指派协同工作责任的员工。 </p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2" data-mc-conditions="">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBodyIndented">状态</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">协作工作的状态。单元格突出显示颜色会根据状态动态变化。状态设置为:</p>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><span class="User_Entry">待处理</span> - 员工尚未完成任务。员工可能已经或可能没有启动任务。橙色突出显示单元格。</td>
+                                    </tr>
+                                </table>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><span class="User_Entry">完成</span>-员工已经完成了协作任务, 无论工作是否完成得很晚。当协作者单击内容协作者的 "完整" 按钮时, 工作完成-通过 "分配和审阅内容" 页访问完成的工作分配弹出式, 分配和审阅 "内容任务" 选项卡。红色突出显示单元格。</td>
+                                    </tr>
+                                </table>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><span class="User_Entry">逾期</span> - 员工尚未完成任务，指派的完成任务的时间已过期。当当前日期晚于截止日期时, 任务延迟。员工可能已经或可能没有启动任务。红色突出显示单元格。</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBodyIndented">分配日期</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">包所有者将协作分配给 "更新程序包" 页 "协作" 选项卡上的合作伙伴的日期。 日期采用 yyyy/mm/dd 格式。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2" data-mc-conditions="">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBodyIndented">到期日</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">协作工作到期的日期。到期日期是根据包所有者分配协作工作给合作者的日期以及 "更新包" 页 "协作" 选项卡上指定的持续时间/期间计算的。 日期采用 yyyy/mm/dd 格式。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBodyIndented">完成日期</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">协作工作完成的日期。当协作者单击内容协作者的 "完整" 按钮时, 工作就完成了-完成了任务弹出。 日期采用 yyyy/mm/dd 格式。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2" data-mc-conditions="">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBodyIndented">合作者评论</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">协作者在内容协作者的 "备注" 字段中输入的最新文本-完成的任务弹出。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBodyIndented">协作说明</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">在 "更新包" 页 "协作程序" 选项卡上的 "合作伙伴" 字段的说明中输入包所有者的文本。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2" data-mc-conditions="">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">对所有协同者的指示</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">对所有协同者的指示.应用程序显示软件包所有者为 "更新包" 页 "协作" 选项卡上的所有协作者输入的说明。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1" data-mc-conditions="">
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                <p class="CellBody">合作者说明</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                <p class="CellBody">包所有者对协同者的具体指示。应用程序显示软件包所有者为 "更新包" 页 "协作" 选项卡上的特定协作者输入的说明。不显示其他合作者的说明。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p class="Head3-Side">“如何将内容指派给包<a name="How_to_Assign_Content_to_a_Package">”</a><a name="kanchor84"></a></p>
+        <p class="_1bodyKeepWithNext">按照以下步骤将内容分配给包:</p>
+        <table class="AutoNumber_p_Step_" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>1.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">从<span class="User_Entry">更改管理</span>菜单中选择<span class="User_Entry">包搜索</span>。 <span class="Emphasis">将显示“包搜索”页。</span></td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>2.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">输入或选择一个或多个条件以缩小搜索范围。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>3.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">单击<span class="User_Entry">搜索</span>。 <span class="Emphasis">应用程序将在“搜索结果”表格中显示与搜索准则匹配的包。</span></td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>4.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;4.&lt;/b&gt;">选择要为其分配内容的包。 <span class="Emphasis">应用程序将显示该包的相关事务</span>。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>5.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;5.&lt;/b&gt;">单击 "<span class="User_Entry">分配内容</span>"。<span class="Emphasis">此时将显示 "分配和审阅内容" 页。</span></td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>6.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;6.&lt;/b&gt;">是否正在执行协作任务？</td>
+            </tr>
+        </table>
+        <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_TableIndent3body.css');width: 90%;" class="TableStyle-Horiz-rules_TableIndent3body" cellspacing="0">
+            <col class="TableStyle-Horiz-rules_TableIndent3body-Column-Column1" style="width: 72px;" />
+            <col class="TableStyle-Horiz-rules_TableIndent3body-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Head-Header1">
+                    <th class="TableStyle-Horiz-rules_TableIndent3body-HeadE-Column1-Header1">
+                        <p class="CellHead-Left">如果 ...</p>
+                    </th>
+                    <th class="TableStyle-Horiz-rules_TableIndent3body-HeadD-Column1-Header1">
+                        <p class="CellHead-Left">操作步骤 ...</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body1">
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyE-Column1-Body1">
+                        <p class="CellBody">是</p>
+                    </td>
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyD-Column1-Body1">
+                        <p class="CellBody" style="color: #000000;">执行 "<a href="#How_to_View_Collaborator_Tasks" class="MCXref xref">如何查看协作任务</a>" 过程。</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body2">
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyB-Column1-Body2">
+                        <p class="CellBody">否</p>
+                    </td>
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyA-Column1-Body2">
+                        <p class="CellBody">转到步骤 7。</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>7.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;7.&lt;/b&gt;">从 "<span class="User_Entry">对象</span>" 列表中选择一个建模对象。<span class="Emphasis">应用程序在 "实例" 列表中显示可用的建模对象实例。</span></td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Step_KeepWithNext" valign="top"><span class="Number"><b>8.</b></span>
+                </td>
+                <td class="AutoNumber_p_Step_KeepWithNext" valign="top" data-mc-autonum="&lt;b&gt;8.&lt;/b&gt;">是否要筛选实例？</td>
+            </tr>
+        </table>
+        <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_TableIndent3body.css');width: 90%;" class="TableStyle-Horiz-rules_TableIndent3body" cellspacing="0">
+            <col class="TableStyle-Horiz-rules_TableIndent3body-Column-Column1" style="width: 72px;" />
+            <col class="TableStyle-Horiz-rules_TableIndent3body-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Head-Header1">
+                    <th class="TableStyle-Horiz-rules_TableIndent3body-HeadE-Column1-Header1">
+                        <p class="CellHead-Left">如果 ...</p>
+                    </th>
+                    <th class="TableStyle-Horiz-rules_TableIndent3body-HeadD-Column1-Header1">
+                        <p class="CellHead-Left">操作步骤 ...</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body1">
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyE-Column1-Body1">
+                        <p class="CellBody">是</p>
+                    </td>
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyD-Column1-Body1">
+                        <p class="CellBody">执行 "<a href="#How_to_Filter_the_Instances" class="MCXref xref">如何筛选实例</a>" 过程。</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body2">
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyB-Column1-Body2">
+                        <p class="CellBody">否</p>
+                    </td>
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyA-Column1-Body2">
+                        <p class="CellBody">转到步骤 9。</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>9.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;9.&lt;/b&gt;"> 选择要分配给包的实例。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>10.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;10.&lt;/b&gt;">单击 "<span class="User_Entry">添加到网格</span>"。<span class="Emphasis">应用程序将对象及其所选实例添加到“对象类型名称”表格并更新“对象和实例计数”。</span></td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>11.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;11.&lt;/b&gt;"> 重复步骤 7-10，添加其他处理程序。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Step_KeepWithNext" valign="top"><span class="Number"><b>12.</b></span>
+                </td>
+                <td class="AutoNumber_p_Step_KeepWithNext" valign="top" data-mc-autonum="&lt;b&gt;12.&lt;/b&gt;">是否要添加对包的引用？</td>
+            </tr>
+        </table>
+        <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_TableIndent3body.css');width: 90%;" class="TableStyle-Horiz-rules_TableIndent3body" cellspacing="0">
+            <col class="TableStyle-Horiz-rules_TableIndent3body-Column-Column1" style="width: 71px;" />
+            <col class="TableStyle-Horiz-rules_TableIndent3body-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Head-Header1">
+                    <th class="TableStyle-Horiz-rules_TableIndent3body-HeadE-Column1-Header1">
+                        <p class="CellHead-Left">如果 ...</p>
+                    </th>
+                    <th class="TableStyle-Horiz-rules_TableIndent3body-HeadD-Column1-Header1">
+                        <p class="CellHead-Left">操作步骤 ...</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body1">
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyE-Column1-Body1">
+                        <p class="CellBody">是</p>
+                    </td>
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyD-Column1-Body1">
+                        <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 41px;" />
+                            <col style="width: 30px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_CellNumA" valign="top"><span class="Number"><b>a.</b></span>
+                                </td>
+                                <td class="AutoNumber_p_CellNumA" valign="top" data-mc-autonum="&lt;b&gt;a.&lt;/b&gt;">单击<span class="User_Entry">添加</span>按钮。<span class="Emphasis">应用程序会将所有引用的实例添加到“对象类型名称”表格并更新“对象和实例计数”表格。</span></td>
+                            </tr>
+                        </table>
+                        <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 41px;" />
+                            <col style="width: 30px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p__1bullet" valign="top"><span class="Number"><b>b.</b></span>
+                                </td>
+                                <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;b&gt;b.&lt;/b&gt;">转到步骤 13。</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body2">
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyB-Column1-Body2">
+                        <p class="CellBody">否</p>
+                    </td>
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyA-Column1-Body2">
+                        <p class="CellBody" style="color: #000000;">转到步骤 13。</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>13.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;13.&lt;/b&gt;">单击<span class="User_Entry">指派</span>。<span class="Emphasis">应用程序将显示一条成功消息。</span></td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>14.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;14.&lt;/b&gt;">是否正在执行协作任务？</td>
+            </tr>
+        </table>
+        <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_TableIndent3body.css');width: 90%;" class="TableStyle-Horiz-rules_TableIndent3body" cellspacing="0">
+            <col class="TableStyle-Horiz-rules_TableIndent3body-Column-Column1" style="width: 71px;" />
+            <col class="TableStyle-Horiz-rules_TableIndent3body-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Head-Header1">
+                    <th class="TableStyle-Horiz-rules_TableIndent3body-HeadE-Column1-Header1">
+                        <p class="CellHead-Left">如果 ...</p>
+                    </th>
+                    <th class="TableStyle-Horiz-rules_TableIndent3body-HeadD-Column1-Header1">
+                        <p class="CellHead-Left">操作步骤 ...</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body1">
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyE-Column1-Body1">
+                        <p class="CellBody">是</p>
+                    </td>
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyD-Column1-Body1">
+                        <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 41px;" />
+                            <col style="width: 30px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_CellNumA" valign="top"><span class="Number"><b>a.</b></span>
+                                </td>
+                                <td class="AutoNumber_p_CellNumA" valign="top" data-mc-autonum="&lt;b&gt;a.&lt;/b&gt;">单击<span class="User_Entry">完成</span>。<span class="Emphasis">内容协作者-显示完成的工作分配弹出。</span></td>
+                            </tr>
+                        </table>
+                        <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 41px;" />
+                            <col style="width: 30px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p__1bullet" valign="top"><span class="Number"><b>b.</b></span>
+                                </td>
+                                <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;b&gt;b.&lt;/b&gt;">转到步骤 15。</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body2">
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyB-Column1-Body2">
+                        <p class="CellBody">否</p>
+                    </td>
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyA-Column1-Body2">
+                        <p class="CellBody">此过程完成。</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Step_KeepWithNext" valign="top"><span class="Number"><b>15.</b></span>
+                </td>
+                <td class="AutoNumber_p_Step_KeepWithNext" valign="top" data-mc-autonum="&lt;b&gt;15.&lt;/b&gt;">是否要完成当前选定的任务？</td>
+            </tr>
+        </table>
+        <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_TableIndent3body.css');width: 90%;" class="TableStyle-Horiz-rules_TableIndent3body" cellspacing="0">
+            <col class="TableStyle-Horiz-rules_TableIndent3body-Column-Column1" style="width: 71px;" />
+            <col class="TableStyle-Horiz-rules_TableIndent3body-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Head-Header1">
+                    <th class="TableStyle-Horiz-rules_TableIndent3body-HeadE-Column1-Header1">
+                        <p class="CellHead-Left">如果 ...</p>
+                    </th>
+                    <th class="TableStyle-Horiz-rules_TableIndent3body-HeadD-Column1-Header1">
+                        <p class="CellHead-Left">操作步骤 ...</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body1">
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyE-Column1-Body1">
+                        <p class="CellBody">是</p>
+                    </td>
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyD-Column1-Body1">
+                        <p class="CellBody">输入描述您在 "<span class="User_Entry">备注</span>" 字段中完成的协作工作的文本。</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body2">
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyB-Column1-Body2">
+                        <p class="CellBody">否</p>
+                    </td>
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyA-Column1-Body2">
+                        <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 41px;" />
+                            <col style="width: 30px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_CellNumA" valign="top"><span class="Number"><b>a.</b></span>
+                                </td>
+                                <td class="AutoNumber_p_CellNumA" valign="top" data-mc-autonum="&lt;b&gt;a.&lt;/b&gt;">在协作网格中选择其他任务。</td>
+                            </tr>
+                        </table>
+                        <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 41px;" />
+                            <col style="width: 30px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p__1bullet" valign="top"><span class="Number"><b>b.</b></span>
+                                </td>
+                                <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;b&gt;b.&lt;/b&gt;">输入描述您在 "<span class="User_Entry">备注</span>" 字段中完成的协作工作的文本。</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>16.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;16.&lt;/b&gt;">单击<span class="User_Entry">完成</span>。<span class="Emphasis">应用程序显示一条成功消息, 关闭内容协作者-完成作业弹出, 更新 "协作任务" 选项卡上的 "注释"、"状态" 和 "完成日期" 字段, 使用任何新的合格任务更新任务列表, 并发送向包所有者和下一个协作者发送电子邮件通知 (如果适用)。</span></td>
+            </tr>
+        </table>
+        <p class="Head3-Side">如何筛选实例<a name="How_to_Filter_the_Instances"></a><a name="kanchor85"></a></p>
+        <p class="_1bodyKeepWithNext">按照下列步骤筛选实例:</p>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>1.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">执行 "<a href="#How_to_Assign_Content_to_a_Package" class="MCXref xref">”</a>" 过程的步骤1-7。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Step_KeepWithNext" valign="top"><span class="Number"><b>2.</b></span>
+                </td>
+                <td class="AutoNumber_p_Step_KeepWithNext" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">要按名称还是按多个条件筛选？</td>
+            </tr>
+        </table>
+        <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_TableIndent3body.css');width: 90%;" class="TableStyle-Horiz-rules_TableIndent3body" cellspacing="0">
+            <col class="TableStyle-Horiz-rules_TableIndent3body-Column-Column1" style="width: 130px;" />
+            <col class="TableStyle-Horiz-rules_TableIndent3body-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Head-Header1">
+                    <th class="TableStyle-Horiz-rules_TableIndent3body-HeadE-Column1-Header1">
+                        <p class="CellHead-Left">筛选条件 ...</p>
+                    </th>
+                    <th class="TableStyle-Horiz-rules_TableIndent3body-HeadD-Column1-Header1">
+                        <p class="CellHead-Left">操作步骤 ...</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body1">
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyE-Column1-Body1">
+                        <p class="CellBody">仅名称</p>
+                    </td>
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyD-Column1-Body1">
+                        <p class="CellBody">在 "<span class="User_Entry">实例</span>" 字段中输入建模对象实例名称的前几个字符。<span class="Emphasis">应用程序更新实例列表, 以仅显示包含名称中这些字符的那些实例。</span></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body2">
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyB-Column1-Body2">
+                        <p class="CellBody">多个条件</p>
+                    </td>
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyA-Column1-Body2">
+                        <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 41px;" />
+                            <col style="width: 30px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_CellNumA" valign="top"><span class="Number"><b>a.</b></span>
+                                </td>
+                                <td class="AutoNumber_p_CellNumA" valign="top" data-mc-autonum="&lt;b&gt;a.&lt;/b&gt;">单击<span class="User_Entry">筛选器</span>图标。<span class="Emphasis">应用程序将显示实例筛选器弹出窗口。</span></td>
+                            </tr>
+                        </table>
+                        <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 41px;" />
+                            <col style="width: 30px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p__1bullet" valign="top"><span class="Number"><b>b.</b></span>
+                                </td>
+                                <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;b&gt;b.&lt;/b&gt;">输入或选择一个或多个条件以缩小搜索范围。 有关字段的信息, 请参阅实例筛选器弹出字段定义表。</td>
+                            </tr>
+                        </table>
+                        <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 41px;" />
+                            <col style="width: 30px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p__1bullet" valign="top"><span class="Number"><b>c.</b></span>
+                                </td>
+                                <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;b&gt;c.&lt;/b&gt;">单击 "<span class="User_Entry">应用</span>" 以筛选列表并关闭弹出窗口。<span class="Emphasis">应用程序更新实例列表, 以仅显示符合指定条件的实例。</span></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Head3-Side">如何查看包内容摘要<a name="How_to_View_the_Package_Content_Summary"></a><a name="kanchor86"></a></p>
+        <p class="_1bodyKeepWithNext">按照下列步骤查看包内容摘要:</p>
+        <table class="AutoNumber_p_Step_" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>1.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">执行 "<a href="#How_to_Assign_Content_to_a_Package" class="MCXref xref">”</a>" 过程的步骤1-5。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>2.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">单击 " <span class="User_Entry">Pkg 内容摘要</span>" 图标。<span class="Emphasis">应用程序将显示 "包内容摘要" 弹出窗口。</span></td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>3.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">单击 "<span class="User_Entry">关闭</span>" 关闭 "包内容摘要" 弹出窗口。</td>
+            </tr>
+        </table>
+        <p class="Head3-Side">如何将使用的实例添加到包中<a name="How_to_Add_Where_Used_Instances_to_a_Package"></a><a name="kanchor87"></a></p>
+        <p class="_1bodyKeepWithNext">按照以下步骤将使用的实例添加到包中:</p>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>1.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">执行 "<a href="#How_to_Assign_Content_to_a_Package" class="MCXref xref">”</a>" 过程的步骤1-9。 </td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>2.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">选择一个或多个容器。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>3.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">单击<span class="User_Entry">何处使用</span>。<span class="Emphasis">应用程序显示使用的弹出窗口。</span></td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>4.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;4.&lt;/b&gt;">选择要添加到包中的一个或多个实例。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>5.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;5.&lt;/b&gt;">单击<span class="User_Entry">添加</span>。<span class="Emphasis">应用程序将选定的实例添加到包中, 并关闭使用的弹出窗口。</span></td>
+            </tr>
+        </table>
+        <p class="Head3-Side"><a name="How_to_View_a_Hierarchy_of_Assigned_Instances"></a>如何查看分配的实例的层次结构<a name="kanchor88"></a></p>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>1.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">执行 "<a href="#How_to_Assign_Content_to_a_Package" class="MCXref xref">”</a>" 过程的步骤1-10。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>2.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">单击<span class="User_Entry">层次结构</span>。应用程序会显示“层次结构”弹出窗口。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>3.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">单击<span class="User_Entry">关闭</span>。<a name="Hierarchy_end"></a></td>
+            </tr>
+        </table>
+        <p class="Head3-Side">如何查看协作任务<a name="How_to_View_Collaborator_Tasks"></a><a name="kanchor89"></a></p>
+        <p class="_1bodyKeepWithNext">按照以下步骤查看协作任务:</p>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>1.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">执行 "<a href="#How_to_Assign_Content_to_a_Package" class="MCXref xref">”</a>" 过程的步骤1-5。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>2.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">单击 "<span class="User_Entry">协作任务</span>" 选项卡。<span class="Emphasis">应用程序显示包的所有协作任务, 并显示协作网格中当前选定任务的说明。</span></td>
+            </tr>
+        </table>
+        <MadCap:pageFooter class="FirstPage">
+            <p class="copyright">© Siemens 2020</p>
+        </MadCap:pageFooter>
+    </body>
+</html>

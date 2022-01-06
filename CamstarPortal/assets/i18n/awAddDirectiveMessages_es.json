@@ -1,0 +1,41 @@
+{
+    "recentSectionTitle": "Recientes",
+    "otherSectionTitle": "Otro",
+    "dataSetFileUploadTitle": "Archivo",
+    "relationPropLabel": "Relación",
+
+    "loading": "Cargando...",
+    "Filter": "Filtro",
+    "refine":"Refinar",
+    "objectType": "Tipo",
+    "newTabTitle": "Nuevo",
+    "paletteTabTitle": "Paleta",
+    "searchTabTitle": "Búsqueda",
+    "searchSectionTitle": "Búsqueda",
+    "assignButtonTitle": "Asignar",
+    "ownProjectSectionTitle": "Proyecto propietario",
+    "addProjectButtonTitle": "Agregar un proyecto",
+    "projectsSectionTitle": "Proyectos",
+    "addObjectPanelPinButtonToolTip": "Fijar panel",
+    "addObjectPanelUnpinButtonToolTip": "Desfijar panel",
+    "pasteSuccessful": "Se agregó \"{0}\".",
+    "submitSuccessful": "\"{0}« fue entregado.",
+
+    "addButtonTitle" : "Agregar",
+    "mutiRelationObject" : "Se agregaron {0} selecciones.",
+
+    "resultTabTitle" : "Resultados",
+    "filterTabTitle" : "Filtros",
+    "keywordsLabel" : "Palabras clave",
+    "addButtonInSearch" : "Agregar",
+    "datasetName" : "Nombre",
+    "datasetDesc" : "Descripción",
+    "datasetType" : "Tipo",
+    "uploadFile" : "Cargar el archivo",
+    "reference" : "Referencia",
+    "moreLink"  : "Más...",
+
+    "addObjectPanel_oneStepPinCommands": "Comandos Agregar patilla de conexión de un paso al panel de eventos",
+    "uiwidget_projectSectionCommands": "Comandos de sección del proyecto",
+    "aw_compare": "Comparar"
+}

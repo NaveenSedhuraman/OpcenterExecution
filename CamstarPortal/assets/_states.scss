@@ -1,0 +1,56 @@
+// Copyright 2018 Siemens Product Lifecycle Management Software Inc.
+/**
+ * Top level 'states' CSS for Active Workspace UI
+ */
+
+.required::-webkit-input-placeholder {
+    font-style: normal;
+}
+
+.required:-moz-placeholder {
+    font-style: normal;
+}
+
+.required::-moz-placeholder {
+    font-style: normal;
+}
+
+.required:-ms-input-placeholder {
+    font-style: normal;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.hiddenCell {
+    display: none;
+}
+
+.inline {
+    display: inline;
+    /* 'inline' is the DEFAULT display value */
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+a.inactive,
+a.inactive:hover {
+    cursor: text;
+    text-decoration: none;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: .5;
+}

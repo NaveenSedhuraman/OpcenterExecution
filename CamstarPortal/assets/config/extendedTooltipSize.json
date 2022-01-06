@@ -1,0 +1,25 @@
+{
+  "extendedTooltipSize": {
+    "large": {
+      "popupOrientation": "BOTTOM_LEFT",
+      "popupWidth": "500px",
+      "popupHeight": "500px",
+      "popupMinHeight": "500px",
+      "popupMinWidth": "500px"
+    },
+    "medium": {
+      "popupOrientation": "BOTTOM_LEFT",
+      "popupWidth": "200px",
+      "popupHeight": "200px",
+      "popupMinHeight": "200px",
+      "popupMinWidth": "200px"
+    },
+    "default": {
+      "popupOrientation": "TOP_CENTER",
+      "popupMinWidth": "361px",
+      "popupMinHeight": "361px",
+      "popupWidth": "360px",
+      "popupHeight": "360px"
+    }
+  }
+}

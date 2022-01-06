@@ -1,0 +1,8 @@
+{
+    "clientBuild": "客户端内部版本",
+    "logFile": "用户会话日志文件",
+    "aw_rightWall": "右背景墙",
+    "aw_footer": "移动页脚",
+    "aw_primaryWorkArea": "主工作区域",
+    "aw_globalNavigationbar": "全局导览"
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="zh-cn" xml:lang="zh-cn" data-mc-search-type="NGram" data-mc-help-system-file-name="PortalSFUG.xml" data-mc-path-to-help-system="../../../" data-mc-toc-path="智能扫描" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>了解智能扫描</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/LDCSS1.2.4_zhCN.css" rel="stylesheet" type="text/css" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div role="main" id="mc-main-content">
+            <p class="Head2">了解智能扫描</p>
+            <p class="_1bodyKeepWithNext"><a name="kanchor283"></a>智能扫描在所有门户页面上都可用。通过该功能，在扫描条形码时，应用程序可填充一个或多个字段。例如，扫描容器上的条形码不仅可以填充“容器”字段，还可以填充显示有关该容器信息的任何字段。条形码包含以下一项或多项内容:</p>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">前导符，表示条形码是否为智能条形码的单个字符。当应用程序检测到前导符时，会将条形码标识为智能条形码，并在读取智能标记之前去除前导符。</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">智能标记，附加到扫描字符串的前缀，表示实体类型；例如，容器。应用程序使用智能标记定位要填充实体名称的字段。</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">实体名称。</td>
+                </tr>
+            </table>
+            <p class="_1body">智能条形码始终包含实体名称、前导符和智能标记。前导符和智能标记在 Portal Studio SmartScanningSettings 部分定义。有关 Portal Studio 中的设置以及配置前导符和智能标记的信息，请参考《&#160;&#160;<span class="Emphasis">Opcenter Execution Medical Device and Diagnostics Portal Studio 用户指南</span>》或《&#160;&#160;<span class="Emphasis">Opcenter Execution Core Portal Studio 用户指南</span>》。</p>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="When_Scanning_a_Barcode"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="关闭" data-mc-alt2="打开" />在扫描条形码时</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1body">当车间操作员扫描条形码时，应用程序将从 Portal Studio SmartScanningSettings 加载实体名称、前导符和智能标记。如果当前页已启用智能扫描并且扫描的条形码包含智能标记，则应用程序不仅会填充实体名称，还会填充先前已定义了该实体的值的任何从属字段。如果条形码包含智能标记，则条形码被视为智能条码。</p>
+                    <table class="AutoNumber_p_Note1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 21px;" />
+                        <col style="width: 40px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">注释:</span></b></span></span>
+                            </td>
+                            <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;注释:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">应用程序如何填充页面上的字段取决于该页面是否已启用“智能扫描”以及条形码是否为智能条形码。有关启用智能扫描功能的信息，请参考《&#160;&#160;<span class="Emphasis">Opcenter Execution Medical Device and Diagnostics Portal Studio 用户指南</span>》或《&#160;&#160;<span class="Emphasis">Opcenter Execution Core Portal Studio 用户指南</span>》。</td>
+                        </tr>
+                    </table>
+                    <p class="Head4">在页面包含同一类型的多个字段时</p>
+                    <p class="_1body">可以定义自定义智能标记，以便在页面包含多个字段时区分字段。</p>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Barcode_Example"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="关闭" data-mc-alt2="打开" />条形码示例</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1bodyKeepWithNext">此图显示条形码示例。 </p>
+                    <p class="_1body">
+                        <img src="../../Resources/Images/BARCODE_400x74.png" style="width: 400;height: 74;" />
+                    </p>
+                    <p class="_1bodyKeepWithNext">在此示例中：</p>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">! 是前导符</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">#Container# 是智能标记</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">SCA 0001 是容器名称</td>
+                        </tr>
+                    </table>
+                    <p class="_1body">当车间操作员扫描此条形码时，应用程序会将 ! 从扫描字符串中去除，定位“容器”字段，并在字段中填充 “SCA.0001”。</p>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Cursor_Placement"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="关闭" data-mc-alt2="打开" />光标放置</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1body">当在条形码中扫描到终端器（例如，由扫描设备设置的水平制表符）时，应用程序会在填充扫描字段后将光标移动到下一个逻辑字段，无论条形码是否为智能（包含前导符）条形码。手动输入值的从属字段的解析方式与之相同。如果在条形码中没有扫描到终端器，则应用程序不会将光标移动到下一个字段，而条形码类型（智能或非智能）将决定应用程序是否填充该字段。</p>
+                    <p class="_1body">如果条形码为非智能条形码，则应用程序将在光标所在的字段填充实体名称，并且光标停留在最后一个字符的末尾。如果条形码为智能条形码，当光标焦点从目标字段中移除时，应用程序将填充该字段。无论条形码为什么类型，可以通过扫描设备自动移除焦点（如果已为设备配置了终端器），或者通过输入目标字段手动移除。</p>
+                    <table class="AutoNumber_p_Note1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 21px;" />
+                        <col style="width: 40px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">注释:</span></b></span></span>
+                            </td>
+                            <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;注释:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">来自扫描设备的终端器必须与 Portal Studio SmartScanningSettings 部分中定义的终端器值相匹配。有关智能扫描设置和定义终端器的信息，请参考《&#160;&#160;<span class="Emphasis">Opcenter Execution Medical Device and Diagnostics Portal Studio 用户指南</span>》或《&#160;&#160;<span class="Emphasis">Opcenter Execution Core Portal Studio 用户指南</span>》。有关为扫描设备配置终端器的信息，请参考随设备提供的文档。</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <MadCap:pageFooter class="FirstPage">
+            <p class="copyright">© Siemens 2020</p>
+        </MadCap:pageFooter>
+    </body>
+</html>

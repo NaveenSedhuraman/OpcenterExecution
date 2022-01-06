@@ -1,0 +1,158 @@
+{
+  "actionTemplateDefs": {
+    "openGlobalNavigationPanelCustomAction": {
+      "actionType": "JSFunction",
+      "method": "registerCtx",
+      "inputData": {
+        "key": "globalNavigationToolbar",
+        "value": {
+          "showPanel": "{{!(ctx.globalNavigationToolbar.showPanel=='true' && ctx.globalNavigationToolbar.viewName == inputData.viewName)}}",
+          "viewName": "{{inputData.viewName}}"
+        }
+      },
+      "deps": "js/appCtxService"
+    },
+    "MomActivatePrimaryNavigationPanel": {
+      "actionType": "JSFunction",
+      "method": "activatePrimaryNavigationPanel",
+      "inputData": {
+        "cfg": "{{inputData.cfg}}"
+      },
+      "deps": "js/mom.utils.service"
+    },
+    "MomStartTableEditing": {
+      "actionType": "JSFunction",
+      "method": "startTableEditing",
+      "inputData": {
+        "data": "{{inputData.data}}",
+        "uid": "{{inputData.uid}}",
+        "props": "{{inputData.props}}"
+      },
+      "deps": "js/mom.utils.service"
+    },
+    "MomStartEditing": {
+      "actionType": "JSFunction",
+      "method": "startEditing",
+      "inputData": {
+        "object": "{{inputData.object}}",
+        "editMap": "{{inputData.editMap}}"
+      },
+      "deps": "js/mom.utils.service"
+    },
+    "MomCancelEditing": {
+      "actionType": "JSFunction",
+      "method": "cancelEditing",
+      "inputData": {
+        "object": "{{inputData.object}}",
+        "editMap": "{{inputData.editMap}}"
+      },
+      "deps": "js/mom.utils.service"
+    },
+    "MomHttpRequest": {
+      "actionType": "JSFunctionAsync",
+      "method": "httpRequest",
+      "inputData": {
+        "config": "{{inputData.config}}",
+        "options": "{{inputData.options}}"
+      },
+      "deps": "js/mom.utils.service"
+    },
+    "MomHttpGet": {
+      "actionType": "JSFunctionAsync",
+      "method": "httpGet",
+      "inputData": {
+        "url": "{{inputData.url}}",
+        "config": "{{inputData.config}}",
+        "options": "{{inputData.options}}"
+      },
+      "deps": "js/mom.utils.service"
+    },
+    "MomHttpHead": {
+      "actionType": "JSFunctionAsync",
+      "method": "httpHead",
+      "inputData": {
+        "url": "{{inputData.url}}",
+        "config": "{{inputData.config}}",
+        "options": "{{inputData.options}}"
+      },
+      "deps": "js/mom.utils.service"
+    },
+    "MomHttpDelete": {
+      "actionType": "JSFunctionAsync",
+      "method": "httpDelete",
+      "inputData": {
+        "url": "{{inputData.url}}",
+        "config": "{{inputData.config}}",
+        "options": "{{inputData.options}}"
+      },
+      "deps": "js/mom.utils.service"
+    },
+    "MomHttpPost": {
+      "actionType": "JSFunctionAsync",
+      "method": "httpPost",
+      "inputData": {
+        "url": "{{inputData.url}}",
+        "data": "{{inputData.data}}",
+        "config": "{{inputData.config}}",
+        "options": "{{inputData.options}}"
+      },
+      "deps": "js/mom.utils.service"
+    },
+    "MomHttpPut": {
+      "actionType": "JSFunctionAsync",
+      "method": "httpPut",
+      "inputData": {
+        "url": "{{inputData.url}}",
+        "data": "{{inputData.data}}",
+        "config": "{{inputData.config}}",
+        "options": "{{inputData.options}}"
+      },
+      "deps": "js/mom.utils.service"
+    },
+    "MomHttpPatch": {
+      "actionType": "JSFunctionAsync",
+      "method": "httpPatch",
+      "inputData": {
+        "url": "{{inputData.url}}",
+        "data": "{{inputData.data}}",
+        "config": "{{inputData.config}}",
+        "options": "{{inputData.options}}"
+      },
+      "deps": "js/mom.utils.service"
+    },
+    "MomGetInputData": {
+      "actionType": "JSFunctionAsync",
+      "method": "getInputData",
+      "inputData": {
+        "input": "{{inputData.input}}"
+      },
+      "deps": "js/mom.utils.service"
+    },
+    "MomUpdateDataProvider": {
+      "actionType": "JSFunction",
+      "method": "updateDataProvider",
+      "inputData": {
+        "dataProvider": "{{inputData.dataProvider}}",
+        "collection": "{{inputData.collection}}",
+        "total": "{{inputData.total}}"
+      },
+      "deps": "js/mom.utils.service"
+    },
+    "MomGetCfg": {
+      "actionType": "JSFunctionAsync",
+      "method": "getCfg",
+      "inputData": {
+        "file": "{{inputData.file}}"
+      },
+      "deps": "js/mom.utils.service"
+    },
+    "MomCompositeAction": {
+      "actionType": "JSFunctionAsync",
+      "method": "compositeAction",
+      "inputData": {
+        "cfg": "{{inputData.cfg}}"
+      },
+      "deps": "js/mom.utils.service"
+    }
+  }
+}

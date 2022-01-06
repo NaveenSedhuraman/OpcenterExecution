@@ -1,0 +1,41 @@
+<aw-column class="numeric-filter" aw-init="data.context=subPanelContext">
+    <aw-label prop="data.title"></aw-label>
+    <aw-row height="3f">
+        <aw-column width="6">
+            <aw-listbox prop="data.context.column.filter.operation" list="data.operationTypeList.dbValue" />
+        </aw-column>
+        <aw-column width="4">
+            <aw-numeric class="single-value" prop="data.context.column.filter.numberValue" aw-enter-key="filterAction" visible-when="data.context.column.filter.operation.dbValue!=='range'" />
+        </aw-column>
+    </aw-row>
+    <aw-row class="range-contianer" height="5f">
+        <aw-column width="6" visible-when="data.context.column.filter.operation.dbValue==='range'">
+            <aw-label class="range-from-label" prop="data.fromTitle"></aw-label>
+            <aw-numeric prop="data.context.column.filter.startNumber" aw-enter-key="filterAction" />
+        </aw-column>
+        <aw-column width="1" visible-when="data.context.column.filter.operation.dbValue==='range'">
+            <div class="aw-ui-filterRangeSeparator aw-base-x-large">-</div>
+        </aw-column>
+        <aw-column width="6" visible-when="data.context.column.filter.operation.dbValue==='range'">
+            <aw-label class="range-to-label" prop="data.toTitle"></aw-label>
+            <aw-numeric prop="data.context.column.filter.endNumber" aw-enter-key="filterAction" />
+        </aw-column>
+    </aw-row>
+    <aw-row height="2f">
+        <aw-column width="5.75">
+            <aw-button button-type="negative" action="removeAction" exist-when="data.context.column.filter.isFilterApplied">
+                <aw-i18n>i18n.REMOVE_BUTTON_TITLE</aw-i18n>
+            </aw-button>
+            <aw-button button-type="disabled" exist-when="!data.context.column.filter.isFilterApplied">
+                <aw-i18n>i18n.REMOVE_BUTTON_TITLE</aw-i18n>
+            </aw-button>
+        </aw-column>
+        <aw-column width="0.5">
+        </aw-column>
+        <aw-column width="5.75">
+            <aw-button action="filterAction">
+                <aw-i18n>i18n.FILTER_TEXT</aw-i18n>
+            </aw-button>
+        </aw-column>
+    </aw-row>
+</aw-column>

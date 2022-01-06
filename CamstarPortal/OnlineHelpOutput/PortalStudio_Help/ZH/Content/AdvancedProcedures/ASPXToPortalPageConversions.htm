@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="zh-cn" xml:lang="zh-cn" data-mc-search-type="NGram" data-mc-help-system-file-name="PortalStudio_Help.xml" data-mc-path-to-help-system="../../" data-mc-toc-path="高级程序" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>将 ASPX 文件转换为门户页面</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/LDCSS1.2.4.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div role="main" id="mc-main-content">
+            <p class="Head2">将 ASPX 文件转换为门户页面<a name="kanchor125"></a></p>
+            <p class="_1body">Portal Studio 可用于将 ASPX 文件自动转换为门户页面并将其作为门户页面继续进行编辑和使用。</p>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="When_Converting_ASPX_Files_to_Portal_Pages"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="关闭" data-mc-alt2="打开" />在将 ASPX 文件转换为门户页面时</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1bodyKeepWithNext">以下注释适用于要转换为门户页面的 ASPX 文件：</p>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">转换实用程序将 Web 应用程序页面中的控件转换为 Portal Studio 中最接近的等效控件类型，并为逻辑部分创建 Web 部件。</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">DisplayInFrame=True 的 Web 应用程序按钮将转换为“页面操作”按钮。如果 DisplayInFrame=False，则这些按钮将转换为页面上的按钮控件。</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">尽可能保留相依项，例如当“资源”字段在 Web 应用程序页面中将 DependsOn 属性设为“容器”字段时。</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">页面的隐藏代码不会转换，因为该实用程序仅转换 ASPX 文件。</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">不支持 ASPX 文件的批转换。</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <p class="Head3-Side"><a name="How_to_Convert_ASPX_Files_to_Portal_Pages"></a>如何将 ASPX 文件转换为门户页面<a name="kanchor126"></a></p>
+            <p class="_1bodyKeepWithNext">按照以下步骤将 ASPX 文件转换为门户页面。</p>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>1.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">访问 Portal Studio。</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>2.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">单击<span class="User_Entry">转换 ASPX 页面</span>按钮。<span class="Emphasis">将显示“打开”弹出窗口。</span><br /></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>3.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">导航至并选择要转换的 ASPX 文件，然后单击<span class="User_Entry">打开</span>按钮。<span class="Emphasis">Portal Studio 将自动执行转换并保存该页面。将显示一条成功消息，指示文件已成功转换。</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Note3body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 62px;" />
+                <col style="width: 50px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">转换后的页面显示在前缀为 "ASPX_" 的页面列表中。可以在“属性”窗格中重命名该页面。</td>
+                </tr>
+            </table>
+        </div>
+        <MadCap:pageFooter class="FirstPage">
+            <p class="copyright">© Siemens 2020</p>
+        </MadCap:pageFooter>
+    </body>
+</html>

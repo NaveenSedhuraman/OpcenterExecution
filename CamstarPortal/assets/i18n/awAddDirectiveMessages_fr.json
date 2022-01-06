@@ -1,0 +1,41 @@
+{
+    "recentSectionTitle": "Récents",
+    "otherSectionTitle": "Autre",
+    "dataSetFileUploadTitle": "Fichier",
+    "relationPropLabel": "Relation",
+
+    "loading": "Chargement...",
+    "Filter": "Filtre",
+    "refine":"Affiner",
+    "objectType": "Type",
+    "newTabTitle": "Nouveau",
+    "paletteTabTitle": "Palette",
+    "searchTabTitle": "Rechercher",
+    "searchSectionTitle": "Rechercher",
+    "assignButtonTitle": "Affecter",
+    "ownProjectSectionTitle": "Projet propriétaire",
+    "addProjectButtonTitle": "Ajouter un projet",
+    "projectsSectionTitle": "Projets",
+    "addObjectPanelPinButtonToolTip": "Epingler le panneau",
+    "addObjectPanelUnpinButtonToolTip": "Débloquer le panneau",
+    "pasteSuccessful": "\"{0}\" a été ajouté.",
+    "submitSuccessful": "\"{0}\" a été soumis.",
+
+    "addButtonTitle" : "Ajouter",
+    "mutiRelationObject" : "{0} sélections ont été ajoutées.",
+
+    "resultTabTitle" : "Résultats",
+    "filterTabTitle" : "Filtres",
+    "keywordsLabel" : "Mots-clés",
+    "addButtonInSearch" : "Ajouter",
+    "datasetName" : "Nom",
+    "datasetDesc" : "Description",
+    "datasetType" : "Type",
+    "uploadFile" : "Importer le fichier",
+    "reference" : "Référence",
+    "moreLink"  : "Plus...",
+
+    "addObjectPanel_oneStepPinCommands": "Commandes Epingler en une étape Ajouter Panneau Objet",
+    "uiwidget_projectSectionCommands": "Commandes Section de projet",
+    "aw_compare": "Comparer"
+}

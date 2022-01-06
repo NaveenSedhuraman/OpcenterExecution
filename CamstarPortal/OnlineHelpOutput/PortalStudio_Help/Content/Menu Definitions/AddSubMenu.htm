@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="PortalStudio_Help.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Menu Definitions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Adding a Sub Menu to a Menu Definition</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/LDCSS1.2.4.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Horiz-rules_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div role="main" id="mc-main-content">
+            <p class="Head2">Adding a Sub Menu to a Menu Definition<a name="kanchor165"></a></p>
+            <p class="_1body">You can associate sub menus  with a menu after you have defined the Portal main menu. Any defined menu can be added as a sub menu.  Adding a sub menu enables you to add a group of transactions rather than adding each transaction individually. This continues the process of defining a multi-level menu structure.</p>
+            <p class="_1body">Sub menus are defined in the MenuItems pop-up.</p>
+            <p class="_1body">You can modify submenu icons  by entering an icon file name in the ApolloIcon field on the MenuItems pop-up. Icon files are located in the following directory:&#160;C:\Program Files (x86)\Camstar\Camstar Portal\assets\image. </p>
+            <p class="_1bodyKeepWithNext">You must use the following standards when adding an icon file in the ApolloIcon field:</p>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"> The file must be an .svg file located within the folder.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">The file must be 24-pixels wide which is indicated in the file name using '24'. </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">The file name must be entered as case-sensitive.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">The file name must be entered without the image size and file extension. </td>
+                </tr>
+            </table>
+            <p class="_3body">For example, if the icon file name appears in the folder as "cmdAttach24.svg" you should enter "cmdAttach" in the ApolloIcon field.</p>
+            <table class="AutoNumber_p_Note1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 20px;" />
+                <col style="width: 50px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                    </td>
+                    <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">Siemens does not support adding custom submenu icons.</td>
+                </tr>
+            </table>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />MenuItems Pop-up&#160;Field Definitions for Sub Menus</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <table style="width: 95%;caption-side: top;mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                                <td class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">Field </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">Definition</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                    <p class="CellHead-Left">Type</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody" style="color: #000000;">ApolloIcon</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody" style="color: #000000;">File name of the default icon for the menu item in the global toolbar.</p>
+                                    <p class="CellBody" style="color: #000000;"><span class="User_Entry" style="color: #000000;">Note:</span> The ApolloIcon field is case-sensitive and file names must be entered as they appear in the folder.<a name="V8_JW"></a></p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Caption</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Unique name for the sub menu.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Required</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">LabelName</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Determines the text that displays on the sub menu. </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">MenuDefinition</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Specifies a parent menu definition for the sub menu.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">PortalTab</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Specifies a portal tab.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2">
+                                    <p class="CellBody">Sequence</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2">
+                                    <p class="CellBody">Determines the sequence of the sub menu.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body2">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p class="Head3-Side"><a name="How_to_Add_a_Sub_Menu_to_a_Menu_Definition"></a>How to Add a Sub Menu to a Menu Definition<a name="kanchor166"></a></p>
+            <p class="_1bodyKeepWithNext">Follow these steps to add a sub menu to a menu definition:</p>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>1.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">Access Portal Studio.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>2.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">Click <span class="User_Entry">Show/Hide Catalog</span> if the UI&#160;Components catalog is hidden.<span class="Emphasis"> The UI Components catalog appears.</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>3.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">Select the <span class="User_Entry">Navigation</span> tab.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>4.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;4.&lt;/b&gt;">Expand <span class="User_Entry">Menus</span>.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>5.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;5.&lt;/b&gt;">Double-click a menu. <span class="Emphasis">The menu appears in the working area.</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>6.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;6.&lt;/b&gt;">Click <span class="User_Entry">More</span> for <span class="User_Entry">MenuItems</span>. <span class="Emphasis">The MenuItems pop-up appears.</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>7.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;7.&lt;/b&gt;">Select <span class="User_Entry">PortalMenuSubMenuChanges</span> from the drop-down and click <span class="User_Entry">Add</span>. <span class="Emphasis">A new sub menu appears in the list and fields appear in the right pane.</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>8.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;8.&lt;/b&gt;">Enter a caption for the sub menu in the <span class="User_Entry">Caption</span> field.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>9.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;9.&lt;/b&gt;">Enter optional information according to your business requirements. Refer to the field definitions table for information on the optional fields.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>10.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;10.&lt;/b&gt;">Repeat steps 7-9 for each sub menu you want to add.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>11.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;11.&lt;/b&gt;">Click <span class="User_Entry">OK</span>. <span class="Emphasis">The MenuItems pop-up closes.</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>12.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;12.&lt;/b&gt;">Click <span class="User_Entry">Save</span>. <span class="Emphasis">The application saves your changes  and displays a success message.</span> </td>
+                </tr>
+            </table>
+            <p class="Head3-Side"><a name="How_to_Add_a_Sub_Menu_Icon"></a>How to Add a Submenu Icon<a name="kanchor167"></a></p>
+            <p class="_1bodyKeepWithNext">Follow these steps to add a submenu icon:</p>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>1.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">Access Portal Studio.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>2.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">Select the <span class="User_Entry">Navigation</span> tab on the Components catalog and then double-click a menu. <span class="Emphasis">The menu appears in the working area.</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>3.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">Click <span class="User_Entry">More</span> for <span class="User_Entry">MenuItems</span>. <span class="Emphasis">The MenuItems modal  appears.</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>4.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;4.&lt;/b&gt;">Select <span class="User_Entry">PortalMenuSubMenuChanges</span> from the drop-down and select a submenu. <span class="Emphasis">The submenu's fields appear in the right pane.</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>5.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;5.&lt;/b&gt;">Enter an icon file name  in the <span class="User_Entry">ApolloIcon</span> field  that corresponds with the icon image file in the <span class="User_Entry">C:\Program Files (x86)\Camstar\Camstar Portal\assets\image</span> directory.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>6.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;6.&lt;/b&gt;">Click <span class="User_Entry">OK</span>. <span class="Emphasis">The MenuItems modal  closes.</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>7.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;7.&lt;/b&gt;">Click <span class="User_Entry">Save</span>. <span class="Emphasis">The application saves your changes  and displays a success message.</span></td>
+                </tr>
+            </table>
+        </div>
+        <MadCap:pageFooter class="FirstPage">
+            <p class="copyright">© Siemens 2020</p>
+        </MadCap:pageFooter>
+    </body>
+</html>

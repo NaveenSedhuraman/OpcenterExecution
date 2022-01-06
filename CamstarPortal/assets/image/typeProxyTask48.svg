@@ -1,0 +1,21 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 48 48">
+    <linearGradient id="Dark_Blue_Grad" data-name="Dark Blue Grad" x1="11.586" y1="3.586" x2="38.414" y2="30.414" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#73b4c8"/>
+      <stop offset="0.175" stop-color="#6aaec3"/>
+      <stop offset="0.457" stop-color="#529eb5"/>
+      <stop offset="0.809" stop-color="#2c839f"/>
+      <stop offset="1" stop-color="#147391"/>
+    </linearGradient>
+    <linearGradient id="paper_gradient" data-name="paper gradient" x1="27.5" y1="27.5" x2="47.5" y2="47.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.221" stop-color="#f8f8f8"/>
+      <stop offset="0.541" stop-color="#e5e5e5"/>
+      <stop offset="0.92" stop-color="#c6c6c6"/>
+      <stop offset="1" stop-color="#bebebe"/>
+    </linearGradient>
+  <rect x="0.5" y="0.5" width="47" height="47" fill="#dcdcdc" stroke="#464646" stroke-miterlimit="10"/>
+  <rect x="6" y="1" width="19" height="46" fill="#bebebe"/>
+  <rect x="3.5" y="10.5" width="43" height="13" rx="2" ry="2" stroke="#147391" stroke-miterlimit="10" fill="url(#Dark_Blue_Grad)"/>
+  <rect x="27.5" y="27.5" width="20" height="20" stroke="#464646" stroke-miterlimit="10" fill="url(#paper_gradient)"/>
+  <path d="M37.085,33.167L39.858,30.5H30.5v9l2.58-2.482S37.663,38.944,39,41c1.794,2.76-.5,3.25-0.5,3.25v0.5a2.026,2.026,0,0,0,2.444-.194,2.534,2.534,0,0,0,.791-1.37C42.716,38.47,37.085,33.167,37.085,33.167Z" fill="#3c91af" stroke="#147391"/>
+</svg>

@@ -1,0 +1,41 @@
+.awRoot .global-navigation-parent,
+aw-global-navigation {
+    transition: width $global_navigation_animation_duration ease;
+    width: auto;
+
+    @media (max-width: 28.75em) {
+        width: 0;
+    }
+}
+
+.global-navigation {
+    aw-global-navigation-panel {
+        height: $global_navigation_panel_height;
+    }
+
+    .global-navigation-toolbar {
+        aw-command-bar.aw-commands-commandBarVertical {
+            width: $global_navigation_toolbar_command_width;
+
+            .aw-commands-commandIconButton {
+                width: $global_navigation_toolbar_command_width;
+            }
+
+            .aw-commands-overflow {
+                .aw-commands-commandIconButton.aw-commands-commandWrapperVertical {
+                    width: $global_navigation_toolbar_command_width;
+                }
+            }
+        }
+
+        aw-avatar {
+            border-radius: 50%;
+        }
+
+        .aw-layout-row:first-child .aw-commands-commandBarVertical{
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 0;
+        }
+    }
+}

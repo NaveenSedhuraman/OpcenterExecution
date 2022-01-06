@@ -1,0 +1,13 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <g id="g860">
+    <path id="path2" d="M15,5h9V0H15Zm8-1H16V1h7Z" class="aw-theme-iconOutline" fill="#464646"/>
+    <path id="path6" d="M15,11h9V6H15Zm8-1H16V7h7Z" class="aw-theme-iconOutline" fill="#464646"/>
+    <path id="path10" d="M15,23h9V18H15Zm8-1H16V19h7Z" class="aw-theme-iconOutline" fill="#464646"/>
+    <path id="path14" d="M1.111,13.084,3.9,16l.676-.707L2.6,13.232l.067,0c2.348-.165,4.776-.336,5.8.669a2.2,2.2,0,0,1,.571,1.656H10a3.2,3.2,0,0,0-.874-2.387A5.329,5.329,0,0,0,5.316,12.1c-.81,0-1.679.059-2.564.12l1.859-1.946-.676-.707L1.11,12.522A.412.412,0,0,0,1.111,13.084Z" class="aw-theme-iconOutline" fill="#464646"/>
+    <path id="path16" d="M20,12v5H11V12Zm-8,2.484V16h1.077A.481.481,0,0,1,13,15.75a.5.5,0,0,1,1,0,.481.481,0,0,1-.077.25h1.154A.481.481,0,0,1,15,15.75a.5.5,0,0,1,1,0,.481.481,0,0,1-.077.25h1.154A.481.481,0,0,1,17,15.75a.5.5,0,0,1,1,0,.481.481,0,0,1-.077.25H19V13H17.944a.49.49,0,0,1,.056.219.5.5,0,1,1-1,0A.49.49,0,0,1,17.056,13H15.945a.5.5,0,1,1-.945.219A.49.49,0,0,1,15.056,13H13.945a.5.5,0,1,1-.945.219A.49.49,0,0,1,13.056,13H12Z" class="aw-theme-iconOutline" fill="#464646"/>
+    <path id="circle18" d="M12,14.484a.5.5,0,1,0,.5-.5A.5.5,0,0,0,12,14.484Z" class="aw-theme-iconOutline" fill="#464646"/>
+    <path id="circle20" d="M14,14.484a.5.5,0,1,0,.5-.5A.5.5,0,0,0,14,14.484Z" class="aw-theme-iconOutline" fill="#464646"/>
+    <path id="circle22" d="M16,14.484a.5.5,0,1,0,.5-.5A.5.5,0,0,0,16,14.484Z" class="aw-theme-iconOutline" fill="#464646"/>
+    <path id="circle24" d="M18,14.484a.5.5,0,1,0,.5-.5A.5.5,0,0,0,18,14.484Z" class="aw-theme-iconOutline" fill="#464646"/>
+  </g>
+</svg>

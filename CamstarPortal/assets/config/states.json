@@ -1,0 +1,127 @@
+{
+  "states": {
+    "login": {
+      "url": "/login",
+      "data": {},
+      "view": "login",
+      "dependencies": [
+        "js/aw-include.directive"
+      ],
+      "template": "<aw-include name=\"login\"></aw-include>"
+    },
+    "momSwacLocation": {
+      "url": "",
+      "type": "location",
+      "data": {
+        "label": ""
+      },
+      "controller": "MomDefaultLocationCtrl",
+      "templateUrl": "/html/mom.default.location.html",
+      "dependencies": [
+        "js/mom.default.location.controller"
+      ],
+      "abstract": true,
+      "parent": "root"
+    },
+    "momSwacSublocation": {
+      "parent": "momSwacLocation",
+      "data": {
+        "label": "",
+        "nameToken": "",
+        "context": {
+          "hideRightWall": true
+        }
+      },
+      "url": "/screen/:screen",
+      "type": "subLocation",
+      "controller": "MomSwacSubLocationCtrl",
+      "templateUrl": "/html/mom.swac.sublocation.html",
+      "dependencies": [
+        "js/mom.swac.sublocation.controller"
+      ],
+      "reloadOnSearch": false
+    },
+    "portal": {
+      "url": "/containers/screen/apollo",
+      "data": {},
+      "view": "portal",
+      "dependencies": [
+        "js/aw-include.directive"
+      ],
+      "template": "<aw-include name=\"portal\"></aw-include>"
+    },
+    "portalPageList": {
+      "url": "/pageList",
+      "data": {},
+      "view": "portalPageList",
+      "dependencies": [
+        "js/aw-include.directive"
+      ],
+      "template": "<aw-include name=\"portalPageList\"></aw-include>"
+    },
+    "root": {
+      "controller": "RootController",
+      "abstract": true,
+      "dependencies": [
+        "js/aw.root.controller",
+        "js/aw-column.directive",
+        "js/aw-global-navigation.directive",
+        "js/aw-include.directive",
+        "js/visible-when.directive"
+      ],
+      "templateUrl": "/html/rootView.html"
+    },
+    "errorLocation": {
+      "data": {
+        "browserSubTitle": {
+          "source": "/i18n/UIMessages",
+          "key": "MissingPageTitle"
+        },
+        "headerTitle": {
+          "source": "/i18n/UIMessages",
+          "key": "MissingPageTitle"
+        }
+      },
+      "type": "location",
+      "abstract": true,
+      "templateUrl": "/html/aw.default.location.html",
+      "controller": "DefaultLocationCtrl",
+      "dependencies": [
+        "js/aw.default.location.controller"
+      ],
+      "parent": "root"
+    },
+    "errorSubLocation": {
+      "controller": "ErrorSubLocationCtrl",
+      "data": {
+        "priority": 0,
+        "label": ""
+      },
+      "dependencies": [
+        "js/aw.error.sublocation.controller"
+      ],
+      "parent": "errorLocation",
+      "templateUrl": "/html/aw.error.sublocation.html",
+      "type": "subLocation",
+      "url": null,
+      "reloadOnSearch": false
+    },
+    "internalOAuth2State": {
+      "url": "/access_token={accessToken}",
+      "templateUrl": "/html/internalOAuth2State.html",
+      "controller": "internalOAuth2StateController",
+      "dependencies": [
+        "js/aw.internalOAuth2State.controller"
+      ]
+    },
+    "serverError": {
+      "url": "/serverError",
+      "view": "serverError",
+      "noAuth": true,
+      "template": "<aw-include name=\"serverError\"></aw-include>",
+      "dependencies": [
+        "js/aw-include.directive"
+      ]
+    }
+  }
+}

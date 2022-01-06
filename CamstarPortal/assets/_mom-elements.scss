@@ -1,0 +1,236 @@
+mom-homepage {
+    width: 100%;
+}
+
+.mom-homepage-container {
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 64px;
+    padding-right: 48px;
+}
+
+.mom-homepage-section-title {
+    height: 2rem;
+    color: #ffffff;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.mom-homepage-section {
+    min-height: calc(100vh - 128px);
+}
+
+.mom-homepage-card-section {
+    @extend .mom-homepage-section;
+    text-align: center;
+}
+
+.mom-homepage-tile-section {
+    @extend .mom-homepage-section;
+    text-align: left;
+}
+
+.mom-homepage-tile {
+    width: 148px;
+    height: 148px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 2px;
+    margin: 8px;
+    display: inline-block;
+    cursor: pointer;
+
+    .mom-homepage-tile-icon {
+        margin-top: 16px;
+        margin-bottom: 12px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 64px;
+        width: 64px;
+    }
+
+    .mom-homepage-tile-title {
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 17px;
+        font-size: 12px;
+        margin: 0px 8px;
+        width: 132px;
+        float: left;
+        /* Necessary to avoid misalignments due to line-height and wrapping */
+    }
+}
+
+mom-homepage-tile:first-child .mom-homepage-tile {
+    margin-left: 0;
+}
+
+.mom-homepage-tile:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+aw-command-bar.aw-commands-commandBarVertical[anchor="mom_homeRightSideBar"] {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    right: 16px;
+
+    .aw-commands-commandIconButton {
+        padding: 8px;
+        width: 48px;
+        height: 48px;
+
+        &:hover {
+            background-color: #003750;
+        }
+
+        .aw-commands-svg svg .aw-theme-iconOutline {
+            fill: #ffffff;
+        }
+    }
+}
+
+@media (max-width: 28.75em) {
+    .mom-homepage-container {
+        padding-right: 0;
+    }
+
+    aw-command-bar.aw-commands-commandBarVertical[anchor="mom_homeRightSideBar"] {
+        display: none;
+    }
+}
+
+.mom-modal-overlay {
+    transition: visibility 0s, opacity 0.5s linear;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.mom-modal-overlay.mom-modal-overlay-displayed {
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+    z-index: 6000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(30px);
+    background: rgba(220, 220, 220, 0.75) 50% 50% no-repeat;
+
+    .mom-modal-overlay-spinner {
+        background-image: url(image/grahCircleLoader80R.SVG);
+        background-repeat: no-repeat;
+        background-size: contain;
+        animation: spin 1s infinite linear;
+        width: 80px;
+        height: 80px;
+        position: fixed;
+        top: calc(50% - 40px);
+        left: calc(50% - 40px);
+        z-index: 6500;
+    }
+}
+
+.mom-information-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    min-height: 32px;
+    align-items: center;
+    background: #F0F0F0;
+    padding: 0 16px;
+    border: 1px solid #F0F0F0;
+    box-sizing: border-box;
+    margin: 8px 0;
+    color: #464646;
+
+    .mom-information-bar-icon {
+
+        svg {
+            width: 16px !important;
+            height: 16px !important;
+        }
+
+        svg path {
+            fill: #464646;
+        }
+    }
+
+    .mom-information-bar-link {
+        cursor: pointer;
+    }
+
+    .mom-information-bar-contents {
+        margin-left: 8px;
+    }
+
+    .mom-information-bar-text {
+        line-height: 1.5em;
+    }
+
+    .mom-information-bar-label {
+        font-weight: bold;
+    }
+
+    .mom-information-bar-link {
+        display: inline;
+        margin-left: 16px;
+    }
+}
+
+.mom-information-bar-help {
+    background: #E3FAFF;
+    border: 1px solid #E3FAFF;
+    color: #005F87;
+
+    .mom-information-bar-icon {
+
+        svg path {
+            fill: #005F87;
+        }
+    }
+}
+
+.mom-information-bar-success {
+    background: #EDFBF5;
+    border: 1px solid #EDFBF5;
+    color: #0B9B01;
+
+    .mom-information-bar-icon {
+
+        svg path {
+            fill: #0B9B01;
+        }
+    }
+}
+
+.mom-information-bar-warning {
+    background: #FFF7CD;
+    border: 1px solid #FFF7CD;
+    color: #DB780B;
+
+    .mom-information-bar-icon {
+
+        svg path {
+            fill: #DB780B;
+        }
+    }
+}
+
+.mom-information-bar-error {
+    background: #FBEEED;
+    border: 1px solid #FBEEED;
+    color: #DC0000;
+
+    .mom-information-bar-icon {
+
+        svg path {
+            fill: #DC0000;
+        }
+    }
+}

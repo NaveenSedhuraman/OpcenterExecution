@@ -1,0 +1,284 @@
+/***************************** for layouting *********************************************/
+aw-command-bar {
+    &.aw-commands-commandBarHorizontal {
+        .aw-commands-commandIconButton {
+            height: $horizontal_command_bar_button_height;
+            width: $horizontal_command_bar_button_width;
+            padding: $horizontal_command_bar_default_padding;
+            margin: $horizontal_command_bar_margin;
+        }
+
+        .aw-commands-cellDecorator div{
+            margin: $horizontal_command_bar_command_decorator_margin;
+        }
+    }
+
+    &.aw-commands-commandBarVertical {
+        width: $vertical_command_bar_width;
+
+        .aw-commands-commandIconButton{
+            padding: $vertical_command_bar_button_padding;
+            width: $vertical_command_bar_button_width;
+            height: $vertical_command_bar_button_height;
+            margin: $vertical_command_bar_button_margin;
+        }
+
+        .aw-commands-wrapper{
+            padding: $vertical_command_bar_padding;
+        }
+
+        .aw-commands-overflow {
+            .aw-commands-commandIconButton.aw-commands-commandWrapperVertical {
+                padding: $vertical_command_bar_button_padding;
+                width: $vertical_command_bar_button_width;
+                height: $vertical_command_bar_button_height;
+                margin: $vertical_command_bar_button_margin;
+            }
+        }
+
+        .aw-commands-wrapper.aw-commands-overflow {
+            padding: $vertical_command_bar_with_labels_overflown_button_padding;
+            overflow-y: auto;
+        }
+    }
+
+    aw-command {
+        .aw-commands-commandIconButton {
+            -webkit-transition: $command_bar_width_height_transition;
+            -moz-transition: $command_bar_width_height_transition;
+            -o-transition: $command_bar_width_height_transition;
+            -ms-transition: $command_bar_width_height_transition;
+            transition: $command_bar_width_height_transition;
+        }
+
+        .aw-widgets-groupCommand {
+            width: $command_bar_group_command_icon_size;
+        }
+
+        .aw-widgets-groupCommandStack {
+            margin: $command_bar_group_command_icon_margin;
+        }
+
+        .aw-commands-cellDecorator {
+            position: relative;
+            top: $vertical_command_bar_command_decorator_top;
+            right: $vertical_command_bar_command_decorator_right;
+            div{
+                position: absolute;
+                width: $command_bar_command_decorator_width;
+                border-radius: $command_bar_command_decorator_border_radius;
+                height: $command_bar_command_decorator_height;
+                font-size: $command_bar_command_decorator_font_size;
+                line-height: $command_bar_command_decorator_line_height;
+            }
+        }
+    }
+
+    .aw-commands-commandIconButton {
+        .aw-commands-svg {
+            width: $command_bar_svg_size;
+            height: $command_bar_svg_size;
+            padding: $command_bar_svg_padding;
+        }
+    }
+}
+
+.aw-layout-globalToolbarCommands {
+    aw-command-bar {
+        .aw-commands-wrapper{
+            padding: $global_toolbar_command_bar_padding;
+        }
+
+        .aw-commands-commandIconButton {
+            padding: $global_toolbar_command_bar_padding;
+            width: $global_toolbar_command_bar_button_width;
+            height: $global_toolbar_command_bar_button_height;
+        }
+
+        &.aw-commands-commandBarVertical{
+            width: $global_toolbar_command_bar_width;
+        }
+
+        aw-command .aw-commands-commandIconButton .aw-commands-svg{
+            padding: $global_toolbar_command_bar_svg_padding;
+        }
+    }
+
+
+    .aw-widgets-groupCommandStack {
+        margin: $global_toolbar_command_bar_group_icon_margin;
+    }
+}
+
+/************************** for showing labels on command bar ***********************************/
+
+/************************** For supporting AW show labels on command bar usecases ***************************/
+.aw-commands-showIconLabel {
+    aw-command-bar:not(.aw-layout-userSessionCommands) {
+
+        .aw-commands-commandIconButtonText {
+            width: $command_bar_label_width;
+            height: $command_bar_label_height;
+            margin: $command_bar_label_margin;
+            font-size: $command_bar_label_font_size;
+            line-height: $command_bar_label_line_height;
+            display: block;
+            word-wrap: break-word;
+            white-space: normal;
+            overflow: hidden;
+            padding: $command_bar_label_padding;
+            max-height: $command_bar_label_max_height;
+            // clamp line; not yet supported for IE
+            // start using for other browsers anyway
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+        }
+
+        &.aw-commands-commandBarHorizontal {
+            .aw-commands-commandIconButtonText {
+                height: $horizontal_command_bar_label_height;
+            }
+
+            .aw-commands-commandIconButton {
+                height: $horizontal_command_bar_with_labels_button_height;
+                width: $horizontal_command_bar_with_labels_button_width;
+                padding: $horizontal_command_bar_with_labels_button_padding;
+                margin: $horizontal_command_bar_with_labels_button_margin;
+            }
+        }
+
+        &.aw-commands-commandBarVertical {
+            .aw-commands-commandIconButton {
+                height: $vertical_command_bar_with_labels_button_height;
+                max-height: $vertical_command_bar_with_labels_button_max_height;
+                width: $vertical_command_bar_with_labels_button_width;
+                padding: $vertical_command_bar_with_labels_button_padding;
+                margin: $vertical_command_bar_with_labels_button_margin;
+            }
+
+            .aw-commands-cellDecorator div {
+                margin: $vertical_command_bar_with_labels_command_decorator_margin;
+            }
+
+            .aw-commands-overflow .aw-commands-commandIconButton.aw-commands-commandWrapperVertical {
+                padding: $vertical_command_bar_with_labels_button_padding;
+            }
+        }
+
+        aw-command {
+            .aw-widgets-groupCommandStack {
+                margin: $command_bar_with_labels_group_command_icon_margin;
+            }
+        }
+
+        .aw-commands-commandIconButton .aw-commands-svg {
+            width: $command_bar_with_labels_svg_size;
+            height: $command_bar_with_labels_svg_size;
+            padding: $command_bar_with_labels_svg_padding;
+            margin: $command_bar_with_labels_svg_margin;
+        }
+
+        .aw-widgets-groupCommandStack svg{
+            padding: $command_bar_with_labels_group_command_icon_padding;
+        }
+    }
+
+    .global-navigation-toolbar {
+        aw-command-bar:not(.aw-layout-userSessionCommands){
+            &.aw-commands-commandBarVertical {
+                .aw-commands-commandIconButton {
+                    height: $global_navigation_toolbar_command_with_labels_height;
+                    max-height: $global_navigation_toolbar_command_with_labels_max_height;
+                    width: $global_navigation_toolbar_command_with_labels_width;
+                    padding: $global_navigation_toolbar_command_with_labels_padding;
+                    margin: $global_navigation_toolbar_command_with_labels_margin;
+                }
+            }
+        }
+    }
+
+    .aw-layout-infoCommandbar, .aw-layout-navigationCommandbar {
+        margin: $vertical_command_bar_margin;
+    }
+
+    // may changed when global toolbar converted to LHN
+    .aw-layout-globalToolBarTransition {
+        flex: 0 0 6rem;
+    }
+
+    .aw-layout-globalToolBarOverlay {
+        width: auto;
+    }
+
+    .aw-layout-globalToolBarCmdClosed, .aw-layout-globalToolBarCmdOpen {
+        margin: $global_toolbar_command_bar_with_labels_chevron_icon_margin;
+    }
+}
+
+/*************************  applies when 'showCommandLabels' is set to true  **********************************/
+aw-command-bar{
+    &.aw-commands-commandBarHorizontal .aw-commands-showIconLabel {
+        .aw-commands-commandIconButton {
+            height: $horizontal_command_bar_with_labels_button_height;
+            width: $horizontal_command_bar_with_labels_button_width;
+            padding: $horizontal_command_bar_with_labels_button_padding;
+            margin: $horizontal_command_bar_with_labels_button_margin;
+        }
+    }
+
+    .aw-commands-showIconLabel{
+        aw-command {
+            .aw-widgets-groupCommandStack {
+                margin: $command_bar_with_labels_group_command_icon_margin;
+            }
+        }
+
+        .aw-commands-commandIconButton .aw-commands-svg {
+            width: $command_bar_with_labels_svg_size;
+            height: $command_bar_with_labels_svg_size;
+            padding: $command_bar_with_labels_svg_padding;
+            margin: $command_bar_with_labels_svg_margin;
+        }
+
+        .aw-commands-commandIconButtonText {
+            width: $command_bar_label_width;
+            height: $command_bar_label_height;
+            margin: $command_bar_label_margin;
+            font-size: $command_bar_label_font_size;
+            line-height: $command_bar_label_line_height;
+            display: block;
+            word-wrap: break-word;
+            white-space: normal;
+            overflow: hidden;
+            padding: $command_bar_label_padding;
+            max-height: $command_bar_label_max_height;
+        }
+
+        .aw-widgets-groupCommandStack svg{
+            padding: $command_bar_with_labels_group_command_icon_padding;
+        }
+    }
+
+    &.aw-commands-commandBarVertical .aw-commands-showIconLabel {
+        .aw-commands-commandIconButton {
+            height: $vertical_command_bar_with_labels_button_height;
+            max-height: $vertical_command_bar_with_labels_button_max_height;
+            width: $vertical_command_bar_with_labels_button_width;
+            padding: $vertical_command_bar_with_labels_button_padding;
+            margin: $vertical_command_bar_with_labels_button_margin;
+        }
+
+        aw-command .aw-widgets-groupCommand {
+            padding: $command_bar_with_labels_group_command_icon_padding;
+        }
+
+        .aw-commands-cellDecorator div {
+            margin: $vertical_command_bar_with_labels_command_decorator_margin;
+        }
+
+        .aw-commands-overflow .aw-commands-commandIconButton.aw-commands-commandWrapperVertical {
+            padding: $vertical_command_bar_with_labels_button_padding;
+        }
+    }
+}

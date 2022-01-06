@@ -1,0 +1,6 @@
+<aw-scrollpanel width="35f" exist-when="conditions.isPageListPanelVisible">
+    <div class="cep-pageList-title">{{data.selectedMenu}}</div>
+    <aw-tree name="'pageListTree'" tree="data.menu">
+        <aw-link prop="node"></aw-link>
+    </aw-tree>
+</aw-scrollpanel>

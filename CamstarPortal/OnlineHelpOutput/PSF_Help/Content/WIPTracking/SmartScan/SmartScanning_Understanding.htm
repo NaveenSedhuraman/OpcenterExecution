@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-US" xml:lang="en-US" data-mc-search-type="Stem" data-mc-help-system-file-name="PortalSFUG.xml" data-mc-path-to-help-system="../../../" data-mc-toc-path="Smart Scanning" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Understanding Smart Scanning</title>
+        <link href="../../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Resources/Stylesheets/LDCSS1.2.4.css" rel="stylesheet" type="text/css" />
+        <script src="../../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div role="main" id="mc-main-content">
+            <p class="Head2">Understanding Smart Scanning</p>
+            <p class="_1bodyKeepWithNext"><a name="kanchor285"></a>Smart scanning is available  on all Portal pages.  The feature allows the application to populate one or more fields when you scan a barcode. For example, scanning a barcode on a container could populate not only a Container field, but also any fields displaying information about that container. A barcode contains one or more of the following:</p>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">A preamble, a single character indicating whether the barcode is a smart barcode. When the application detects a preamble, it identifies the barcode as smart and strips the preamble before reading the smart tag.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">A smart tag, a prefix attached to a scan string indicating entity type; for example,  container. The application uses the smart tag to locate the field to populate with the entity name.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">The entity name.</td>
+                </tr>
+            </table>
+            <p class="_1body">A smart barcode will always contain an entity name, preamble, and smart tag. Preambles and smart tags are defined in the Portal Studio SmartScanningSettings section. Refer to the <span class="Emphasis">Opcenter Execution Medical Device and Diagnostics Portal Studio User Guide</span> or the <span class="Emphasis">Opcenter Execution Core Portal Studio User Guide</span> for information on the settings in Portal Studio  and configuring preambles and smart tags.</p>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="When_Scanning_a_Barcode"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />When Scanning a Barcode</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1body">When a shop floor operator scans a barcode, the application loads the entity name, preamble, and smart tag from the Portal Studio SmartScanningSettings. If the current page is smart scan-enabled and the scanned barcode contains a smart tag, the application populates not only the entity name but also any dependent fields for which values have been defined previously for that entity. If the barcode contains a smart tag, the barcode is considered a smart barcode.</p>
+                    <table class="AutoNumber_p_Note1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 20px;" />
+                        <col style="width: 50px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                            </td>
+                            <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">How the application populates the fields on a page depends on whether the page is Smart Scan-enabled and whether the barcode is smart. Refer to the <span class="Emphasis">Opcenter Execution Medical Device and Diagnostics Portal Studio User Guide</span> or the <span class="Emphasis">Opcenter Execution Core Portal Studio User Guide</span> for information on enabling the smart scanning feature.</td>
+                        </tr>
+                    </table>
+                    <p class="Head4">When a Page Contains Multiple Fields of the Same Type</p>
+                    <p class="_1body">You can define custom smart tags to distinguish between fields when a page contains multiple fields.</p>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Barcode_Example"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Barcode Example</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1bodyKeepWithNext">This image shows an example of a barcode. </p>
+                    <p class="_1body">
+                        <img src="../../Resources/Images/BARCODE_400x74.png" style="width: 400;height: 74;" />
+                    </p>
+                    <p class="_1bodyKeepWithNext">In this example:</p>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">! is the preamble</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">#Container# is the smart tag</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">SCA.0001 is the container name</td>
+                        </tr>
+                    </table>
+                    <p class="_1body">When a shop floor operator scans this barcode, the application strips the ! from the scan string, locates the Container field, and populates the field with SCA.0001.</p>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Cursor_Placement"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Cursor Placement</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1body">When a barcode is scanned with a terminator (for example, a horizontal tab, set by the scanning device), the application moves the cursor to the next logical field after populating the scanned field regardless of whether the barcode is Smart (contains a preamble) or Not Smart. Dependent fields are resolved the same as they are for values entered manually. If the barcode is scanned without a terminator, the application does not move the cursor to the next field and the barcode type (Smart or Not Smart) determines whether the application populates the field.</p>
+                    <p class="_1body">If the barcode is Not Smart, the application populates the field the cursor is on with the entity name and the cursor sits at the end of the last character. If the barcode is Smart, the application populates the field when the focus is removed from the target field. Regardless of barcode type, the focus may be removed automatically by the scanning device if a terminator has been configured for the device or manually by tabbing off of the target field.</p>
+                    <table class="AutoNumber_p_Note1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 20px;" />
+                        <col style="width: 50px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                            </td>
+                            <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">The terminator coming from the scanning device must match the terminator value defined in the Portal Studio SmartScanningSettings sections. Refer to the <span class="Emphasis">Opcenter Execution Medical Device and Diagnostics Portal Studio User Guide</span> or the <span class="Emphasis">Opcenter Execution Core Portal Studio User Guide</span> for information on Smart Scanning Settings and defining terminators. Refer to the documentation supplied with the device for information on configuring a terminator for a scanning device.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <MadCap:pageFooter class="FirstPage">
+            <p class="copyright">© Siemens 2020</p>
+        </MadCap:pageFooter>
+    </body>
+</html>

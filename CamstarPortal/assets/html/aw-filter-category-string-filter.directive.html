@@ -1,0 +1,29 @@
+<div  title="{{category.displayName}}" >
+    <aw-filter-category-searchbox category="category" index="category.index" visible-when="category.showFilterText"
+        filter-action="filterAction" >
+    </aw-filter-category-searchbox>
+    <aw-filter-category-contents
+        search-action="searchAction"
+        filter="item"
+        category= "category"
+        ng-repeat="item in results = ( category.filterValues | filterInFilters : filterAction ? '' : category.filterBy ) | limitTo: numberOfFiltersShown(category)">
+    </aw-filter-category-contents >
+     <div class="aw-ui-filterNameLabelMore aw-base-normal aw-ui-filterCategoryLabelEnabled"
+           ng-show="numberOfFiltersShown(category)>category.defaultFilterValueDisplayCount"
+        title="{{lessText}}" ng-click="toggleFiltersSoa(false)"
+        visible-when="isLessLinkVisible(category)">
+           <span id="filterLabelColorBlock1"  class="aw-ui-filterNameColorBlock {{filter.color}}"
+              visible-when="category.showEnabled && category.showColor">&nbsp;
+            </span>
+        {{lessText}}
+     </div>
+     <div class="aw-ui-filterNameLabelMore aw-base-normal aw-ui-filterCategoryLabelEnabled"
+           ng-show="results.length >= numberOfFiltersShown(category) && results.length > category.defaultFilterValueDisplayCount"
+        title="{{moreText}}" ng-click="toggleFiltersSoa(true)"
+        visible-when="isMoreLinkVisible(category)" >
+           <span id="filterLabelColorBlock1"  class="aw-ui-filterNameColorBlock {{filter.color}}"
+              visible-when="category.showEnabled && category.showColor">&nbsp;
+            </span>
+        {{moreText}}
+     </div>
+</div>

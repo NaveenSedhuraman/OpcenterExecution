@@ -1,0 +1,11 @@
+<aw-showobject-page class="aw-layout-flexColumn aw-page" locationPanelStyle="locationPanelStyle" headerTitle="headerTitle" browserTitle="browserTitle" browserSubTitle="browserSubTitle" subLocationTabs="subLocationTabs" headerViewModel="headerViewModel" headerProperties="headerProperties">
+    <mom-modal-overlay
+        start-event="modal.progress.start"
+        end-event="modal.progress.end"
+        content-class="mom-modal-overlay-spinner"></mom-modal-overlay>
+    <mom-modal-overlay
+        start-event="modal.overlay.show"
+        end-event="modal.overlay.hide"
+        content-class="mom-modal-overlay-screen"></mom-modal-overlay>
+    <ui-view  class="aw-layout-flexColumn"/>
+</aw-showobject-page>

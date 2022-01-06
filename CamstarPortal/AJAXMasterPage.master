@@ -1,0 +1,71 @@
+<%-- Copyright Siemens 2019   --%>
+
+<%@ master language="C#" codefile="AJAXMasterPage.master.cs" autoeventwireup="true" inherits="Camstar.Portal.AJAXMasterPage" %>
+<!doctype html>
+<html>
+    <head runat="server">
+        <title>Opcenter Execution</title>
+
+        <asp:PlaceHolder runat="server">
+            <%= this.styleSheetString %>
+        </asp:PlaceHolder> 
+        
+    </head>
+    <body class="body-main <%=currentTheme%>-theme master-page AJAXMaster-page">
+        <div id="mod" class="mod" style="display: none">
+            <div id="modImage" class="modImage">
+                <img src="themes/<%= currentTheme %>/images/icons/loading-128x128.gif" alt="" />
+            </div>
+        </div>
+        <form id="AJAXForm" novalidate runat="server">
+           <cwpf:WebPartFrameworkManager ID="WebPartManager" runat="server" EnableClientScript="false" />            
+            <asp:ScriptManager ID="ScriptManager" runat="server" EnablePartialRendering="true" EnableCdn="false" EnableScriptGlobalization="true">
+                
+                <scripts>
+                    <asp:ScriptReference Name="jquery"/>
+                    <asp:ScriptReference Name="camstar"/>
+                    <asp:ScriptReference Name="camstar.webcontrols"/>
+                    <asp:ScriptReference Name="camstar.scripts"/>
+                    <asp:ScriptReference Path="~/Scripts/jquery/tiny_mce/tinymce.min.js" /> 
+                    <asp:ScriptReference Path="~/Scripts/jquery/datepicker/jquery-ui-timepicker-addon.js" /> 
+                    <asp:ScriptReference Name="camstar.webcontrols.jqGrid"/>
+                    <asp:ScriptReference Path="~/Scripts/jsPlumb/jsplumb.js" />
+                    <asp:ScriptReference Name="workspaceoverride"/>                                        
+                    <asp:scriptreference path="~/Scripts/User/User.js" /> 
+                </scripts>
+                    
+            </asp:ScriptManager>
+
+            <cwfw:label runat="server" Visible="false" ID="YesLabel" LabelName="Web_Yes" LabelType="Designer" />
+            <cwfw:label runat="server" Visible="false" ID="NoLabel" LabelName="Web_No" LabelType="Designer" />
+            <cwfw:label runat="server" Visible="false" ID="OkLabel" LabelName="OKButton" LabelType="Designer" />
+            <cwfw:label runat="server" Visible="false" ID="CloseLabel" LabelName="Web_Close" LabelType="Designer" />
+            <cwfw:label runat="server" Visible="false" ID="MessageTitleLabel" LabelName="ConfirmationMessageTitle" LabelType="Designer" />
+            <div class="form-container">
+                <div id="scrollablepanel" class="form-scrollablepanel">
+                    <cwpf:WebPartBaseZone ID="StaticZoneTop" CssClassBrowse="zone-static" runat="server">
+                        <ZoneTemplate>
+                            <cwpfc:StatusBarControl ID="StatusBar" runat="server" />
+                            <cwpfc:WorkflowProgress ID="WorkflowProgressButtonsBar" runat="server" />
+                        </ZoneTemplate>
+                    </cwpf:WebPartBaseZone>
+                    <div class="test">
+                        <div id="DynamicContentDiv">
+                            <div id="TemplateContentDiv" class="ui-form-contentpanel">
+                                <asp:ContentPlaceHolder ID="AJAXContentPlaceHolder" runat="server" />
+                            </div>
+                        </div>
+                        <cwpf:WebPartBaseZone ID="StaticZoneBottom" CssClassBrowse="zone-static" runat="server">
+                            <ZoneTemplate>
+                                <cwpfc:ButtonsBarControl ID="ButtonsBar" runat="server" />
+                                <cwpfc:WorkflowNavigationButtons ID="NavigationButtonsBar" runat="server" />
+                            </ZoneTemplate>
+                        </cwpf:WebPartBaseZone>
+                    </div>
+                </div>
+                <cwpfc:SideBar ID="SideBarRight" Side="Right" IsResponsive="false" runat="server" />
+            </div>
+            <csc:FloatingFrame ID="FloatingFrame" runat="server" />
+        </form>
+    </body>
+</html>

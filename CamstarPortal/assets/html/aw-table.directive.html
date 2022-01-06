@@ -1,0 +1,17 @@
+<div class="aw-jswidgets-grid aw-layout-flexColumn aw-widgets-droptable"
+  ng-class="{'aw-jswidgets-selectionEnabled': enableSelection, 'aw-jswidgets-gridEditing': isEditing, 'aw-widgets-showDecorators' : dataprovider.showDecorators}">
+    <!--  LCS-109882 move aw-popup-command-bar to 1st element to make the position calculation correct in position:fixed-->
+    <!--  In chrome it works OK but for IE we have to move this to the top -->
+    <aw-popup-command-bar ng-if="::(showContextMenu === true)" anchor="{{(dataprovider.json.contextMenuCommandsAnchor) ? (dataprovider.json.contextMenuCommandsAnchor) : 'aw_contextMenu2'}}" own-popup="true" close-on-click="true" ></aw-popup-command-bar>
+    <!-- No Results Message -->
+    <div class="aw-widgets-noResultsLabel" ng-show="dataProvider.noResults">{{dataProvider.noResultsFound}}</div>
+    <!-- ui-grid -->
+    <div ng-if="!dataProvider.noResults && !useTree" ui-grid="gridOptions" class="aw-jswidgets-actualGrid aw-layout-flexColumn" aw-table-auto-resize ui-grid-empty-base-layer="false" ui-grid-infinite-scroll ui-grid-resize-columns ui-grid-move-columns ui-grid-selection ui-grid-pinning                   aw-right-click="handleRightClick($event)" aw-long-press="handlePressAndHold($event)"/>
+    <div ng-if="!dataProvider.noResults && useTree" ui-grid="gridOptions" class="aw-jswidgets-actualGrid aw-layout-flexColumn" aw-table-auto-resize ui-grid-empty-base-layer="false" ui-grid-infinite-scroll ui-grid-resize-columns ui-grid-move-columns ui-grid-selection ui-grid-pinning ui-grid-tree-view aw-right-click="handleRightClick($event)" aw-long-press="handlePressAndHold($event)"/>
+    <div ng-if="!dataProvider.noResults && gridOptions.enableGridMenu" class="ui-grid-menu-button" >
+        <button type="button"
+            class="aw-commands-commandIconButton icon-override" >
+            <aw-icon id="cmdSettings"  ng-class="aw-commands-svg"></aw-icon>
+        </button>
+    </div>
+</div>

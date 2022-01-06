@@ -1,0 +1,26 @@
+// Copyright 2018 Siemens Product Lifecycle Management Software Inc.
+// aw-label
+.aw-widgets-propertyLabelTop {
+    padding: $label_padding;
+    font-size: $label_font_size;
+    font-weight: $label_text_font_weight;
+}
+
+.aw-widgets-propertyNonEditValue {
+    font-size: $label_font_size;
+    font-weight: $label_value_font_weight;
+    word-wrap: break-word;
+}
+
+.aw-widgets-spaceBetween {
+    margin-bottom: $label_margin_bottom;
+}
+
+// asterix on required fields
+.afx-property-required:after {
+    content: "*";
+    font-size: $default_font_size;
+    line-height: $default_font_size;
+    display: inline-block;
+    margin-left: $listbox_cell_list_item_content_padding;
+}

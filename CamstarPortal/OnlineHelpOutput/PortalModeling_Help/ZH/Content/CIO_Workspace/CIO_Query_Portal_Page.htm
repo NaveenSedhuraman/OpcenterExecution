@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="PortalModeling.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>定义 CIO 查询门户页面</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/LDCSS1.2.4.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Horiz-rules_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div role="main" id="mc-main-content">
+            <p class="Head2"><a name="Defining_CIO_Query_Portal_Pages"></a>定义 CIO 查询门户页面</p>
+            <p class="_1body"><span style="color: #ff0000;">[US30047 V8 RH]</span>
+            </p>
+            <p class="_1body"><a name="kanchor195"></a>可以使用“CIO 查询门户页面”对象定义一系列查询，以便将结果返回到“CIO 查询门户页面查询”。有关定义用户查询的信息，请参考《<span class="Emphasis">Portal Modeling 用户指南</span>》和“<a href="CIO_User_Query.htm#Defining_CIO_User_Queries" class="MCXref xref">定义 CIO 用户查询</a>”。 </p>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="When_Defining_Query_Portal_Pages"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />定义 CIO 查询门户页面</a><a name="When_Defining_CIO_Query_Portal_Pages_PDF"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1body"><a name="kanchor196"></a>必须使用“CIO 用户查询”页来定义 CIO 用户查询，然后才能定义“CIO 查询门户页面”对象上的字段。</p>
+                    <p class="_1body">可以在“查询门户页面查询”表格中最多定义四个查询。应用程序将顺序自动指派给“查询门户页面查询”表格中列出的查询。</p>
+                    <p class="_1body">“查询门户页面查询”表格中列出的第一个查询应该是汇总类型的查询。此查询不需要参数。汇总类型查询的一个示例是显示今天的 CIO 日志条目行的查询。 </p>
+                    <p class="_1body">第二个查询必须具有与第一个查询中的行同名的参数。应用程序根据第一个查询中的行选择填充第二个查询的结果。应用程序根据第二个查询中的行选择填充第三个查询的结果。应用程序根据第三个查询中的行选择填充第四个查询。<span style="color: #ff00ff;">有关执行 CIO 查询门户页面查询的信息，请参考“</span><a href="../03aInquiries/Query_Portal_Page_Inquiry.htm" style="color: #ff00ff;" class="MCXref xref">执行 CIO 查询门户页面查询</a><span style="color: #ff00ff;">”。</span></p>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="CIO_Query_Portal_Page_Object_Field_Definitions"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />CIO 查询门户页面对象字段定义</a><a name="CIO_Query_Portal_Page_Object_Field_Definitions_PDF"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1bodyKeepWithNext">此表定义“CIO 查询门户页面”对象的独有字段。</p>
+                    <p class="_1bodyKeepWithNext">请参考“<a href="../Getting Started/Modeling_Page.htm#Common" class="MCXref xref">建模页上的公共字段</a>”获取有关所有建模对象的公共字段的信息。</p>
+                    <table style="width: 95%;margin-left: auto;margin-right: 0;mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                        <col style="width: 150px;" class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                        <col style="width: 132px;" class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                                <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">字段</p>
+                                </th>
+                                <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">定义</p>
+                                </th>
+                                <th class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                    <p class="CellHead-Left">类型</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td colspan="3" class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellSectionHeader">查询门户页面查询</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">查询门户页面查询表格</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">此表格显示为此实例定义的查询列表。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">&#160;</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBodyIndented">查询名称 </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">查询的名称。</p>
+                                    <p class="CellBody"><span class="User_Entry">注：</span>如果未指定，此字段将默认为“用户查询”。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBodyIndented">顺序</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">查询的顺序。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">仅显示</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                    <p class="CellBodyIndented">用户查询</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                    <p class="CellBody">要执行的 CIO 用户查询。 </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body1">
+                                    <p class="CellBody">必需</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p class="Head3-Side" data-mc-conditions=""><a name="How_to_Define_a_CIO_Query_Portal_Page"></a>如何定义 CIO 查询门户页面</p>
+            <p class="_1bodyKeepWithNext" data-mc-conditions=""><a name="kanchor197"></a>按照以下步骤定义“CIO 查询门户页面”：</p>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>1.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">打开 <span class="User_Entry">CIO 查询门户页面</span>对象。<span class="Emphasis">随即“建模”页中将显示“CIO 查询门户页面”对象。</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>2.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">单击<span class="User_Entry">新建</span>。 <span class="Emphasis">显示用于定义新实例的空白字段。</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>3.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">在 <span class="User_Entry">CIO 查询门户页面</span>字段中输入查询门户页面的名称。</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>4.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;4.&lt;/b&gt;">单击“查询门户页面查询”表格上的<span class="User_Entry">添加新行</span>。 <span class="Emphasis">将显示新行。</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>5.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;5.&lt;/b&gt;">在<span class="User_Entry">查询名称</span>字段中输入第一个查询的名称。</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>6.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;6.&lt;/b&gt;">从列表中选择<span class="User_Entry">用户查询</span>。</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>7.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;7.&lt;/b&gt;">重复步骤 4-6 以添加查询。</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>8.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;8.&lt;/b&gt;">根据您的业务需求输入可选信息。有关可选字段的信息，请参考字段定义表。</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>9.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;9.&lt;/b&gt;">单击<span class="User_Entry">保存</span>。 <span class="Emphasis">应用程序保存建模对象并显示成功消息。</span><a name="last"></a></td>
+                </tr>
+            </table>
+        </div>
+        <MadCap:pageFooter class="FirstPage">
+            <p class="copyright">© Siemens 2020</p>
+        </MadCap:pageFooter>
+    </body>
+</html>

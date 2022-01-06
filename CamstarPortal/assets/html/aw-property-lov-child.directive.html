@@ -1,0 +1,11 @@
+<div class="aw-jswidgets-nestingListItemDisplay" ng-class="{'aw-state-selected': lovEntry.sel, 'aw-state-attention': lovEntry.attn}" ng-click="setLovEntry(lovEntry, $event)" tabindex="0">
+    <div class="aw-jswidgets-lovIndicatorContainer">
+        <div class="aw-jswidgets-lovchildren" ng-if="lovEntry.hasChildren" ng-class="lovEntry.indicator" ng-click="toggleChildren($event, lovEntry)">
+          <aw-property-image name="miscDownArrow_uxRefresh"/>
+        </div>
+    </div>
+    <div class="aw-jswidgets-lovValuesContainer">
+        <div class="aw-widgets-cellListCellText aw-base-small" title="{{lovEntry.propDisplayValue}}">{{lovEntry.propDisplayValue}}</div>
+        <div class="aw-widgets-cellListCellItemType aw-base-small" title="{{lovEntry.propDisplayDescription}}">{{lovEntry.propDisplayDescription}}</div>
+    </div>
+</div>

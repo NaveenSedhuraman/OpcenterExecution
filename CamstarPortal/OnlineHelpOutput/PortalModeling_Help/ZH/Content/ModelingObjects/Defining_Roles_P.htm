@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="PortalModeling.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="物理模型定义">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>定义角色</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/LDCSS1.2.4.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Plain_NoIndent.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Horiz-rules_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div role="main" id="mc-main-content">
+            <p class="Head2">定义角色<a name="kanchor655"></a></p>
+            <p class="_1body">角色定义具有一组固有权限的工作职能，这些权限用于授权访问门户的全部或部分内容。门户管理员将角色指派给员工，以授权他们访问执行其工作所需应用程序的某些部分。例如，可以定义“制造班次主管”角色，并授予该角色启动容器的权限。</p>
+            <p class="_1bodyKeepWithNext">Opcenter EX&#160;MDD&#160;和 Opcenter EX&#160;CR 提供以下默认角色：</p>
+            <table style="mc-table-style: url('../Resources/TableStyles/Plain_NoIndent.css');width: 95%;" class="TableStyle-Plain_NoIndent" cellspacing="0">
+                <col class="Column-Column1" style="width: 100px;" />
+                <col class="Column-Column1" style="width: 100px;" />
+                <tbody>
+                    <tr class="Body-Body1">
+                        <th class="BodyB-Column1-Body1" style="text-align: left;">
+                            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 45px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">默认导出导入</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 45px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">默认查询</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 45px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">默认制造</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 45px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">默认建模</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 45px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><a name="17472"></a>默认建模高级</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 45px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">默认建模只读</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 45px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">默认页</td>
+                                </tr>
+                            </table>
+                        </th>
+                        <th class="BodyA-Column1-Body1" style="text-align: left;">
+                            <table class="AutoNumber_p__1bullet" style="text-align: left; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 45px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">默认质量</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p__1bullet" style="text-align: left; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 45px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">登录</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p__1bullet" style="text-align: left; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 45px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">制造审核追踪查询</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p__1bullet" style="text-align: left; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 45px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">门户配置</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p__1bullet" style="text-align: left; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 45px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">安全管理</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p__1bullet" style="text-align: left; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 45px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">SPC</td>
+                                </tr>
+                            </table>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="_1bodyKeepWithNext">有关为使用 Change Management 的用户提供的其他默认角色的信息，请参考以下特定于产品的相应指南：</p>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><span class="Emphasis">Opcenter Execution Core Change Management 用户指南</span>
+                    </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><span class="Emphasis">Opcenter Execution Core 系统管理指南</span>
+                    </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><span class="Emphasis">Opcenter Execution Medical Device and Diagnostics Change Management 用户指南</span>
+                    </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__1bullet" style="font-style: italic; font-size: 10pt; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><span class="Emphasis">Opcenter Execution Medical Device and Diagnostics 系统管理指南</span>
+                    </td>
+                </tr>
+            </table>
+            <p class="_1bodyKeepWithNext">有关安全管理的信息，请参考以下特定于产品的安全指南：</p>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><span class="Emphasis">Opcenter Execution Core 安全指南</span>
+                    </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><span class="Emphasis">Opcenter Execution Medical Device and Diagnostics 安全指南</span>
+                    </td>
+                </tr>
+            </table>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Default_Role_Membership"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a name="Default_Role_Membership_PDF"></a><a name="kanchor656"></a><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />默认角色成员资格</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1bodyKeepWithNext">所有默认角色都至少有一个关联的默认员工。 </p>
+                    <p class="_1bodyKeepWithNext">此表显示指派给随应用程序提供的默认角色的默认员工。</p>
+                    <table style="width: 95%;mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                        <col style="width: 189px;" class="TableStyle-Horiz-rules_Table-Column-Column1">
+                        </col>
+                        <col style="width: 59px;" class="TableStyle-Horiz-rules_Table-Column-Column1">
+                        </col>
+                        <col style="width: 88px;" class="TableStyle-Horiz-rules_Table-Column-Column1">
+                        </col>
+                        <col style="width: 148px;" class="TableStyle-Horiz-rules_Table-Column-Column1">
+                        </col>
+                        <thead>
+                            <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                                <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellBody">&#160;</p>
+                                </th>
+                                <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left" style="text-align: center;">管理员</p>
+                                </th>
+                                <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left" style="text-align: center;">CamstarAdmin</p>
+                                </th>
+                                <th class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                    <p class="CellHead-Left" style="text-align: center;">InSiteAdmin</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td colspan="4" class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellSectionHeader">角色</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBodyIndented">登录</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBodyIndented">安全管理</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBodyIndented">默认导出导入</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBodyIndented">默认查询</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBodyIndented">默认制造</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBodyIndented">默认建模</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2" data-mc-conditions="">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBodyIndented">默认建模高级</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;color: #000000;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;color: #000000;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;color: #000000;">X<a name="17472end"></a></p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBodyIndented">默认页</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBodyIndented">默认质量</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2" style="text-align: center;">
+                                    <p class="CellBody">&#160;</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBodyIndented">门户配置</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1" style="text-align: center;">
+                                    <p class="CellBody">&#160;</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2">
+                                    <p class="CellBodyIndented">SPC</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2" style="text-align: center;">
+                                    <p class="CellBody">&#160;</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2" style="text-align: center;">
+                                    <p class="CellBody" style="text-align: center;">X</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body2" style="text-align: center;">
+                                    <p class="CellBody">&#160;</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="AutoNumber_p_Note1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 20px;" />
+                        <col style="width: 50px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                            </td>
+                            <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">默认情况下，不授予其他权限。 </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Understanding_Roles"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />了解角色</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1body">角色由权限和权限访问模式的集合组成。权限是用于执行操作的授权；例如，用于启动容器或发起请求的权限。也可以将权限视为事务或页。</p>
+                    <p class="_1body">访问模式指定指派的权限的授权级别。例如，如果某个用户需要执行“开始”事务，则该用户必须与包含“开始”事务的权限且具有为该权限指派的“执行”访问模式的角色关联。默认情况下，在指派权限时，应用程序会指派所有访问模式。</p>
+                    <p class="_1body">角色仅对在制造领域内将其指派给的组织有效。如果某个实体没有组织关联（如事务），则在将角色指派给用户时不必指定组织。此外，仅当管理员将角色传播到子组织时，角色才对这些子组织有效。  </p>
+                    <table class="AutoNumber_p_Note1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 20px;" />
+                        <col style="width: 50px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                            </td>
+                            <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">系统不会自动将应用程序的扩展（如新页）的权限添加到默认服务。必须手动为这些角色授予权限。</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="When_Defining_Roles"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a name="When_Defining_Roles_PDF"></a><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />在定义角色时</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1bodyKeepWithNext">角色包含可选的建模定义：</p>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">员工</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">组织</td>
+                        </tr>
+                    </table>
+                    <p class="_1bodyKeepWithNext">“角色”是以下建模定义中的必填字段：</p>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">审批模板 - 在添加审批者时</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">电子签名要求* - 在添加电子签名要求时</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">归类规范 - 在添加归类项时</td>
+                        </tr>
+                    </table>
+                    <p class="_1bodyKeepWithNext">“角色”是以下建模定义中的可选字段： </p>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">更改管理规范*</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">电子邮件通讯组</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">员工 </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">电子签名角色组</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">组织</td>
+                        </tr>
+                    </table>
+                    <p class="_1body"><span class="Emphasis">*星号表示对象需要单独许可的模块。</span>
+                    </p>
+                    <p class="_1body"><a name="Role_Type_start_PDF"></a>角色类型用于指定正在定义的角色的类型：更改管理、质量或车间。例如，可以将默认角色“包创建者”的角色类型设为“更改管理”并将“默认质量”的角色类型设为“质量”。</p>
+                    <table class="AutoNumber_p_Note1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 20px;" />
+                        <col style="width: 50px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                            </td>
+                            <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">如果要按角色类型过滤角色选择列表，可以在 Designer 中更新查询。通过全球技术支持中心 (GTAC) 与产品支持联系，以获取相关信息。</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="When_Assigning_Permissions"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a name="When_Assigning_Permissions_PDF"></a><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />在指派权限时</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1body">从“权限类型过滤器”字段中选择某个权限类型时，会更新“指派的权限”表格和“可用权限”表格，以仅显示指定权限类型的权限。应用程序会在当前实例中维护为权限类型指派的所有权限，并在用户查看之前选择的权限集时显示这些指派的权限和可用权限。仅当用户单击“保存”时，应用程序才会将权限保存到角色定义。 </p>
+                    <p class="_1body">例如，选择“容器”权限类型时，会更新“可用权限”表格，以显示与容器相关的事务。如果将某些权限指派给角色，然后选择一种不同的权限类型，则应用程序会更新“可用权限”表格，以仅显示与该权限类型相关的权限。应用程序会从“指派的权限”表格中清除所有与容器相关的权限，但不会将其删除。当用户重新选择“容器”权限类型时，应用程序会显示所有与容器相关的指派。</p>
+                    <p class="_1body">可以单独选择要指派的一个或多个可用权限，也可以一次选择要指派的所有可用权限。选中“可用权限”表格的标题行的复选框时，会自动选择所有显示的权限。“指派的权限”表格的功能与之类似，使用户可以单独移除指派的权限，也可以一次移除所有指派的权限。 </p>
+                    <table class="AutoNumber_p_Note1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 20px;" />
+                        <col style="width: 50px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                            </td>
+                            <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">无论 Portal Studio 中的全局表格设置为何，“指派的权限”表格都会以不分页的形式显示所有可用权限。有关信息，请参考《<span class="Emphasis">Opcenter Execution Core Portal Studio 用户指南</span>》或《<span class="Emphasis">Opcenter Execution Medical Device and Diagnostics Portal Studio 用户指南</span>》。</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="When_Managing_Roles"></a> </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />在管理角色时</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1body">可以在两个建模页（即“角色”和“员工”）上管理角色成员资格。如果在“角色”页上对角色成员资格进行更改，则应用程序会在“员工”页上为相关员工显示更新后的角色成员资格信息。同样，如果在“员工”页上更新角色成员资格信息，则在“角色”页上显示该角色时，应用程序会显示更新后的信息。 </p>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Roles_and_Electronic_Signatures"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />角色和电子签名</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1body">在为车间和质量记录事务实施电子签名时，角色是必需的建模对象。电子签名等效于手写签名，表示对特定事务的绩效负有责任。可以在制造审核追踪中查看容器或质量记录的已记录电子签名。有关实施电子签名的信息，请参考“<a href="../Modeling ESig/Electronic_Signatures_for_Modeling_P.htm#Electron2" class="MCXref xref">用于建模的电子签名简介</a>”。 </p>
+                    <table class="AutoNumber_p_Note1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 20px;" />
+                        <col style="width: 50px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                            </td>
+                            <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">电子签名功能是单独许可的模块。</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Role_Page"></a>
+            </p>
+            <p class="_1body" style="page-break-before: always;" data-mc-conditions="Default.ScreenOnly"><a name="Role_Page_Field_Definitions"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead" style="page-break-before: always;"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false" style="page-break-before: always;"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />角色页字段定义</a></span>
+                <div class="MCDropDownBody dropDownBody" style="page-break-before: avoid;">
+                    <p class="_1bodyKeepWithNext" style="page-break-before: avoid;">此表定义“角色”页的独有字段。</p>
+                    <p class="_1bodyKeepWithNext">请参考“<a href="../Getting Started/Modeling_Page.htm#Common" class="MCXref xref">建模页上的公共字段</a>”获取有关所有建模对象的公共字段的信息。</p>
+                    <table style="width: 95%;mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 144px;" />
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 85px;" />
+                        <thead>
+                            <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                                <td class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left" style="page-break-after: avoid;">字段 </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">定义</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                    <p class="CellHead-Left">类型</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1" colspan="3">
+                                    <p class="CellSectionHeader" style="page-break-before: avoid;page-break-after: avoid;">常规</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody" style="page-break-before: avoid;margin-bottom: 0.5em;">角色类型<a name="Role_Type_end_PDF"></a></p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">角色类型的列表。 包括以下选项：</p>
+                                    <table class="AutoNumber_p_CellNumA" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 41px;" />
+                                        <col style="width: 30px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                            </td>
+                                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">更改管理</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_CellNumA" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 41px;" />
+                                        <col style="width: 30px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                            </td>
+                                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">质量</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_CellNumA" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 41px;" />
+                                        <col style="width: 30px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                            </td>
+                                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">车间</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1" colspan="3">
+                                    <p class="CellSectionHeader">详细信息</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2" colspan="3">
+                                    <p class="CellSubSectionHeader">权限</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">权限类型过滤器</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody" style="color: #000000;">系统定义的权限集，用于过滤可用权限的类别，以查找可能指派给角色的权限。权限类型决定可以指派的权限及其访问模式。 </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">指派的权限表格</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">显示指派给该角色的权限以及每个权限的适用访问模式的表格。默认情况下，在添加新权限时，应用程序会选择所有访问模式。</p>
+                                    <p class="CellBody">第一列的复选框用于选择要从角色移除的指派的权限。可以选中标题行的复选框以自动选择所有显示的权限，也可以选中各个权限对应的复选框。</p>
+                                    <p class="CellBody">此表格会根据选择的权限类型过滤器而发生变化，以显示相应的权限及其访问模式。 </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">可用权限表格</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">此表格显示根据选择的权限类型过滤器可以指派给角色的权限。仅显示尚未指派的权限以供选择。
+
+</p>
+                                    <p class="CellBody">第一列的复选框用于选择要指派给角色的权限。可以选中标题行的复选框以自动选择所有显示的权限，也可以选中各个权限对应的复选框。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2" colspan="3">
+                                    <p class="CellSubSectionHeader">成员资格</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">员工角色成员资格表格</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">此表格显示获得角色指派的员工。对于每个用户，此表格会显示角色对其有效的组织，以及角色是否传播到组织的子组织。 </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBodyIndented">[复选框]</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">此复选框用于选择员工。可以选中标题行的复选框以自动选择所有显示的员工，也可以选中各个员工对应的复选框。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBodyIndented">员工</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">已向其指派角色的员工的姓名。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBodyIndented">组织</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">角色对员工有效的组织的名称。 </p>
+                                    <p class="CellBody">此字段可以留空，表示此角色是没有组织关联的实体，如制造事务。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                    <p class="CellBodyIndented">传播</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                    <p class="CellBody">此复选框表示该角色对组织的所有子组织都有效。</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body1">
+                                    <p class="CellBody">可选</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p class="Head3-Side">如何定义角色<a name="How_to_Define_a_Role"></a><a name="kanchor657"></a></p>
+            <p class="_1bodyKeepWithNext">按照以下步骤定义角色及其权限：</p>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>1.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">打开<span class="User_Entry">角色</span>页。<span class="Emphasis">随即“建模”页中将显示“角色”页。</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>2.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">单击<span class="User_Entry">新建</span>。 <span class="Emphasis">显示用于定义新实例的空白字段。</span> </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>3.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">在<span class="User_Entry">角色</span>字段中输入名称。</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>4.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;4.&lt;/b&gt;">从<span class="User_Entry">权限类型过滤器</span>字段中选择权限类型。<span class="Emphasis">“可用权限”表格将会更新，以显示指定权限类型的权限。</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step_KeepWithNext" valign="top"><span class="Number"><b>5.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step_KeepWithNext" valign="top" data-mc-autonum="&lt;b&gt;5.&lt;/b&gt;">使用以下其中一种方法来选择要指派的权限：</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__2bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 72px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">选中“可用权限”表格的标题行中的<span class="User_Entry">权限名称</span>复选框，以选择所有权限。 </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p__2bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 72px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                    </td>
+                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">选中各个权限对应的复选框。</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>6.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;6.&lt;/b&gt;">单击<span style="font-weight: bold;">添加</span>以指派已选权限。<span class="Emphasis">系统会将这些权限添加到“指派的权限”表格，并且默认情况下会选择所有访问模式。</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>7.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;7.&lt;/b&gt;">重复步骤 4-6，为此角色添加其他权限。 </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>8.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;8.&lt;/b&gt;">根据您的业务需求输入可选信息。有关可选字段的信息，请参考字段定义表。</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>9.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;9.&lt;/b&gt;">单击<span class="User_Entry">保存</span>。 <span class="Emphasis">应用程序保存建模对象并显示成功消息。</span></td>
+                </tr>
+            </table>
+            <p class="Head3-Side">如何将角色指派给员工<a name="How_to_Assign_the_Role_to_an_Employee"></a><a name="kanchor658"></a></p>
+            <p class="_1bodyKeepWithNext">按照以下步骤将角色指派给员工：</p>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>1.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">执行“<a href="#How_to_Define_a_Role" class="MCXref xref">如何定义角色</a>”流程。 </td>
+                </tr>
+            </table>
+            <p class="_3body">或 </p>
+            <p class="_3body">选择现有“角色”实例。</p>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>2.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">在<span class="User_Entry">员工角色成员资格</span>表格中单击<span class="User_Entry">添加</span>。 <span class="Emphasis">将显示新行。</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>3.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">选择<span class="User_Entry">员工</span>。</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>4.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;4.&lt;/b&gt;">如果需要，选择角色将对员工有效的<span class="User_Entry">组织</span>。</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>5.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;5.&lt;/b&gt;">如果希望应用程序使角色对指定组织的所有子组织有效，选中<span class="User_Entry">传播</span>复选框。</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>6.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;6.&lt;/b&gt;">重复步骤 2-5，将此角色指派给其他员工。</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>7.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;7.&lt;/b&gt;">单击<span class="User_Entry">保存</span>。 <span class="Emphasis">应用程序显示成功消息，指出建模对象已更新。</span></td>
+                </tr>
+            </table>
+        </div>
+        <MadCap:pageFooter class="FirstPage">
+            <p class="copyright">© Siemens 2020</p>
+        </MadCap:pageFooter>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+// Copyright 2018 Siemens Product Lifecycle Management Software Inc.
+// aw-list-filter
+aw-list-filter{
+    .gwt-ListBox, input[type="text"], .gwt-TextBox, textarea, .gwt-TextArea {
+        padding: $list_filter_input_padding;
+    }
+}

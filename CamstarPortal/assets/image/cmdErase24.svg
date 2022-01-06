@@ -1,0 +1,8 @@
+<svg id="Artwork" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M22,8,9.121,20.879a3,3,0,0,1-4.243,0L2.121,18.121a3,3,0,0,1,0-4.243L15,1Z" fill="none" stroke="#464646" stroke-linejoin="round"/>
+  <line x1="12" y1="21.5" x2="24" y2="21.5" fill="none" stroke="#464646" stroke-linejoin="round"/>
+  <line x1="5.5" y1="10.5" x2="12.5" y2="17.5" fill="none" stroke="#464646" stroke-linejoin="round"/>
+  <circle cx="15" cy="19" r="0.5" fill="none" stroke="#464646" stroke-linejoin="round"/>
+  <circle cx="18.5" cy="18.5" r="1" fill="none" stroke="#464646" stroke-linejoin="round"/>
+  <rect width="24" height="24" fill="none"/>
+</svg>

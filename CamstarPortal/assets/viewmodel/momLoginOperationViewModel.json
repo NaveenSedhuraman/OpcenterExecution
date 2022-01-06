@@ -1,0 +1,65 @@
+{
+    "schemaVersion": "1.0.0",
+    "imports": [
+        "js/aw-include.directive",
+        "js/aw-icon.directive",
+        "js/aw-link.directive",
+        "js/aw-button.directive",
+        "js/aw-widget.directive",
+        "js/aw-password.directive",
+        "js/aw-textbox.directive",
+        "js/aw-command-panel.directive",
+        "js/aw-enter-key.directive",
+        "js/visible-when.directive",
+        "js/aw-repeat.directive",
+        "js/enable-when.directive",
+        "js/aw-warning-label.directive",
+        "js/aw-panel-body.directive",
+        "js/aw-command-panel-section.directive",
+        "js/mom-update-ctx-on-change.directive",
+        "js/aw-panel-footer.directive"
+    ],
+    "data": {},
+    "actions": {
+        "requestLogin": {
+            "actionType": "Event",
+            "method": "Event",
+            "inputData": {
+                "events": [ {
+                    "condition": "conditions.isValidLoginOperationForm",
+                    "name": "mom.login.onLoginRequested",
+                    "eventData": {
+                        "data": "{{subPanelContext}}"
+                    },
+                    "excludeLocalDataCtx": true
+                } ]
+            }
+        },
+        "requestResetPassword": {
+            "actionType": "Event",
+            "method": "Event",
+            "inputData": {
+                "events": [ {
+                    "name": "mom.login.onResetPasswordRequested",
+                    "eventData": {
+                        "data": "{{subPanelContext}}"
+                    },
+                    "excludeLocalDataCtx": true
+                } ]
+            }
+        }
+    },
+    "onEvent": [],
+    "conditions": {
+        "isValidLoginOperationForm": {
+            "expression": "ctx.momValidLoginOperationForm"
+        },
+        "isResetPasswordEnabled": {
+            "expression": "subPanelContext.resetPassword && (subPanelContext.email.dbValue.length > 0) || (subPanelContext.email.dbValue.length > 0)"
+        },
+        "validLoginData": {
+            "expression": "!subPanelContext.email.error && !subPanelContext.username.error && !subPanelContext.password.error && !subPanelContext.domain.error && !ctx.momInvalidLoginData"
+        }
+    },
+    "i18n": {}
+}

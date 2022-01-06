@@ -1,0 +1,93 @@
+//command icon outline
+.aw-theme-iconOutline {
+    fill: white;
+}
+
+.aw-ui-treeNode-valueContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.aw-ui-treeNode {
+    margin-left: 0;
+    line-break: 1;
+}
+
+.cep-pageList-title {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+aw-global-navigation {    
+    .global-navigation {
+        
+        aw-tree {
+            flex: 1 1 auto;
+            .aw-ui-treeNode-valueContainer {
+                padding: 0;
+            }
+            li {
+                list-style-type: none; 
+                .aw-state-selected {
+                    background-color: #003750;            
+                }            
+                .aw-ui-treeNodeValue:hover {
+                    background-color: #003750;          
+                }
+                
+            }           
+        }
+    
+        .aw-layout-panelBody {       
+            padding: 0;         
+        }
+        .aw-sidenav-layoutContainer.aw-sidenav-standard {
+            display: flex;
+            width: auto;        
+            .aw-layout-flexbox.afx-base-parentElement {
+                flex:1 1 100%;             
+            }
+        }
+
+        .aw-sidenav-expand {
+            min-width: 180px;
+        }        
+    }
+}
+
+
+
+ul.cep-line-assignemnt-header {
+    padding-left: 0.5em;
+    li {
+        display: inline;
+        padding-right: 2em;
+    }
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+
+    position: fixed;
+    z-index: 999;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.loaderContainer {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background-color: rgba(0,0,0,0.3);
+}

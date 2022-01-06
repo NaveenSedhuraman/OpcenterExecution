@@ -1,0 +1,67 @@
+/*
+***************************************************************************
+Copyright Siemens 2019  
+This file should include all user-defined CSS classes. 
+Classes defined in this file will over-ride any classes of the
+same name written in any of the Camstar supplied CSS files.
+***************************************************************************
+*/
+.cs-label[required="true"]:after
+{
+color:red !important;
+font-weight: bolder;
+}
+
+input.hasDatepicker
+{
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #969696;
+    border-radius: 2px;
+    display: inline-block;
+    padding: 0 7px;
+    margin: 0 0 4px 0;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 30%);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 48px;
+    width: 300px;
+    box-sizing: border-box;
+}
+.body-eproc .form-container
+{
+    background-size: 296px 100%,230px 100%;
+}
+.webpart-containerstatus-m .inquiry_control_label, .webpart-containerstatus-m .cell-info .container-timer .cs-label 
+{
+    font-weight: bolder;
+}
+.changeqty-types-label>.typelabel:after {
+    color: red;
+    content: " *";
+    font-size: 20px;
+}
+body.cs-responsive .taskitem-m>span {
+color: red;
+font-size: 20px;
+line-height: 10px;
+margin: 3px 3px;
+}
+.ParametricDataControlDiv-resp.grid-layout .DataPointItem-resp[required=true] .Label .label-text::after {
+    content: " *";
+    font-size: 20px;
+    color: red;
+    padding: 0;
+    margin: 0;
+    line-height: 8px;
+}
+.desktop-device .cs-label[required=true], .desktop-device .webpart-containerstatus .cs-label {
+    font-weight: bolder;
+}
+body.cs-responsive div.DCTitleResp span.required {
+    margin: 0 4px;
+    color: red;
+    font-size: 20px;
+    line-height: 10px;
+    text-indent: 0;
+}

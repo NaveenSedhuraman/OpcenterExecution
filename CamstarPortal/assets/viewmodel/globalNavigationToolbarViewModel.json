@@ -1,0 +1,77 @@
+{
+    "schemaVersion": "1.0.0",
+    "imports": [
+        "js/aw-row.directive",
+        "js/aw-column.directive",
+        "js/aw-command-bar.directive",
+        "js/aw-avatar.directive"
+    ],
+    "data": {
+        "applicationImage": "assets/image/cmd16Chrome24.svg"
+    },
+    "actions": {
+        "updateUserAndUserSessionOnContext": {
+            "actionType": "batchJob",
+            "steps": [ {
+                    "action": "updateUserOnContext"
+                },
+                {
+                    "action": "updateUserSessionOnContext"
+                }
+            ]
+        },
+        "updateUserOnContext": {
+            "actionType": "JSFunction",
+            "method": "createViewModelObject",
+            "inputData": {
+                "user": "{{ctx.user}}"
+            },
+            "outputData": {
+                "ctx.user": ""
+            },
+            "deps": "js/viewModelObjectService"
+        },
+        "updateUserSessionOnContext": {
+            "actionType": "JSFunction",
+            "method": "createViewModelObject",
+            "inputData": {
+                "userSession": "{{ctx.userSession.uid}}"
+            },
+            "outputData": {
+                "ctx.userSession": ""
+            },
+            "deps": "js/viewModelObjectService"
+        },
+        "avatarAction": {
+            "actionType": "Event",
+            "method": "Event",
+            "inputData": {
+                "events": [ {
+                    "name": "awsidenav.openClose",
+                    "eventData": {
+                        "id": "globalNavigationSideNav",
+                        "includeView": "avatar",
+                        "commandId": "globalNavigationSideNavCommand",
+                        "keepOthersOpen": true,
+                        "config": {
+                            "width": "{{ctx.awSidenavConfig && ctx.awSidenavConfig.avatarPanel.width ? ctx.awSidenavConfig.avatarPanel.width : 'STANDARD' }}",
+                            "height": "{{ctx.awSidenavConfig && ctx.awSidenavConfig.avatarPanel.height ? ctx.awSidenavConfig.avatarPanel.height : 'FULL' }}"
+                        }
+                    }
+                } ]
+            }
+        }
+    },
+    "onEvent": [ {
+        "eventId": "globalNavigationToolbar.contentLoaded",
+        "action": "updateUserAndUserSessionOnContext",
+        "condition": "conditions.hasTcSessionData"
+    } ],
+
+    "conditions": {
+        "hasTcSessionData": {
+            "expression": "ctx.tcSessionData"
+        }
+    }
+
+}

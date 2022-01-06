@@ -1,0 +1,48 @@
+// Copyright 2018 Siemens Product Lifecycle Management Software Inc.
+// command-panel-section OR aw-command-panel-section
+
+.aw-layout-panelSection .aw-layout-workareaCommandbar {
+    background: none;
+}
+
+.aw-commands-showIconLabel {
+    .aw-layout-declarativePanelRoot.aw-layout-panel {
+        .aw-layout-panelSection {
+            aw-command-bar:not(.aw-layout-userSessionCommands).aw-commands-commandBarHorizontal {
+                
+                aw-command:first-child .aw-commandIcon{
+                    margin-left: rem-calc(12);
+                }
+
+                .aw-commands-commandIconButton {
+                    width: fit-content;
+                    height: rem-calc(40);
+                    padding: rem-calc(8) rem-clac(4);
+
+                    .aw-commandIcon {
+                        display: inline-block;
+                        padding: 0;
+                        margin-left: rem-calc(2);
+                        vertical-align: middle;
+                    }
+                    
+                    .aw-commands-svg {
+                        margin: 0;
+                    }
+
+                    .aw-commands-showIconLabel.aw-commands-commandIconButtonText {
+                        display: -webkit-inline-box;
+                        text-align: left;
+                        vertical-align: middle;
+                        padding: 0;
+                        max-width: rem-calc(60);
+                        line-height: 1.2;
+                        max-height: none;
+                        height: auto;
+                        margin-left: rem-calc(4);
+                    }
+                }
+            }
+        }
+    }
+}

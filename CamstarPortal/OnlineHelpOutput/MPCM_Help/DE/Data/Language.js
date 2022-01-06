@@ -1,0 +1,1 @@
+define({'skin':{'default':{},'SiemensHTML5_DE':{}},'toc':{'default':{'OpenBookIconAlternateText':'Offenes Buch','ClosedBookIconAlternateText':'Geschlossenes Buch','TopicIconAlternateText':'Topic-Symbol','MarkAsNewIconAlternateText':'New Topic'}}});

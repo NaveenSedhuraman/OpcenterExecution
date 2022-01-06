@@ -1,0 +1,1 @@
+define(['js/configurationService'],function(cfgSvc){cfgSvc.add('authenticator',{"cepAuthenticator":{"dep":"js/cepAuthenticatorService"}});});

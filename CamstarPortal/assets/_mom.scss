@@ -1,0 +1,96 @@
+.mom-home-location {
+
+    .aw-layout-primaryWorkarea,
+    .aw-layout-infoCommandbar,
+    .aw-layout-subLocation {
+        background-color: transparent;
+    }
+    .aw-layout-sublocationContainer .aw-layout-infoCommandbar {
+        display: none;
+    }
+}
+
+mom-secondary-workarea {
+    @extend aw-secondary-workarea;
+}
+
+mom-secondary-workarea .aw-layout-sublocationContent {
+    @extend aw-secondary-workarea;
+}
+
+mom-secondary-workarea .mom-details-summary {
+    @extend aw-secondary-workarea;
+}
+
+mom-page {
+    @extend aw-page;
+}
+
+mom-header {
+    @extend aw-header;
+}
+
+.mom-user-label {
+    width: calc(100%);
+    color: #ffffff;
+    h3 {
+        padding: 0 0.3rem;
+        word-break: break-all;
+        line-height: 1.1rem;
+    }
+}
+
+.mom-input-group {
+    padding: 0;
+    display: inline-flex;
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid #969696;
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    color: #1e1e1e;
+
+    &:hover {
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+    }
+    &:focus-within {
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+        background-color: #ffffff;
+        color: #1e1e1e;
+        border-color: #3296b9;
+        caret-color: #3296b9;
+    }
+
+    input[type="text"], input[type="password"] {
+        box-shadow: none;
+        border: none;
+        &:hover {
+            box-shadow: none;
+        }
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+
+    button {
+        height: 30px;
+        width: 30px;
+    }
+
+    .aw-base-iconButton .aw-theme-iconOutline {
+        fill: #464646;
+        background-color: #ffffff;
+    }
+}
+
+// input-group within a panel body
+.aw-layout-panelContent {
+    .mom-input-group {
+        margin: 16px 0 8px 0;
+
+        .aw-widgets-propertyContainer {
+            margin-top: -18px; // Ensure label is above the input group
+        }
+    }
+}

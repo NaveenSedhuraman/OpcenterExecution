@@ -1,0 +1,41 @@
+{
+    "recentSectionTitle": "Последнее",
+    "otherSectionTitle": "Другое",
+    "dataSetFileUploadTitle": "Файл",
+    "relationPropLabel": "Отношение",
+
+    "loading": "Загрузка...",
+    "Filter": "Фильтр",
+    "refine":"Обновить",
+    "objectType": "Типы",
+    "newTabTitle": "Создать",
+    "paletteTabTitle": "Паллета",
+    "searchTabTitle": "Поиск",
+    "searchSectionTitle": "Поиск",
+    "assignButtonTitle": "Назначить",
+    "ownProjectSectionTitle": "Владелец проекта",
+    "addProjectButtonTitle": "Добавить проект",
+    "projectsSectionTitle": "Проекты",
+    "addObjectPanelPinButtonToolTip": "Закрепить панель",
+    "addObjectPanelUnpinButtonToolTip": "Открепить панель",
+    "pasteSuccessful": "\"{0}\" добавлено.",
+    "submitSuccessful": "\"{0}\" отправлено.",
+
+    "addButtonTitle" : "Добавить",
+    "mutiRelationObject" : "Добавлено {0}выбранных объектов.",
+
+    "resultTabTitle" : "Результаты",
+    "filterTabTitle" : "Фильтры",
+    "keywordsLabel" : "Ключевые слова",
+    "addButtonInSearch" : "Добавить",
+    "datasetName" : "Имя",
+    "datasetDesc" : "Описание",
+    "datasetType" : "Типы",
+    "uploadFile" : "Импорт файла",
+    "reference" : "Ссылка",
+    "moreLink"  : "Развернуть...",
+
+    "addObjectPanel_oneStepPinCommands": "Одношаговые команды закрепления панели Добавить объект",
+    "uiwidget_projectSectionCommands": "Команды раздела проекта",
+    "aw_compare": "Сравнить"
+}

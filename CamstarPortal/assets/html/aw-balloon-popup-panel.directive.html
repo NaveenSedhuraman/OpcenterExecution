@@ -1,0 +1,6 @@
+<aw-popup-panel class="afx-content-background">
+    <div exist-when="loading && loading!='disabled'" class="aw-layout-contentLabel">{{loadingMsg}}</div>
+    <span ng-click="closePopUp($event)" class="aw-popup-close" ng-show="{{closebutton}}">&times;</span>
+    <div ng-if="loading===true || loading===false" class="aw-layout-flexColumnContainer" ng-class="{'aw-tooltip-loadingDisable':loading}" ng-transclude></div>
+    <div ng-if="loading==='disabled'" class="aw-layout-flexColumnContainer" ng-transclude></div>
+</aw-popup-panel>

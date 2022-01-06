@@ -1,0 +1,14 @@
+<div class="mom-information-bar" ng-class="'mom-information-bar-'+type">
+    <!-- Image -->
+    <div class="mom-information-bar-icon" ng-bind-html="iconSvg" ng-if="iconSvg">
+    </div>
+    <!-- Contents -->
+    <div class="mom-information-bar-contents" ng-if="label">
+        <span class="mom-information-bar-label">{{label}}</span> &ndash; <span class="mom-information-bar-text" ng-transclude></span>
+        <a class="mom-information-bar-link" ng-click="execute(linkAction)" ng-if="linkText">{{linkText}}</a>
+    </div>
+    <div class="mom-information-bar-contents" ng-if="!label">
+        <span class="mom-information-bar-text" ng-transclude></span>
+        <a class="mom-information-bar-link" ng-click="execute(linkAction)" ng-if="linkText">{{linkText}}</a>
+    </div>
+</div>

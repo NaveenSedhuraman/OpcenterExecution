@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="de" xml:lang="de" data-mc-search-type="Stem" data-mc-help-system-file-name="PortalStudio_Help.xml" data-mc-path-to-help-system="../../" data-mc-toc-path="Exportieren und Importieren von Dateien" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Durchführen von Batch-Exporten</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/LDCSS1.2.4.css" rel="stylesheet" type="text/css" />
+        <link href="../Resources/TableStyles/Horiz-rules_TableIndent3body.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <link href="../Resources/TableStyles/Horiz-rules_Table.css" rel="stylesheet" data-mc-stylesheet-type="table" />
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div role="main" id="mc-main-content">
+            <p class="Head2">Durchführen von Batch-Exporten<a name="kanchor146"></a></p>
+            <p class="_1body">Der Batch-Export bietet die Möglichkeit, mehrere Seiten, Webparts und Seitenfolgen als eine einzelne XML-Datei oder als ZIP-Datei mit mehreren XML-Dateien zu exportieren und die Elemente in ein Zielportal zu exportieren.</p>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="When_Performing_Batch_Exports"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Geschlossen" data-mc-alt2="Öffnen" />Beim Durchführen von Batch-Exporten</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1body">Sie können Elemente exportieren in:</p>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">eine einzelne XML-Datei</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">eine ZIP-Datei mit mehreren XML-Dateien</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">ein Zielportal</td>
+                        </tr>
+                    </table>
+                    <p class="_1body">Sie können die Elemente gleichzeitig in eine lokale Datei und ein Zielportal exportieren. Bei der Ausführung eines Batch-Exports muss mindestens eine Option ausgewählt werden.</p>
+                    <table class="AutoNumber_p_Note1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 20px;" />
+                        <col style="width: 50px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                            </td>
+                            <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">Beim Speichern eines Batch-Exports als ZIP-Datei wird eine ZIP-Datei mit einer XML-Datei für jede Seite, jedes Webpart und jede Seitenfolge erstellt, die im Export enthalten ist.</td>
+                        </tr>
+                    </table>
+                    <p class="_1body">Sie müssen in der Liste "Personalisierungstyp für Export" (Personalization Type to Export) mindestens einen Arbeitsbereich auswählen.</p>
+                    <p class="_1body">Die Schaltflächen "Alle aktivieren" (Check All) und "Alle deaktivieren" (Uncheck All) betreffen nur die Elemente auf der Registerkarte, die derzeit im linken Bereich des Fensters "Batch-Export" (Batch Export) ausgewählt ist. Wenn z. B. die Registerkarte "Seiten" (Pages) ausgewählt ist und Sie auf "Alle deaktivieren" (Uncheck All) klicken, sind Webparts, die bereits auf der Registerkarte "Webparts" (Web Parts) ausgewählt sind, hiervon nicht betroffen.</p>
+                    <p class="_1body">Wenn Sie auf die Schaltfläche "Export starten" (Start Export) klicken, wird das Popup-Fenster "Exportfortschritt..." (Export Progress) mit zwei Fortschrittsbalken angezeigt. Der erste Balken zeigt den Fortschritt des jeweils ausgewählten Elements an, der zweite Balken den Gesamtfortschritt des Exportvorgangs.</p>
+                    <p class="_1body">Beim Durchführen von Batch-Exporten über Domänengrenzen hinweg müssen Sie den Zugriff auf Ziele genehmigen. Sie können den Zugriff genehmigen, indem Sie eine Datei namens clientaccesspolicy.xml erstellen und diese im Stammverzeichnis der Domäne, in der der Exportservice gehostet wird, platzieren. Weitere Informationen zum Erstellen und Platzieren dieser Datei in Ihrer Umgebung finden Sie im <a href="https://msdn.microsoft.com/library/cc197955(VS.95)" target="_blank">Microsoft Developer Network</a>.</p>
+                    <table class="AutoNumber_p_Important1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 20px;" />
+                        <col style="width: 81px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Important1body" valign="top"><span class="Note"><b><span style="color: #006487;" class="mcFormatColor"><span style="font-family: 'Arial';" class="mcFormatFamily">Important:</span></span></b></span>
+                            </td>
+                            <td class="AutoNumber_p_Important1body" valign="top" data-mc-autonum="&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;Important:&lt;/span&gt;&lt;/span&gt;&lt;/b&gt;">Beim Batch-Export werden abhängige Seiten nicht automatisch gefunden und exportiert. Wenn Sie z.&#160;B. eine Seite mit abhängigen Seiten exportieren, die in einer Seitenumleitungsaktion oder von einem Flyout-Steuerelement referenziert werden, werden die abhängigen Seiten nicht gefunden und exportiert. Sie müssen die abhängigen Seiten manuell als Bestandteil des Exports auswählen, damit die importierte Seite korrekt funktioniert.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Batch_Export_Window"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Geschlossen" data-mc-alt2="Öffnen" />Fenster "Batch-Export" (Batch Export)</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1bodyKeepWithNext">Im linken Bereich des Fensters "Batch-Export" (Batch Export) werden alle für den Batch-Export verfügbaren Seiten, Webparts und Seitenfolgen auf separaten Registerkarten angezeigt. Die auf einer Registerkarte ausgewählten Elemente verbleiben in der Auswahl, wenn Sie den Fokus auf eine andere Registerkarte verschieben. </p>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Batch_Export_Window_Field_Definitions"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Geschlossen" data-mc-alt2="Öffnen" />Felddefinitionen des Fensters "Batch-Export" (Batch Export)</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1bodyKeepWithNext">Diese Tabelle definiert die Felder im Fenster "Batch-Export" (Batch Export).</p>
+                    <table style="caption-side: top;width: 95%;mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                        <col width="113px" class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                                <td class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">Feld </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">Definition</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                    <p class="CellHead-Left">Typ</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1" colspan="3">
+                                    <p class="CellSectionHeader">Exportoptionen</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Personalization Type to Export</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Gibt die Arbeitsbereichsdaten an, die exportiert werden sollen. Mindestens ein Arbeitsbereich muss ausgewählt werden.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Erforderlich</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Export to File</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Bei Auswahl dieser Option wird der Export als Datei gespeichert und das Feld "Dateiname" (File Name) wird aktiviert.</p>
+                                    <p class="CellBody"><span class="User_Entry">Hinweis:</span> Sie müssen zu einem Speicherort navigieren und einen Dateinamen für die Exportdatei eingeben, wenn das Kontrollkästchen "Export in Datei" (Export to File) aktiviert ist.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBodyIndented">File Name</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Zeigt den Namen der zu exportierenden Datei nach der Navigation zu einem Speicherort an, nachdem Dateiname und Dateityp angegeben wurden.</p>
+                                    <p class="CellBody">Durch Klicken auf die Schaltfläche "Mehr" (More) wird das Popup-Fenster "Speichern unter" (Save As) angezeigt, in dem Sie zu einem Speicherort navigieren und einen Dateityp auswählen können. Folgende Dateitypoptionen sind verfügbar:</p>
+                                    <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 41px;" />
+                                        <col style="width: 30px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                            </td>
+                                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">XML-Dateien</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 41px;" />
+                                        <col style="width: 30px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                            </td>
+                                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">ZIP-Dateien</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 41px;" />
+                                        <col style="width: 30px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                            </td>
+                                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">Alle Dateien</td>
+                                        </tr>
+                                    </table>
+                                    <p class="CellBody"><span class="User_Entry">Hinweis:</span> Dieses Feld wird beim Aktivieren des Kontrollkästchens "Export in Datei" (Export to File) aktiviert.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Export to Target Portal</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Exportiert Daten in ein Zielportal.</p>
+                                    <p class="CellBody"><span class="User_Entry">Hinweis:</span> Wenn Sie dieses Kontrollkästchen aktivieren, werden die Felder "Benutzername" (User Name), "Kennwort" (Password), "Portaldomäne" (Portal Domain) und "Portal-URL" (Portal URL), das Kontrollkästchen "Vorhandene Webparts, Seiten oder Seitenfolgen überschreiben" (Override existing Web Parts, Pages or Pageflows) und die Schaltfläche "Verbindung überprüfen" (Verify Connection) aktiviert.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBodyIndented">Benutzername</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Der Anmeldename, der zum Zugriff auf das Zielportal verwendet wird. CamstarAdmin ist standardmäßig eingegeben.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBodyIndented">Kennwort (Password)</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Das Kennwort, das zum Zugriff auf das Zielportal verwendet wird.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBodyIndented">Domain</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Die Domäne des Zielportals.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBodyIndented">Portal&#160;URL</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Die URL des Zielportals. http://targethost/CamstarPortal/ ist standardmäßig angegeben.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2">
+                                    <p class="CellBodyIndented">Vorhandene Webparts, Seiten oder Seitenfolgen überschreiben (Override existing Web Parts, Pages or Pageflows)</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2">
+                                    <p class="CellBody">Wenn diese Option ausgewählt ist, werden vorhandene Elemente im Zielportal beim Export überschrieben. Diese Option ist standardmäßig aktiviert.</p>
+                                    <p class="CellBody"><span class="User_Entry">Hinweis:</span> Seiten, Webparts und Seitenfolgen in der Exportdatei, die bereits im Zielportal vorhanden sind, werden nicht exportiert, wenn diese Option nicht ausgewählt ist.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body2">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Batch_Export_Window_Button_Definitions"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Geschlossen" data-mc-alt2="Öffnen" />Schaltflächendefinitionen des Fensters "Batch-Export" (Batch Export)</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1bodyKeepWithNext">Diese Tabelle definiert die Schaltflächen im Fenster "Batch-Export" (Batch Export).</p>
+                    <table style="caption-side: top;width: 95%;mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                        <col width="113px" class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                                <td class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">Schaltfläche</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                    <p class="CellHead-Left">Funktion der Schaltfläche . . .</p>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Verbindung überprüfen (Verify Connection)</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Überprüft die Anmeldeinformationen und den Pfad, die Sie beim Export in Zielportal eingegeben haben.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Alles auswählen (Check All)</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Wählt alle Elemente auf der aktuellen Registerkarte im linken Bereich aus.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Auswahl für alles aufheben (Uncheck All)</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Hebt die Auswahl aller Elemente auf der aktuellen Registerkarte im linken Bereich auf.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Export starten (Start Export)</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Startet den Batch-Exportprozess.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                    <p class="CellBody">Schließen (Close)</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body1">
+                                    <p class="CellBody">Schließt das Fenster "Batch-Export" (Batch Export).</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p class="Head3-Side"><a name="How_to_Perform_Batch_Exports"></a>Vorgehensweise zum Durchführen von Batch-Exporten<a name="kanchor147"></a></p>
+            <p class="_1bodyKeepWithNext">Gehen Sie folgendermaßen vor, um einen Batch-Export durchzuführen:</p>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step_KeepWithNext" valign="top"><span class="Number"><b>1.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step_KeepWithNext" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">Greifen Sie auf Portal Studio zu.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>2.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">Klicken Sie auf die Schaltfläche <span class="User_Entry">Batch-Export</span> (Batch Export). <span class="Emphasis">Das Fenster "Batch-Export" (Batch Export) wird angezeigt.</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>3.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">Wählen Sie die zu exportierenden Elemente auf den Registerkarten "Seiten" (Pages), "Webparts" (Web Parts) und "Seitenfolgen" (Pageflows) aus.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>4.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;4.&lt;/b&gt;">Wählen Sie in der Liste <span class="User_Entry">Personalisierungstyp für Export</span> (Personalization Type to Export) mindestens einen Arbeitsbereich aus.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step_KeepWithNext" valign="top"><span class="Number"><b>5.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step_KeepWithNext" valign="top" data-mc-autonum="&lt;b&gt;5.&lt;/b&gt;">Möchten Sie die ausgewählten Elemente als XML-Datei exportieren?</td>
+                </tr>
+            </table>
+            <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_TableIndent3body.css');width: 90%;" class="TableStyle-Horiz-rules_TableIndent3body" cellspacing="0">
+                <col class="TableStyle-Horiz-rules_TableIndent3body-Column-Column1" style="width: 81px;" />
+                <col class="TableStyle-Horiz-rules_TableIndent3body-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-Horiz-rules_TableIndent3body-Head-Header1">
+                        <th class="TableStyle-Horiz-rules_TableIndent3body-HeadE-Column1-Header1">
+                            <p class="CellHead-Left">Antwort . . .</p>
+                        </th>
+                        <th class="TableStyle-Horiz-rules_TableIndent3body-HeadD-Column1-Header1">
+                            <p class="CellHead-Left">Dann . . .</p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_TableIndent3body-BodyE-Column1-Body1">
+                            <p class="CellBody">Ja</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_TableIndent3body-BodyD-Column1-Body1">
+                            <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 41px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_CellNumA" valign="top"><span class="Number"><b>a.</b></span>
+                                    </td>
+                                    <td class="AutoNumber_p_CellNumA" valign="top" data-mc-autonum="&lt;b&gt;a.&lt;/b&gt;">Aktivieren Sie das Kontrollkästchen <span class="User_Entry">In Datei exportieren</span> (Export to File). <span class="Emphasis">Das Feld "Dateiname" (File Name) und die Schaltfläche "Mehr" (More) werden aktiviert.</span></td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 41px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Number"><b>b.</b></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;b&gt;b.&lt;/b&gt;">Klicken Sie auf die Schaltfläche <span class="User_Entry">Mehr</span> (More) für das Feld <span class="User_Entry">Dateiname</span> (File Name). <span class="Emphasis">Das Popup "Speichern unter" (Save As) wird angezeigt.</span></td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 41px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Number"><b>c.</b></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;b&gt;c.&lt;/b&gt;">Geben Sie im Feld <span class="User_Entry">Dateiname</span> (File Name) einen Dateinamen ein, navigieren Sie zu einem Speicherort und wählen Sie einen Dateityp aus. Klicken Sie dann auf <span class="User_Entry">Speichern</span> (Save). <span class="Emphasis">Das Popup "Speichern unter" (Save As) wird geschlossen und im Feld "Dateiname" (File Name) wird der Dateiname angezeigt.</span></td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 41px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Number"><b>d.</b></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;b&gt;d.&lt;/b&gt;">Gehen Sie zu Schritt 6.</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_TableIndent3body-BodyB-Column1-Body2">
+                            <p class="CellBody">Nein</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_TableIndent3body-BodyA-Column1-Body2">
+                            <p class="CellBodyIndented">Gehen Sie zu Schritt 6.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step_KeepWithNext" valign="top"><span class="Number"><b>6.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step_KeepWithNext" valign="top" data-mc-autonum="&lt;b&gt;6.&lt;/b&gt;">Möchten Sie die ausgewählten Elemente in ein Zielportal exportieren?</td>
+                </tr>
+            </table>
+            <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_TableIndent3body.css');width: 90%;" class="TableStyle-Horiz-rules_TableIndent3body" cellspacing="0">
+                <col class="TableStyle-Horiz-rules_TableIndent3body-Column-Column1" style="width: 81px;" />
+                <col class="TableStyle-Horiz-rules_TableIndent3body-Column-Column1" />
+                <thead>
+                    <tr class="TableStyle-Horiz-rules_TableIndent3body-Head-Header1">
+                        <th class="TableStyle-Horiz-rules_TableIndent3body-HeadE-Column1-Header1">
+                            <p class="CellHead-Left">Antwort . . .</p>
+                        </th>
+                        <th class="TableStyle-Horiz-rules_TableIndent3body-HeadD-Column1-Header1">
+                            <p class="CellHead-Left">Dann . . .</p>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body1">
+                        <td class="TableStyle-Horiz-rules_TableIndent3body-BodyE-Column1-Body1">
+                            <p class="CellBody">Ja</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_TableIndent3body-BodyD-Column1-Body1">
+                            <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 41px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p_CellNumA" valign="top"><span class="Number"><b>a.</b></span>
+                                    </td>
+                                    <td class="AutoNumber_p_CellNumA" valign="top" data-mc-autonum="&lt;b&gt;a.&lt;/b&gt;">Aktivieren Sie das Kontrollkästchen <span class="User_Entry">Export an Zielportal</span> (Export to Target Portal). <span class="Emphasis">Die Felder "Benutzername" (User Name), "Kennwort" (Password), "Portaldomäne" (Portal Domain) und "Portal-URL" (Portal URL), das Kontrollkästchen "Vorhandene Webparts, Seiten oder Seitenfolgen überschreiben" (Override existing Web Parts, Pages or Pageflows) und die Schaltfläche "Verbindung überprüfen" (Verify Connection) werden aktiviert.</span></td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 41px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Number"><b>b.</b></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;b&gt;b.&lt;/b&gt;">Geben Sie im Feld <span class="User_Entry">Benutzername</span> (User Name) den Benutzernamen für das Zielportal ein.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 41px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Number"><b>c.</b></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;b&gt;c.&lt;/b&gt;">Geben Sie im Feld <span class="User_Entry">Kennwort</span> (Password) das Kennwort für das Zielportal ein.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 41px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Number"><b>d.</b></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;b&gt;d.&lt;/b&gt;">Geben Sie im Feld <span class="User_Entry">Domäne</span> (Domain) die Domäne für das Zielportal ein.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 41px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Number"><b>e.</b></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;b&gt;e.&lt;/b&gt;">Geben Sie im Feld <span class="User_Entry">Portal-URL</span> (Portal URL) die URL für das Zielportal ein.</td>
+                                </tr>
+                            </table>
+                            <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                <col style="width: 41px;" />
+                                <col style="width: 30px;" />
+                                <col style="width: auto;" />
+                                <tr>
+                                    <td valign="top" />
+                                    <td class="AutoNumber_p__1bullet" valign="top"><span class="Number"><b>f.</b></span>
+                                    </td>
+                                    <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;b&gt;f.&lt;/b&gt;">Gehen Sie zu Schritt 7.</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body2">
+                        <td class="TableStyle-Horiz-rules_TableIndent3body-BodyB-Column1-Body2">
+                            <p class="CellBody">Nein</p>
+                        </td>
+                        <td class="TableStyle-Horiz-rules_TableIndent3body-BodyA-Column1-Body2">
+                            <p class="CellBodyIndented">Gehen Sie zu Schritt 7.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>7.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;7.&lt;/b&gt;">Geben Sie entsprechend Ihren Geschäftsanforderungen optionale Informationen ein. Weitere Informationen zu den optionalen Feldern finden Sie in der Tabelle der Felddefinitionen.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step1" valign="top"><span class="Number"><b>8.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step1" valign="top" data-mc-autonum="&lt;b&gt;8.&lt;/b&gt;">Klicken Sie auf <span class="User_Entry">Export starten</span> (Start Export). <span class="Emphasis">Das Popup-Fenster "Exportfortschritt..." (Export Progress) wird angezeigt und zeigt den Fortschritt des Exports an. Popup-Fenster "Exportfortschritt..." (Export Progress) wird geschlossen und im Fenster "Batch-Export" (Batch Export) wird eine Erfolgsmeldung angezeigt, wenn der Exportprozess abgeschlossen wurde.</span></td>
+                </tr>
+            </table>
+        </div>
+        <MadCap:pageFooter class="FirstPage">
+            <p class="copyright">© Siemens 2020</p>
+        </MadCap:pageFooter>
+    </body>
+</html>

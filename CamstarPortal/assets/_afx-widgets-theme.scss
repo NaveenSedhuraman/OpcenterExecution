@@ -1,0 +1,1074 @@
+// Copyright 2018 Siemens Product Lifecycle Management Software Inc.
+// mixins
+@import 'mixins/mixins';
+
+body,
+.afx-default-background {
+    // note: dark gradient background is default for light theme
+    @include gradient_bg();
+    color: $body_text_color_on_dark_background;
+    fill: $body_text_color_on_dark_background;
+}
+
+.afx-accent-background {
+    // default is darker accent
+    background-color: $brand_quaternary_content_background;
+    color: $brand_quaternary_content_text;
+    fill: $brand_quaternary_content_text;
+    .aw-theme-iconOutline {
+        fill: $brand_quaternary_content_text;
+    }
+}
+
+// aw-layout-subLocation background is here for backward compatibility, we'd like to remove...
+.aw-layout-subLocation,
+.afx-content-background {
+    background-color: $content_background_color;
+}
+
+// Toolbar background in aw for compatibility in lighter theme
+.aw-toolbar-background {
+    background-color: $aw_toolbar;
+}
+
+.afx-alt-content-background {
+    background-color: $light_background_color;
+}
+
+.afx-medium-background,
+.afx-medium-background .aw-layout-panel {
+    background-color: $medium_background_color;
+}
+
+// styling widgets for light background
+@mixin secondary-foreground-styles {
+    color: $body_text_color;
+    fill: $body_text_color;
+    text {
+        fill: $body_text_color;
+
+        &.aw-theme-errorText {
+            fill: $Siemens_Status_Red;
+        }
+    }
+    tr td {
+        color: $body_text_color;
+    }
+    .aw-widgets-propertyNonEditValue {
+        color: $label_value_color;
+    }
+    .aw-layout-panelSectionTitle {
+        // currently set via awRoot, etc. remove and set here
+        color: $body_text_color;
+    }
+    a {
+        color: $link_dark;
+        &:visited {
+            color: $link_dark_visited;
+        }
+        &:hover {
+            color: $link_dark_hover;
+        }
+        &:active {
+            color: $link_dark_active;
+        }
+        &.disabled {
+            color: $link_disabled;
+        }
+    }
+
+    // label
+    .aw-widgets-propertyLabelTop {
+        color: $label_text_color;
+    }
+
+    // widget required asterisk
+    .afx-property-required:after {
+        color: $Siemens_Blue_7;
+    }
+}
+
+// styling for dark background
+@mixin primary-foreground-styles {
+    .aw-widgets-propertyLabelTop,
+    .aw-widgets-propertyNonEditValue {
+        color: $body_text_color_on_dark_background;
+    }
+    .aw-layout-panelSectionTitle {
+        color: $aw_tab_unselected;
+    }
+    a {
+        color: $link;
+        &:visited {
+            color: $link_visited;
+        }
+        &:hover {
+            color: $link_hover;
+        }
+        &:active {
+            color: $link_active;
+        }
+        &.disabled {
+            color: $link_disabled;
+        }
+    }
+
+    // widget required asterisk light color
+    .afx-property-required:after {
+        color: $body_text_color_on_dark_background;
+    }
+}
+
+// dark background is on body so treat as default and style at root
+@include primary-foreground-styles;
+// light backgrounds; aw-layout-subLocation is here for backward compatibility, we'd like to remove...
+.aw-layout-subLocation,
+.afx-content-background,
+.afx-alt-content-background,
+.aw-toolbar-background,
+.noty_container_type_error,
+.noty_container_type_information,
+.noty_container_type_warning,
+.afx-medium-background {
+    @include secondary-foreground-styles;
+    .afx-accent-background,
+    .afx-default-background {
+        // support dark background inside light
+        @include primary-foreground-styles;
+    }
+}
+
+// code below needs to be moved into dark/light mixin above
+
+/* aw-list */
+.aw-widgets-cellListWidget {
+    .aw-widgets-cellListItem {
+        &:hover {
+            background: $cell_list_item_hover;
+            color: $brand_selection_text_hover;
+        }
+        &:active {
+            background: $cell_list_item_active;
+            color: $brand_selection_text_active;
+        }
+        &.aw-widgets-cellListItemSelected {
+            background: $cell_list_item_selected;
+            color: $brand_selection_text_selected;
+
+            &:hover {
+                background: $cell_list_item_selected_hover;
+                color: $brand_selection_text_selected_hover;
+            }
+        }
+    }
+}
+
+.aw-widgets-cellListItem.aw-widgets-hideCellListSelEffect:hover,
+.aw-widgets-cellListItem.aw-widgets-hideCellListSelEffect:active {
+    background-color: transparent;
+}
+
+.aw-widgets-cellListWidget .aw-widgets-cellListItem.aw-widgets-hideCellListSelEffect:hover,
+.aw-widgets-cellListWidget .aw-widgets-cellListItem.aw-widgets-hideCellListSelEffect:active {
+    background: transparent;
+}
+
+.aw-layout-popup {
+    border-color: $popup_border_color;
+    box-shadow: $popup_drop_shadow;
+}
+
+.aw-popup-contentContainer > .aw-layout-popup {
+    box-shadow: $popup_child_drop_shadow;
+}
+
+.afx-default-background,
+.afx-accent-background {
+
+    &.aw-global-navigation-panel,
+    &.aw-sidenav-layoutContainer {
+
+        label,
+        span {
+            color: $global_navigation_label_background_color;
+        }
+
+        span.aw-avatar-name {
+            color: $panel_avatar_name;
+        }
+
+        .aw-layout-panelSectionTitle {
+            background-color: $global_navigation_panel_title_background_color;
+
+            aw-property-image svg {
+                polygon {
+                    fill: $global_navigation_link_polygon_icon_color;
+                }
+            }
+        }
+
+        .aw-layout-panel {
+            background-color: $brand_quaternary_content_background;
+        }
+
+        //Make command icons within the array widget container to have a black shade,
+        //as their background is light.
+        .aw-jswidgets-arrayWidgetContainer {
+            .aw-commands-commandIconButton {
+                .aw-theme-iconOutline {
+                    fill: $panel_command_icon_color;
+                }
+            }
+        }
+    }
+
+    button {
+        color: $link;
+        &:hover {
+            color: $Siemens_Blue_1;
+        }
+    }
+
+    aw-link-with-popup {
+        @include aw_link_with_popup_color($link_with_popup_dropdown_darker_background_color, $brand_secondary_link_hover);
+    }
+}
+
+// gloabl navigation pin color
+.aw-global-navigation-panel {
+    &.unpinned {
+        box-shadow: $global_navigation_panel_shadow;
+
+        aw-property-image {
+            svg path {
+                fill: $panel_unpinned_icon_color;
+            }
+        }
+    }
+
+    &.pinned {
+        box-shadow: none;
+
+        aw-property-image {
+            svg path {
+                fill: $panel_pinned_icon_color;
+            }
+        }
+    }
+}
+
+.afx-accent-background {
+    .aw-layout-panel {
+        .aw-commands-commandIconButton:hover {
+            .aw-theme-iconOutline {
+                fill: $panel_command_icon_hover_color;
+            }
+        }
+    }
+}
+/* aw sidenav with pin (directive) */
+.aw-sidenav-layoutContainer {
+    .unpinned {
+        aw-property-image {
+            svg path {
+                fill: $panel_unpinned_icon_color;
+            }
+        }
+    }
+
+    .pinned {
+        box-shadow: none;
+
+        aw-property-image {
+            svg path {
+                fill: $panel_pinned_icon_color;
+            }
+        }
+    }
+}
+
+/* aw-navigate-breadcrumb  */
+.aw-layout-fxbreadCrumbs,
+.aw-layout-breadCrumbs {
+    background: $breadcrumb_container_background;
+    .aw-layout-popup {
+        .aw-commands-svg svg,
+        .aw-theme-iconOutline {
+            fill: $aw_iconOutline;
+        }
+        .aw-widgets-crumbLink {
+            color: $breadcrumb_link_dark;
+            &:hover {
+                color: $breadcrumb_link_hover_dark;
+            }
+            &:active {
+                color: $breadcrumb_link_active_dark;
+            }
+        }
+    }
+}
+
+.aw-jswidget-controlArrow {
+    // an inelegant solution
+    svg {
+        path {
+            fill: $breadcrumb_arrow_color;
+        }
+    }
+}
+
+.aw-layout-panelMain {
+    .aw-jswidget-controlArrow {
+        svg {
+            path {
+                fill: $breadcrumb_arrow_color;
+            }
+        }
+    }
+}
+
+aw-header,
+aw-showobject-header {
+    // dark background
+    .aw-widgets-crumbLink {
+        color: $breadcrumb_link_dark;
+        &:hover {
+            color: $breadcrumb_link_hover_dark;
+        }
+        &:active {
+            color: $breadcrumb_link_active_dark;
+        }
+    }
+    .aw-jswidget-controlArrow,
+    .aw-layout-panelMain {
+        // an inelegant solution
+        svg {
+            path {
+                fill: $breadcrumb_arrow_color_dark;
+            }
+        }
+    }
+    .afx-layout-fullscreen-header .aw-jswidget-controlArrow {
+        svg {
+            path {
+                fill: $breadcrumb_arrow_color;
+            }
+        }
+    }
+}
+
+// aw-tab
+.aw-jswidget-tabContainer {
+    .aw-jswidget-tab {
+        a.aw-base-tabTitle {
+            color: $tab_title;
+            border-color: $tab_title_border_color;
+            &:hover {
+                color: $tab_title_hover;
+            }
+            &:active {
+                color: $tab_title_active;
+            }
+        }
+        a.aw-base-tabTitleSelected {
+            color: $tab_title_selected;
+            border-color: $tab_title_selected_border_color;
+            -webkit-transition: $hover_border_color_transition;
+            transition: $hover_border_color_transition;
+            &:hover {
+                color: $tab_title_hover;
+                border-color: $tab_title_selected_border_color_hover;
+            }
+        }
+    }
+}
+
+.aw-layout-header {
+    .aw-jswidget-tab {
+        a.aw-base-tabTitle {
+            color: $brand_primary_content_background;
+        }
+    }
+}
+
+// textbox, text-area and password
+.gwt-ListBox,
+.gwt-TextBox,
+.gwt-TextArea,
+textarea,
+input[type="text"],
+input[type="password"] {
+    border-color: $textbox_border_color;
+    background-color: $textbox_background;
+    box-shadow: $textbox_drop_shadow;
+    color: $input_text_color;
+    &:hover {
+        box-shadow: $textbox_drop_shadow_hover;
+    }
+    &:focus {
+        box-shadow: $textbox_drop_shadow_hover;
+        background-color: $textbox_background;
+        color: $input_text_color;
+        border-color: $textbox_border_color_focus;
+        caret-color: $textbox_caret_color;
+    }
+    &.changed,
+    &.ng-dirty {
+        background-color: $input_pending_change;
+        color: $input_pending_change_text;
+    }
+    &:disabled {
+        background-color: $aw_gray_25;
+        border-color: $aw_gray_18;
+        box-shadow: none;
+    }
+}
+
+// certain inputs don't show dirty state
+.aw-layout-navigationAreaContainer,
+.aw-jswidgets-cbaSearch,
+.aw-uiwidgets-searchBoxContainer,
+.aw-session-signIn,
+.aw-uiwidgets-typeSelectorContainer {
+
+    input[type="text"],
+    input[type="password"] {
+        &.changed,
+        &.ng-dirty {
+            background-color: $textbox_background;
+            color: $input_text_color;
+        }
+    }
+}
+
+input[type="password"] {
+
+    &.changed,
+    &.ng-dirty {
+        background-color: $textbox_background;
+        color: $input_text_color;
+    }
+}
+
+// parent tab
+aw-header,
+aw-header-tabs .aw-layout-subLocationTitles {
+    .aw-jswidget-tabContainer {
+        .aw-jswidget-tab {
+            a.aw-base-tabTitle {
+                color: $brand_primary_content_background;
+                border-color: transparent;
+            }
+            a.aw-base-tabTitleSelected,
+            a.aw-base-tabTitleSelected:hover,
+            a.aw-base-tabTitle:hover {
+                color: $parent_tab_title;
+                border-color: $parent_tab_title_border_color;
+            }
+
+            a.aw-base-tabTitle:hover {
+                border-color: $tab_title_border_color;
+            }
+        }
+    }
+}
+
+// checkbox
+.afx-checkbox {
+    .afx-checkbox-md-style {
+        .check {
+            color: $checkbox_border_color;
+            -webkit-transition: $hover_border_color_transition;
+            transition: $hover_border_color_transition;
+        }
+        &:before {
+            background-color: $checkbox_checked_color;
+            pointer-events: none;
+        }
+    }
+    &:hover {
+        input[type=checkbox]:not(:checked) {
+            +.afx-checkbox-md-style {
+                .check {
+                    border: $checkbox_hover_border;
+                }
+            }
+        }
+        input[type=checkbox][disabled]:not(:checked) {
+            +.afx-checkbox-md-style {
+                .check {
+                    color: $checkbox_disabled_color;
+                    border: $checkbox_disabled_border;
+                }
+            }
+        }
+    }
+    input[type=checkbox]:checked {
+        +.afx-checkbox-md-style {
+            .check {
+                color: $checkbox_checked_color;
+            }
+        }
+    }
+    input[type=checkbox][disabled] {
+        +.afx-checkbox-md-style {
+            .check {
+                color: $checkbox_disabled_color;
+            }
+        }
+    }
+}
+
+.disabled .aw-jswidgets-checkboxLabel {
+    color: $checkbox_disabled_color;
+}
+
+aw-checkbox {
+    .disabled,
+    &.disabled {
+        .aw-widgets-propertyLabelTop {
+            color: $checkbox_disabled_color;
+        }
+    }
+}
+
+.changed {
+    .afx-checkbox {
+        .afx-checkbox-md-style {
+            .check {
+                box-shadow: $checkbox_changed_border;
+            }
+        }
+    }
+}
+
+// checkbox-list seperator after selected vals
+.aw-widgets-cellListWidget .afx-selected-vals .aw-jswidgets-nestingListItem:last-child {
+    border-bottom-color: $aw_separator_border_color;
+}
+
+// lov descriptions
+.aw-jswidgets-drop .aw-widgets-cellListCellItemType {
+    color: $body_text_color;
+}
+
+// button
+button.aw-base-blk-button {
+    &:not(.disabled) {
+        box-shadow: $default_button_drop_shadow;
+        color: $default_button_text;
+        text-shadow: $button_text_shadow;
+        background-color: $default_button_background;
+        border-color: $default_button_border;
+        &:hover,
+        &:focus {
+            box-shadow: $default_button_drop_shadow;
+            color: $default_button_text;
+            background-color: $default_button_background_hover;
+        }
+        &:active {
+            background-color: $default_button_background_active;
+            box-shadow: $drop_shadow_button_active;
+            color: $default_button_text;
+        }
+        &.aw-sole-button {
+            background-color: $solo_button_background;
+            border-color: $solo_button_border;
+            &:hover,
+            &:focus {
+                background-color: $solo_button_background_hover;
+            }
+            &:active {
+                background-color: $solo_button_background_active;
+            }
+        }
+        &.aw-negative-button {
+            background-color: $negative_button_background;
+            border-color: $negative_button_border;
+            color: $negative_button_text;
+            &:hover,
+            &:focus {
+                background-color: $negative_button_background_hover;
+                color: $negative_button_text;
+            }
+            &:active {
+                background-color: $negative_button_background_active;
+                color: $negative_button_text;
+            }
+        }
+    }
+    &.disabled {
+        background-color: $disabled_button_background;
+        border-color: $disabled_button_border;
+        color: $disabled_button_text;
+    }
+}
+
+.aw-layout-panelMain {
+    .aw-base-blk-button.aw-not-default-button {
+        background-color: transparent;
+        border-color: $aw_button_color;
+        color: $negative_button_text;
+        &:hover,
+        &:focus {
+            background-color: $default_button_background_hover;
+            color: $default_button_text;
+        }
+    }
+
+    // default class for aw-button
+    .aw-base-blk-button {
+        box-shadow: $default_button_drop_shadow;
+        color: $default_button_text;
+        text-shadow: $button_text_shadow;
+        background-color: $default_button_background;
+        border-color: $default_button_border;
+        &:hover,
+        &:focus {
+            box-shadow: $default_button_drop_shadow;
+            color: $default_button_text;
+            background-color: $default_button_background_hover;
+        }
+        &:active {
+            background-color: $default_button_background_active;
+            box-shadow: $drop_shadow_button_active;
+            color: $default_button_text;
+        }
+        &.aw-sole-button {
+            background-color: $solo_button_background;
+            border-color: $solo_button_border;
+            &:hover,
+            &:focus {
+                background-color: $solo_button_background_hover;
+            }
+            &:active {
+                background-color: $solo_button_background_active;
+            }
+        }
+        &.aw-negative-button {
+            background-color: $negative_button_background;
+            border-color: $negative_button_border;
+            color: $negative_button_text;
+            &:hover,
+            &:focus {
+                background-color: $negative_button_background_hover;
+                color: $negative_button_text;
+            }
+            &:active {
+                background-color: $negative_button_background_active;
+                color: $negative_button_text;
+            }
+        }
+        &.disabled {
+            background-color: $disabled_button_background;
+            border-color: $disabled_button_border;
+            color: $disabled_button_text;
+            box-shadow: none;
+        }
+    }
+}
+
+// icon-button
+.aw-global-toolbar .aw-base-iconButton .aw-theme-iconOutline {
+    fill: $icon_button_reverse_fill;
+}
+
+.aw-global-toolbar .aw-base-iconButton:hover {
+    background-color: $icon_button_reverse_background_color_hover;
+}
+
+// file-upload
+.aw-file-upload-container {
+    &:hover {
+        .aw-file-upload-fileLabel {
+            background-color: $file_upload_button_background_color;
+        }
+        .aw-file-upload-fileName {
+            box-shadow: $drop_shadow_file_upload_input_active;
+            border-color: $file_upload_input_border_color;
+        }
+    }
+}
+
+// DRAG AND DROP CHANGES
+.aw-widgets-droptable.aw-widgets-dropframe,
+.ui-grid-row.aw-widgets-droparea,
+.aw-widgets-droparea,
+.aw-widgets-dropframe,
+.aw-widgets-dropframe.aw-theme-dropframe {
+    border-color: $dragdrop_container_border_color;
+    background-color: $dragdrop_container_background_color;
+}
+
+// DRAG AND DROP CHANGES
+.ui-grid-row.aw-theme-dropframe.aw-widgets-dropframe {
+    border-color: $dragdrop_container_border_color;
+    background-color: $dragdrop_container_background_color;
+}
+
+// DRAG AND DROP CHANGES
+.ui-grid-cell.aw-theme-dropframe.aw-widgets-dropframe {
+    background-color: $dragdrop_container_background_color;
+}
+
+/* This style will override the border-color for the line between pinned & scroll containers. */
+.aw-splm-table-pinned-container-drop-frame.aw-widgets-dropframe.aw-theme-dropframe.ui-grid-row {
+    border-right-color: $table_border_color;
+}
+
+/* This style will override the border-color for the line between pinned & scroll containers. */
+.aw-splm-table-scroll-container-drop-frame.aw-widgets-dropframe.aw-theme-dropframe.ui-grid-row {
+    border-left-color: $table_border_color;
+}
+
+// DRAG AND DROP CHANGES
+.aw-noeachrow-highlight-dropframe {
+    background-color: $dragdrop_container_background_color !important;
+}
+
+.aw-file-upload-fileName {
+    box-shadow: $drop_shadow_file_upload_input;
+    background-color: $file_upload_input_background_color;
+    border-color: $file_upload_file_name_border_color;
+    color: $file_upload_input_color;
+}
+
+.aw-file-upload-fileLabel {
+    border-color: $file_upload_button_border_color;
+    background-color: $file_upload_label_background_color;
+    color: $file_upload_button_text_color;
+}
+
+.file-upload-selected-file {
+    color: $file_upload_selected_file_text_color;
+}
+
+//avatar
+.aw-avatar-icon {
+    background-color: $avatar_background_color;
+}
+
+.aw-avatar-name {
+    color: $avatar_text_color;
+}
+
+.aw-avatar-normal-icon .aw-theme-iconOutline {
+    fill: $avatar_icon_fill;
+}
+
+.aw-avatar-layout {
+    background-color: $avatar_layout_background_color;
+    border-color: $avatar_layout_border_color;
+    box-shadow: $avatar_layout_drop_shadow;
+    color: $avatar_text_color;
+}
+
+// aw-radiobutton
+@keyframes radio-ripple {
+    0% {
+        box-shadow: 0px 0px 0px 1px rgba($radio_ripple_color, 0);
+    }
+    50% {
+        box-shadow: 0px 0px 0px 13px rgba($radio_ripple_color, 0.2);
+    }
+    100% {
+        box-shadow: 0px 0px 0px 13px rgba($radio_ripple_color, 0);
+    }
+}
+
+.aw-jswidgets-radioButtonItem {
+    input[type="radio"] {
+        &:checked+.aw-jswidgets-radioLabel:before {
+            animation: radio-ripple 0.7s forwards ease-out;
+            border-color: $radiobutton_checked_border_color;
+        }
+        &:not(:checked):hover+.aw-jswidgets-radioLabel:before {
+            border: solid 4px $radiobutton_hover_border_color;
+        }
+    }
+    .aw-jswidgets-radioLabel {
+        &:before,
+        &:after {
+            transition-property: transform, border-color;
+        }
+        &:before {
+            border-color: $radio_button_border_color;
+        }
+        &:after {
+            background: $radiobutton_checked_dot_color;
+        }
+    }
+}
+
+.disabled .aw-jswidgets-radioText {
+    color: $radiobutton_disabled_color;
+}
+
+aw-radiobutton {
+    .disabled,
+    &.disabled {
+        .aw-widgets-propertyLabelTop {
+            color: $radiobutton_disabled_color;
+        }
+    }
+}
+
+.disabled .aw-jswidgets-radioButtonItem .aw-jswidgets-radioLabel:before,
+.disabled .aw-jswidgets-radioButtonItem input[type="radio"]:checked+.aw-jswidgets-radioLabel:before,
+.aw-jswidgets-radioButtonItem.disabled .aw-jswidgets-radioLabel:before {
+    border-color: $radiobutton_disabled_color;
+}
+
+.disabled .aw-jswidgets-radioButtonItem .aw-jswidgets-radioLabel:after {
+    background: $radiobutton_disabled_color;
+}
+
+// balloon popup
+aw-balloon-popup-panel .aw-layout-popup {
+    box-shadow: $balloon_popup_box_shadow;
+    background-color: $balloon_popup_background_color;
+    border-color: $balloon_popup_border_color;
+}
+
+aw-balloon-popup-panel .aw-layout-popup:before {
+    border-bottom-color: $balloon_popup_border_color;
+}
+
+// search-prefilter
+aw-search-prefilter {
+    input.aw-jswidgets-choice[readonly="readOnly"] {
+        color: $search_prefilter_text_color;
+        background-color: $search_prefilter_background_color;
+        border-color: $search_prefilter_border_color;
+        &:active {
+            background-color: $search_prefilter_background_color_active;
+        }
+        &:focus {
+            background-color: $search_prefilter_background_color_focus;
+        }
+        &.aw-search-dirty {
+            background-color: $search_prefilter_background_color_dirty;
+            border-color: $search_prefilter_border_color_dirty;
+        }
+    }
+    aw-property-image.aw-search-prefilter-icon .aw-theme-iconOutline {
+        fill: $search_prefilter_icon_color;
+    }
+}
+
+// indeterministic progress indicator
+.aw-layout-progressBarCylon {
+    @include linear_gradient(to right, $progress_indicator_thumb_color 0px, $progress_indicator_thumb_color 0px);
+}
+
+.aw-layout-progressBarIE9 {
+    background-color: $progress_indicator_thumb_color;
+}
+
+.aw-layout-progressBar {
+    background-color: $progress_indicator_path_color;
+}
+
+// command bar
+aw-command-bar {
+    .aw-commands-commandIconButton {
+        &:hover {
+            background-color: $command_bar_icon_button_background_color_hover;
+        }
+        &:active {
+            background-color: $command_bar_icon_button_background_color_active;
+        }
+    }
+    .aw-commands-cellDecorator div {
+        background-color: $command_bar_command_decorator_background_color;
+        color: $command_bar_command_decorator_color;
+    }
+}
+
+// toolbar
+.aw-toolbar-layout.aw-toolbar-horizontal {
+    box-shadow: $horizontal_tool_bar_drop_shadow;
+}
+
+/* aw-sidenav css start */
+
+.aw-sidenav-push.aw-sidenav-leftBackground {
+    box-shadow: $drop_shadow_for_right_panel;
+}
+
+.aw-sidenav-push.aw-sidenav-rightBackground {
+    box-shadow: $drop_shadow_for_left_panel;
+}
+
+.aw-sidenav-float.aw-sidenav-leftBackground {
+    box-shadow: $left_shadow_2x_large;
+}
+
+.aw-sidenav-float.aw-sidenav-rightBackground {
+    box-shadow: $right_shadow_2x_large;
+}
+
+.global-navigation {
+    .aw-sidenav-float {
+        &.aw-sidenav-rightBackground {
+            box-shadow: $global_navigation_panel_float_outer_shadow, $global_navigation_panel_inner_shadow;
+        }
+    }
+    .aw-sidenav-push {
+        &.aw-sidenav-rightBackground {
+            box-shadow: $global_navigation_panel_pushed_outer_shadow, $global_navigation_panel_inner_shadow;
+        }
+    }
+
+    .aw-sidenav-float,
+    .aw-sidenav-push {
+        &.aw-sidenav-rightBackground {
+            .aw-layout-declarativePanelRoot {
+                box-shadow: $global_navigation_panel_inner_shadow;
+            }
+        }
+    }
+}
+
+/* aw-sidenav css end */
+
+// Array widget
+aw-property-array-val, aw-search-property-array-val {
+    .aw-jswidgets-arrayWidgetContainer {
+        border-color: $property_array_val_border_color;
+        box-shadow: $property_array_val_box_shadow;
+    }
+    .aw-jswidgets-arrayWidgetContainer:hover {
+        box-shadow: $property_array_val_box_shadow_hover;
+    }
+    .aw-jswidgets-arrayWidgetContainerFocused {
+        border-color: $Siemens_Blue_13;
+    }
+}
+
+//aw-property-non-edit-overflow-array-val
+.aw-layout-overflowPopupCellist .aw-widgets-cellListItem a {
+    color: $body_text_color;
+    &:hover {
+        color: $body_text_color;
+    }
+}
+
+// AW Search Box
+aw-search-box,
+aw-in-content-search-box {
+    .aw-uiwidgets-searchBoxContainer {
+        border-color: $search_box_border_color;
+        box-shadow: $search_box_drop_shadow;
+        background-color: $search_box_background_color;
+        .aw-uiwidgets-searchBoxIcon {
+            background-color: $search_box_background_color;
+        }
+    }
+    .aw-search-inContentSearchBox .aw-uiwidgets-searchBoxContainer {
+        border-color: $search_box_border_color;
+    }
+    .aw-search-inContentSearchBox .aw-uiwidgets-searchBoxContainer:hover {
+        border-color: $search_box_border_color_hover;
+    }
+    .aw-uiwidgets-searchBoxIcon:hover {
+        background-color: $search_box_icon_hover;
+    }
+    .aw-uiwidgets-searchBoxIcon:active {
+        background-color: $search_box_icon_active;
+    }
+    aw-icon .aw-theme-iconOutline {
+        fill: $search_box_icon_color;
+    }
+}
+
+.aw-search-searchIconViewContainer .aw-uiwidgets-searchBoxIcon {
+    background-color: transparent;
+}
+
+.aw-search-globalSearchPreFilterWrapper .aw-widgets-propertyContainer {
+    box-shadow: $search_box_drop_shadow;
+}
+
+// start styling for placeholder
+::-webkit-input-placeholder {
+    color: $placeholder_text_color;
+}
+
+:-ms-input-placeholder {
+    color: $placeholder_text_color !important;
+}
+
+:-moz-placeholder {
+    // Firefox 18-
+    color: $placeholder_text_color;
+}
+
+::-moz-placeholder {
+    // Firefox 19+
+    color: $placeholder_text_color;
+}
+/* end styling for placeholder */
+
+.aw-search-globalSearchElementsContainer aw-search-prefilter .aw-jswidgets-popUpVisible .aw-jswidgets-nestingListItemDisplay:hover {
+    color: $aw_prefilter_text_color;
+}
+
+aw-link-with-popup {
+    @include aw_link_with_popup_color($link_with_popup_dropdown_icon_color, $brand_primary_link_hover);
+}
+
+//aw-comand-panel-section command-bar styling with labels
+.aw-commands-showIconLabel {
+    .aw-layout-declarativePanelRoot.aw-layout-panel .aw-layout-panelSection {
+        aw-command-bar:not(.aw-layout-userSessionCommands).aw-commands-commandBarHorizontal {
+            box-shadow: $aw_command_panel_section_commandbar_box_shadow;
+        }
+    }
+}
+
+
+/* NOTIFICATION-CELL or AW-NOTIFICATION-CELL start */
+/* notification cell decorator color*/
+.aw-notification-cell-importance-high {
+    border-left-color: $aw_notification_cell_imp_color;
+}
+
+.aw-notification-cell-importance-medium {
+    border-left-color: $aw_notification_cell_med_color;
+}
+
+.aw-notification-cell-importance-low {
+    border-left-color: $aw_notification_cell_low_color;
+}
+
+/* notification cell title color*/
+.aw-notification-cell-title-high {
+    color: $aw_notification_cell_imp_color;
+}
+
+.aw-notification-cell-title-medium {
+    color: $aw_notification_cell_med_color;
+}
+
+.aw-notification-cell-title-low {
+    color: $aw_notification_cell_low_color;
+}
+
+.aw-notification-cell-read {
+    border-left-color: $aw_notification_cell_read_color;
+}
+
+.aw-notification-cell-prop {
+    color: $aw_notification_cell_prop_color;
+}
+
+.aw-notification-cell:hover {
+    box-shadow: $aw_notification_cell_box_shadow_hover;
+}
+
+.aw-notification-cell {
+    background-color: $aw_notification_cell_read_color;
+    box-shadow: $aw_notification_cell_box_shadow;
+}
+/* NOTIFICATION-CELL or AW-NOTIFICATION-CELL end */

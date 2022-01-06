@@ -1,0 +1,16 @@
+<div ng-if="prop.renderingHint == 'label'">
+    <aw-property-non-edit-val prop="prop" />
+</div>
+<div ng-if="prop.renderingHint != 'label' && prop.hasLov">
+    <aw-property-lov-val prop="prop" />
+</div>
+<div ng-if="prop.renderingHint != 'label' && !prop.hasLov">
+    <div class="aw-jswidgets-dateTimeInputbox">
+        <div ng-show="prop.dateApi.isDateEnabled">
+            <aw-property-date-val prop="prop" />
+        </div>
+        <div ng-show="prop.dateApi.isTimeEnabled">
+            <aw-property-time-val prop="prop" />
+        </div>
+    </div>
+</div>

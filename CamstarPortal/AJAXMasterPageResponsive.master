@@ -1,0 +1,110 @@
+<%-- Copyright Siemens 2019   --%>
+
+<%@ master language="C#" codefile="AJAXMasterPageResponsive.master.cs" autoeventwireup="true" inherits="Camstar.Portal.AJAXMasterPageResponsive" %>
+<!doctype html>
+<html>
+    <head runat="server">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Opcenter Execution</title>
+        <asp:PlaceHolder runat="server">
+            <%= this.styleSheetString %>
+        </asp:PlaceHolder>         
+    </head>
+    <body class="body-main fullScreen cs-responsive <%=currentTheme%>-theme AJAXMasterResponsive-page">
+        <div id="mod" class="mod" style="display: none">
+            <div id="modImage" class="modImage">
+                <img src="themes/<%= currentTheme %>/images/icons/loading-128x128.gif" alt="" />
+            </div>
+        </div>
+        <form id="AJAXForm" novalidate runat="server" style="height: 100%">
+            <cwpf:WebPartFrameworkManager ID="WebPartManager" runat="server" EnableClientScript="false" />            
+            <asp:ScriptManager ID="ScriptManager" runat="server" EnablePartialRendering="true" EnableCdn="false" EnableScriptGlobalization="true">
+                <scripts>
+                    <asp:ScriptReference Name="jquery"/>
+                    <asp:ScriptReference Path="~/Scripts/jquery/jquery.ui.touch-punch.min.js" /> 
+                    <asp:ScriptReference Name="bootstrap"/>
+                    <asp:ScriptReference Name="camstar"/>
+                    <asp:ScriptReference Name="camstar.webcontrols"/>
+                    <asp:ScriptReference Name="camstar.scripts"/>
+                    <asp:ScriptReference Path="~/Scripts/jquery/tiny_mce/tinymce.min.js" /> 
+                    <asp:ScriptReference Path="~/Scripts/jquery/datepicker/jquery-ui-timepicker-addon.js" /> 
+                    <asp:ScriptReference Name="camstar.webcontrols.jqGrid"/>
+                    <asp:ScriptReference Path="~/Scripts/jsPlumb/jsplumb.js" />
+                    <asp:ScriptReference Name="workspaceoverride"/>                                        
+                    <asp:scriptreference path="~/Scripts/User/User.js" />
+                </scripts>
+            </asp:ScriptManager>
+            <cwfw:label runat="server" Visible="false" ID="YesLabel" LabelName="Web_Yes" LabelType="Designer" />
+            <cwfw:label runat="server" Visible="false" ID="NoLabel" LabelName="Web_No" LabelType="Designer" />
+            <cwfw:label runat="server" Visible="false" ID="OkLabel" LabelName="OKButton" LabelType="Designer" />
+            <cwfw:label runat="server" Visible="false" ID="CloseLabel" LabelName="Web_Close" LabelType="Designer" />
+            <cwfw:label runat="server" Visible="false" ID="MessageTitleLabel" LabelName="ConfirmationMessageTitle" LabelType="Designer" />
+            <div class="form-container">
+                <div class="scrollable-panel">
+                    <cwpf:webpartbasezone id="StaticZoneTop" cssclassbrowse="zone-static" runat="server">
+                        <zonetemplate>
+                            <cwpfc:statusbarcontrol ID="StatusBar" runat="server" />
+                            <cwpfc:workflowprogress ID="WorkflowProgressButtonsBar" runat="server" />
+                        </zonetemplate>
+                    </cwpf:webpartbasezone>
+                    <div class="pageTitleMobile">
+                        <span class="pageTitle"></span>                        
+                    </div>
+                    <div id="DynamicContentDiv" >
+                        <div id="TemplateContentDiv" class="ui-form-contentpanel">
+                            <asp:contentplaceholder id="AJAXContentPlaceHolder" runat="server" />
+                        </div>
+                    </div>
+                </div>
+                <cwpfc:SideBar ID="SideBarRight" Side="Right" IsResponsive="true" runat="server" />
+                <div class="bottom-panel-container">
+                    <div class="bottom-panel">
+                        <cwpf:webpartbasezone id="StaticZoneBottom" cssclassbrowse="zone-static" runat="server">
+                            <ZoneTemplate>
+                                <cwpfc:buttonsbarcontrol ID="ButtonsBar" runat="server" />
+                                <cwpfc:workflownavigationbuttons id="NavigationButtonsBar" runat="server" />
+                            </ZoneTemplate>
+                        </cwpf:webpartbasezone>
+                    </div>
+                </div>
+            </div>
+            <csc:FloatingFrame ID="FloatingFrame" runat="server" />
+        </form>
+
+        <script type="text/javascript">
+            Sys.Application.add_load(function ()
+            {
+                __page = $find("__Page");
+                window.addEventListener("orientationchange", function (e) {
+                    if (__page)
+                        __page.closePanels(e);
+                });
+
+                var redirectPageFlow = '<%=RedirectPageflow%>';
+                var redirectPage = '<%=RedirectPage%>';
+                if (redirectPageFlow.length)
+                {
+                    __page.pageflow('<%=RedirectPageflow%>', '<%= CallStackKey %>', '<%= ResumeWorkflow %>', '<%= QualityObject %>');
+                }
+                else if (redirectPage.length)
+                {
+                    __page.redirect(redirectPage);
+                }
+                else
+                {
+                    __page.set_virtualPageName('<%= PageName %>');
+                    __page.set_queryString('<%= Query %>');
+                    __page.setFocusOnLoad();
+                }
+
+                // initialize mobile barcode if enabled
+                if (__page._mobileBarcodeEnabled && __page.isMobilePage())
+                {
+                    if (!Camstars.Browser.IE) {
+                        InitBarcodeIcons();
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

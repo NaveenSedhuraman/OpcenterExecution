@@ -1,0 +1,41 @@
+{
+    "recentSectionTitle": "Ostatni",
+    "otherSectionTitle": "Inne",
+    "dataSetFileUploadTitle": "Plik",
+    "relationPropLabel": "Relacja",
+
+    "loading": "Ładowanie...",
+    "Filter": "Filtr",
+    "refine":"Zmodyfikuj",
+    "objectType": "Typ",
+    "newTabTitle": "Nowe",
+    "paletteTabTitle": "Paleta",
+    "searchTabTitle": "Szukaj",
+    "searchSectionTitle": "Szukaj",
+    "assignButtonTitle": "Przypisz",
+    "ownProjectSectionTitle": "Posiadający projekt",
+    "addProjectButtonTitle": "Dodaj projekt",
+    "projectsSectionTitle": "Projekty",
+    "addObjectPanelPinButtonToolTip": "Przypnij panel",
+    "addObjectPanelUnpinButtonToolTip": "Wypnij panel",
+    "pasteSuccessful": "Dodano \"{0}\".",
+    "submitSuccessful": "Przekazano \"{0}\".",
+
+    "addButtonTitle" : "Dodaj",
+    "mutiRelationObject" : "Dodano {0} wyborów.",
+
+    "resultTabTitle" : "Wyniki",
+    "filterTabTitle" : "Filtry",
+    "keywordsLabel" : "Słowa kluczowe",
+    "addButtonInSearch" : "Dodaj",
+    "datasetName" : "Nazwa",
+    "datasetDesc" : "Opis",
+    "datasetType" : "Typ",
+    "uploadFile" : "Wgraj plik",
+    "reference" : "Odwołanie",
+    "moreLink"  : "Więcej...",
+
+    "addObjectPanel_oneStepPinCommands": "Polecenia przypinania panelu dodawania elementu w jednym kroku",
+    "uiwidget_projectSectionCommands": "Polecenia przekroju projektu",
+    "aw_compare": "Porównaj"
+}

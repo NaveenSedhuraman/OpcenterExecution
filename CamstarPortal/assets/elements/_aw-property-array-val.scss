@@ -1,0 +1,30 @@
+// Array widget
+aw-property-array-val, aw-search-property-array-val {
+    .aw-jswidgets-arrayWidgetContainer {
+        border: $default_border;
+    }
+
+    .aw-jswidgets-arrayWidgetContainer input[type="text"]{
+        box-shadow: none;
+    }
+
+    .aw-jswidgets-arrayValueCellListItem{
+        padding: $property_array_val_padding;
+    }
+
+    .aw-jswidgets-dateInputbox .aw-widgets-innerWidget {
+        .aw-widget-icon {
+            top: $property_array_val_dateInputbox_calender_icon_top;
+        }
+    }
+
+    .aw-jswidgets-dateTimeInputbox .aw-jswidgets-timepicker .aw-widgets-innerWidget {
+        & .aw-widget-icon {
+            top: $property_array_val_dateTimeInputbox_calender_icon_top;
+        }
+    }
+
+    .aw-jswidgets-arrayEditWidgetContainer aw-property-text-area-val .aw-widgets-innerWidget textarea {
+        width: 100% !important;
+    }
+}

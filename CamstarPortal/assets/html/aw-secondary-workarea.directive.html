@@ -1,0 +1,4 @@
+<div class="aw-layout-sublocationContent">
+    <aw-xrt-summary ng-if="isXrtApplicable && selectedLength === 1" model-object="selected[0]"></aw-xrt-summary>
+    <aw-selection-summary ng-if="!isXrtApplicable || selectedLength !== 1" selection="selected"></aw-selection-summary>
+</div>

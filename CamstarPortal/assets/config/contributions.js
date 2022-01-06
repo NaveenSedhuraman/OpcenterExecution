@@ -1,0 +1,1 @@
+define(['js/configurationService'],function(cfgSvc){cfgSvc.add('contributions',{"states":["js/ui.states"],"command-provider":["js/commandConfiguration.command-provider"]});});

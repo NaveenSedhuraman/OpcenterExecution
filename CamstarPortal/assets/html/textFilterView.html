@@ -1,0 +1,23 @@
+<aw-column class="text-filter" aw-init="data.context=subPanelContext">
+    <aw-label prop="data.title"></aw-label>
+    <aw-search-box prop="data.context.column.filter.textValue" placeholder="data.searchBoxPlaceHolder" action="filterAction"></aw-search-box>
+    <aw-break></aw-break>
+    <aw-break></aw-break>
+    <aw-row height="2f">
+        <aw-column width="5.75">
+            <aw-button button-type="negative" action="removeAction" exist-when="data.context.column.filter.isFilterApplied">
+                <aw-i18n>i18n.REMOVE_BUTTON_TITLE</aw-i18n>
+            </aw-button>
+            <aw-button button-type="disabled" exist-when="!data.context.column.filter.isFilterApplied">
+                <aw-i18n>i18n.REMOVE_BUTTON_TITLE</aw-i18n>
+            </aw-button>
+        </aw-column>
+        <aw-column width="0.5">
+        </aw-column>
+        <aw-column width="5.75">
+            <aw-button action="filterAction">
+                <aw-i18n>i18n.FILTER_TEXT</aw-i18n>
+            </aw-button>
+        </aw-column>
+    </aw-row>
+</aw-column>

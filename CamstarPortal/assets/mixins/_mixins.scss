@@ -1,0 +1,78 @@
+@mixin gradient_bg() {
+    background-image: -ms-radial-gradient(75% top, ellipse farthest-side, $background_1 -100%, $background_2 40%, $background_3 75%, $background_4 100%);
+    background-image: -moz-radial-gradient(75% top, ellipse farthest-side, $background_1 -100%, $background_2 40%, $background_3 75%, $background_4 100%);
+    background-image: -o-radial-gradient(75% top, ellipse farthest-side, $background_1 -100%, $background_2 40%, $background_3 75%, $background_4 100%);
+    background-image: -webkit-gradient(radial, 75% top, 0, center top, 258, color-stop(-100, $background_1), color-stop(40, $background_2), color-stop(75, $background_3), color-stop(100, $background_4));
+    background-image: -webkit-radial-gradient(75% top, ellipse farthest-side, $background_1 -100%, $background_2 40%, $background_3 75%, $background_4 100%);
+    background-image: radial-gradient(ellipse farthest-side at 75% top, $background_1 -100%, $background_2 40%, $background_3 75%, $background_4 100%);
+}
+
+@mixin transition($property, $timeInMilliseconds, $easeInOrOut) {
+    -webkit-transition: $property $timeInMilliseconds $easeInOrOut;
+    -moz-transition: $property $timeInMilliseconds $easeInOrOut;
+    -o-transition: $property $timeInMilliseconds $easeInOrOut;
+    transition: $property $timeInMilliseconds $easeInOrOut;
+}
+
+@mixin transform_rotate($degree) {
+    -ms-transform: rotate($degree);
+    -webkit-transform: rotate($degree);
+    -o-transition: rotate($degree);
+    transform: rotate($degree);
+}
+
+@mixin calc($property, $expression) {
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+@mixin flex($flex) {
+    -webkit-flex: $flex;
+    -ms-flex: $flex;
+    flex: $flex;
+}
+
+@mixin box_pack_justify() {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+}
+
+@mixin linear_gradient($direction, $colorStop1, $colorStop2) {
+    background-image: -webkit-linear-gradient($direction, $colorStop1, $colorStop2);
+    background-image: -moz-linear-gradient($direction, $colorStop1, $colorStop2);
+    background-image: -ms-linear-gradient($direction, $colorStop1, $colorStop2);
+    background-image: linear-gradient($direction, $colorStop1, $colorStop2);
+}
+
+@mixin display_flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flex_justify_content {
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+@mixin aw_link_with_popup_color($color, $color_on_hover) {
+    .aw-widgets-linkWithPopupMenu {
+        aw-property-image  svg polygon {
+            fill: $color;
+        }
+
+        &:hover {
+            aw-link a {
+                color: $color_on_hover;
+            }
+            aw-property-image  svg polygon {
+                fill: $color_on_hover;
+            }
+        }
+    }
+}

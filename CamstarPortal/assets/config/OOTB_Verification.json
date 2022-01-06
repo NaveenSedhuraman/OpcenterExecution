@@ -1,0 +1,32 @@
+{
+  "OOTB_Verification": {
+    "commands": [
+      "Awp0ChangeTheme",
+      "Awp0ShowLightTheme",
+      "Awp0ShowDarkTheme",
+      "arrangeSelectAll",
+      "arrangeReset",
+      "arrangeMoveUp",
+      "arrangeMoveDown",
+      "Awp0ColumnConfig",
+      "Awp0ShowColumnFilters",
+      "Awp0HideColumnFilters",
+      "Awp0GoBack",
+      "AddObjectPanelSetPin",
+      "AddObjectPanelSetUnPin",
+      "uiwidgetAddcmd",
+      "Awp0ColumnConfigPre"
+    ],
+    "locations": [
+      "root",
+      "errorLocation",
+      "errorSubLocation",
+      "internalOAuth2State",
+      "serverError"
+    ],
+    "themes": [
+      "ui-darkTheme",
+      "ui-lightTheme"
+    ]
+  }
+}

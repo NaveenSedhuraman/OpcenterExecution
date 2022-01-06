@@ -1,0 +1,15 @@
+// Copyright 2018 Siemens Product Lifecycle Management Software Inc.
+// aw-balloon-popup
+aw-balloon-popup-panel {
+    .aw-popup-close {
+        font-size: $balloon_popup_close_font_size;
+        margin: $balloon_popup_close_margin;
+        height: $balloon_popup_close_height;
+        width: $balloon_popup_close_width;
+    }
+
+    .aw-layout-panelBody {
+        padding: 0;
+    }
+}
+

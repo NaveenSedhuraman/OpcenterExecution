@@ -1,0 +1,67 @@
+// Copyright 2018 Siemens Product Lifecycle Management Software Inc.
+
+// aw-tab
+
+.aw-jswidget-tabContainer {
+    width: 100%;
+    -moz-transition: width 0.01s, height 0.01s;
+    -webkit-transition: width 0.01s, height 0.01s;
+    -o-transition: width 0.01s, height 0.01s;
+    transition: width 0.01s, height 0.01s;
+    padding: $tab_container_padding;
+    .aw-jswidget-tabBar {
+        float: left;
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        width: calc(100% - 40px);
+    }
+    .aw-jswidget-tab {
+        display: inline-block;
+        width: $tab_width;
+        margin: $tab_margin;
+        padding: $tab_padding;
+        a.aw-base-tabTitle,
+        a.aw-base-tabTitleSelected {
+            box-sizing: border-box;
+            font-size: $tab_font_size;
+            font-weight: $tab_font_weight;
+            height: $tab_title_height;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        a.aw-base-tabTitleSelected {
+            border-bottom: $tab_border_bottom;
+        }
+    }
+    .aw-jswidget-controlArrow,
+    .aw-jswidget-controlArrowNoFloat {
+        margin: 0 0 0 rem-calc(12);
+        height: rem-calc(12);
+        width: rem-calc(12);
+        .aw-jswidget-controlArrowRotateRight {
+            transform: rotate( 90deg);
+            -ms-transform: rotate( 90deg);
+            -webkit-transform: rotate( 90deg);
+        }
+        svg {
+            margin: 0;
+        }
+    }
+}
+
+aw-tab-set {
+    .aw-jswidget-tabContainer .aw-jswidget-tab {
+        .aw-base-tabTitleSelected:hover,
+        a.aw-base-tabTitleSelected:hover,
+        .aw-base-tabTitleSelected,
+        a.aw-base-tabTitleSelected,
+        .aw-base-tabTitle:hover,
+        a.aw-base-tabTitle:hover,
+        .aw-base-tabTitle,
+        a.aw-base-tabTitle {
+            height: $tab_title_height;
+        }
+    }
+}

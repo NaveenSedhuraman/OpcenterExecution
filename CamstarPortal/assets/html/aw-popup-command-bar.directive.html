@@ -1,0 +1,18 @@
+<aw-scrollpanel>
+    <div class="aw-widgets-noResultsLabel" ng-if="loading && showLoadingIndicator">
+        <div class="aw-layout-flexRow"></div>
+        <div class="aw-jswidgets-loading"></div>
+        <div class="aw-layout-flexRow"></div>
+    </div>
+    <div class="aw-widgets-noResultsLabel" ng-if="!ownPopup && !loading && !visibleCommands.length">{{noCommandsError}}</div>
+    <aw-popup-command-cell ng-if="!ownPopup" ng-repeat="cmd in commandsList | filter:{visible:true} as visibleCommands" prop="::cmd" close-on-click="closeOnClick ? closeOnClick : false"></aw-popup-command-cell>
+    <aw-popup-panel ng-if="ownPopup">
+        <div class="aw-widgets-noResultsLabel" ng-if="loading && showLoadingIndicator">
+            <div class="aw-layout-flexRow"></div>
+            <div class="aw-jswidgets-loading"></div>
+            <div class="aw-layout-flexRow"></div>
+        </div>
+        <div class="aw-widgets-noResultsLabel" ng-if="!loading && !visibleCommands.length">{{noCommandsError}}</div>
+        <aw-popup-command-cell ng-if="visibleCommands.length" ng-repeat="cmd in commandsList | filter:{visible:true} as visibleCommands" prop="::cmd" close-on-click="closeOnClick ? closeOnClick : false"></aw-popup-command-cell>
+    </aw-popup-panel>
+</aw-scrollpanel>

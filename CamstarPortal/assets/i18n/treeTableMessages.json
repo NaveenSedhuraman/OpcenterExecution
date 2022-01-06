@@ -1,0 +1,12 @@
+{
+    "TwistieTooltipCollapsed": "Show Children",
+    "TwistieTooltipExpanded": "Hide Children",
+    "freezeMenu": "Freeze",
+    "unfreezeMenu": "Unfreeze",
+    "visibilityControlsTitle": "Show/Hide",
+    "arrangeMenu": "Arrange",
+    "sortAscending": "Sort Ascending",
+    "sortDescending": "Sort Descending",
+    "removeSort": "No Sorting",
+    "removeAllFilters": "Remove all filters"
+}

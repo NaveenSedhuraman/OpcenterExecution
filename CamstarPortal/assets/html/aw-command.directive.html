@@ -1,0 +1,20 @@
+<button type="button" id="{{::command.commandId}}" class="aw-commands-commandIconButton
+    {{::command.alignment === 'VERTICAL' ? 'aw-commands-commandWrapperVertical' : ''}}
+    {{::command.alignment === 'HORIZONTAL' ? 'aw-commands-commandWrapperHorizontal' : ''}}
+    aw-commandId-{{::command.commandId}}" ng-class="{'disabled' : command.enabled === false, 'aw-state-selected': command.isSelected || popupOpen}" ng-disabled="command.enabled === false" title="{{command.extendedTooltip ? undefined : command.title}}" extended-tooltip="{{command.extendedTooltip}}" aw-click="ctrl.executeCommand($event)">
+    <div class="aw-commandIcon" ng-class="[{'aw-widgets-groupCommand': command.isGroupCommand }]">
+        <ng-bind-html ng-bind-html="safeIcon"></ng-bind-html>
+        <div class="aw-widgets-groupCommandStack" ng-if="command.isGroupCommand">
+            <aw-icon id="miscCommandStackIndicator"></aw-icon>
+        </div>
+        <div id="commandTemplate" class="aw-commands-cellDecorator"></div>
+        <div class="aw-commands-narrowCommandText" ng-show="::showLabel">{{command.title}}</div>
+    </div>
+    <div class="aw-commands-showIconLabel aw-commands-commandIconButtonText">{{command.title}}</div>
+</button>
+<div ng-if="command.isGroupCommand || popupName">
+    <aw-popup-panel>
+        <aw-include ng-if="popupName" name="{{popupName}}"></aw-include>
+        <aw-popup-command-bar ng-if="!popupName" anchor="{{command.commandId}}" context="context" close-on-click="true"></aw-popup-command-bar>
+    </aw-popup-panel>
+</div>

@@ -1,0 +1,2 @@
+<%-- Copyright Siemens 2019   --%>
+<%@ ServiceHost Language="C#" Debug="true" Service="WebClientPortal.PortalStudioService" CodeBehind="~/App_Code/PortalStudio/PortalStudioService.cs" %>

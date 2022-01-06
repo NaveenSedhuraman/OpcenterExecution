@@ -1,0 +1,68 @@
+// Copyright 2018 Siemens Product Lifecycle Management Software Inc.
+// datetime OR aw-datetime
+
+.aw-jswidgets-dateTimeInputbox .aw-jswidgets-timepicker .aw-widgets-innerWidget {
+    position: relative;
+    & input {
+        font-size: $datetime_dateTimeInputbox_input_font_size;
+        min-width: $datetime_dateTimeInputbox_min_width;
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder {
+            font-size: $datetime_dateTimeInputbox_input_font_size;
+        }
+    }
+    & .aw-widget-icon {
+        top: $datetime_dateTimeInputbox_calender_icon_top;
+        right: $datetime_dateTimeInputbox_calender_icon_right;
+        width: $datetime_dateTimeInputbox_calender_icon_width;
+        height: $datetime_dateTimeInputbox_calender_icon_height;
+    }
+}
+
+.aw-jswidgets-dateTimeInputbox .aw-jswidgets-timepicker ul li {
+    height: $datetime_timepicker_item_height;
+}
+
+.aw-jswidgets-dateTimeInputbox .aw-jswidgets-timepicker ul li .aw-jswidgets-nestingListItemDisplay {
+    padding: $datetime_timepicker_item_padding;
+    display: block;
+}
+
+.aw-jswidgets-dateTimeInputbox .aw-jswidgets-drop.aw-layout-popup {
+    border-width: $datetime_timepicker_list_border_width;
+}
+
+.aw-jswidgets-dateTimeInputbox .aw-jswidgets-drop.aw-layout-popup {
+    max-height: $datetime_timepicker_list_max_height;
+}
+
+.aw-jswidgets-dateTimeInputbox .aw-jswidgets-drop li.aw-jswidgets-nestingListItem {
+    padding: $datetime_timepicker_item_container_padding;
+    margin: $datetime_timepicker_item_container_margin;
+}
+
+.aw-jswidgets-dateTimeInputbox .aw-jswidgets-timepicker ul li .aw-widgets-cellListCellText {
+    font-size: $datetime_timepicker_item_text_font_size;
+}
+
+.aw-jswidgets-dateTimeInputbox {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.aw-jswidgets-dateTimeInputbox.aw-widgets-propertyError {
+    float: left;
+    clear: left;
+}
+
+.aw-jswidgets-timepicker {
+    width: 100%;
+}
+
+td .aw-jswidgets-timepicker input.aw-jswidgets-choice {
+    padding-right: 0;
+}

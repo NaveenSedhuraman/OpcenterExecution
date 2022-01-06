@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="PortalModeling.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="Quality Model Definitions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Defining Smart Scan Rules</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/LDCSS1.2.4.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Horiz-rules_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" defer="defer">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" defer="defer">
+        </script>
+    </head>
+    <body>
+        <div role="main" id="mc-main-content">
+            <p class="Head2"><a name="Defining_Smart_Scan_Rules"></a>Defining Smart Scan Rules<a name="kanchor668"></a></p>
+            <p class="_1body">A Smart Scan Rule enables you to define data patterns that identify data elements within a scanned barcode. The rule can also be configured with processing instructions for patterns found within a barcode.</p>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="understanding_patterns"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false" name="kanchor669"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Understanding Patterns</a><a name="understanding_patterns_PDF"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1body">The application uses the pattern or patterns in a Smart Scan Rule to interpret barcode data. The patterns must conform to the barcodes you expect to process.</p>
+                    <p class="Head4">Example</p>
+                    <p class="_1bodyKeepWithNext">Note this example process:</p>
+                    <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>1.</b></span>
+                            </td>
+                            <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">The application is configured with a Smart Scan Rule that has the following patterns:</td>
+                        </tr>
+                    </table>
+                    <p class="_2body">
+                        <img src="../Resources/Images/patterns.png" style="width: 568px;max-width: 600px;" />
+                    </p>
+                    <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>2.</b></span>
+                            </td>
+                            <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">An operator scans a barcode into an application page that contains various fields including a Container field and a Mfg Order field. The barcode contains the following string:  CON-12348976. </td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>3.</b></span>
+                            </td>
+                            <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">The application evaluates the barcode against the Smart Scan Rule and executes the following logic:</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_StepA" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 70px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>a.</b></span>
+                            </td>
+                            <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;a.&lt;/b&gt;">Matches the string to the first pattern which resolves to three letters, followed by a hyphen, followed by eight numeric digits.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_StepA" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 70px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>b.</b></span>
+                            </td>
+                            <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;b.&lt;/b&gt;">Extracts the data string and places it into the field on the page corresponding to the pattern's Smart Scan Type—Container. This is done because the Is Active setting is selected for the pattern.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_StepA" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 70px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>c.</b></span>
+                            </td>
+                            <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;c.&lt;/b&gt;">Removes the data string because the Remove on Match is selected for the pattern.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_Note1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 20px;" />
+                        <col style="width: 50px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                            </td>
+                            <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">The application performs similar logic if the barcode also contains a string matching the Mfg Order pattern.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p_Note1body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 20px;" />
+                        <col style="width: 50px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p_Note1body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                            </td>
+                            <td class="AutoNumber_p_Note1body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">The example is just one of many. Another factory could have a totally different pattern configured for their Container and Mfg Order names.</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="elements_of_a_pattern"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false" name="kanchor670"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Elements of a Pattern</a><a name="elements_of_a_pattern_PDF"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1bodyKeepWithNext">This table describes the elements of a pattern.</p>
+                    <table style="width: 95%;margin-left: 25px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width:100px" />
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                                <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">Element</p>
+                                </th>
+                                <th class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                    <p class="CellHead-Left">Description</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Constants</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Letters, numbers, and special characters</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Wildcards</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <table class="AutoNumber_p_CellNumA" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 41px;" />
+                                        <col style="width: 30px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                            </td>
+                                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><b>?</b> A question mark matches any single alphanumeric character.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_CellNumA" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 41px;" />
+                                        <col style="width: 30px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                            </td>
+                                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><![CDATA[
+]]><b>*</b> An asterisk matches zero or more characters.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_CellNumA" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 41px;" />
+                                        <col style="width: 30px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                            </td>
+                                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><![CDATA[
+]]><b>!</b> An exclamation point matches a single numeric character.</td>
+                                        </tr>
+                                    </table>
+                                    <table class="AutoNumber_p_CellNumA" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                        <col style="width: 41px;" />
+                                        <col style="width: 30px;" />
+                                        <col style="width: auto;" />
+                                        <tr>
+                                            <td valign="top" />
+                                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                            </td>
+                                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><![CDATA[
+]]><b>|</b> A pipe matches a single alpha character
+.</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                    <p class="CellBody">[ ]</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body1">
+                                    <p class="CellBody">Brackets indicate that what is inside contains a value that can be extracted.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="specifying_ascii_characters"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false" name="kanchor671"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Specifying ASCII Characters</a><a name="specifying_ascii_characters_PDF"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1body">You can include special characters by specifying their ASCII codes (000 to 255) in barcode patterns. The backslash (\) is used to indicate that the next 1 to 3 characters are to be treated as an ASCII code. However, the backslash itself is considered a "special" character and must be escaped by placing another backslash before it. </p>
+                    <p class="_1bodyKeepWithNext">Note these examples:</p>
+                    <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');margin-left: 25px;margin-right: auto;width: 95%;" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width:150px" />
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width:75px" />
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width:180px" />
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                                <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">Barcode String</p>
+                                </th>
+                                <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">Specificity</p>
+                                </th>
+                                <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">Pattern</p>
+                                </th>
+                                <th class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                    <p class="CellHead-Left">Explanation</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">N\A</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Exact</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">N\\65</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">The first backslash in N\A&#160;must be escaped. The ASCII code for A&#160;is 65.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">AP</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Exact</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">\065P</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">The ASCII code for A is \065.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">AP followed by any eleven alphanumeric characters followed by B</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Exact and Variable</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">\065P[???????????&gt;]066</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">The ASCII code for B is 066.The eleven alphanumeric character wildcards are enclosed in brackets, so they are taken as the data—part number, reel number, and so forth, as indicated by the Smart Scan Type.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2">
+                                    <p class="CellBody">BQ + four digits + A</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2">
+                                    <p class="CellBody">Exact and Variable</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2">
+                                    <p class="CellBody"> \066Q[!!!!]\065</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body2">
+                                    <p class="CellBody">The four digits enclosed in brackets are taken as the data.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="pattern_order"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false" name="kanchor672"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Pattern Order</a><a name="pattern_order_PDF"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1body">Barcodes can contain single or multiple values of information. The order in which barcodes are tested is significant, and can yield varying results. Different barcode patterns might yield the same result.</p>
+                    <p class="_1bodyKeepWithNext">&#160;</p>
+                    <p class="Head4">Example</p>
+                    <p class="_1bodyKeepWithNext">Note this example:</p>
+                    <p class="_1body">You want to recognize the part number PAA-123456. The barcode is characterized by:</p>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">The letter P  indicates part number. This is optional and does not have to be specified.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">The two characters following the P, if there is a P, are letters.</td>
+                        </tr>
+                    </table>
+                    <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                        <col style="width: 45px;" />
+                        <col style="width: 30px;" />
+                        <col style="width: auto;" />
+                        <tr>
+                            <td valign="top" />
+                            <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                            </td>
+                            <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">The six characters after the hyphen (-) are numeric.</td>
+                        </tr>
+                    </table>
+                    <p class="_1body">All of the patterns in the following table yield the correct results when matching PAA-123456.</p>
+                    <table style="width: 95%;margin-left: 25px;margin-right: auto;mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width:100px" />
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                        <thead>
+                            <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                                <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">Pattern</p>
+                                </th>
+                                <th class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                    <p class="CellHead-Left">Why It Matches</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">P[*]</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">A&#160;P followed by zero or more characters.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">[?????????]</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">P is optional. The 10 question marks indicate any ten alphanumeric characters.</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                    <p class="CellBody">P[??-!!!!!!]</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body1">
+                                    <p class="CellBody">P followed by any two alphanumeric characters followed by a hypen followed by six numeric digits.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="testing_patterns"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false" name="kanchor673"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Testing Patterns</a><a name="testing_patterns_PDF"></a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1body">You can test a Smart Scan Rule to ensure that it works as intended by using the Test section of the Smart Scan Rule page. This enables you to test individual patterns as well as the sequence of multiple patterns.</p>
+                </div>
+            </div>
+            <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Smart_Scan_Rule_Page_Field_Definitions"></a>
+            </p>
+            <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0)" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />Smart Scan Rule Page Field Definitions</a></span>
+                <div class="MCDropDownBody dropDownBody">
+                    <p class="_1bodyKeepWithNext">This table defines the fields unique to the Smart Scan Rule page. </p>
+                    <p class="_1bodyKeepWithNext">Refer to "<a href="../Getting Started/Modeling_Page.htm#Common" class="MCXref xref">Common Fields on Modeling Pages</a>" for information on the fields common to all modeling objects.</p>
+                    <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');width: 95%;" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                        <col style="width: 120px;" class="TableStyle-Horiz-rules_Table-Column-Column1">
+                        </col>
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1">
+                        </col>
+                        <col class="TableStyle-Horiz-rules_Table-Column-Column1">
+                        </col>
+                        <thead>
+                            <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                                <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">Field</p>
+                                </th>
+                                <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                    <p class="CellHead-Left">Definition</p>
+                                </th>
+                                <th class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                    <p class="CellHead-Left">Type</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1" colspan="3">
+                                    <p class="CellSectionHeader">General</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Preamble</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Single character indicating whether the barcode is a smart barcode. When the system detects a preamble, it identifies the barcode as smart and strips the preamble before reading the smart tag.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Terminator</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Control character  that the scanning device will append to the barcode.</p>
+                                    <p class="CellBody"><span class="User_Entry">Note</span>: Siemens recommends that you use the Tab key as the default terminator. Refer to the Smart Scanning appendix in the <span class="Emphasis">Opcenter Execution Core System Administration Guide</span>.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Smart Scan Pattern grid</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Contains one or more patterns that the application will try to match when evaluating a scanned barcode.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBodyIndented">
+                                        <img src="../Resources/Images/pattern_sequencer_icon.png" />
+                                    </p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Arrows to move a pattern up or down to resequence the order in which the application looks for the pattern.</p>
+                                    <p class="CellBody"><span class="User_Entry">Note</span>:&#160;The arrow icon does not appear on a grid with no patterns.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBodyIndented">Pattern</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">A series of characters or types of characters for which the application searches within the barcode.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBodyIndented">Remove on Match</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Indicates whether the pattern should be removed if found within the barcode.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBodyIndented">Smart Scan Type</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Smart tag  for the field you want to scan.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBodyIndented">Is Active</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Specifies whether the application should extract the data value from the pattern.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBodyIndented">Is Regex</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Indicates that the pattern uses Regular Expression syntax.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellSectionHeader">Test</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Section to test the Smart Scan Rule and its pattern or patterns.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Smart Scan Value</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Barcode to test.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Apply Rule</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">Click to apply the rule to the barcode entered into the Smart Scan Value.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Optional</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Extracted Values grid</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                    <p class="CellBody">Results of the Smart Scan Rule test.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                    <p class="CellBody">Display Only</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBodyIndented">Smart Scan Type</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                    <p class="CellBody">An entity or page field into which an extracted value will be placed.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                    <p class="CellBody">Display Only</p>
+                                </td>
+                            </tr>
+                            <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2">
+                                    <p class="CellBodyIndented">Value</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body2">
+                                    <p class="CellBody">The value that will be placed into the entity or Smart Scan Type.</p>
+                                </td>
+                                <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body2">
+                                    <p class="CellBody">Display Only</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <p class="Head3-Side">How to Define a Smart Scan Rule<a name="How_to_Define_a_Smart_Scan_Rule"></a><a name="kanchor674"></a></p>
+            <p class="_1bodyKeepWithNext">Follow these steps to define a Smart Scan Rule:</p>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>1.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">Open the <span class="User_Entry">Smart Scan Rule</span> page. <span class="Emphasis">The Smart Scan Rule page appears within the Modeling page.</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>2.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">Click <span class="User_Entry">New</span>. <span class="Emphasis">Blank fields appear for you to define a new instance.</span> </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>3.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">Enter a preamble value in the <span class="User_Entry">Preamble</span> field. </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="font-weight: normal; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>4.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;4.&lt;/b&gt;">Enter the terminator characters in the  <span class="User_Entry">Terminator</span> field.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>5.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;5.&lt;/b&gt;">Enter  optional information according to your business requirements. Refer to the field definitions table for information on the optional fields.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>6.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;6.&lt;/b&gt;">Click <span class="User_Entry">Save</span>. <span class="Emphasis">The application saves the modeling object and displays a success message.</span></td>
+                </tr>
+            </table>
+            <p class="Head3-Side">How to Add Smart Scan Patterns to a Smart Scan Rule<a name="How_to_Add_Patterns_to_a_Smart_Scan_Rule"></a><a name="kanchor675"></a></p>
+            <p class="_1bodyKeepWithNext">Follow these steps to add Smart Scan Patterns to a Smart Scan Rule:</p>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>1.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">Perform the "<a href="#How_to_Define_a_Smart_Scan_Rule" class="MCXref xref">How to Define a Smart Scan Rule</a>" procedure.</td>
+                </tr>
+            </table>
+            <p class="_3body">Or</p>
+            <p class="_3body">Select an existing <span class="User_Entry">Smart Scan Rule</span> instance.</p>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Step_KeepWithNext" valign="top"><span class="Number"><b>2.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Step_KeepWithNext" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">Click <span class="User_Entry">Add new row</span> on the <span class="User_Entry">Smart Scan Pattern</span> grid. <span class="Emphasis">A new row appears.</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Note3body" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 62px;" />
+                <col style="width: 50px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Note"><span style="font-family: 'Arial';" class="mcFormatFamily"><b><span style="color: #006487;" class="mcFormatColor">Note:</span></b></span></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;span style=&quot;font-family: 'Arial';&quot; class=&quot;mcFormatFamily&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: #006487;&quot; class=&quot;mcFormatColor&quot;&gt;Note:&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;">An up-down arrow icon appears in the first column enabling you to resequence patterns when there are multiple patterns on the grid.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>3.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">Enter the characters identifying the pattern in the  <span class="User_Entry">Pattern</span> field.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>4.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;4.&lt;/b&gt;">Select or enter data into the remaining fields on the row according to your business requirements.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>5.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;5.&lt;/b&gt;">Repeat steps 2-4 to add additional Smart&#160;Scan Patterns.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>6.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;6.&lt;/b&gt;">Click <span class="User_Entry">Save</span>. <span class="Emphasis">The application displays a success message indicating the modeling object was updated.</span></td>
+                </tr>
+            </table>
+            <p class="Head3-Side">How to Test a Smart Scan Rule<a name="How_to_Test_a_Smart_Scan_Rule"></a><a name="kanchor676"></a></p>
+            <p class="_1bodyKeepWithNext">Follow these steps to test a Smart Scan Rule:</p>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>1.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">Open the <span class="User_Entry">Smart Scan Rule</span> page. <span class="Emphasis">The Smart Scan Rule page appears within the Modeling page.</span></td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>2.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">Expand the <span class="User_Entry">Test</span> section.</td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>3.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">Enter a barcode to be tested in the <span class="User_Entry">Smart Scan Value</span> field. </td>
+                </tr>
+            </table>
+            <table class="AutoNumber_p_Step1" style="font-weight: normal; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                <col style="width: 45px;" />
+                <col style="width: 30px;" />
+                <col style="width: auto;" />
+                <tr>
+                    <td valign="top" />
+                    <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>4.</b></span>
+                    </td>
+                    <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;4.&lt;/b&gt;">Click  <span class="User_Entry">Apply Rule</span>. <span class="Emphasis">The application searches the barcode for each pattern in the rule in the order in which they appear on the page. The application populates the Extracted Values grid with each Smart Scan Type (field entity), and the value that would be extracted into that entity based on the configuration of matched patterns within the Smart Scan Rule.</span><a name="Defining_Smart_Scan_Rules_topic_end"></a></td>
+                </tr>
+            </table>
+        </div>
+        <MadCap:pageFooter class="FirstPage">
+            <p class="copyright">© Siemens 2020</p>
+        </MadCap:pageFooter>
+    </body>
+</html>

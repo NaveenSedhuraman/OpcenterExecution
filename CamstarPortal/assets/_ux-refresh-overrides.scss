@@ -1,0 +1,678 @@
+// Fixes to Apollo styles
+[anchor=aw_globalNavigationbar] .aw-commands-showIconLabel,
+[anchor=aw_userSessionbar] .aw-commands-showIconLabel {
+    color: #ffffff;
+}
+
+.aw-layout-headerTitleContainer {
+    min-height: 25px;
+}
+
+aw-header-title .aw-layout-headerLeft {
+    width: 100%;
+    margin-left: 48px;
+}
+
+.aw-layout-sublocationContainer .aw-layout-infoCommandbar {
+    padding-top: 0;
+}
+
+.aw-layout-subLocationTitles {
+    height: inherit;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+aw-showobject-page .aw-commands-showIconLabel .aw-layout-subLocationTitles {
+    padding-left: 16px;
+}
+
+.aw-layout-logoProgressContainer {
+    margin-right: 0;
+}
+
+aw-sublocation-title {
+    width: 100%;
+}
+
+.aw-layout-locationTitle {
+    font-size: 1.296rem;
+}
+
+/* Command bars */
+
+.aw-layout-mainView {
+
+    // Maximize overflow and add scrollbar
+
+    aw-command-bar.aw-commands-commandBarVertical .aw-commands-wrapper.aw-commands-overflow {
+        overflow-y: auto;
+        flex-grow: 70 !important;
+        border: none;
+    }
+
+    aw-command-bar aw-command .aw-commands-commandIconButton .aw-commands-svg,
+    aw-cell-command-bar aw-command .aw-commands-commandIconButton .aw-commands-svg {
+        height: 24px;
+        width: 24px;
+    }
+
+    aw-command-bar aw-command .aw-widgets-groupCommandStack {
+        margin-left: 0;
+        margin-top: -3px;
+    }
+
+    #momCmdToggleViewMode .aw-commands-svg {
+        padding-top: 5px;
+    }
+
+    [class*="afx-3.0"],
+    [class*="afx-3.1"] {
+        aw-command-bar.aw-commands-commandBarHorizontal .aw-commands-commandIconButton {
+            padding: 8px;
+        }
+
+        aw-command-bar aw-command .aw-widgets-groupCommandStack {
+            margin-left: -3px;
+            margin-top: -2px;
+        }
+
+        #momCmdToggleViewMode .aw-commands-svg {
+            padding-top: 0;
+        }
+
+    }
+}
+
+.afx-accent-background .aw-state-selected .aw-theme-iconOutline,
+aw-showobject-header .aw-state-selected .aw-theme-iconOutline {
+    fill: #464646;
+}
+
+.afx-accent-background .aw-state-selected:hover .aw-theme-iconOutline,
+aw-showobject-header .aw-state-selected:hover .aw-theme-iconOutline {
+    fill: #FFFFFF;
+}
+
+// AFX 2.1 and 2.2 early builds
+aw-global-navigation-panel,
+// AFX 2.2+
+.global-navigation .aw-sidenav-layoutContainer {
+
+    aw-command-bar .aw-commands-commandIconButton .aw-commands-svg {
+        width: 16px !important;
+        height: 16px !important;
+        display: inline-block;
+    }
+
+    // Command groups in navigation bar
+    .popupContent .aw-widgets-cellListItem.aw-state-selected::after {
+        content: ' \2713'; // Add check to selected command.
+    }
+
+    // Manage command icon next to command
+    aw-command-bar.aw-commands-commandBarVertical aw-command button.aw-commands-commandIconButton {
+        display: flex;
+        height: 32px;
+        padding-left: 6px;
+        margin-top: 0.25rem;
+
+        .aw-commandIcon {
+            flex: 0 0 16px;
+
+            .aw-widgets-groupCommandStack {
+                display: none;
+            }
+        }
+
+        .afx-accent-background .aw-theme-iconOutline {
+            fill: #c8f5ff;
+        }
+
+        &:hover {
+            .aw-commands-svg .aw-theme-iconOutline {
+                fill: #ffffff;
+            }
+        }
+
+        .aw-commands-showIconLabel {
+            flex: 1 1 auto; // was: 0 1 auto -- needed in AFX 3.0
+            padding: 0 8px; // needed in AFX 3.0
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+}
+
+
+.global-navigation .aw-sidenav-layoutContainer .aw-layout-declarativePanelRoot>aw-include {
+    padding: 0;
+}
+
+// AFX 2.1 and 2.2 early builds
+.aw-global-navigation-panel.unpinned .aw-layout-popupOverlay,
+.aw-global-navigation-panel.pinned .aw-layout-popupOverlay,
+// AFX 2.2
+.aw-sidenav-container .aw-layout-popupOverlay,
+// AFX 3.0+
+.aw-layout-panel .aw-layout-popupOverlay {
+    z-index: auto;
+    position: static;
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    padding-left: 16px;
+}
+
+.global-navigation {
+
+    .popupContent,
+    .aw-layout-popup.aw-layout-popupOverlay {
+        .aw-widgets-cellListItem {
+            border-color: transparent;
+            color: #ffffff;
+            padding: 10px 15px 5px 10px;
+            font-size: 0.75rem;
+
+            &:hover {
+                color: #ffb900;
+                fill: #ffb900;
+                background-color: transparent;
+            }
+        }
+
+        .aw-widgets-cellListItem.aw-state-selected {
+            background: transparent;
+        }
+
+        .aw-layout-popup {
+            background-color: transparent;
+        }
+    }
+}
+
+// AFX 2.1 and 2.2 early builds
+.aw-global-navigation-panel,
+// AFX 2.2+
+.aw-sidenav-container,
+// AFX 3.1+
+.aw-sidenav-layoutContainer {
+
+    .aw-commands-commandIconButtonText {
+        white-space: nowrap;
+    }
+
+    aw-command-bar[anchor] .aw-commands-commandIconButton {
+        color: #ffffff;
+        padding-left: 16px;
+
+        &:hover {
+            color: #ffffff;
+            background-color: #2882AD;
+        }
+    }
+
+    aw-command-bar[anchor] .aw-commands-commandIconButton.aw-state-selected {
+        background-color: #004664;
+    }
+
+    // Hierarchical navigation menus
+    aw-tree ul,
+    aw-tree ol {
+        margin: 0;
+    }
+
+    aw-tree li .aw-ui-treeNodeValue a {
+        color: #ffffff;
+    }
+
+    aw-tree li :hover,
+    aw-tree li :hover .aw-ui-treeNodeValue {
+        background-color: transparent;
+    }
+
+    aw-tree li .aw-ui-treeNodeValue a:hover {
+        color: #ffb900;
+    }
+
+    li.aw-ui-treeNode {
+        margin: 0;
+        width: 100%;
+        padding: 8px 8px 8px 0px;
+        vertical-align: middle;
+        box-sizing: border-box;
+
+        [name="miscExpandedTree"] {
+            margin: 0 1.5px;
+
+            svg {
+                height: 100%;
+
+                .aw-theme-iconOutline {
+                    fill: #c8f5ff;
+                }
+
+                .aw-theme-iconOutline:hover {
+                    fill: #ffb900;
+                }
+
+            }
+        }
+
+        .aw-ui-treeNode-valueContainer,
+        .aw-ui-treeNodeValue {
+            padding: 0;
+            height: 1rem;
+        }
+
+        aw-link .aw-base-normal {
+            height: 16px;
+        }
+    }
+}
+
+
+// Avoid third label line to be partially displayed
+.aw-layout-mainView.aw-commands-showIconLabel aw-command-bar.aw-commands-commandBarVertical .aw-commands-commandIconButtonText {
+    padding: 0 4px;
+    height: 24px;
+    max-height: 24px;
+    line-height: 12px;
+}
+
+// Needed to make sure the style of commands in the global navigation doesn't break when showing labels.
+.aw-layout-mainView.aw-commands-showIconLabel #globalNavigationSideNav aw-command-bar.aw-commands-commandBarVertical {
+    .aw-commands-commandIconButton {
+        height: 32px;
+        width: 100%;
+    }
+
+    .aw-commands-commandIconButtonText {
+        font-size: 0.75rem;
+        height: inherit;
+    }
+}
+
+// Command labels in mom_headerBar
+.aw-commands-showIconLabel .afx-layout-header-container aw-command-bar.aw-commands-commandBarHorizontal .aw-commands-commandIconButtonText {
+    color: #ffffff;
+    margin-top: -3px;
+}
+
+.aw-layout-mainView.aw-commands-showIconLabel aw-command-bar.aw-commands-commandBarVertical[anchor="aw_globalNavigationbar"] button.aw-commands-commandIconButton.aw-commands-commandWrapperVertical {
+    width: 64px; // incorrectly set to 56px;
+}
+
+// Go to top command
+aw-command-bar[anchor="mom_homeRightSideBar"] .aw-commands-showIconLabel {
+    color: #ffffff;
+}
+
+aw-global-navigation-panel aw-command-bar aw-command .aw-commands-commandIconButton .aw-commands-svg,
+aw-global-navigation-panel aw-command-bar aw-command button.aw-commands-commandIconButton .aw-commands-svg,
+.aw-commands-showIconLabel aw-command-bar[alignment="VERTICAL"] aw-command button.aw-commands-commandIconButton.aw-commands-commandWrapperVertical .aw-commands-svg,
+.aw-commands-showIconLabel aw-command-bar[alignment="HORIZONTAL"] aw-command button.aw-commands-commandIconButton.aw-commands-commandWrapperHorizontal .aw-commands-svg {
+    width: 24px;
+    height: 24px;
+}
+
+.global-navigation-toolbar aw-command-bar.aw-commands-commandBarVertical {
+    margin-top: -0.33em;
+}
+
+.global-navigation-toolbar aw-command-bar.aw-commands-commandBarVertical .aw-commands-commandIconButton {
+    height: 48px;
+}
+
+aw-command-bar.aw-commands-commandBarVertical .aw-commands-wrapper.aw-commands-overflow .aw-commands-commandIconButton.aw-commands-commandWrapperVertical {
+    height: 48px;
+}
+
+
+.global-navigation-toolbar>.aw-layout-include>.aw-layout-column>.aw-layout-row[style*="flex: 0 0 0.33em"] {
+    flex: 0 0 4px !important;
+}
+
+aw-command-bar.aw-commands-commandBarVertical[anchor="aw_rightWall"] {
+    padding-top: 0;
+}
+
+aw-command-bar.aw-commands-commandBarVertical[anchor="aw_rightWall"] .aw-commands-commandIconButton {
+    height: 48px;
+    padding: 8px;
+}
+
+aw-command-bar.aw-commands-commandBarVertical[anchor="aw_rightWall"] .aw-commands-wrapper {
+    padding: 0;
+}
+
+aw-command-bar.aw-commands-commandBarHorizontal.aw-commands-commandBarContainer .aw-commands-commandIconButton {
+    padding: 4px;
+}
+
+/* Padding around section titles in PWA */
+
+.aw-layout-primaryWorkareaContainer .aw-layout-panelSectionTitle {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+/* Extended PWA*/
+
+aw-showobject-page .aw-layout-primaryWorkarea.aw-layout-primaryWorkareaFill {
+    padding: 16px;
+    background: #ffffff;
+
+
+    .aw-widgets-cellListWidget li.aw-widgets-cellListItem {
+        background: #fafafa;
+        margin: 4px;
+
+        &:hover {
+            background: #a3d0dc;
+            color: #464646;
+        }
+    }
+
+    .aw-widgets-cellListWidget li.aw-widgets-cellListItemSelected {
+        background: #cde6eb;
+        color: #464646;
+    }
+
+    .aw-layout-workareaCommandbar {
+        background: #ffffff;
+        box-shadow: none;
+    }
+}
+
+aw-page aw-primary-workarea .aw-layout-workareaCommandbar,
+aw-showobject-page aw-primary-workarea .aw-layout-workareaCommandbar {
+    z-index: 4; // Make sure change viewMode dropdown is on top of the table
+}
+
+.aw-commands-showIconLabel {
+    aw-command-bar .aw-commands-commandIconButtonText {
+        margin-top: 2px;
+    }
+
+    aw-command-bar.aw-commands-commandBarContainer,
+    aw-command-bar.aw-commands-commandBarHorizontal[anchor="aw_primaryWorkArea"],
+    aw-command-bar.aw-commands-commandBarVertical[anchor="aw_globalNavigationbar"],
+    aw-command-bar.aw-commands-commandBarVertical[anchor="aw_userSessionbar"],
+    aw-command-bar.aw-commands-commandBarVertical[anchor="aw_rightWall"] {
+        aw-command-bar .aw-commands-commandIconButtonText {
+            margin-top: 2px;
+        }
+
+        button.aw-commands-commandIconButton.aw-commands-commandWrapperVertical,
+        button.aw-commands-commandIconButton.aw-commands-commandWrapperHorizontal {
+            width: 56px;
+            height: 64px;
+            max-height: 68px;
+        }
+    }
+
+    aw-command-bar.aw-commands-commandBarVertical[anchor="aw_rightWall"] button.aw-commands-commandIconButton {
+        width: 48px;
+    }
+
+    aw-logo .aw-layout-logoProgressContainer {
+        margin-right: 0;
+    }
+
+    .aw-layout-header.aw-layout-flexRowContainer {
+        padding: 8px 0 16px 0;
+    }
+}
+
+.aw-layout-splitter .aw-layout-splitterLine {
+    left: 0;
+}
+
+
+/* Header */
+
+.mom-home-location aw-showobject-header .aw-layout-header.afx-layout-fullscreen-header {
+    border-color: transparent;
+    background-color: transparent;
+    padding-left: 0.625rem;
+    padding-bottom: 0;
+}
+
+[class*="afx-3.0"],
+[class*="afx-3.1"] {
+    .aw-layout-header.afx-layout-fullscreen-header .aw-layout-workareaTitle {
+        margin-top: -8px; // TODO: review
+    }
+}
+
+.afx-layout-header-container {
+    flex: 0 0 4rem !important;
+}
+
+.aw-layout-workareaTitle {
+    padding: 0;
+}
+
+.aw-widgets-crumbLink {
+    line-height: 2rem;
+}
+
+aw-showobject-page [class*="afx-3.1"] .aw-layout-header a {
+    color: #ffffff;
+}
+
+
+/* Sublocation tabs */
+
+aw-showobject-page .aw-layout-flexRowContainer .aw-layout-subLocationTitles {
+    background-color: #e6e6e6;
+}
+
+// AFX 2.2.0-151+
+.aw-layout-mainView>div>div>ui-view>aw-showobject-page>div>div>div>div:nth-child(2),
+// AFX 2.2.0-150
+.aw-layout-mainView>div>ui-view>aw-showobject-page>div>div>div>div:nth-child(2),
+// AFX 2.1.0
+.aw-layout-mainView>ui-view>aw-showobject-page>div>div>div>div:nth-child(2) {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border-radius: 2px 2px 0 0;
+}
+
+.aw-layout-subLocation {
+    border-radius: 2px 2px 0 0;
+}
+
+
+
+/* Tabs */
+
+.aw-jswidget-tabContainer .aw-jswidget-tab a.aw-base-tabTitleSelected {
+    width: inherit !important;
+}
+
+.aw-base-tabTitle,
+.aw-base-tabTitleSelected,
+.aw-layout-panelHeader .aw-jswidget-tab a.aw-base-tabTitle {
+    margin-right: 16px;
+}
+
+.aw-jswidget-tabContainer .aw-jswidget-tabBarContent .aw-jswidget-tab {
+    margin-right: 0;
+}
+
+/* Side Panels */
+
+.aw-sidenav-layoutContainer .aw-layout-panelMain .aw-layout-panelBody .aw-layout-panelSectionContent {
+    width: 100%;
+    padding: 0px;
+}
+
+
+aw-showobject-page {
+
+    // AFX 2.1
+    .aw-layout-declarativePanelRoot .aw-command-panelContainer {
+        border-radius: 0;
+        /* Otherwise it looks ugly with box-shadow */
+    }
+
+    // AFX 3.0+
+    .aw-sidenav-push,
+    .aw-sidenav-float {
+        .aw-layout-declarativePanelRoot .aw-command-panelContainer {
+            border-radius: 0;
+            /* Otherwise it looks ugly with box-shadow */
+        }
+    }
+}
+
+/* Input Controls */
+
+.aw-layout-mainView {
+
+    select,
+    .gwt-ListBox,
+    input[type="text"],
+    .gwt-TextBox,
+    textarea,
+    .gwt-TextArea,
+    input[type="password"] {
+        border-width: 1px;
+        font-size: 0.75rem;
+    }
+
+    aw-property-lov-val .aw-widget-icon {
+        padding: 10px 10px;
+    }
+
+    aw-listbox input.aw-jswidgets-choice {
+        padding: 5px;
+    }
+}
+
+/* Custom Scrollbars (WebKit only) */
+
+::-webkit-scrollbar {
+    height: 4px;
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aaaaaa;
+    opacity: 0.2;
+    border: 0px solid #aaaaaa;
+    border-radius: 2px;
+
+}
+
+/* Panels */
+
+.aw-base-scrollPanel {
+    overflow: auto;
+}
+
+.aw-layout-mainView {
+    .aw-layout-panelMain .aw-layout-panelBody .aw-layout-panelSectionTitle {
+        background-color: transparent;
+    }
+
+    .aw-layout-panelFooter {
+        text-align: right;
+    }
+
+    .aw-layout-panelMain .aw-base-blk-button {
+        white-space: nowrap;
+        max-width: 100%;
+        width: auto;
+        min-width: 88px;
+        text-overflow: ellipsis;
+    }
+}
+
+/* Fix padding in case command labels are shown */
+.aw-commands-showIconLabel aw-showobject-page aw-showobject-header .aw-layout-header.aw-layout-flexRowContainer {
+    padding: 8px 0 8px 0;
+}
+
+/* Fullscreen header */
+aw-showobject-page {
+    aw-showobject-header {
+        .aw-layout-headerRight {
+            margin-top: -8px; // Center contents vertically.
+        }
+
+        .aw-layout-header {
+            padding: 8px 0 0 0;
+        }
+
+        .aw-layout-locationTitlePanel {
+            height: 48px;
+        }
+
+        .aw-layout-headerContribution {
+            margin-top: -12px;
+        }
+
+        .aw-layout-header.afx-layout-fullscreen-header {
+            background-color: transparent;
+            padding: 0.625rem 0;
+
+            .aw-layout-locationTitle {
+                font-size: 0.8rem;
+            }
+
+            .aw-layout-fxbreadCrumbs {
+                color: #ffffff;
+
+                .aw-widgets-selectedCrumb {
+                    margin-top: 0;
+                }
+
+                svg path {
+                    fill: #ffffff;
+                }
+            }
+
+            a {
+                color: #ffffff;
+
+                &:hover {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+/* Code */
+
+code {
+    color: #780100;
+    font-family: monospace;
+}
+
+pre {
+    code {
+        border: 1px solid #dcdcdc;
+        background-color: #fafafa;
+        color: #000000;
+        border-left: 6px solid #55a0b9;
+        padding: 10px;
+        display: block;
+    }
+}
+
+/* Header Contributions */
+
+.aw-layout-headerContribution .aw-widgets-propertyLabelTopValueContainer {
+    min-width: 0;
+}
+
+// AFX 3.1 (renamed .aw-layout-headerPropContainer into .aw-layout-headerProperty)
+.aw-layout-headerContribution .aw-widgets-propertyContainer aw-property-label,
+.aw-layout-headerContribution .aw-widgets-propertyLabelTopValueContainer {
+    flex: 0 1 auto;
+}

@@ -1,0 +1,16 @@
+{
+  "contextConfiguration": {
+    "contexts": {
+      "momUserContext": {
+        "view": "momUserContext"
+      }
+    },
+    "placements": {
+      "userContext": {
+        "anchor": "headerContextPosition",
+        "contextId": "momUserContext",
+        "priority": 1
+      }
+    }
+  }
+}

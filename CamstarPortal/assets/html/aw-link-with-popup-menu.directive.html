@@ -1,0 +1,9 @@
+<aw-link-with-popup prop="prop" use-icon="useIcon"  id={{id}}>
+    <div class= "aw-base-scrollPanel"  >
+        <div class="aw-widgets-cellListWidget">
+            <ul class="aw-layout-linkWithPopupContainer">
+                <li class="aw-widgets-cellListItem aw-widgets-cellTop" ng-class="{'aw-widgets-cellListItemSelected': item.isSelected}" ng-repeat="item in items"  ng-mousedown="closePopupMenu($event, item)" > {{item.listElementDisplayValue}} </li>
+            </ul>
+        </div>
+    </div>
+</aw-link-with-popup>

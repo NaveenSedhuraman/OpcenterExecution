@@ -1,0 +1,3 @@
+<aw-property-error>
+    <input type="{{prop.inputType}}" aw-widget-initialize aw-autofocus auto-focus="prop.autofocus" ng-change="changeFunction()" maxlength="{{prop.maxLength}}" ng-model="prop.dbValue" placeholder="{{prop.propertyRequiredText}}" ng-class="{'aw-widgets-propertyError': errorApi.errorMsg, 'changed': prop.dirty}" class="aw-widgets-propertyEditValue" ng-disabled="!prop.isEnabled" ng-blur="blurTextBoxFunction($event)" ng-keydown="evalKey($event)" ng-required="prop.isRequired" aw-validator="REQUIRED" ng-trim="{{prop.inputType!=='password'}}" ng-attr-tabindex="{{prop.tabIndex}}" />
+</aw-property-error>

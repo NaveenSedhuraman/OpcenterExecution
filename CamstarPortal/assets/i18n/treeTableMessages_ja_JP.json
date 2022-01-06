@@ -1,0 +1,12 @@
+{
+    "TwistieTooltipCollapsed": "子を表示",
+    "TwistieTooltipExpanded": "子を非表示",
+    "freezeMenu": "凍結",
+    "unfreezeMenu": "解凍",
+    "visibilityControlsTitle": "表示\/非表示",
+    "arrangeMenu": "整列",
+    "sortAscending": "昇順でソート",
+    "sortDescending": "降順でソート",
+    "removeSort": "ソートなし",
+    "removeAllFilters": "すべてのフィルタを除去"
+}

@@ -1,0 +1,41 @@
+{
+    "recentSectionTitle": "Nedávné",
+    "otherSectionTitle": "Jiný",
+    "dataSetFileUploadTitle": "Soubor",
+    "relationPropLabel": "Relace",
+
+    "loading": "Načítání...",
+    "Filter": "Filtr",
+    "refine":"Zpřesnit",
+    "objectType": "Typ",
+    "newTabTitle": "Nový",
+    "paletteTabTitle": "Paleta",
+    "searchTabTitle": "Hledat",
+    "searchSectionTitle": "Hledat",
+    "assignButtonTitle": "Přiřadit",
+    "ownProjectSectionTitle": "Vlastnící projekt",
+    "addProjectButtonTitle": "Přidat projekt",
+    "projectsSectionTitle": "Projekty",
+    "addObjectPanelPinButtonToolTip": "Připnout panel",
+    "addObjectPanelUnpinButtonToolTip": "Odepnout panel",
+    "pasteSuccessful": "Položka \"{0}\" byla přidána.",
+    "submitSuccessful": "Položka {0} byla odeslána.",
+
+    "addButtonTitle" : "Přidat",
+    "mutiRelationObject" : "Vybrané položky ({0}) byly přidány",
+
+    "resultTabTitle" : "Výsledky",
+    "filterTabTitle" : "Filtry",
+    "keywordsLabel" : "Klíčová slova",
+    "addButtonInSearch" : "Přidat",
+    "datasetName" : "Název",
+    "datasetDesc" : "Popis",
+    "datasetType" : "Typ",
+    "uploadFile" : "Odeslat soubor",
+    "reference" : "Reference",
+    "moreLink"  : "Další...",
+
+    "addObjectPanel_oneStepPinCommands": "Přidat jednokrokové příkazy připnutí panelu objektu",
+    "uiwidget_projectSectionCommands": "Příkazy řezu projektu",
+    "aw_compare": "Porovnat"
+}

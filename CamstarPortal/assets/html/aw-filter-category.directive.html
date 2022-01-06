@@ -1,0 +1,59 @@
+<div class="aw-ui-filterCategory" title="{{category.displayName}}">
+<!--      display expand/collapse icons only when needed -->
+    <aw-icon class="aw-ui-filterCategoryLabelExpand" ng-click="toggleExpansion()" id="miscExpand"
+    ng-if="category.showExpand && category.expand && !category.isPopulated"></aw-icon>
+    <aw-icon class="aw-ui-filterCategoryLabelExpand" ng-click="toggleExpansion()" id="miscExpand"
+    ng-if="category.showExpand && category.expand && category.isPopulated"></aw-icon>
+    <aw-icon class="aw-ui-filterCategoryLabelCollapse" ng-click="toggleExpansionSoa()" id="miscCollapse"
+    ng-if="category.showExpand && !category.expand && !category.isPopulated"></aw-icon>
+    <aw-icon class="aw-ui-filterCategoryLabelCollapse" ng-click="toggleExpansion()" id="miscCollapse"
+    ng-if="category.showExpand && !category.expand && category.isPopulated"></aw-icon>
+
+    <div  class="aw-ui-filterCategoryLabel" ng-class="{'aw-ui-filterCategoryLabelEnabled': category.showEnabled && category.type !== 'ObjectFilter'}"
+          ng-click="select($event)" category-action="categoryAction">
+          {{category.displayName}}
+    </div>
+
+    <div ng-if="category.expand && category.showStringFilter">
+        <aw-filter-category-string-filter
+            category="category"
+            filter-action="filterAction"
+            search-action="searchAction">
+         </aw-filter-category-string-filter>
+    </div>
+    <div ng-if="category.expand && category.showDateFilter">
+        <aw-filter-category-date-filter
+            category="category"
+            filter-action="filterAction"
+            search-action="searchAction">
+         </aw-filter-category-date-filter>
+    </div>
+    <div ng-if="category.expand && category.showNumericFilter">
+        <aw-filter-category-numeric-filter
+            category="category"
+            filter-action="filterAction"
+            search-action="searchAction">
+         </aw-filter-category-numeric-filter>
+    </div>
+    <div ng-if="category.expand && category.type === 'ObjectFilter'">
+        <aw-hierarchical-navigation
+            parentnodes="category.filterValues.parentnodes"
+            childnodes="category.filterValues.childnodes"
+            displaynameprop="'stringDisplayValue'"
+            tooltipprop="'stringDisplayValue'"
+            displaycountprop="'count'"
+            maxchildrentoshow="5"
+            action="searchAction">
+        </aw-hierarchical-navigation>
+    </div>
+    <div ng-if="category.expand && category.showRadioFilter">
+        <aw-filter-category-toggle-filter
+            category="category"
+            filter-action="filterAction"
+            search-action="searchAction">
+         </aw-filter-category-toggle-filter>
+    </div>
+     <div aw-transclude ng-if="category.expand" class="aw-ui-filterCategorySearchBoxWidget">
+       <!-- insert custom code -->
+    </div>
+</div>

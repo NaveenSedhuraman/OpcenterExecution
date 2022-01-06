@@ -1,0 +1,1 @@
+define(['js/configurationService'],function(cfgSvc){cfgSvc.add('viewAndViewModelRepoConfiguration',{"actionType":"GET","viewUrl":"{{baseUrl}}","viewModelUrl":"{{baseUrl}}"});});

@@ -1,0 +1,21 @@
+// Copyright 2018 Siemens Product Lifecycle Management Software Inc.
+/* aw-link-with-popup */
+
+aw-link-with-popup {
+    .aw-widgets-linkWithPopupMenu .aw-layout-headerSubTitle {
+        display: flex;
+        align-items: center;
+
+        aw-property-image {
+            cursor: pointer;
+
+            svg {
+                display: inline-block;
+                vertical-align: text-bottom;
+                height: rem-calc(12);
+                width: rem-calc(12);
+                margin: rem-calc(2);
+            }
+        }
+    }
+}

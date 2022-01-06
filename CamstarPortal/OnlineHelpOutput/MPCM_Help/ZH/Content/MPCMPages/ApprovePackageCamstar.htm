@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="zh-cn" xml:lang="zh-cn" data-mc-search-type="NGram" data-mc-help-system-file-name="MPCM_Help.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="路由和捕获审批">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>批准包 (Camstar)</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/LDCSS1.2.4.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Horiz-rules_TableIndent3body.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Horiz-rules_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="Head2"><a name="top"></a>批准包 (Camstar)</p>
+        <p class="_1body">在 "待定审批 Camstar" 步骤中, 可以批准分配给 Camstar 更改管理工作流的包。 </p>
+        <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="When_Approving_a_Package_on_the_Camstar_Workflow"></a>
+        </p>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" />在 Camstar 工作流上审批包时</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1body">您必须具有包审批者角色。</p>
+                <p class="_1bodyKeepWithNext">审批包 (Camstar) 页有两个选项卡:</p>
+                <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">批准</td>
+                    </tr>
+                </table>
+                <p class="_3body">"审批" 选项卡提供了批准更改管理包的能力。如果您是最后的审批者, 应用程序将记录您的决定并将包移动到下一个适当的步骤。</p>
+                <table class="AutoNumber_p__1bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                    <col style="width: 45px;" />
+                    <col style="width: 30px;" />
+                    <col style="width: auto;" />
+                    <tr>
+                        <td valign="top" />
+                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                        </td>
+                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;">审批状态</td>
+                    </tr>
+                </table>
+                <p class="_3body">"审批状态" 选项卡提供了查看当前和过去审批周期状态的功能, 并查看每个周期中所有包审批者的决策。</p>
+                <p class="Head4"><a name="When_Recording_Approval_Decisions"></a>记录审批决定时</p>
+                <p class="_1body">当审批决定被批准时, 应用程序将更改管理包从待定的审批 Camstar 移动到挂起的部署。当审批决定被拒绝时, 应用程序将包从待定审批 Camstar 移动到拒绝。应用程序将包移动到被拒绝的步骤时, 只有一个拒绝的审批决定是必需的。但是, 在应用程序将包移动到下一步骤之前, 必须接收所有审批决策。</p>
+            </div>
+        </div>
+        <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Approve_Package_Page_with_Approve_Tab_Field_Definitions"></a>
+        </p>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" />使用审批选项卡字段定义审核包 (Camstar) 页</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1bodyKeepWithNext">此表定义审核包 (Camstar) 页的 "审批" 选项卡上的字段。</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');width: 95%;" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 145px;" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 100px;" />
+                    <thead>
+                        <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                            <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">字段</p>
+                            </th>
+                            <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">定义</p>
+                            </th>
+                            <th class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                <p class="CellHead-Left">类型</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">包信息</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">所选包及其核心属性。核心属性提供状态、描述、所有者、上次更新和工步等信息。此外，此区域还包括一些图标，单击这些图标可提供其他功能或浮出控件菜单。有关信息，请参考“<a href="../GettingStarted/PackageInformation.htm" class="MCXref xref">包信息</a>”。 </p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">必需</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody" style="color: #000000;">对所有审批者的指示</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody" style="color: #000000;">与分配给变更管理包的审批模板关联的所有审批者的说明。如果在定义审批模板时提供了说明, 应用程序将显示说明。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody" style="color: #000000;">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">审批者说明</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">来自所有者或审批者的管理员的特定说明。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody" style="color: #000000;">备注</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">有关审批者选择的审批决定的其他信息。</p>
+                                <p class="CellBody"><span class="User_Entry">注:</span>与分配给此包的审批模板关联的审批决策列表建模对象中的设置确定是否需要对指定的决策进行注释。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody" style="color: #000000;">仅显示/ 可选</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody" style="color: #000000;">角色</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">执行审批的员工的角色。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody" style="color: #000000;">必需</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">批准的</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">执行审批的员工。您可以选择您的用户名或您正在执行审批的人员的用户名。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">必需</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                <p class="CellBody">审批决定</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                <p class="CellBody">为审批选择预定义的决策。可用的决定取决于分配给变更管理包的审批模板。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body1">
+                                <p class="CellBody">必需</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p class="_1body" data-mc-conditions="Default.ScreenOnly"><a name="Approve_Package_Page_with_Approval_Status_Tab_Field_Definitions"></a>
+        </p>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage"><img class="MCDropDown_Image_Icon" src="../../Skins/Default/Stylesheets/Images/transparent.gif" height="11" width="16" alt="已关闭" data-mc-alt2="打开" />审批程序包 (Camstar) 页 (具有审核状态选项卡字段定义)</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <p class="_1bodyKeepWithNext">此表定义 "审核包 (Camstar)" 页的 "审批状态" 选项卡上的字段。</p>
+                <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_Table.css');width: 95%;" class="TableStyle-Horiz-rules_Table" cellspacing="0">
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 145px;" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" />
+                    <col class="TableStyle-Horiz-rules_Table-Column-Column1" style="width: 100px;" />
+                    <thead>
+                        <tr class="TableStyle-Horiz-rules_Table-Head-Header1">
+                            <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">字段</p>
+                            </th>
+                            <th class="TableStyle-Horiz-rules_Table-HeadE-Column1-Header1">
+                                <p class="CellHead-Left">定义</p>
+                            </th>
+                            <th class="TableStyle-Horiz-rules_Table-HeadD-Column1-Header1">
+                                <p class="CellHead-Left">类型</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">包信息</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">所选包及其核心属性。核心属性提供状态、描述、所有者、上次更新和工步等信息。另外，此区域还包含了在单击时可提供其他功能或激活弹出菜单的图标。有关信息，请参考“<a href="../GettingStarted/PackageInformation.htm" class="MCXref xref">包信息</a>”。 </p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">必需</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody" style="color: #000000;">审核工作表周期</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody" style="color: #000000;">用于确定显示的审批周期的选项:</p>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><span class="User_Entry">查看当前</span>审核-显示当前审批流程周期的审批捕获信息。在所有审批者的说明中显示的信息、审批者的说明、审批者注释字段和审核人网格均为当前周期。</td>
+                                    </tr>
+                                </table>
+                                <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                                    <col style="width: 41px;" />
+                                    <col style="width: 30px;" />
+                                    <col style="width: auto;" />
+                                    <tr>
+                                        <td valign="top" />
+                                        <td class="AutoNumber_p__1bullet" valign="top"><span class="Dingbat-SqBullet"><span style="font-size: 120%;" class="mcFormatSize">•</span></span>
+                                        </td>
+                                        <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;span style=&quot;font-size: 120%;&quot; class=&quot;mcFormatSize&quot;&gt;•&lt;/span&gt;"><span class="User_Entry">查看历史记录</span>-显示 "审批周期" 字段中所选期间的审批捕获信息。选择此选项将启用“签署人角色”字段。</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody" style="color: #000000;">可选</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody" style="color: #000000;">审批周期</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">以前的审批周期 (如果有) 按日期和时间显示。当您选择上一个周期时, 应用程序将更新所有审批者、审核人网格、审批者说明和审批者注释字段的说明, 以显示相关信息。</p>
+                                <p class="CellBody"><span class="User_Entry">注:</span>选择 "视图历史记录" 选项可启用此字段。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody" style="color: #000000;">仅显示/ 可选</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody" style="color: #000000;">对所有审批者的指示</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody" style="color: #000000;">与分配给变更管理包的审批模板关联的所有审批者的说明。如果在定义审批模板时提供了说明, 应用程序将显示说明。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody" style="color: #000000;">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">审批者表格</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">网格列出为变更管理包指定为审批者的所有员工。 </p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBodyIndented">层次</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">与审批者关联的审批级别。 </p>
+                                <p class="CellBody">级别定义审批路由顺序。应用程序可以串行、并行或二者组合的方式将审批路由到审批者。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBodyIndented">角色</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">角色分配的责任为批准。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBodyIndented">名称</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">员工分配的审批责任。 </p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBodyIndented">批准者</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">提供审批的员工。 </p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBodyIndented">状态</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">审批者提供的批准决定。 </p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBodyIndented">路由日期</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">将审批请求发送到审批者的日期。 </p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBodyIndented">到期日</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">必须提交批准的日期。 </p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBodyIndented">完成日期</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body1">
+                                <p class="CellBody">审批者指定决定的日期。在审批者指定决策之前, 该列保持为空。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body1">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body2">
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">对审批者的指示</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyE-Column1-Body2">
+                                <p class="CellBody">在审批者网格中选择的审批者的所有者或管理员的特定说明。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyD-Column1-Body2">
+                                <p class="CellBody">仅显示</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-Horiz-rules_Table-Body-Body1">
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                <p class="CellBody" style="color: #000000;">审批者注释</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyB-Column1-Body1">
+                                <p class="CellBody">在审批者网格中选择的审批者输入的任何注释。</p>
+                            </td>
+                            <td class="TableStyle-Horiz-rules_Table-BodyA-Column1-Body1">
+                                <p class="CellBody" style="color: #000000;">仅显示</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <p class="Head3-Side"><a name="How_to_Approve_a_Change_Management_Package"></a>“如何审批更改管理包”</p>
+        <p class="_1bodyKeepWithNext">按照以下步骤定义更改管理工作流程：</p>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>1.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">从<span class="User_Entry">更改管理</span>菜单中选择<span class="User_Entry">包搜索</span>。 <span class="Emphasis">将显示“包搜索”页。</span></td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>2.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">输入或选择一个或多个条件以缩小搜索范围。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>3.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">单击<span class="User_Entry">搜索</span>。 <span class="Emphasis">应用程序将在“搜索结果”表格中显示与搜索准则匹配的包。</span></td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>4.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;4.&lt;/b&gt;">选择要更新的包。 <span class="Emphasis">应用程序将显示该包的相关事务</span>。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>5.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;5.&lt;/b&gt;">单击 "<span class="User_Entry">批准" (Camstar)</span>。<span class="Emphasis">将出现 "审核包 (Camstar)" 页。</span></td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>6.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;6.&lt;/b&gt;">选择您的<span class="User_Entry">角色</span>。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>7.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;7.&lt;/b&gt;">从 "<span class="User_Entry">审批</span>" 字段中选择您的用户 ID。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>8.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;8.&lt;/b&gt;">选择<span class="User_Entry">审批决定</span>。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>9.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;9.&lt;/b&gt;">如果需要, 请在 "<span class="User_Entry">备注</span>" 字段中输入有关审批决定的注释或备注。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>10.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;10.&lt;/b&gt;">单击 "<span class="User_Entry">保存决策</span>"。<span class="Emphasis">应用程序将显示一条消息, 说明您已完成审批。</span></td>
+            </tr>
+        </table>
+        <p class="Head3-Side"><a name="How_to_View_Approval_Status_or_Approval_Capture_History"></a>如何查看审批状态或审批捕获历史记录<a name="kanchor51"></a></p>
+        <p class="_1bodyKeepWithNext">按照以下步骤查看审批状态或审批捕获历史记录:</p>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>1.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;1.&lt;/b&gt;">从<span class="User_Entry">更改管理</span>菜单中选择<span class="User_Entry">包搜索</span>。 <span class="Emphasis">将显示“包搜索”页。</span></td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>2.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;2.&lt;/b&gt;">输入或选择一个或多个条件以缩小搜索范围。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>3.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;3.&lt;/b&gt;">单击<span class="User_Entry">搜索</span>。 <span class="Emphasis">应用程序将在“搜索结果”表格中显示与搜索准则匹配的包。</span></td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>4.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;4.&lt;/b&gt;">选择要查看部署详细信息的包。 <span class="Emphasis">应用程序将显示该包的相关事务</span>。</td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>5.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;5.&lt;/b&gt;">单击 "<span class="User_Entry">批准" (Camstar)</span>。<span class="Emphasis">将出现 "审核包 (Camstar)" 页。</span></td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>6.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;6.&lt;/b&gt;">单击“<span class="User_Entry">当前状态</span>”选项卡。<span class="Emphasis">应用程序显示当前的审批信息。</span></td>
+            </tr>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>7.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;7.&lt;/b&gt;">是否要查看审批状态或审核捕获历史记录？</td>
+            </tr>
+        </table>
+        <table style="mc-table-style: url('../Resources/TableStyles/Horiz-rules_TableIndent3body.css');width: 90%;" class="TableStyle-Horiz-rules_TableIndent3body" cellspacing="0">
+            <col class="TableStyle-Horiz-rules_TableIndent3body-Column-Column1" style="width: 140px;" />
+            <col class="TableStyle-Horiz-rules_TableIndent3body-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Head-Header1">
+                    <th class="TableStyle-Horiz-rules_TableIndent3body-HeadE-Column1-Header1">
+                        <p class="CellHead-Left">如果要查看 ... </p>
+                    </th>
+                    <th class="TableStyle-Horiz-rules_TableIndent3body-HeadD-Column1-Header1">
+                        <p class="CellHead-Left">操作步骤 ...</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body1">
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyE-Column1-Body1">
+                        <p class="CellBody">审批状态</p>
+                    </td>
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyD-Column1-Body1">
+                        <p class="CellBody">转到步骤 8。 </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body2">
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyE-Column1-Body2">
+                        <p class="CellBody">审核捕获历史记录</p>
+                    </td>
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyD-Column1-Body2">
+                        <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 41px;" />
+                            <col style="width: 30px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p_CellNumA" valign="top"><span class="Number"><b>a.</b></span>
+                                </td>
+                                <td class="AutoNumber_p_CellNumA" valign="top" data-mc-autonum="&lt;b&gt;a.&lt;/b&gt;">找到审核工作表周期部分。</td>
+                            </tr>
+                        </table>
+                        <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 41px;" />
+                            <col style="width: 30px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p__1bullet" valign="top"><span class="Number"><b>b.</b></span>
+                                </td>
+                                <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;b&gt;b.&lt;/b&gt;">选择 "<span class="User_Entry">查看历史记录</span>"。<span class="Emphasis">应用程序启用 "审批周期" 字段。</span></td>
+                            </tr>
+                        </table>
+                        <table class="AutoNumber_p_CellBody-Bullet" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 41px;" />
+                            <col style="width: 30px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p__1bullet" valign="top"><span class="Number"><b>c.</b></span>
+                                </td>
+                                <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;b&gt;c.&lt;/b&gt;">从 "<span class="User_Entry">审批周期</span>" 字段中选择日期。<span class="Emphasis">应用程序使用在该审批周期中捕获的信息更新该选项卡。</span></td>
+                            </tr>
+                        </table>
+                        <table class="AutoNumber_p_CellBody-Bullet" style="color: #000000; width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+                            <col style="width: 41px;" />
+                            <col style="width: 30px;" />
+                            <col style="width: auto;" />
+                            <tr>
+                                <td valign="top" />
+                                <td class="AutoNumber_p__1bullet" valign="top"><span class="Number"><b>d.</b></span>
+                                </td>
+                                <td class="AutoNumber_p__1bullet" valign="top" data-mc-autonum="&lt;b&gt;d.&lt;/b&gt;">转到步骤 8。</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr class="TableStyle-Horiz-rules_TableIndent3body-Body-Body1">
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyB-Column1-Body1">
+                        <p class="CellBody">审批捕获状态</p>
+                    </td>
+                    <td class="TableStyle-Horiz-rules_TableIndent3body-BodyA-Column1-Body1">
+                        <p class="CellBody" style="color: #000000;">转到步骤 8。 </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="AutoNumber_p_Step_" style="width: 100%; margin-left: 0;" cellspacing="0" cellpadding="0">
+            <col style="width: 45px;" />
+            <col style="width: 30px;" />
+            <col style="width: auto;" />
+            <tr>
+                <td valign="top" />
+                <td class="AutoNumber_p_Note3body" valign="top"><span class="Number"><b>8.</b></span>
+                </td>
+                <td class="AutoNumber_p_Note3body" valign="top" data-mc-autonum="&lt;b&gt;8.&lt;/b&gt;">选择审批者以查看该审批者输入的任何特殊说明或注释。</td>
+            </tr>
+        </table>
+        <MadCap:pageFooter class="FirstPage">
+            <p class="copyright">© Siemens 2020</p>
+        </MadCap:pageFooter>
+    </body>
+</html>
