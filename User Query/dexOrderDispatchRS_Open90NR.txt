@@ -1,0 +1,71 @@
+SELECT   mfgorder.mfgorderid -- Instance ID is replaced with MfgOrder ID
+        ,mfgorder.mfgordername
+       --,MfgOrder.PlannedStartDate
+       ,MfgOrderContainers.inprocessqty
+       --,MfgOrder.ReleaseDate
+        ,prioritycode.prioritycodename 
+        ,MfgOrder.ReleaseDate
+        ,MfgOrder.Qty
+        --,FinalProduct.StdStartQty 
+        ,uom.uomname  
+        ,MfgOrderContainers.InProcessQty 
+        ,BeginProductBase.ProductName AS PRD1
+        ,FinalProductBase.ProductName AS PRD2
+        ,FinalProduct.Description 
+        ,NumberingRule.NumberingRuleName AS NumberingRule
+        ,ordertype.ordertypename 
+        ,orderstatus.orderstatusname 
+       ,CASE WHEN MfgOrder.PlannedStartDate is null THEN FORMAT(CONVERT(datetime,'12/31/9999 00:00:00'),'MM/dd/yyyy hh:mm:ss') End as PlannedStartDate
+       ,CASE WHEN MfgOrder.PlannedCompletionDate is null THEN FORMAT(CONVERT(datetime,'12/31/9999 00:00:00'),'MM/dd/yyyy hh:mm:ss') End as PlannedCompletionDate
+ 
+       --,NVL(MfgOrder.PlannedStartDate, TO_DATE('12/31/9999 00:00:00','MM/DD/RRRR HH24:MI:SS')) as PlannedStartDate
+        --,NVL(MfgOrder.PlannedCompletionDate, TO_DATE('12/31/9999 00:00:00','MM/DD/RRRR HH24:MI:SS')) as PlannedCompletionDate
+ 
+FROM  MfgOrder LEFT OUTER JOIN PriorityCode ON prioritycode.prioritycodeid = mfgorder.priorityid
+               LEFT OUTER JOIN (
+     SELECT Product.ProductId, Product.Description, ProductBase.ProductBaseId, ProductBase.RevOfRcdId
+     FROM Product INNER JOIN ProductBase ON (PRODUCT.PRODUCTBASEID=PRODUCTBASE.PRODUCTBASEID OR PRODUCT.PRODUCTID=PRODUCTBASE.REVOFRCDID)
+	 --Product.ProductId = ProductBase.RevOfRcdId
+     ) BeginProduct ON (
+        ( BeginProduct.ProductId = MfgOrder.BeginProductId AND MfgOrder.BeginProductId != '0000000000000000' )
+        OR
+        ( MfgOrder.BeginProductId = '0000000000000000' AND BeginProduct.ProductBaseId = MfgOrder.BeginProductBaseId )
+      )
+                  LEFT OUTER JOIN ProductBase BeginProductBase ON  BeginProductBase.ProductBaseId = BeginProduct.ProductBaseId OR  BeginProduct.PRODUCTID=BeginProductBase.REVOFRCDID
+				  --BeginProductBase.ProductBaseId = BeginProduct.ProductBaseId
+                  LEFT OUTER JOIN (
+     SELECT Product.ProductId, Product.Description, ProductBase.ProductBaseId, ProductBase.RevOfRcdId, Product.StdStartQty, Product.ContainerNumberingRuleId
+     FROM Product INNER JOIN ProductBase ON (PRODUCT.PRODUCTBASEID=PRODUCTBASE.PRODUCTBASEID OR PRODUCT.PRODUCTID=PRODUCTBASE.REVOFRCDID)
+	 --Product.ProductId = ProductBase.RevOfRcdId
+     ) FinalProduct ON (
+        ( FinalProduct.ProductId = MfgOrder.ProductId AND MfgOrder.ProductId != '0000000000000000' )
+        OR
+        ( MfgOrder.ProductId = '0000000000000000' AND FinalProduct.ProductBaseId = MfgOrder.ProductBaseId )
+       )
+                  LEFT OUTER JOIN ProductBase FinalProductBase ON FinalProductBase.ProductBaseId = FinalProduct.ProductBaseId OR FinalProduct.PRODUCTID=FinalProductBase.REVOFRCDID
+				  --FinalProductBase.ProductBaseId = FinalProduct.ProductBaseId
+                  LEFT OUTER JOIN OrderType ON ordertype.ordertypeid = mfgorder.ordertypeid
+                  LEFT OUTER JOIN OrderStatus ON orderstatus.orderstatusid = mfgorder.orderstatusid
+                  LEFT OUTER JOIN NumberingRule on NumberingRule.NumberingRuleId = FinalProduct.ContainerNumberingRuleId
+                  LEFT OUTER JOIN UOM ON uom.uomid = mfgorder.uomid
+                  LEFT OUTER JOIN (
+    SELECT SUM(Qty) AS InProcessQty, MfgOrderId FROM Container
+    WHERE ( ParentContainerID IS NULL OR ParentContainerID = '0000000000000000' )
+    AND Status IN (1, 3) GROUP BY MfgOrderId
+                                  ) MfgOrderContainers ON MfgOrderContainers.MfgOrderId = MfgOrder.MfgOrderId
+WHERE 
+((CASE WHEN FORMAT(CONVERT(datetime,MfgOrder.ReleaseDate),'MM/dd/yyyy hh:mm:ss')  is null THEN getdate() ELSE FORMAT(CONVERT(datetime,MfgOrder.PlannedStartDate),'MM/dd/yyyy hh:mm:ss') END) <= getdate() AND 
+(CASE WHEN FORMAT(CONVERT(datetime,MfgOrder.ReleaseDate),'MM/dd/yyyy hh:mm:ss') is null THEN getdate() ELSE FORMAT(CONVERT(datetime,MfgOrder.PlannedStartDate),'MM/dd/yyyy hh:mm:ss') END) > (getdate()-90))
+AND ((CASE WHEN FORMAT(CONVERT(datetime,MfgOrder.PlannedStartDate),'MM/dd/yyyy hh:mm:ss') is null THEN  getdate() ELSE FORMAT(CONVERT(datetime,MfgOrder.PlannedStartDate),'MM/dd/yyyy hh:mm:ss') END) > (getdate()-90))
+AND ((CASE WHEN MfgOrderContainers.inprocessqty is null THEN 0 END) < MfgOrder.Qty)
+ 
+--(NVL(MfgOrder.ReleaseDate,SYSDATE) <= SYSDATE AND NVL(MfgOrder.ReleaseDate,SYSDATE) > (SYSDATE-90))
+--AND    NVL(MfgOrder.PlannedStartDate,SYSDATE) > (SYSDATE - 90)
+--AND    NVL(MfgOrderContainers.inprocessqty,0) < MfgOrder.Qty
+ 
+AND    mfgorder.mfgordername LIKE ?NameFilter
+AND    orderstatus.orderstatusname = 'Open'
+AND    ordertype.ordertypename = 'Repetitive Schedule'
+ORDER By  mfgorder.mfgordername, MfgOrder.PlannedStartDate
+         ,CASE WHEN PriorityCode.RelativePriority is null THEN 0 END DESC
+         ,MfgOrder.PlannedCompletionDate;

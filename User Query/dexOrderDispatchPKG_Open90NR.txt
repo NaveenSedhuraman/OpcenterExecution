@@ -1,0 +1,80 @@
+SELECT  mfgorder.mfgorderid -- Instance ID is replaced with MfgOrder ID
+        ,mfgorder.mfgordername
+        ,ordertype.ordertypename
+        ,prioritycode.prioritycodename 
+        ,MfgOrder.ReleaseDate
+        ,MfgOrder.Qty
+        ,FinalProduct.StdStartQty 
+        ,uom.uomname  
+        ,MfgOrderContainers.InProcessQty 
+        ,BeginProductBase.ProductName as BeginProduct
+        ,FinalProductBase.ProductName as Product
+        ,FinalProduct.Description as ProductDescription
+        ,NumberingRule.NumberingRuleName AS NumberingRule
+        ,orderstatus.orderstatusname 
+		,ISNULL(MfgOrder.PlannedStartDate,NULL) as PlannedStartDate
+        ,ISNULL(MfgOrder.PlannedCompletionDate, NULL) as PlannedCompletionDate
+		,ContainerLevel.ContainerLevelName AS Level
+,StartReason.StartReasonName As StartReason
+,Owner.OwnerName As Owner
+,UOM.UOMName As UOM
+,MfgOrder.dexRunType As RunType
+,ResourceDef.ResourceName As Line
+        --,CASE WHEN MfgOrder.PlannedStartDate is null THEN FORMAT(CONVERT(datetime,'12/31/9999 00:00:00'),'MM/dd/yyyy hh:mm:ss') End as PlannedStartDate
+        --,CASE WHEN MfgOrder.PlannedCompletionDate is null THEN FORMAT(CONVERT(datetime,'12/31/9999 00:00:00'),'MM/dd/yyyy hh:mm:ss') End as PlannedCompletionDate
+FROM  MfgOrder LEFT OUTER JOIN PriorityCode ON prioritycode.prioritycodeid = mfgorder.priorityid
+                  LEFT OUTER JOIN (
+     SELECT Product.ProductId, Product.Description, ProductBase.ProductBaseId, ProductBase.RevOfRcdId
+     FROM Product INNER JOIN ProductBase ON (PRODUCT.PRODUCTBASEID=PRODUCTBASE.PRODUCTBASEID OR PRODUCT.PRODUCTID=PRODUCTBASE.REVOFRCDID)
+	 --Product.ProductId = ProductBase.RevOfRcdId
+     ) BeginProduct ON (
+        ( BeginProduct.ProductId = MfgOrder.BeginProductId AND MfgOrder.BeginProductId != '0000000000000000' )
+        OR
+        ( MfgOrder.BeginProductId = '0000000000000000' AND BeginProduct.ProductBaseId = MfgOrder.BeginProductBaseId )
+      )
+                  LEFT OUTER JOIN ProductBase BeginProductBase ON BeginProduct.PRODUCTBASEID=BeginProductBase.PRODUCTBASEID OR BeginProduct.PRODUCTID=BeginProductBase.REVOFRCDID
+				  --BeginProductBase.ProductBaseId = BeginProduct.ProductBaseId
+                  LEFT OUTER JOIN (
+     SELECT Product.ProductId, Product.Description, ProductBase.ProductBaseId, ProductBase.RevOfRcdId, Product.StdStartQty, Product.ContainerNumberingRuleId,Product.ProductFamilyId ,producttypeid 
+     FROM Product INNER JOIN ProductBase ON (PRODUCT.PRODUCTBASEID=PRODUCTBASE.PRODUCTBASEID OR PRODUCT.PRODUCTID=PRODUCTBASE.REVOFRCDID)
+	 --Product.ProductId = ProductBase.RevOfRcdId
+     ) FinalProduct ON (
+        ( FinalProduct.ProductId = MfgOrder.ProductId AND MfgOrder.ProductId != '0000000000000000' )
+        OR
+        ( MfgOrder.ProductId = '0000000000000000' AND FinalProduct.ProductBaseId = MfgOrder.ProductBaseId )
+       )
+                  LEFT OUTER JOIN ProductBase FinalProductBase ON FinalProduct.PRODUCTBASEID=FinalProductBase.PRODUCTBASEID OR FinalProduct.PRODUCTID=FinalProductBase.REVOFRCDID
+				  --FinalProductBase.ProductBaseId = FinalProduct.ProductBaseId
+                  LEFT OUTER JOIN OrderType ON ordertype.ordertypeid = mfgorder.ordertypeid
+				  LEFT OUTER JOIN ProductType on producttype.producttypeid = FinalProduct.producttypeid
+                  LEFT OUTER JOIN OrderStatus ON orderstatus.orderstatusid = mfgorder.orderstatusid
+                  LEFT OUTER JOIN NumberingRule on NumberingRule.NumberingRuleId = FinalProduct.ContainerNumberingRuleId
+				  LEFT OUTER JOIN ProductFamily ON ProductFamily.ProductFamilyId = FinalProduct.ProductFamilyId
+				  LEFT OUTER JOIN StartReason   ON ProductFamily.dexStartReasonId = StartReason.StartReasonId
+				  LEFT OUTER JOIN Owner ON ProductFamily.dexOwnerId = Owner.OwnerId
+				  LEFT OUTER JOIN ContainerLevel ON ProductFamily.dexContainerLevelId = ContainerLevel.ContainerLevelId
+				  LEFT OUTER JOIN ResourceDef   ON MfgOrder.dexLineId = ResourceDef.ResourceId
+                  LEFT OUTER JOIN UOM ON uom.uomid = mfgorder.uomid
+                  LEFT OUTER JOIN (
+    SELECT SUM(Qty) AS InProcessQty, MfgOrderId FROM Container
+    WHERE ( ParentContainerID IS NULL OR ParentContainerID = '0000000000000000' )
+    AND Status IN (1, 3) GROUP BY MfgOrderId
+                                  ) MfgOrderContainers ON MfgOrderContainers.MfgOrderId = MfgOrder.MfgOrderId
+
+
+
+
+WHERE 	(ISNULL(MfgOrder.ReleaseDate,GETDATE()) <= GETDATE() AND ISNULL(MfgOrder.ReleaseDate,GETDATE()) > (GETDATE()-90))
+AND	ISNULL(MfgOrder.PlannedStartDate,GETDATE()) > (GETDATE() - 90)
+AND 	ISNULL(MfgOrderContainers.inprocessqty,0) < MfgOrder.Qty
+AND     MfgOrder.MfgOrderName LIKE ?NameFilter
+AND     OrderStatus.OrderStatusName = 'Open' 
+--AND ordertype.ordertypename = 'Repetitive Schedule'-- OR ordertype.ordertypeid IS NULL)
+AND producttype.producttypename = 'Kits'
+--AND    NOT EXISTS (SELECT 1 FROM CONTAINER            WHERE CONTAINER.MFGORDERID = MFGORDER.MfgOrderId)
+AND  FinalProduct.ProductId  LIKE ISNULL(NULLIF(?dexSearchProduct, '') ,N'%') 
+AND  MfgOrder.MfgOrderId  LIKE ISNULL (NULLIF(?dexSearchMfgOrder, '') ,N'%') 
+AND  ProductFamily.dexProductClass  LIKE ISNULL (NULLIF(?dexProductClass, '') ,N'%') 
+ORDER By  MfgOrder.MfgOrderName, MfgOrder.PlannedStartDate
+         , ISNULL(PriorityCode.RelativePriority, 0) DESC
+         , MfgOrder.PlannedCompletionDate

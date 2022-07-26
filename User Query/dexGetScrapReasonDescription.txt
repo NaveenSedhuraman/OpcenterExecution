@@ -1,0 +1,1 @@
+select Description from ScrapReason where ScrapReasonName=?ScrapReasonName

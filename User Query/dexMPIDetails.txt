@@ -1,0 +1,6 @@
+
+SELECT MLD.ParameterName,MLD.ParameterValue FROM
+		[dex_MPIEQLookUp] ML
+Inner JOin 
+		[dex_MPIEQLookUpDetail] MLD ON MLD.Parentid=ML.dex_MPIEQLookUpId
+where ML.dex_MPIEQLookupName=?MPIName

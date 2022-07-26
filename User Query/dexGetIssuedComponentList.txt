@@ -1,0 +1,17 @@
+SELECT IAH.IssueActualsHistoryId, hm.txndate, pb.productname, p.productrevision, mt.containername as "lot", p.description, iah.qty as "qty", 'Issue' as "type", e.employeename, IR.IssueDifferenceReasonName
+  FROM IssueActualsHistory IAH
+  join IssueHistoryDetail IHD on IHD.IssueHistoryDetailId = IAH.IssueHistoryDetailId
+  LEFT join IssueDifferenceReason IR on IR.IssueDifferenceReasonId = IHD.IssueDifferenceReasonId
+  join ComponentIssueHistory CIH on CIH.ComponentIssueHistoryId = IHD.ComponentIssueHistoryId
+  join HistoryMainline HM on HM.HistoryMainlineId = CIH.HistoryMainlineId
+  join employee e on e.employeeid = HM.employeeid 
+  join product p on p.productid = IAH.productid
+  join productbase pb on pb.productbaseid = p.productbaseid
+  join container c on c.containerid = iah.tocontainerid
+  left join container mt on mt.containerid = iah.fromcontainerid
+   WHERE c.containername           =  ?Container
+   AND NOT EXISTS (SELECT * FROM RemoveHistoryDetail Where IAH.IssueActualsHistoryId = RemoveHistoryDetail.IssueActualsHistoryId AND IAH.ProductId=RemoveHistoryDetail.ProductId )
+   and HM.ReversalStatus              = 1
+   and pb.productname=?Prd
+   and p.productrevision=?Rev
+order by productname asc, txndate asc;

@@ -1,0 +1,7 @@
+select dsf.dexSubFeederName,rdf.ResourceName,rt.ResourceTypeName from dexSubFeeder dsf
+inner join ResourceDef rdf on rdf.ResourceId=dsf.dexCellId
+inner join ResourceType rt on rt.ResourceTypeId=rdf.ResourceTypeId and ResourceTypeName='Cell'
+inner join CurrentStatus cs on cs.ResourceId=rdf.ResourceId
+inner join container c on c.CurrentStatusId=cs.CurrentStatusId
+inner join ContainerLevel cl on cl.ContainerLevelId=c.LevelId
+where rdf.ResourceName=?CellName and C.containername=?ContainerName and cl.containerLevelName='MT Lot' 

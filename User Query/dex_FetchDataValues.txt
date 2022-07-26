@@ -1,0 +1,12 @@
+SELECT TOP 1 DPH.DATANAME,DPH.DATAVALUE 
+		FROM DataPointHistory dh  
+		INNER JOIN DataPointHistoryDetail dph  ON dh.DataPointHistoryId = dph.DataPointHistoryId 
+		INNER JOIN DataPoint DP  ON dp.DataPointId=dph.DataPointId
+		INNER JOIN DataCollectionDef dc ON dph.DataCollectionDefId = dc.DataCollectionDefId 
+		INNER JOIN DataCollectionDefBase dcb   ON dc.DataCollectionDefBaseId = dcb.DataCollectionDefBaseId   
+		INNER JOIN DataPointHistoryDetail dph1  ON dph.DataPointHistoryId = dph1.DataPointHistoryId 
+		INNER JOIN historymainline hm   ON dh.historymainlineid = hm.historymainlineid  
+		INNER JOIN container c ON c.containerid = hm.historyId 
+ WHERE dcb.DataCollectionDefName =?DataCollectionName AND DC.datacollectiondefrevision=?DataCollectionRev
+		AND DP.DataPointName=?DataPointName AND c.containername=?ContainerName
+ ORDER BY hm.txndate DESC

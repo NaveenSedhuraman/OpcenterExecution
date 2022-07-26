@@ -1,0 +1,1 @@
+select Description from LossReason where LossReasonName=?LossReasonName

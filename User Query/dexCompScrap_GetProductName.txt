@@ -1,0 +1,4 @@
+Select (pb.ProductName + ':' + p.ProductRevision) as ProductName from Container c
+inner join Product p on p.ProductId=c.ProductId
+inner join ProductBase pb on pb.ProductBaseId=p.ProductBaseId
+where c.ContainerName=?ContainerName
