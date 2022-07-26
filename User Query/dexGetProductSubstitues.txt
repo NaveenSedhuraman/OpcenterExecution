@@ -1,0 +1,6 @@
+
+select ProdBaseBOM.ProductName+':'+ProdBOM.ProductRevision AS SubstituteProduct from Container C JOIN Product P ON C.ProductId = P.ProductId 
+ JOIN ProductSubstitutes PS ON PS.ProductId = P.ProductId
+LEFT JOIN Product ProdBOM ON ProdBOM.ProductId = PS.SubstitutesId
+LEFT JOIN ProductBase ProdBaseBOM ON ProdBaseBOM.ProductBaseId = ProdBOM.ProductBaseId
+ WHERE C.ContainerName=?Container

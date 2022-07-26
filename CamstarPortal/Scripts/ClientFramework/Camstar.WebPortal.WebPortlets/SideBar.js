@@ -838,37 +838,71 @@ Camstar.WebPortal.WebPortlets.SideBar.prototype = {
         var me = this;
         var div_list = [];
         var actions = $(".transaction-action", this.$bar()).data("menuitem").TransactionMenu;
-
+        //Get configured data collection in spec modeling 
+        var SpecDPConfig = $("[id$='SpecDPConfig']").find('input[type=text]').val();
+        $("[id$='SelectedDC']").find('input[type=text]').val('');
         actions.forEach(function (menuItem) {
-            if (menuItem.CSS && menuItem.CSS.Transaction && menuItem.CSS.Transaction.indexOf("origin-invisible")!=-1)
-                return true;
-
-            var targetElement = menuItem.Action.RedirectClick;
-            var isDisabled = targetElement.disabled;
-            if (!isDisabled && targetElement.classList.contains("aspNetDisabled")) {
-                isDisabled = true;
-            }
-
             var ac = menuItem.Action;
-            var $d = $("<div class='content-row content-btn-row'><input type='submit' class=action-button /></div>");
-            var $actBtn = $('.action-button', $d);
-            $actBtn.prop("value", ac.Caption).prop("title", ac.Caption)
-                .data("cmdObj", me)
-                .data("menuitem", menuItem)
-                .addClass(menuItem.CSS && menuItem.CSS.Transaction && menuItem.CSS.Transaction.join(' '));
-            $d.attr("order", menuItem.Order);
-            if (menuItem.Group)
-                $d.attr("group", menuItem.Group);
-
-            if (!isDisabled)
-                $actBtn.click(function () {
-                    me.redirectClick($(this));
-                    return false;
-                });
-            else {
-                $actBtn.prop("disabled", "disabled");
+            //Bind configured data collection in array -- start
+            var DPArray = new Array();
+            var findCollectDataArr = new Array();
+            if (SpecDPConfig != '' && SpecDPConfig.indexOf('|') >= 0) {
+                var strDPList = SpecDPConfig.split('|');
+                if (strDPList[0] == ac.Caption) {
+                    if (strDPList[1].indexOf(',') >= 0) {
+                        DPArray = strDPList[1].split(',');
+                        findCollectDataArr = DPArray;
+                    }
+                    else {
+                        DPArray = new Array(1);
+                        DPArray[0] = strDPList[1];
+                        findCollectDataArr.push(strDPList[1]);
+                    }
+                }
+                else {
+                    DPArray = new Array(1);
+                    DPArray[0] = ac.Caption;
+                }
             }
-            div_list.push($d);
+            else {
+                DPArray = new Array(1);
+                DPArray[0] = ac.Caption;
+            }
+             //Bind configured data collection in array -- end
+            for (var iDPCount = 0; iDPCount < DPArray.length; iDPCount++) {
+                if (DPArray[iDPCount] != "") {
+                    if (menuItem.CSS && menuItem.CSS.Transaction && menuItem.CSS.Transaction.indexOf("origin-invisible") != -1)
+                        return true;
+                    var targetElement = menuItem.Action.RedirectClick;
+                    var isDisabled = targetElement.disabled;
+                    if (!isDisabled && targetElement.classList.contains("aspNetDisabled")) {
+                        isDisabled = true;
+                    }
+
+                    var $d = $("<div class='content-row content-btn-row'><input type='submit' class=action-button /></div>");
+                    var $actBtn = $('.action-button', $d);
+                    $actBtn.prop("value", DPArray[iDPCount]).prop("title", DPArray[iDPCount])
+                        .data("cmdObj", me)
+                        .data("menuitem", menuItem)
+                        .addClass(menuItem.CSS && menuItem.CSS.Transaction && menuItem.CSS.Transaction.join(' '));
+                    $d.attr("order", menuItem.Order);
+                    if (menuItem.Group)
+                        $d.attr("group", menuItem.Group);
+
+                    if (!isDisabled)
+                        $actBtn.click(function () {
+                            if (findCollectDataArr.indexOf($(this).prop("value")) >= 0) {
+                                me.setSelectedDCtoDM($(this).prop("value"));
+                            }
+                            me.redirectClick($(this));
+                            return false;
+                        });
+                    else {
+                        $actBtn.prop("disabled", "disabled");
+                    }
+                    div_list.push($d);
+                }
+            }
         });
         return div_list;
     },
@@ -1149,7 +1183,11 @@ Camstar.WebPortal.WebPortlets.SideBar.prototype = {
     },
 
     get_controlId: function () { return this._controlId; },
-    set_controlId: function (value) { this._controlId = value; }
+    set_controlId: function (value) { this._controlId = value; },
+//Added to get selected data collection in operation view
+    setSelectedDCtoDM: function (itemDC) {
+        $("[id$='SelectedDC']").find('input[type=text]').val(itemDC);
+    }
 }
 
 Camstar.WebPortal.WebPortlets.SideBar.registerClass( 'Camstar.WebPortal.WebPortlets.SideBar', Sys.UI.Control );
