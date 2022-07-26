@@ -27,6 +27,10 @@ namespace Camstar.WebPortal.WebPortlets.Shopfloor
         {
             get { return Page.FindCamstarControl("ChildProcessingMode") as DropDownList; }
         }
+  protected CheckBox QAHold
+        {
+            get { return Page.FindCamstarControl("ServiceDetail_dexQAHold") as CheckBox; }
+        }
 
         protected override void OnLoad(EventArgs e)
         {
@@ -109,8 +113,23 @@ namespace Camstar.WebPortal.WebPortlets.Shopfloor
             ContainerMaint_Result result = null;
             ResultStatus resultStatus = serv.GetAttributes(inputData, new ContainerMaint_Request { Info = info }, out result);
 
-            if (resultStatus.IsSuccess)
+            // if (resultStatus.IsSuccess)
+             //   DisplayValues(result.Value);
+
+// Based on LHR execution QA Hold or QA release check box should be checked in Lot Maint screen
+	if (resultStatus.IsSuccess)
+            {
+                if (result.Value.ServiceDetail.dexQAHold == true)
+                {
+                    QAHold.DefaultValue = true;
+                }
+                else
+                {
+                    QAHold.DefaultValue = false;
+                }
+
                 DisplayValues(result.Value);
+}
         }
 
         protected void FillDataContract()

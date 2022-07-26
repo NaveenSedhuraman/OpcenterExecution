@@ -43,23 +43,54 @@ namespace Camstar.WebPortal.WebPortlets.Shopfloor
                 if (drpRejectReason.Data != null)
                 {
                     int rowid = Convert.ToInt32(_gridRejectGrid.SelectedRowID);
-                   // OM.dexTXSNRejectDetail[] dexTXSNRejectDetails = (_gridRejectGrid.GridContext as BoundContext).Data as OM.dexTXSNRejectDetail[];
-                   // dexRecordRejectDetails[] odexExistingList = (_gridRejectGrid.GridContext as BoundContext).Data as dexRecordRejectDetails[];
-                   // List<OM.dexTXSNRejectDetail> odexNewList = new List<OM.dexTXSNRejectDetail>();
+                    OM.dexTXSNRejectDetail[] dexTXSNRejectDetails = (_gridRejectGrid.GridContext as BoundContext).Data as OM.dexTXSNRejectDetail[];
+                    dexRecordRejectDetails[] odexExistingList = (_gridRejectGrid.GridContext as BoundContext).Data as dexRecordRejectDetails[];
+                    List<OM.dexTXSNRejectDetail> odexNewList = new List<OM.dexTXSNRejectDetail>();
 
                     string strReason = drpRejectReason.Data.ToString();
                    
                     string strRejectDescription = GetRejectDescription(strReason);
                     //_gridRejectGrid.ClearData();
                     int iRowCount = 0;
-                  //  if (dexTXSNRejectDetails != null)
-                   // {
-                        
-                          
-                      //  }
-                   // }
+                    if (dexTXSNRejectDetails != null)
+                    {
+                        foreach (OM.dexTXSNRejectDetail rejectDetail in dexTXSNRejectDetails)
+                        {
+                            OM.dexTXSNRejectDetail oCurrentRow = new OM.dexTXSNRejectDetail();
+                            if (iRowCount == rowid)
+                            {
+                                rejectDetail.dexRejectReasonDescription = strRejectDescription;
+                                OM.NamedObjectRef rejectReason = new OM.NamedObjectRef();
+                                rejectReason.Name = drpRejectReason.Data.ToString();
+                                rejectDetail.dexRejectReason = rejectReason;
+                                if (txtTXSN.Data != null)
+                                {
+                                    rejectDetail.dexTXSN = txtTXSN.Data.ToString();
+                                }
+                                if (dtRejectDate.Data != null)
+                                {
+                                    rejectDetail.dexRejectDate = Convert.ToDateTime(dtRejectDate.Data);
+                                }
+                                
+                                if (drpdexCell.Data != null)
+                                {
+                                    OM.NamedObjectRef rejectCell = new OM.NamedObjectRef();
+                                    rejectCell.Name = drpdexCell.Data.ToString();
+                                    rejectDetail.dexCell = rejectCell;
+                                }
+                                
+                            }
+                            oCurrentRow = rejectDetail;
+                            odexNewList.Add(oCurrentRow);
+                            iRowCount++;
+                        }
+                    }
 
-                   
+                    (_gridRejectGrid.GridContext as BoundContext).Data = odexNewList.ToArray();
+
+                    _gridRejectGrid.GridContext.LoadData();
+
+                    CamstarWebControl.SetRenderToClient(_gridRejectGrid);
                     //Page.RenderToClient = true;
                 }
             }

@@ -95,12 +95,26 @@ namespace Camstar.WebPortal.WebPortlets.Shopfloor
         {
             get { return Page.FindCamstarControl("Details_AutoNumber") as CWC.CheckBox; }
         }
+        protected virtual CWC.NamedObject WorkCenter
+        {
+            get { return Page.FindCamstarControl("dexLotDispatch_WorkCenter") as CWC.NamedObject; }
+        }
 
         #endregion
 
         protected override void OnLoad(System.EventArgs e)
         {
             base.OnLoad(e);
+
+            if((WorkCenter.Data.ToString().ToUpper() == "OTHER")|| (WorkCenter.Data.ToString().ToUpper() == "OTHERS"))
+            {
+                Details_dexLine.Visible = false;
+            }
+            else
+            {
+                Details_dexLine.Visible = true;
+            }
+
             if (Page.DataContract.GetValueByName(mkRowSelectionChangedDM) != null)
             {
                 SetSelectionValuesToControls();
@@ -240,17 +254,19 @@ namespace Camstar.WebPortal.WebPortlets.Shopfloor
                     if (Num_Rule == null)
                     {
                         Details_ContainerName.Required = true;
+                        Details_ContainerName.ReadOnly = false;
                     }
                     else
                     {
                         Details_ContainerName.Required = false;
+                        Details_ContainerName.ReadOnly = true;
                     }
                     if (runType.Trim() == "1")
                     {
                         Details_ContainerName.Data = Details_MfgOrder.Data.ToString();
                         Details_dexLine.Enabled = true;
                         Details_Qty.Data = GetColumnValue(selectedRow, mkQty);
-                        Details_Qty.ReadOnly = true;
+                        //Details_Qty.ReadOnly = true;
                     }
                     if (runType.Trim() == "2")
                     {
@@ -258,7 +274,7 @@ namespace Camstar.WebPortal.WebPortlets.Shopfloor
                         AutoNumber.DefaultValue = (bool)true;
                         Details_dexLine.Data = GetColumnValue(selectedRow, mkLine);
                         Details_dexLine.Enabled = false;
-                        Details_Qty.ReadOnly = false;
+                        //Details_Qty.ReadOnly = false;
                     }
                 }
             }

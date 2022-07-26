@@ -82,7 +82,30 @@ namespace Camstar.WebPortal.WebPortlets.Shopfloor
                     Priority = FieldInfoUtil.RequestValue(),
                     SamplingLot = FieldInfoUtil.RequestValue(),
                     SamplingRequired = FieldInfoUtil.RequestValue(),
-                    VendorItem = FieldInfoUtil.RequestValue()
+                    VendorItem = FieldInfoUtil.RequestValue(),
+					/*
+					Date: 07/Feb/2022
+					VP page : dexLotViewMgrVP
+					Purpose: Below field data not populated when lot trigger happen, 
+					hence below fields are added to populate the data
+					*/
+					//start
+					dexEngineeringRun = FieldInfoUtil.RequestValue(),
+                    dexLine = FieldInfoUtil.RequestValue(),
+                    dexLineStatus = FieldInfoUtil.RequestValue(),
+                    dexMfgDate = FieldInfoUtil.RequestValue(),
+                    dexRollupHoldStatus = FieldInfoUtil.RequestValue(),
+                    dexScrapAccount = FieldInfoUtil.RequestValue(),
+                    dexSterilizationComplete = FieldInfoUtil.RequestValue(),
+                    dexSupplyLocatorId = FieldInfoUtil.RequestValue(),
+                    dexSupplySubinventory = FieldInfoUtil.RequestValue(),
+                    dexQAHold = FieldInfoUtil.RequestValue(),
+                    dexFGExpirationDate = FieldInfoUtil.RequestValue(),
+                    dexFGManufactureDate = FieldInfoUtil.RequestValue(),
+                    dexLastThruputDate = FieldInfoUtil.RequestValue(),
+                    dexThruputRowVersionNumber = FieldInfoUtil.RequestValue(),
+					dexSupplyType = FieldInfoUtil.RequestValue()
+					//end
                 },
                 ChildProcessingMode = FieldInfoUtil.RequestValue(),
                 Container = FieldInfoUtil.RequestValue(),

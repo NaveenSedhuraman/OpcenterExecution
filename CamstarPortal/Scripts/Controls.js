@@ -1393,3 +1393,447 @@ EProcedureCommandBar.prototype = $.extend(Object.create(ContainerStatusWebPart_D
     }
 });
 
+//Created the function to move Document icon to bottom
+function ContainerStatusWebPartV2_Deco() {
+    CommandBarBase_Deco.call(this);
+}
+
+ContainerStatusWebPartV2_Deco.prototype = $.extend(Object.create(CommandBarBase_Deco.prototype), {
+
+    initialize: function (commandBarObj) {
+        CommandBarBase_Deco.prototype.initialize.apply(this, commandBarObj);
+    },
+
+    /* public virtual */
+    GetCommandBarItems: function () {
+        var me = this;
+        this._commandBarItems.forEach(function (c) {
+            if (c.Action && c.Action.Visible === undefined) {
+                c.Action.Visible = me._isContainerDefined;
+            }
+        });
+        return this._commandBarItems;
+    },
+
+    GetCommandBarGlobals: function () {
+        var me = this;
+        return $.extend(CommandBarBase_Deco.prototype.GetCommandBarGlobals.call(this),
+            {
+                transactionThreshold: function () { return 2; },
+                onTransactionsLoaded: function (transactionArray) {
+                    return this.transactionsLoaded(transactionArray);
+                },
+                getLabels: function (cmdObj) {
+                    var baseLabels = CommandBarBase_Deco.prototype.get_instance().labels || {};
+                    $.extend(cmdObj._labels, baseLabels);
+                    return cmdObj._labels;
+                },
+
+                showMobileMenu: true
+            });
+    },
+
+    _commandBarItems: [
+        {
+            Action: {
+                PanelBuilder: function () { return this._getContainerInfo('all'); },
+                Visible: function () { return this._isContainerDefined(); }
+            },
+            Icon: { CSS: "container-status" },
+            Name: { Label: "Constants_ContainerStatus" }
+        },
+        {
+            Action: {
+                PanelBuilder: function () { return this._attachDocument(); },
+                Visible: function () { return this._isContainerDefined(); }
+            },
+            Icon: { CSS: "container-attachments" },
+            Name: { Label: "Lbl_AttachDocument" },
+            CSS: { Bar: [], Panel: [] }
+        },
+        {
+            Action: {
+                Page: "MfgAuditTrailVP_R2",
+                PanelBuilder: function () { return this._mfgAudit(); },
+                GetDataContracts: function () { return this._getContainerNameObj(); },
+                OpenMode: function () {
+                    if ($(document.body).hasClass("mobile-device"))
+                        return $(document.body).is(".mobile-device:not(.wide)") ? "slideout" : "popup";
+                    return "newtab";
+                },
+                Visible: function () { return this._isContainerDefined(); }
+            },
+            Icon: { CSS: "container-audit-trail" },
+            Name: { Label: "LblMenuMfgAuditTrail" }
+        },
+        {
+            Action: { PanelBuilder: function () { return this._viewTimers(); }, Visible: false },
+            Name: { Label: "ContainerStatus_ActiveTimers" },
+            CSS: { Bar: ["active-timers"], Panel: ["extended-width"] },
+        },
+        {
+            Action: {
+                PanelBuilder: function () { return this._getContainerInfo('workflow'); },
+                OpenMode: function () { return $(document.body).is(".mobile-device:not(.wide)") ? "slideout" : "popup"; },
+                Visible: function () { return this._isContainerDefined(); }
+            },
+            Icon: { CSS: "container-workflow" },
+            Name: { Label: "Container_Workflow" },
+            CSS: { Bar: [], Panel: ["workflow"] }
+        },
+        {
+            Action: {
+                PanelBuilder: function () { return this._getContainerInfo('documents'); },
+                Visible: function () { return this._isContainerDefined(); }
+            },
+            Icon: { CSS: "container-documents" },
+            Name: { Label: "DocumentSet_DocumentEntries" },
+        }
+    ],
+
+    _labels: {
+        attributeColumnLbl: { Name: "AttributeTitle", Value: null },
+        valueColumnLbl: { Name: "SelVal_Value", Value: null }
+    },
+
+    /* public virtual */
+    setCallbackData: function (objData) {
+        switch (objData.__fun) {
+            case "getContainerInfo":
+                return this._renderContainerStatusInfo(objData);
+            case "openDocument":
+                return this._openDocument(objData);
+            case "attachDocument":
+                return this._attachDocument(objData);
+            case "viewTimers":
+                return this._viewTimers(objData);
+            default:
+                break;
+        }
+    },
+
+    getContainer: function () {
+        return this._getContainer();
+    },
+
+    _isContainerDefined: function () {
+        return !!this._getContainer();
+    },
+
+    transactionsLoaded: function (trButtons) {
+        // Call base method
+        CommandBarBase_Deco.prototype.transactionsLoad.apply(CommandBarBase_Deco.prototype.get_instance(), [trButtons]);
+
+        var containerValue = this.getContainer();
+        var isHidden = !containerValue;
+
+        if (!containerValue && $(document.body).hasClass("common-search-r2") && trButtons.length > 0)
+            isHidden = false;
+
+        trButtons.each(function () {
+            var $btn = $(this);
+            if (isHidden)
+                $btn.toggleClass("hidden", !$btn.hasClass("transaction-button"));
+        });
+        return containerValue;
+    },
+
+    _getContainerInfo: function (filter) {
+        // ContainerList control
+        var containerName = this._getContainer();
+
+        if (containerName) {
+            CallServer(JSON.stringify(
+                {
+                    serverType: "Camstar.WebPortal.Helpers.ContainerStatusInquiry",
+                    clientType: "ContainerStatusWebPartV2_Deco",
+                    fun: "getContainerInfo",
+                    containerName: containerName,
+                    filter: filter
+                }), null);
+        }
+        else
+            return this._containerIsNotSelected();
+
+        return this._processing();
+    },
+
+    _containerIsNotSelected: function () {
+        return [$("<div class=error> Container is not selected </div>")];
+    },
+
+    _processing: function () {
+        return [$("<div>processing...</div>")];
+    },
+
+    _getContainer: function () {
+        var containerControl = $get("ctl00_WebPartManager_ContainerStatusWP_ContainerStatus_ContainerName_Edit") ||
+            $get("ctl00_WebPartManager_ContainerStatus_WP_ContainerStatus_ContainerName_Edit") ||
+            $get("ctl00_WebPartManager_ContainerStatusWP_R2_ContainerStatus_ContainerName_Edit") ||
+            $get("ctl00_WebPartManager_QuickLinksWP_ContainerStatus_ContainerName_Edit");
+
+        if (containerControl) {
+            return containerControl.value;
+        }
+        return null;
+    },
+
+    _renderContainerStatusInfo: function (data) {
+        var div_list = [];
+        if (data.Error) {
+            div_list.push($("<div class=error>" + data.Error + "</div>"));
+        }
+
+        else if (data["DocumentSets"]) {
+            var dss = data["DocumentSets"];
+            var getIcon = this._getDocIconPath;
+
+            Array.forEach(dss, function (d) {
+                // Document Set name
+                var $hdr = $("<div class='header-content-row cs-docset'></div>");
+                $hdr.text(d.Name);
+                div_list.push($hdr);
+
+                // Doc entries
+                Array.forEach(d.DocumentEntries, function (de) {
+                    var $entry = $(
+                        "<div class='content-row doc-entry'>" +
+                        "<img class=icon></img>" +
+                        "<div class=info><div class=name></div><div class=desc></div></div>" +
+                        "</div>");
+                    $entry.attr("browse-mode", de.BrowseMode);
+                    $entry.prop("title", de.Description);
+                    $('.icon', $entry).prop("src", getIcon(de.FileType));
+                    $('.name', $entry).text(de.Name);
+                    $('.desc', $entry).text(de.Description);
+                    $entry.click(function () {
+
+                        CallServer(JSON.stringify({
+                            fun: 'openDocument',
+                            serverType: "Camstar.WebPortal.Helpers.ContainerStatusInquiry",
+                            clientType: "ContainerStatusWebPartV2_Deco",
+                            documentName: de.Document.Name,
+                            documentRev: de.Document.Revision
+                        }), null);
+                    });
+                    div_list.push($entry);
+                });
+            });
+        }
+        else if (data["WorkflowRef"]) {
+            var wf = data["WorkflowRef"];
+            var title = wf.Name + ":" + wf.Revision;
+            var step = data["StepName"];
+            var dc = JSON.stringify({ "WorkflowCtl": title });
+            var url = $(document.body).is(".mobile-device:not(.wide)") ?
+                "WorkflowViewPopup_VP.aspx?IsFloatingFrame=2&responsive=true&StepName=" + step + "&DataContracts=" + dc :
+                location.href.substr(0, location.href.lastIndexOf("/")) +
+                "/WorkflowViewPopup_VP.aspx?IsFloatingFrame=2&IsChild=true&StepName=" + step + "&DataContracts=" + dc;
+
+            if (!(div_list = this._buildPanelContent(url, div_list, name = "WorkflowSlideOut", slideOutAttr = "workflow", 600, 800)))
+                div_list = [];
+        }
+        else {
+            var $root = $("<div class=content-tbl></div>");
+            var nodes = [];
+            Object.keys(data).forEach(function (k) {
+                if (!k.startsWith("__") && k.toLowerCase() !== 'attributes') {
+                    var d = data[k];
+                    if (d)
+                        d = d.Value || "";
+                    else
+                        d = "";
+
+                    var $r = $("<div class='content-row'><span class='name'></span><span class='val'></span></div>");
+                    $(".name", $r).text(k);
+                    $(".val", $r).text(d);
+                    nodes.push($r);
+                }
+            });
+            $root.html(nodes);
+            div_list.push($root);
+
+            if (data["Attributes"]) {
+                var attrs = data["Attributes"];
+                var $attHdr = $("<div class='header-content-row'><span class='header-name'></span><span class='header-value'></span></div>");
+                $(".header-name", $attHdr).text(this._labels.attributeColumnLbl.Value);
+                $(".header-value", $attHdr).text(this._labels.valueColumnLbl.Value);
+
+                div_list.push($attHdr);
+                var $column = $("<div class=content-tbl></div>");
+                var rows = [];
+                attrs.forEach(function (ap) {
+                    var d = $("<div class='attribute-row content-row'><span class=attribute-name></span><span class=attribute-val></span></div>");
+                    $(".attribute-name", d).text(ap.Name);
+                    $('.attribute-val', d).text(ap.AttributeValue);
+                    rows.push(d);
+                });
+                $column.html(rows);
+                div_list.push($column);
+            }
+        }
+        return div_list;
+    },
+
+    _attachDocument: function () {
+        var div_list = [];
+        var $di = $("<div class=iframe-container></div>");
+        $di.append("<iframe></iframe>");
+        var dc = encodeURIComponent(JSON.stringify({ "SelectedContainerNameDM": this.getContainer() }));
+        var url = "AttachDocument_VP.aspx?IsFloatingFrame=2&responsive=true&DataContracts=" + dc;
+
+        $('iframe', $di)
+            .prop("src", url)
+            .prop("name", "AttachDocumentSlideOut")
+            .attr("slideout", "attachDocument")
+            .on("load", function () {
+                // "this" is an iframe
+                $('body', this.contentDocument)
+                    .addClass("commandbar-panel")
+                    .addClass("cs-responsive");
+            });
+
+        $('iframe', $di).css('width', "100%").css("height", "100%");
+        div_list.push($di);
+        return div_list;
+    },
+
+    _viewTimers: function () {
+        var div_list = [];
+        var dc = encodeURIComponent(JSON.stringify({ "SelectedContainerNameDM": this.getContainer() }));
+        var url = "TimersListPopup_VP.aspx?IsFloatingFrame=2&IsChild=true&responsive=true&slideout=timers&DataContracts=" + dc;
+        var $di = $("<div class=iframe-container></div>");
+        $di.append("<iframe></iframe>");
+        $('iframe', $di)
+            .prop("src", url)
+            .prop("name", "TimersSlideOut")
+            .attr("slideout", "timers")
+            .css('width', "100%").css("height", "100%");
+        div_list.push($di);
+        return div_list;
+    },
+
+    _getDocIconPath: function (fileType) {
+        var theme = "Camstar";
+        var extension = ".png";
+        if ($("body").hasClass("Horizon-theme")) {
+            theme = "Horizon";
+            extension = ".svg";
+        }
+
+        var path = "Themes/" + theme + "/images/icons/";
+        var icon;
+        switch (fileType.toLowerCase()) {
+            case ".bmp":
+                icon = "typeBMP48"; break;
+            case ".rtf":
+                icon = "typeRTF48"; break;
+            case ".pdf":
+                icon = "icon-pdf-32x32"; break;
+            case ".docx":
+            case ".doc":
+                icon = "icon-word-32x32"; break;
+            case ".xml":
+                icon = "typeXml48"; break;
+            case ".exe":
+                icon = "typeExe48"; break;
+            case ".exel":
+                icon = "typeMsExcel48"; break;
+            case ".gif":
+                icon = "typeGif48"; break;
+            case ".jpg":
+            case ".jpeg":
+                icon = "icon-jpg-32x32"; break;
+            case ".txt":
+                icon = "typeTxt48"; break;
+            case ".zip":
+                icon = "typeZipFile48"; break;
+            case ".png":
+                icon = "typePng48"; break;
+            case ".pptx":
+            case ".pptm":
+            case ".ppt":
+                icon = "typeMsPowerpoint48"; break;
+            case ".html":
+            case ".htm":
+                icon = "HTML_32_32"; break;
+
+            case ".jt":
+                switch (theme.toLowerCase()) {
+                    case "camstar":
+                        icon = "3D_32_32"; break;
+                    case "horizon":
+                        icon = "Type3D48"; break;
+                }
+                break;
+            case "url":
+                icon = "HTML_32_32"; break;
+            default:
+                icon = "icon-unknown-32x32"; break;
+        }
+        path += icon + extension;
+
+        return path;
+    },
+
+    _mfgAudit: function () {
+        var div_list = [];
+        var dc = JSON.stringify({ "AddContainerDM": this.getContainer() });
+        var dcEncoded;
+
+        if (dc) {
+            dcEncoded = "DataContracts=" + encodeURI(dc);
+        }
+
+        var url = "MfgAuditTrailVP.aspx?IsFloatingFrame=2&IsChild=true&responsive=true&" + dcEncoded + "&CallStackKey=" + __page.generateQuickGuid();
+
+        return this._buildPanelContent(url, div_list, "MfgAuditTrailSlideOut", "mfgaudit", null, null);
+    },
+
+    _buildPanelContent: function (url, div_list, name, slideOutAttr, height, width) {
+
+        if ($(document.body).is(".mobile-device:not(.wide)")) {
+            // slideout
+            var $di = $("<div class=iframe-container></div>");
+            $di.append("<iframe></iframe>");
+
+            $('iframe', $di)
+                .prop("src", url)
+                .prop("name", name)
+                .attr("slideout", slideOutAttr)
+                .on("load", function () {
+                    // "this" is an iframe
+                    $('body', this.contentDocument)
+                        .addClass("commandbar-panel")
+                        .addClass("cs-responsive");
+                });
+
+            $('iframe', $di).css('width', "100%").css("height", "100%");
+            div_list.push($di);
+        }
+        else {
+            // Popup
+
+            pop.showAjax(url, null,
+                this.isResponsive = height || screen.availHeight/*height*/,
+                this.isResponsive = width || screen.availWidth /*width*/,
+                this.isResponsive ? 0 : 100/*top*/,
+                this.isResponsive ? 0 : 100/*left*/, true /*showButtons*/,
+                "" /*okButtonText*/, ""/*closeButtonText*/,
+                this /*element*/, true /*closeOnCancel*/,
+                ''/*optionArgs*/, null /*cancelConfirmMsg*/, false, false /*display reset*/);
+        }
+
+        return div_list;
+    },
+
+    _getContainerNameObj: function () {
+        var containerName = this.getContainer();
+        if (containerName)
+            return "{\"AddContainerDM\":\"" + containerName + "\"}";
+
+        return "";
+    }
+
+});
+

@@ -65,3 +65,38 @@ body.cs-responsive div.DCTitleResp span.required {
     line-height: 10px;
     text-indent: 0;
 }
+
+
+element.style {
+}
+.ParametricDataControlDiv-resp.grid-layout .DataPointItem-resp .LabelAndInput.active .ui-error input[type=text] {
+    border: 0px solid #000;
+}
+
+.item.action-redirect-button.cmdbar-cs-button-secondary.cmdbar-ActionSubmit  .action-icon
+{
+background-image: url(images/commandbar/cmdbar-shopfloor-submit.svg) !important;
+}
+
+.ManagePalletOptCls span:nth-child(1){
+margin: 35px 0px 0px 5px;
+}
+
+.ManagePalletOptCls span:nth-child(2){
+margin: 35px 0px 0px 75px;
+}
+
+
+/* Added to arrange iteration count input in Data collection */
+.ParametricDataControl {
+    margin-top: 90px;
+}
+
+.IterationCountCls {
+    position: absolute;
+}
+
+.item.action-redirect-button.cmdbar-cs-button-secondary.cmdbar-cmd-reset  .action-icon
+{
+background-image: url(images/commandbar/cmdbar-shopfloor-reset.svg) !important;
+}
