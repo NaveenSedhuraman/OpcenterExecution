@@ -134,6 +134,8 @@ namespace Camstar.WebPortal.WebPortlets
                     LoadTaskDetails();
                 }
             }
+	if(TxtIterationCount.Visible)
+	  {
             if (_paramDataControl.IterationCount < 1 && Convert.ToInt32(TxtIterationCount.Data) > 0)
             {
                 _paramDataControl.IterationCount = 1;
@@ -144,6 +146,7 @@ namespace Camstar.WebPortal.WebPortlets
             {
                 TxtIterationCount.Data = _paramDataControl.IterationCount.ToString();
             }
+	  }
         }
 
         protected virtual void LoadTaskDetails()
@@ -668,7 +671,10 @@ namespace Camstar.WebPortal.WebPortlets
                 if (res.IsSuccess)
                 {
                     DataTable dtDataPoints = recordset.GetAsDataTable();
-                    strFetchValue = dtDataPoints.Rows[0]["DATAVALUE"].ToString();
+		    if(dtDataPoints != null && dtDataPoints.Rows.Count > 0)
+		    { 
+                    	strFetchValue = dtDataPoints.Rows[0]["DATAVALUE"].ToString();
+		    }
                 }
             }
             return strFetchValue;

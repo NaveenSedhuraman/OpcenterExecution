@@ -20,7 +20,8 @@ using Camstar.WebPortal.WebPortlets;
 using Camstar.WebPortal.Personalization;
 
 using CamstarPortal.WebControls;
-
+using CWC = Camstar.WebPortal.FormsFramework.WebControls;
+using OM = Camstar.WCF.ObjectStack;
 
 namespace Camstar.WebPortal.WebPortlets.Modeling
 {
@@ -56,6 +57,15 @@ namespace Camstar.WebPortal.WebPortlets.Modeling
         protected virtual TextBox BooleanFalse
         { get { return Page.FindCamstarControl("Boolean_False") as TextBox; } }
 
+  protected virtual DropDownList dex_FetchedParameter
+        { get { return Page.FindCamstarControl("dex_FetchedParameter") as DropDownList; } }
+
+        protected virtual CWC.RevisionedObject ValueDataPointChanges_dex_FetchedParameterSet
+        { get { return Page.FindCamstarControl("ValueDataPointChanges_dex_FetchedParameterSet") as CWC.RevisionedObject; } }
+
+        protected virtual TextBox ValueDataPointChanges_dex_FetchedParameter
+        { get { return Page.FindCamstarControl("ValueDataPointChanges_dex_FetchedParameter") as TextBox; } }
+
 
         protected override void OnLoad(EventArgs e)
         {
@@ -72,6 +82,10 @@ namespace Camstar.WebPortal.WebPortlets.Modeling
             }
 
             Value_DataType.DataChanged += Value_DataType_DataChanged;
+
+ dex_FetchedParameter.DataChanged += dex_FetchedParameter_DataChanged;
+            ValueDataPointChanges_dex_FetchedParameterSet.DataChanged += dex_FetchedParameterSet_DataChanged;
+            ValueDataPointChanges_dex_FetchedParameter.DataChanged += dex_FetchedParameters_DataChanged;
 
         }
 
@@ -107,5 +121,92 @@ namespace Camstar.WebPortal.WebPortlets.Modeling
             }
           }
         }
+
+ protected virtual void dex_FetchedParameters_DataChanged(object sender, EventArgs e)
+        {
+            if (!Page.IsPostBack && ValueDataPointChanges_dex_FetchedParameter.Data != null && ValueDataPointChanges_dex_FetchedParameter.Data.ToString() != "")
+            {
+                dex_FetchedParameter.Data = ValueDataPointChanges_dex_FetchedParameter.Data;
+            }
+
+        }
+
+private void binddata()
+        {
+
+            if (ValueDataPointChanges_dex_FetchedParameterSet.Data != null && ValueDataPointChanges_dex_FetchedParameterSet.Data.ToString() != "")
+            {
+                OM.RevisionedObjectRef datacollectionname = (OM.RevisionedObjectRef)ValueDataPointChanges_dex_FetchedParameterSet.Data;
+                FrameworkSession qrysession = FrameworkManagerUtil.GetFrameworkSession(HttpContext.Current.Session);
+
+                var serv = new QueryService(qrysession.CurrentUserProfile);
+                OM.RecordSet result = new RecordSet();
+
+
+                string rev = datacollectionname.Revision == null ? "" : datacollectionname.Revision.ToString();
+                if (rev != "")
+                {
+                    var qparam = new OM.QueryParameters()
+                    {
+                        Parameters = new OM.QueryParameter[]
+                                                          {
+
+                                                      new OM.QueryParameter("Name", datacollectionname.Name.ToString()),
+                                                      new OM.QueryParameter("Revision", rev)
+                }
+                    };
+
+
+
+                    var resultStatus = serv.Execute("dex_GetDataPointDetailswithRev", qparam,
+                                                    new OM.QueryOptions() { QueryType = OM.QueryType.User }, out result);
+                }
+                else
+                {
+                    var qparam = new OM.QueryParameters()
+                    {
+                        Parameters = new OM.QueryParameter[]
+                                                         {
+
+                                                      new OM.QueryParameter("Name", datacollectionname.Name.ToString())
+               }
+                    };
+
+
+
+                    var resultStatus = serv.Execute("dex_GetDataPointDetails", qparam,
+                                                    new OM.QueryOptions() { QueryType = OM.QueryType.User }, out result);
+                }
+
+                dex_FetchedParameter.SetSelectionValues(result);
+
+                if (ValueDataPointChanges_dex_FetchedParameter.Data != null && ValueDataPointChanges_dex_FetchedParameter.Data.ToString() != "")
+                {
+                    dex_FetchedParameter.Data = ValueDataPointChanges_dex_FetchedParameter.Data;
+                }
+
+            }
+            else
+            {
+                dex_FetchedParameter.ClearSelectionValues();
+
+            }
+        }
+
+        protected virtual void dex_FetchedParameter_DataChanged(object sender, EventArgs e)
+        {
+            if (dex_FetchedParameter.Data != null && dex_FetchedParameter.Data.ToString() != "")
+                ValueDataPointChanges_dex_FetchedParameter.Data = dex_FetchedParameter.Data;
+            else
+                ValueDataPointChanges_dex_FetchedParameter.Data = "";
+        }
+
+        protected virtual void dex_FetchedParameterSet_DataChanged(object sender, EventArgs e)
+        {
+            binddata();
+        }
+
+
+
     }
 }
