@@ -1,0 +1,4 @@
+SELECT DP.DataPointName Name,DP.DataPointName  Value FROM DataCollectionDefBase DCDB 
+	inner join DataCollectionDef DCD ON (DCD.datacollectiondefbaseId=DCDB.datacollectiondefbaseId or    DCD.DataCollectionDefId=DCDB.revofrcdid)
+	left join DataPoint DP ON DP.DataCollectionDefId=DCD.DataCollectionDefId
+	where DCDB.DataCollectionDefName=?Name  and DCD.DATACOLLECTIONDEFREVISION =?Revision
